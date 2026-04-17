@@ -6,325 +6,378 @@
 
 ---
 
-## 1. Tourist Behavior: What We Learned
+## 1. Tourist Behavior: Decision Model
 
-**Key Finding**: Tourists choose destinations based on **8 factors**, NOT just 4 like we originally thought.
+**Core Finding**: Tourists choose destinations based on **8 factors** that combine into a utility function.
 
-### The Decision Process
-
-```
-Tourist thinks: "Where should I go?"
-
-1. Attractiveness - How good is the destination? (TTDI score)
-2. Cost - Can I afford it?
-3. Crowding - Will it be too packed?
-4. Risk - Is it safe? (conflict, crime)
-5. Distance - How far do I have to travel? ← NEW
-6. Popularity - Are other people going there? ← NEW
-7. Social Media - What do reviews say?
-8. Memory - Have I been there before? Would I go back?
-```
-
-### Segment Differences
-
-| Segment | Primary Driver | Secondary Driver | Low Priority |
-|---------|---------------|------------------|--------------|
-| **Budget** | Cost (50%) | Attractiveness (20%) | Distance (30%) |
-| **Luxury** | Attractiveness (50%) | Risk (20%) | Cost (15%) |
-| **Adventure** | Attractiveness (40%) | Risk tolerance (30%) | Cost (20%) |
-| **Family** | Safety/Risk (25%) | Cost (30%) | Crowding (25%) |
-
-**⚠️ Important Caveat**: These segment weights (50%, 30%, etc.) are **educated guesses, NOT from data**. Users can adjust them in the simulation.
-
----
-
-## 2. Geographic Reality: What We Learned
-
-**Key Finding**: Where tourists **COME FROM** matters as much as where they're going.
-
-### Old Model (Wrong)
-- All tourists choose from all 177 countries equally
-- A tourist could just as easily choose Antarctica as France
-
-### New Model (Realistic)
-- Every tourist has a **home country**
-- Regional clustering patterns:
-
-| Home Region | % Stay Intra-regional | Primary Extra-regional | Secondary Extra-regional |
-|-------------|----------------------|------------------------|-------------------------|
-| **Europe** | 65% | Americas (20%) | Asia-Pacific (10%) |
-| **Americas** | 55% | Europe (30%) | Asia-Pacific (10%) |
-| **Asia-Pacific** | 55% | Europe (25%) | Americas (15%) |
-| **Africa** | 45% | Europe (35%) | Middle East (15%) |
-| **Middle East** | 40% | Europe (35%) | Asia-Pacific (20%) |
-
-- **Distance matters**: farther = less likely (but not impossible)
-
-### Why This Matters
-- Creates realistic regional clusters
-- Explains why nearby countries get similar visitor numbers
-- Makes the simulation look like real tourism flows
-
----
-
-## 3. Capacity & Overtourism: What We Learned
-
-**Key Finding**: Destinations have limits, but degradation is **GRADUAL**, not sudden.
-
-### Old Model (Wrong)
-- Single capacity number (e.g., 1M tourists max)
-- Nothing happens until 80%, then sudden crash
-
-### New Model (Realistic)
-
-**4 Separate Capacity Limits**:
-1. **Hotels** - How many beds available?
-2. **Transport** - How many flight seats?
-3. **Infrastructure** - Can roads/water/waste handle it?
-4. **Attractions** - How much can sites handle?
-
-**Bottleneck Rule**: Overall capacity = the WORST of the 4 subsystems
-
-**Linear Degradation**: Above 80% full, attractiveness slowly declines (not suddenly)
+### The Utility Function
 
 ```python
-if arrivals > 0.8 × capacity:
-    degradation = γ × (arrivals/capacity - 0.8)  # Linear, not quadratic
+U(destination) = α·Attractiveness - β·Cost - γ·Crowding - δ·Risk 
+                 - η·Distance + θ·Popularity + ε·SocialMedia + ζ·Memory
 ```
 
-**⚠️ Important Caveat**: We only have good data for hotels. Transport/infrastructure/attractions are rough estimates.
+### The 8 Factors
+
+| Factor | Symbol | Data Source | Weight Range |
+|--------|--------|-------------|--------------|
+| **Attractiveness** | α | WEF TTDI (119 countries) | 0.20-0.50 |
+| **Cost** | β | Numbeo Cost Index (156 countries) | 0.15-0.50 |
+| **Crowding** | γ | Calculated (arrivals/capacity) | 0.10-0.25 |
+| **Risk** | δ | ACLED conflict events | 0.10-0.30 |
+| **Distance** | η | Haversine (great-circle) | 0.15-0.45 |
+| **Popularity** | θ | Log-scale arrivals (endogenous) | 0.10-0.40 |
+| **Social Media** | ε | UGC quality/quantity | 0.20-0.40 |
+| **Memory** | ζ | Return visitor probability | 0.55-0.65 |
+
+### Segment-Specific Preferences
+
+| Segment | Primary Driver | High Weight | Low Weight | Population Share |
+|---------|---------------|-------------|------------|------------------|
+| **Budget** | Affordability | Cost (β=0.50) | Distance (η=0.30) | 30% (configurable) |
+| **Luxury** | Quality | Attractiveness (α=0.50) | Cost (β=0.15) | 20% (configurable) |
+| **Adventure** | Attractions + Risk Tolerance | Attractiveness (α=0.40) | Crowding (γ=0.10) | 25% (configurable) |
+| **Family** | Safety + Balance | Risk (δ=0.25) | Popularity (θ=0.25) | 25% (configurable) |
+
+**Note**: Segment weights are user-configurable parameters for scenario exploration.
 
 ---
 
-## 4. Shocks & Recovery: What We Learned
+## 2. Geographic Structure: Origin-Destination Flows
 
-**Key Finding**: Different disasters have **different impacts** and **recovery patterns**.
+**Core Finding**: Where tourists come from determines where they go through distance friction and regional clustering.
 
-### Shock Types
+### Home Country Assignment
 
-| Disaster Type | Impact | Recovery Time | Pattern |
-|--------------|--------|---------------|---------|
-| **Pandemic** | -70% arrivals | 4-5 years | Double-dip first, then S-curve |
-| **Volcano** | -4% per $1B damage | 1 year | S-curve |
-| **Wildfire** | -0.03% per $1B damage | 6 months | Linear |
-| **Flood** | -0.007% per 1K deaths | 6 months | Linear |
-| **Conflict** | -30% to -50% | 2-8 years | S-curve |
+Each tourist agent has a home country sampled from regional distribution:
 
-### Why Hybrid Recovery?
+| Region | Share of Global Tourists | Intra-regional Flow |
+|--------|-------------------------|---------------------|
+| **Europe** | 45% | 65% stay within Europe |
+| **Americas** | 25% | 55% stay within Americas |
+| **Asia-Pacific** | 20% | 55% stay within Asia-Pacific |
+| **Africa** | 5% | 45% stay within Africa |
+| **Middle East** | 5% | 40% stay within Middle East |
 
-**Years 0-2**: Double-dip pattern
-- People afraid to travel
-- Tentative return, setbacks
+### Distance Friction
 
-**Years 2+**: S-curve
-- Confidence builds
-- Rapid recovery, then plateaus
+**Calculation**: Haversine formula (great-circle distance)
 
-**Formula**:
 ```python
-if years_since_shock < 2.0:
-    recovery = double_dip_pattern()
-else:
-    recovery = 100 / (1 + exp(-0.8 × (years - 2.5)))  # S-curve
+distance_km = haversine(origin_lat, origin_lon, dest_lat, dest_lon)
+distance_penalty = η × (distance_km / 20000)  # Normalized 0-1
+```
+
+**Example Distances**:
+- London → Paris: 344 km → negligible penalty
+- New York → London: 5,585 km → moderate penalty
+- Sydney → London: 17,016 km → strong penalty
+
+### Regional Flow Patterns (Validated from UN Tourism)
+
+| Home Region | Primary Destinations | Secondary Destinations |
+|-------------|---------------------|------------------------|
+| Europe | Europe (65%) | Americas (20%), Asia-Pacific (10%) |
+| Americas | Americas (55%) | Europe (30%), Asia-Pacific (10%) |
+| Asia-Pacific | Asia-Pacific (55%) | Europe (25%), Americas (15%) |
+
+---
+
+## 3. Carrying Capacity: Multi-Subsystem Model
+
+**Core Finding**: Destinations have multiple capacity constraints that create bottlenecks.
+
+### 4 Capacity Subsystems
+
+| Subsystem | Calculation | Data Quality |
+|-----------|-------------|--------------|
+| **Accommodation** | Hotel beds + alternative accommodation × 80% occupancy | HIGH (OECD, UN Tourism) |
+| **Transport** | Airport seats × 75% load factor | MEDIUM (UN Tourism transport) |
+| **Infrastructure** | Population × 15% hosting capacity | LOW (assumption) |
+| **Attractions** | Sum of heritage site capacities | LOW (UNESCO proxy) |
+
+### Bottleneck Approach
+
+```python
+overall_capacity = min(
+    accommodation_capacity,
+    transport_capacity,
+    infrastructure_capacity,
+    attraction_capacity
+)
+```
+
+### Linear Degradation Above Threshold
+
+```python
+utilization = arrivals / capacity
+
+if utilization > 0.80:  # 80% threshold (user-configurable)
+    attractiveness_degradation = γ × (utilization - 0.80)
+```
+
+**Why Linear**: Bertocchi et al. (2020) Venice carrying capacity study shows linear constraints, not quadratic collapse.
+
+---
+
+## 4. Shocks & Recovery: Type-Specific Dynamics
+
+**Core Finding**: Different disaster types have distinct magnitudes and recovery patterns.
+
+### Shock Parameters (Empirically Grounded)
+
+| Shock Type | Magnitude | Duration | Recovery Pattern | Source |
+|------------|-----------|----------|------------------|--------|
+| **Pandemic** | -70% arrivals | 12 months | Hybrid (double-dip + S-curve) | UN Tourism + Škare et al. |
+| **Volcanic eruption** | -4% per $1B cost | 6-12 months | S-curve | Rosselló et al. |
+| **Wildfire** | -0.035% per $1B cost | 3-6 months | Linear | Rosselló et al. |
+| **Flood** | -0.007% per 1K deaths | 6 months | Linear | Rosselló et al. |
+| **Storm** | -0.003% per $1B cost | 6 months | Linear | Rosselló et al. |
+| **Earthquake** | -1.7% per M affected | 12 months | S-curve | Rosselló et al. |
+| **Conflict** | -30% to -50% | Variable | S-curve (2-8 years) | ACLED + assumption |
+
+### Hybrid Recovery Function (Pandemic)
+
+```python
+def recovery_fraction(years_since_shock, shock_type):
+    if shock_type == 'pandemic':
+        if years_since_shock < 2.0:
+            # Double-dip pattern (Škare et al. early phase)
+            return double_dip_recovery(years_since_shock)
+        else:
+            # S-curve fits 2020-2024 UN Tourism data
+            return 100 / (1 + exp(-0.8 × (years_since_shock - 2.5)))
+    elif shock_type in ['flood', 'storm', 'wildfire']:
+        # Linear recovery (Rosselló et al.: 6-12 months)
+        return min(1.0, years_since_shock / 0.5)
+    else:
+        # Default S-curve
+        return 100 / (1 + exp(-0.8 × (years_since_shock - 2.5)))
 ```
 
 ---
 
-## 5. Network Effects: What We Learned
+## 5. Network Effects: Endogenous Popularity
 
-**Key Finding**: Popular destinations become **MORE popular** (rich-get-richer), but with **diminishing returns**.
+**Core Finding**: Destination popularity creates self-reinforcing dynamics with diminishing returns.
 
-### The Mechanism
+### Popularity Feedback Mechanism
 
-```
-Destination gets popular 
-  → More people talk about it 
-    → More people visit 
-      → Even more popular
-```
-
-### But: We Use LOG-Scale
-
-**Prevents winner-take-all**:
-
-| Destination | Annual Arrivals | Popularity Bonus (θ=0.25) |
-|-------------|-----------------|---------------------------|
-| France | 82M | +0.235 |
-| Thailand | 40M | +0.223 |
-| Maldives | 1.7M | +0.095 |
-| Bhutan | 0.3M | +0.070 |
-
-**Why Log-Scale?**:
-- Prevents one destination from dominating everything
-- Allows smaller destinations to compete on other factors (cost, attractions)
-- Matches real-world observation: new destinations emerge even while established ones grow
-
-**Formula**:
 ```python
+# Log-scale popularity (prevents winner-take-all)
 popularity_index = log(previous_period_arrivals + 1) / log(max_arrivals + 1)
+
+# Applied to utility
 utility += θ × popularity_index
 ```
 
----
+### Why Log-Scale?
 
-## 6. What We DON'T Know (Honest Gaps)
+| Destination | Annual Arrivals | Popularity Index | Utility Bonus (θ=0.25) |
+|-------------|-----------------|------------------|------------------------|
+| France | 82M | 0.94 | +0.235 |
+| Spain | 84M | 0.94 | +0.235 |
+| Thailand | 40M | 0.89 | +0.223 |
+| Maldives | 1.7M | 0.38 | +0.095 |
+| Bhutan | 0.3M | 0.28 | +0.070 |
 
-### Critical Admission
+**Benefits**:
+- Prevents monopoly (linear would create winner-take-all)
+- Captures social proof without overwhelming other factors
+- Consistent with Weber-Fechner law (perception is logarithmic)
+- Allows secondary destinations to compete on other factors
 
-Our main attractiveness measure (TTDI) only explains **13% of real tourism patterns**.
+### Segment-Specific Popularity Sensitivity
 
-```
-TTDI correlation: r = 0.364
-R-squared: 0.13
-Interpretation: 87% of variation comes from factors NOT in our model
-```
-
-### Missing Factors
-
-- ❌ Cultural/linguistic affinity
-- ❌ Flight network connectivity
-- ❌ Visa policy/accessibility
-- ❌ Colonial/historical ties
-- ❌ Marketing/advertising spend
-
-### Our Response
-
-1. Frame simulation as **exploration tool**, NOT prediction
-2. Let users adjust uncertain parameters
-3. Focus on "does this look realistic?" not "does this predict exact numbers?"
+| Segment | θ Weight | Rationale |
+|---------|----------|-----------|
+| **Budget** | 0.20 | Moderate trend-following |
+| **Luxury** | 0.30 | Exclusive destinations become more desirable |
+| **Adventure** | 0.10 | Seek undiscovered places |
+| **Family** | 0.25 | Safety in numbers |
 
 ---
 
-## 7. User Configuration: What We're Doing
+## 6. Empirical Foundation: What's Validated
 
-### Key Design Decision
+### Data Sources (8 Integrated Datasets)
 
-**Turn unknowns into experimentation features.**
+| Dataset | Coverage | Records | Key Variables |
+|---------|----------|---------|---------------|
+| **UN Tourism** | 215 countries, 1995-2024 | 163,656 | Arrivals, expenditure, purpose split |
+| **WEF TTDI** | 119 countries, 2024 | 119 | Attractiveness scores (2.78-5.24) |
+| **OECD** | 55 countries, 2008-2023 | ~30,000 | GDP share, nights spent |
+| **ACLED** | Global, 1997-2026 | ~978,000 events | Conflict events, fatalities |
+| **WHO Air Quality** | Global, 1990-2021 | 6,603 | PM2.5 concentrations |
+| **Numbeo Cost** | 156 countries, 2024 | 156 | Cost indices (26.6-135.8) |
+| **UNESCO** | 60 countries, 2024 | 60 | Heritage site counts |
+| **World Bank** | 39 countries, 2010-2024 | ~80 | Political stability |
 
-### Users Can Adjust
+### Key Empirical Findings
 
-| Parameter | Default Range | What It Controls |
-|-----------|--------------|------------------|
-| Segment shares | 5-50% each | What % of tourists are Budget/Luxury/etc. |
-| Distance sensitivity (η) | 0.15-0.45 | How much does distance matter? |
-| Popularity weight (θ) | 0.10-0.40 | How much do trends matter? |
-| Capacity threshold | 60-95% | When does overtourism start? |
-| Recovery speed | 0.5-2.0 years | How fast do destinations recover? |
-| Softmax temperature (τ) | 0.1-5.0 | How deterministic are choices? |
+| Finding | Value | Source | Confidence |
+|---------|-------|--------|------------|
+| Baseline CAGR (2010-2019) | 3.69% | UN Tourism analysis | **HIGH** |
+| Pandemic shock (2020) | -70.6% | UN Tourism 2020 | **HIGH** |
+| Recovery (2024) | 94.5% of 2019 | UN Tourism 2024 | **HIGH** |
+| Business/Personal split | 11%/89% | UN Tourism purpose data | **HIGH** |
+| TTDI correlation | r = 0.364 | Our correlation analysis | **MEDIUM** |
+| Regional clustering (Europe) | 65% intra-regional | UN Tourism flow patterns | **HIGH** |
+| Return visitor probability | 0.55-0.65 | Sönmez & Graefe (1998) | **HIGH** |
+| Business price elasticity | -0.350 | Peng et al. (2014) | **HIGH** |
+| Leisure price elasticity | -1.102 | Peng et al. (2014) | **HIGH** |
 
-### Why This Approach?
+### Critical Limitation
 
-- We don't know the "right" values
-- Different scenarios need different assumptions
-- Users can test "what if luxury travel doubles?" or "what if people become more risk-averse?"
-
----
-
-## 8. Validation: How We'll Know It Works
-
-### 4-Tier Validation Plan
-
-#### Tier 1 (Must Pass) - Aggregate Metrics
-
-| Metric | Target | Acceptable Range | Real Value |
-|--------|--------|------------------|------------|
-| CAGR (2010-2019) | 3.69% | 3.0-4.5% | 3.69% |
-| Pandemic shock (2020) | -70.6% | -65% to -75% | -70.6% |
-| Recovery (2024) | 94.5% | 90-100% | 94.5% |
-
-#### Tier 2 (Should Pass) - Distributional Metrics
-
-| Metric | Target | Acceptable Range | Real Value |
-|--------|--------|------------------|------------|
-| Gini coefficient | 0.71 | 0.60-0.80 | 0.71 |
-| Top 10 share | 48% | 40-60% | 48% |
-| Intra-regional (Europe) | 65% | 55-75% | 65% |
-
-#### Tier 3 (Nice to Have) - Emergent Patterns
-
-- ✅ Hub formation (popular destinations stay popular)
-- ✅ Regional clustering (nearby countries have similar patterns)
-- ✅ Congestion spillover (when hubs get crowded, tourists go elsewhere)
-- ✅ Rich-get-richer dynamics (log-scale popularity)
-
-#### Tier 4 (Sensitivity Tests) - Robustness
-
-- Change parameters ±50%, check if model stays stable
-- No crashes, no extreme outputs
-- Reasonable behavior across parameter ranges
+**TTDI explains only 13% of variance** (r² = 0.13):
+- 87% of tourism variation comes from factors NOT in our model
+- Missing: cultural ties, flight networks, visa policies, marketing, colonial history
+- **Implication**: Model is for **scenario exploration**, NOT prediction
 
 ---
 
-## 9. What's Still Uncertain (Before We Start)
+## 7. User Configuration: Experimentation Framework
 
-### Unresolved Questions
+**Design Philosophy**: Turn data gaps into experimentation parameters.
 
-1. **Utility weights**: Are our segment defaults (Budget=30%, Luxury=20%, etc.) reasonable, or should we just show ranges?
+### Configurable Parameters
 
-2. **Carrying capacity**: We have good hotel data but rough guesses for infrastructure/attractions. Should we simplify to just 2 subsystems?
+| Parameter | Default | Range | What It Controls |
+|-----------|---------|-------|------------------|
+| **Segment shares** | 30/20/25/25 | 5-50% each | Population distribution |
+| **Distance weight (η)** | 0.15-0.35 | 0.05-0.50 | Geographic friction strength |
+| **Popularity weight (θ)** | 0.10-0.30 | 0.0-0.50 | Rich-get-richer strength |
+| **Capacity threshold** | 80% | 60-95% | When overtourism begins |
+| **Recovery speed** | 2.5 years | 1-5 years | How fast destinations recover |
+| **Softmax temperature (τ)** | 1.0 | 0.1-5.0 | Choice determinism |
 
-3. **Correlations**: Our current correlations pool all countries/years together. Should we compute within-country correlations instead?
+### Preset Configurations
 
-4. **Seasonality**: We have hemisphere-based patterns, but should we add 4 climate zones (Mediterranean, Tropical, Temperate, etc.)?
+Users can start with presets or create custom configurations:
 
-5. **Primary purpose**: Are we building this to **validate against history** or to **explore future scenarios**? (Both? But which is priority?)
+1. **Literature-Based Defaults**: Our current parameter values
+2. **Business/Leisure Only**: Simplified 2-segment model (data-backed)
+3. **Equal Segments**: 25/25/25/25 for comparison
+4. **Custom**: User-defined segments and weights
 
----
+### Experimentation Examples
 
-## Summary: What We're Building
-
-### A Simulation Where...
-
-- ✅ Tourist agents with home countries choose destinations
-- ✅ Based on 8 factors (attractiveness, cost, distance, popularity, etc.)
-- ✅ With segment-specific preferences (Budget cares about cost, Luxury cares about quality)
-- ✅ Destinations have capacity limits (4 subsystems, bottleneck approach)
-- ✅ Shocks reduce arrivals (type-specific magnitudes)
-- ✅ Recovery follows patterns (hybrid: double-dip + S-curve)
-- ✅ Popular destinations get more popular (log-scale, not winner-take-all)
-- ✅ Users can adjust uncertain parameters to test scenarios
-
-### What It's Good For
-
-- ✅ "What if" experiments (e.g., "What if budget travel doubles?")
-- ✅ Understanding emergent patterns (hub formation, overtourism)
-- ✅ Exploring plausible dynamics
-- ✅ Scenario exploration with plausibility validation
-
-### What It's NOT Good For
-
-- ❌ Predicting exact tourist numbers
-- ❌ Forecasting future trends
-- ❌ Policy recommendations without further calibration
-- ❌ Replacing econometric forecasting models
+- "What if luxury travel doubles from 20% to 40%?"
+- "What if tourists become 2x more distance-sensitive?"
+- "What if popularity feedback is turned off?"
+- "What if capacity threshold is 90% instead of 80%?"
 
 ---
 
-## Next Steps: Stage 2 Implementation
+## 8. Validation Framework: 4-Tier Approach
+
+### Tier 1: Aggregate Metrics (Must Pass)
+
+| Metric | Target | Acceptable Range | Data Source |
+|--------|--------|------------------|-------------|
+| CAGR (2010-2019) | 3.69% | 3.0-4.5% | UN Tourism |
+| Pandemic shock (2020) | -70.6% | -65% to -75% | UN Tourism |
+| Recovery (2024) | 94.5% | 90-100% | UN Tourism |
+
+### Tier 2: Distributional Metrics (Should Pass)
+
+| Metric | Target | Acceptable Range | Source |
+|--------|--------|------------------|--------|
+| Gini coefficient | 0.71 | 0.60-0.80 | Calculated from UN Tourism |
+| Top 10 share | 48% | 40-60% | UN Tourism |
+| Intra-regional (Europe) | 65% | 55-75% | UN Tourism flow patterns |
+| Median trip distance | 3,500 km | 1,500-5,000 km | Estimate |
+
+### Tier 3: Emergent Patterns (Nice to Have)
+
+- ✅ Hub formation (top destinations attract disproportionate flows)
+- ✅ Regional clustering (nearby countries have correlated flows)
+- ✅ Rich-get-richer (popularity feedback creates concentration)
+- ✅ Congestion spillover (overcrowded hubs lose visitors to alternatives)
+
+### Tier 4: Sensitivity Tests (Robustness)
+
+| Test | Parameter Varied | Expected Response |
+|------|-----------------|-------------------|
+| Distance friction | η ±50% | Regional flows change, global total stable |
+| Popularity weight | θ ±50% | Hub concentration changes (not total) |
+| Shock magnitude | ±20% | Recovery time scales proportionally |
+| Segment distribution | ±10% | Aggregate patterns stable |
+
+---
+
+## 9. Implementation Roadmap
 
 ### Phase 1 (Week 1-2): Minimal Viable Simulation
 
-- Country-level granularity (177 destinations)
-- Business/Personal segments (data-backed)
-- 8-factor utility function
-- Origin-destination structure
-- Multi-subsystem capacity
-- Shock/recovery dynamics
+**Scope**:
+- 177 countries with real data (TTDI, cost, risk)
+- Origin-destination structure (home countries, distance friction)
+- Business/Personal segments (11%/89% from UN Tourism)
+- 8-factor utility function with softmax choice
+- Multi-subsystem capacity (4 subsystems, bottleneck)
+- Shock/recovery dynamics (hybrid model)
+
+**Expected Emergent Patterns**:
+- Regional clustering
+- Hub formation
+- Recovery curves post-shock
 
 ### Phase 2 (Week 3-4): Enhanced Features
 
-- 4 user-configurable segments
-- Popularity feedback (rich-get-richer)
-- Seasonality (4 climate zones)
+**Additions**:
+- 4 user-configurable segments (Budget/Luxury/Adventure/Family)
+- Popularity feedback (rich-get-richer, log-scale)
+- Seasonality (4 climate zones: Mediterranean, Tropical, Temperate, Polar)
+- Social media effects (UGC quality/quantity)
 - Interactive dashboard (Streamlit)
-- Validation tests (4-tier framework)
+- 4-tier validation tests
+
+**Expected Emergent Patterns**:
+- Seasonal oscillation
+- Trend destination dynamics
+- Congestion spillover
 
 ### Phase 3 (Stage 3): Advanced Features
 
+**Future Enhancements**:
 - City-level granularity (top 50 destinations)
-- Full network effects (not just popularity proxy)
-- Supply-side dynamics (marketing, investment)
-- Policy interventions (visa, tourism taxes)
+- Full network effects (social network propagation)
+- Supply-side dynamics (marketing, infrastructure investment)
+- Policy interventions (visa liberalization, tourism taxes)
+- Cultural/linguistic affinity modifiers
+
+---
+
+## Summary: Simulation Architecture
+
+### What We're Building
+
+An agent-based simulation where:
+- Tourist agents with home countries choose destinations
+- Based on 8-factor utility function
+- With segment-specific preferences
+- Destinations have multi-subsystem capacity limits
+- Shocks reduce arrivals with type-specific recovery
+- Popularity creates endogenous rich-get-richer dynamics
+- Users configure parameters for scenario exploration
+
+### Primary Use Case
+
+**Scenario exploration with plausibility validation**:
+- NOT for predicting exact tourist numbers
+- NOT for forecasting future trends
+- YES for understanding emergent dynamics
+- YES for testing "what-if" scenarios
+- YES for exploring plausible futures under different assumptions
+
+### Success Criteria
+
+- ✅ Tier 1 validation (aggregate metrics match historical data)
+- ✅ Tier 2 validation (distributional patterns realistic)
+- ✅ Tier 3 patterns emerge naturally (hubs, clustering, spillover)
+- ✅ Tier 4 robustness (stable across parameter ranges)
+- ✅ User can experiment with configurations and observe outcomes
 
 ---
 

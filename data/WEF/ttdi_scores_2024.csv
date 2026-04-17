@@ -1,0 +1,120 @@
+rank,country,ttdi_score,year
+1,United States,5.24,2024
+2,Spain,5.18,2024
+3,Japan,5.09,2024
+4,France,5.07,2024
+5,Australia,5.0,2024
+6,Germany,5.0,2024
+7,United Kingdom,4.96,2024
+8,China,4.94,2024
+9,Italy,4.9,2024
+10,Switzerland,4.81,2024
+11,Canada,4.81,2024
+12,Portugal,4.78,2024
+13,Singapore,4.76,2024
+14,"Korea, Rep.",4.74,2024
+15,Austria,4.65,2024
+16,Netherlands,4.64,2024
+17,Denmark,4.63,2024
+18,United Arab Emirates,4.62,2024
+19,Sweden,4.57,2024
+20,Finland,4.52,2024
+21,Greece,4.52,2024
+22,Indonesia,4.46,2024
+23,Belgium,4.45,2024
+24,Ireland,4.44,2024
+25,New Zealand,4.41,2024
+26,Brazil,4.41,2024
+27,Poland,4.4,2024
+28,Luxembourg,4.4,2024
+29,Türkiye,4.39,2024
+30,Cyprus,4.37,2024
+31,Chile,4.33,2024
+32,Iceland,4.32,2024
+33,Czech Republic,4.31,2024
+34,Malta,4.3,2024
+35,Malaysia,4.28,2024
+36,Estonia,4.28,2024
+37,Hungary,4.27,2024
+38,Mexico,4.26,2024
+39,India,4.25,2024
+40,Bulgaria,4.25,2024
+41,Saudi Arabia,4.23,2024
+42,Slovenia,4.22,2024
+43,Romania,4.19,2024
+44,Lithuania,4.17,2024
+45,Georgia,4.14,2024
+46,Croatia,4.13,2024
+47,Thailand,4.12,2024
+48,Israel,4.1,2024
+49,Argentina,4.1,2024
+50,Colombia,4.08,2024
+51,Costa Rica,4.08,2024
+52,Kazakhstan,4.07,2024
+53,Qatar,4.02,2024
+54,Slovak Republic,4.0,2024
+55,South Africa,3.99,2024
+56,Azerbaijan,3.98,2024
+57,Mauritius,3.98,2024
+58,Bahrain,3.96,2024
+59,Viet Nam,3.96,2024
+60,Montenegro,3.96,2024
+61,Egypt,3.96,2024
+62,Peru,3.9,2024
+63,Panama,3.9,2024
+64,Dominican Republic,3.88,2024
+65,Latvia,3.88,2024
+66,Albania,3.87,2024
+67,Oman,3.87,2024
+68,Serbia,3.86,2024
+69,Philippines,3.84,2024
+70,Jordan,3.81,2024
+71,Uruguay,3.79,2024
+72,Armenia,3.73,2024
+73,"Iran, Islamic Rep.",3.72,2024
+74,Barbados,3.71,2024
+75,Botswana,3.71,2024
+76,Sri Lanka,3.69,2024
+77,Kenya,3.68,2024
+78,Uzbekistan,3.68,2024
+79,Lebanon,3.66,2024
+80,Ecuador,3.66,2024
+81,Tanzania,3.65,2024
+82,Morocco,3.64,2024
+83,Tunisia,3.6,2024
+84,Jamaica,3.59,2024
+85,Mongolia,3.57,2024
+86,Cambodia,3.57,2024
+87,North Macedonia,3.53,2024
+88,Moldova,3.53,2024
+89,Trinidad and Tobago,3.52,2024
+90,Bosnia and Herzegovina,3.51,2024
+91,Lao PDR,3.48,2024
+92,Paraguay,3.47,2024
+93,Rwanda,3.45,2024
+94,Bolivia,3.45,2024
+95,Namibia,3.45,2024
+96,Kuwait,3.44,2024
+97,El Salvador,3.43,2024
+98,Algeria,3.42,2024
+99,Tajikistan,3.42,2024
+100,Guatemala,3.42,2024
+101,Pakistan,3.41,2024
+102,Kyrgyz Republic,3.38,2024
+103,Venezuela,3.34,2024
+104,Zambia,3.34,2024
+105,Nepal,3.34,2024
+106,Ghana,3.28,2024
+107,Senegal,3.24,2024
+108,Nicaragua,3.24,2024
+109,Bangladesh,3.19,2024
+110,Zimbabwe,3.19,2024
+111,Honduras,3.19,2024
+112,Nigeria,3.18,2024
+113,Benin,3.16,2024
+114,Côte d'Ivoire,3.13,2024
+115,Malawi,3.06,2024
+116,Angola,3.05,2024
+117,Cameroon,2.99,2024
+118,Sierra Leone,2.89,2024
+119,Mali,2.78,2024

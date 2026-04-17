@@ -175,31 +175,66 @@ data/
 ## 4. Open Questions
 
 ### Resolved ✅
-1. **Tourist heterogeneity**: Yes, 4 segments (Budget, Luxury, Adventure, Family) with different weights
-2. **Attractiveness modeling**: WEF TTDI scores (0-100 scale)
-3. **Crowding**: Density-based (tourists/capacity), threshold at 80%
-4. **Risk factors**: Composite score (0-1), critical threshold at 0.7
+
+1. **Tourist heterogeneity**: Yes, 4 segments (Budget, Luxury, Adventure, Family) with different weights - **USER-CONFIGURABLE**
+2. **Attractiveness modeling**: WEF TTDI scores (0-100 scale, normalized 0-1)
+3. **Crowding**: Multi-subsystem capacity (accommodation, transport, infrastructure, attractions), LINEAR degradation above 80% threshold
+4. **Risk factors**: ACLED conflict events → risk perception (Rosselló coefficient: -0.76)
+5. **Geographic structure**: Origin-destination with home countries, great-circle distance friction
+6. **Network effects**: Popularity feedback (log-scale, rich-get-richer) - **INCLUDED in v2.0**
+7. **Memory/learning**: Return visitor probability (0.55-0.65 from Sönmez & Graefe)
+8. **Regional clustering**: 5 regions with intra-regional flow patterns (65% for Europe)
+9. **Model purpose**: **Exploratory sandbox, NOT predictive** (TTDI r² = 0.13 acknowledged)
 
 ### Remaining ❓
-1. **Time granularity**: Monthly vs yearly timestep? (Recommendation: monthly for seasonality)
-2. **Capacity limits**: Hard cap or soft degradation of attractiveness?
-3. **Network effects**: Include word-of-mouth dynamics in Stage 2 or later?
-4. **Learning**: Should agents remember experiences across timesteps?
+
+1. **Time granularity**: Monthly recommended for seasonality, but computationally heavier than yearly
+2. **Flight network proxy**: Use distance + GDP, or get actual flight connectivity data?
+3. **Cultural affinity**: Add linguistic/colonial ties as additional friction modifier?
+4. **City-level**: Stage 2 (top 10 cities) or Stage 3 (comprehensive)?
+5. **Supply-side dynamics**: Include destination marketing, infrastructure investment in Stage 3?
+6. **Validation automation**: Real-time validation dashboard during simulation, or post-hoc analysis?
 
 ---
 
 ## 5. Technical Stack
 
-### Data Analysis (Stage 1) ✅
-- Python (pandas, numpy)
+### Data Analysis (Stage 1) ✅ COMPLETE
+- Python (pandas, numpy, scipy)
 - Visualization (matplotlib, seaborn)
-- Requests (API data collection)
+- PDF extraction (pdfplumber)
+- Data merging (custom scripts)
 
-### Simulation (Stage 2) - Proposed
-- Python with Mesa (agent-based modeling framework)
-- NetworkX for destination connectivity
-- Streamlit for interactive visualization
-- pytest for validation tests
+### Simulation (Stage 2) - Implementation Plan
+- **Core Framework**: Python with Mesa (agent-based modeling)
+- **Geographic Calculations**: haversine formula (custom implementation)
+- **Network Effects**: NetworkX (for future full network modeling)
+- **Visualization**: 
+  - Static: matplotlib, seaborn
+  - Interactive: Streamlit dashboard
+- **Validation**: pytest (automated validation tests)
+- **Data Management**: pandas, numpy (existing merged dataset)
+
+**Architecture**:
+```
+simulation/
+├── agents/
+│   ├── tourist.py (with home_country, segment, memory)
+│   └── segments.py (user-configurable parameters)
+├── destinations/
+│   ├── destination.py (multi-subsystem capacity)
+│   └── capacity.py (4 subsystems: accommodation, transport, infrastructure, attractions)
+├── dynamics/
+│   ├── utility.py (8-factor utility function)
+│   ├── choice.py (softmax with distance + popularity)
+│   ├── shocks.py (hybrid recovery model)
+│   └── popularity.py (log-scale feedback)
+├── visualization/
+│   └── dashboard.py (Streamlit interface)
+└── validation/
+    ├── metrics.py (4-tier validation)
+    └── tests.py (automated test suite)
+```
 
 ---
 

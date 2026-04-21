@@ -628,12 +628,135 @@ All segment-specific parameters, choice mechanism details, and behavioral parame
 
 ---
 
+## 11. Tourism Friendliness Index (TFI) - NEW
+
+### 11.1 Concept
+
+**Tourism Friendliness Index** models resident attitudes and policy responses to overtourism as a **destination-state moderator** (not utility factor).
+
+**Literature Foundation**:
+- Muler González et al. (2018): 80% capacity triggers resident dissatisfaction
+- Cheung & Li (2019): Visitor-resident conflict as overtourism indicator
+- Bertocchi et al. (2020): Social carrying capacity (distinct from physical)
+- Butler (2019): Resident attitudes create dynamic capacity limits
+
+---
+
+### 11.2 Mathematical Formulation
+
+```python
+# TFI ∈ [0, 1]  # 1 = welcoming, 0 = hostile
+
+# Dynamic update (per timestep)
+if crowding_ratio > 0.8:
+    TFI -= 0.05  # Resident hostility grows
+else:
+    TFI += 0.02  # Recovery toward baseline (slower than decline)
+
+# Policy response thresholds
+if TFI < 0.4:
+    # Restrictive policies activate
+    effective_capacity *= 0.7   # Tourist taxes, visa restrictions
+    attractiveness *= 0.8       # Negative media coverage
+elif TFI < 0.6:
+    # Moderate restrictions
+    effective_capacity *= 0.85
+    attractiveness *= 0.9
+else:
+    # Normal conditions (no penalty)
+    pass
+
+# Hysteresis: Recovery requires sustained low crowding
+# (residents remember negative impacts)
+```
+
+---
+
+### 11.3 TFI Parameters
+
+| Parameter | Symbol | Value | Range | Source | Confidence |
+|-----------|--------|-------|-------|--------|------------|
+| **Baseline TFI** | TFI₀ | 0.80 | 0.70-0.90 | Assumption (most destinations start welcoming) | Medium |
+| **Hostility growth rate** | ρ↓ | 0.05/step | 0.03-0.08 | Muler González et al. (2018) | Medium |
+| **Recovery rate** | ρ↑ | 0.02/step | 0.01-0.03 | Cheung & Li (2019) - hysteresis | Medium |
+| **Crowding threshold** | τ_crowd | 0.80 | 0.75-0.85 | Muler González et al. (2018) | **HIGH** ✅ |
+| **Policy threshold (severe)** | τ_policy_severe | 0.40 | 0.30-0.50 | Assumption (based on Venice, Barcelona cases) | Low |
+| **Policy threshold (moderate)** | τ_policy_moderate | 0.60 | 0.50-0.70 | Assumption | Low |
+| **Capacity penalty (severe)** | κ_cap_severe | 0.70 | 0.60-0.80 | Assumption (Venice cruise ban ~30% reduction) | Low |
+| **Capacity penalty (moderate)** | κ_cap_moderate | 0.85 | 0.80-0.90 | Assumption | Low |
+| **Attractiveness penalty (severe)** | κ_att_severe | 0.80 | 0.70-0.90 | Assumption (negative media impact) | Low |
+| **Attractiveness penalty (moderate)** | κ_att_moderate | 0.90 | 0.85-0.95 | Assumption | Low |
+
+---
+
+### 11.4 Real-World Examples (TFI < 0.4 Cases)
+
+| Destination | Policy Response | Year | Impact |
+|-------------|-----------------|------|--------|
+| **Venice, Italy** | Cruise ship ban (large ships) | 2021 | -30% day-tripper capacity |
+| **Barcelona, Spain** | Tourist apartment license freeze | 2019 | -20% accommodation capacity |
+| **Amsterdam, Netherlands** | "Stay Away" marketing campaign | 2019-2020 | -15% attractiveness (targeted) |
+| **Bhutan** | Tourist visa fee increase ($200→$650/day) | 2022 | -50% arrivals (intentional) |
+| **Dubrovnik, Croatia** | Cruise visitor caps (8,000/day) | 2019 | -25% peak-day capacity |
+| **Maya Bay, Thailand** | Complete closure (4 years) | 2018-2022 | -100% (temporary) |
+
+---
+
+### 11.5 Implementation Notes
+
+**TFI is NOT added to the utility function** (keeps utility at 8 factors). Instead:
+
+```python
+# In destination.update() method:
+def update_tfi(self, crowding_ratio):
+    if crowding_ratio > 0.80:
+        self.tfi = max(0.0, self.tfi - 0.05)
+    else:
+        self.tfi = min(1.0, self.tfi + 0.02)
+
+# In destination.effective_capacity property:
+@property
+def effective_capacity(self):
+    base_cap = self.capacity
+    if self.tfi < 0.4:
+        return base_cap * 0.70  # Severe restrictions
+    elif self.tfi < 0.6:
+        return base_cap * 0.85  # Moderate restrictions
+    else:
+        return base_cap  # Normal
+
+# In destination.effective_attractiveness property:
+@property
+def effective_attractiveness(self):
+    base_att = self.attractiveness
+    if self.tfi < 0.4:
+        return base_att * 0.80  # Negative media/reputation
+    elif self.tfi < 0.6:
+        return base_att * 0.90
+    else:
+        return base_att
+```
+
+---
+
+### 11.6 Validation Targets (Future)
+
+| Metric | Target | Data Source | Status |
+|--------|--------|-------------|--------|
+| TFI decline rate | 0.05/step when crowding > 80% | Case studies (Venice, Barcelona) | ⚠️ Needs calibration |
+| Policy activation threshold | TFI < 0.4 triggers restrictions | News/policy timeline analysis | ⚠️ Needs research |
+| Capacity reduction magnitude | 20-30% when policies active | Destination statistics | ⚠️ Needs calibration |
+| Hysteresis ratio (recovery/decline) | 0.4 (recovery 2.5× slower) | Cheung & Li (2019) | ⚠️ Assumption |
+
+---
+
 ## Next Steps
 
 1. **Complete literature search** on OpenAlex and Google Scholar
 2. **Update this document** with full citations (DOI, URLs)
 3. **Flag any parameters** that cannot be verified (mark as assumptions)
 4. **Create calibration plan** for parameters with weak/no literature support
+5. **Implement TFI** in simulation (new destination class attribute)
 
 ---
 

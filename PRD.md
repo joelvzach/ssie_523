@@ -84,11 +84,12 @@ data/
 
 **Agent Type**: Tourists (individual agents with home countries)
 
-**Enhanced Key Dynamics** (v2.0):
+**Enhanced Key Dynamics** (v2.1):
 - **Origin-Destination Structure**: Each tourist has a home country
 - **Geographic Friction**: Distance decay in destination choice
 - **Network Effects**: Popularity feedback (rich-get-richer)
 - **Regional Clustering**: Realistic flow patterns (65% intra-regional for Europe)
+- **Tourism Friendliness**: Resident attitudes → policy feedback loop (NEW v2.1)
 - Destination choice based on:
   - Attractiveness (TTDI score)
   - Affordability (cost index)
@@ -102,15 +103,17 @@ data/
 **Deliverables**:
 - [ ] Simulation code (Python/Mesa)
   - [ ] Agent classes (tourist agents with home countries)
-  - [ ] Destination classes (multi-subsystem capacity)
+  - [ ] Destination classes (multi-subsystem capacity + TFI)
   - [ ] Utility function (8 factors)
   - [ ] Softmax choice mechanism
   - [ ] Shock/recovery dynamics (hybrid model)
+  - [ ] **Tourism Friendliness Index (TFI) dynamics** (NEW v2.1)
 - [ ] Visualization of emergent patterns
   - [ ] Hub formation
   - [ ] Regional clustering
   - [ ] Congestion spillover
   - [ ] Rich-get-richer dynamics
+  - [ ] **Policy feedback loops (TFI-driven)** (NEW v2.1)
 - [ ] Validation against historical data
   - [ ] Tier 1: Aggregate metrics (CAGR, shock, recovery)
   - [ ] Tier 2: Distributional metrics (Gini, top 10 share)
@@ -120,6 +123,7 @@ data/
   - [ ] User-configurable segments
   - [ ] Parameter tuning interface
   - [ ] Scenario exploration
+  - [ ] **TFI visualization (resident attitudes over time)** (NEW v2.1)
 
 **Implementation Plan**:
 - **Phase 1 (Week 1-2)**: Minimal viable simulation (country-level, Business/Personal segments, baseline dynamics)
@@ -156,6 +160,7 @@ data/
 - [ ] Multi-subsystem capacity (4 subsystems)
 - [ ] Social media/WOM effects
 - [ ] Seasonality (±20% amplitude)
+- [ ] **Tourism Friendliness Index (TFI) dynamics** (NEW v2.1)
 - [ ] Interactive visualization (Streamlit)
 - [ ] Validation dashboard (real-time metrics)
 
@@ -163,7 +168,7 @@ data/
 - [ ] City-level granularity (top 50 destinations)
 - [ ] Full network effects (not just popularity proxy)
 - [ ] Supply-side dynamics (marketing, investment)
-- [ ] Policy interventions (visa, tourism taxes)
+- [ ] Policy interventions (visa, tourism taxes) **← Now modeled via TFI**
 
 **Validation Requirements**:
 - **Tier 1 (Must Pass)**: CAGR 3.0-4.5%, Shock -65% to -75%, Recovery 90-100%
@@ -185,6 +190,7 @@ data/
 7. **Memory/learning**: Return visitor probability (0.55-0.65 from Sönmez & Graefe)
 8. **Regional clustering**: 5 regions with intra-regional flow patterns (65% for Europe)
 9. **Model purpose**: **Exploratory sandbox, NOT predictive** (TTDI r² = 0.13 acknowledged)
+10. **Tourism Friendliness**: TFI models resident attitudes → policy feedback (Muler González et al., Cheung & Li) - **INCLUDED in v2.1**
 
 ### Remaining ❓
 
@@ -222,17 +228,19 @@ simulation/
 │   ├── tourist.py (with home_country, segment, memory)
 │   └── segments.py (user-configurable parameters)
 ├── destinations/
-│   ├── destination.py (multi-subsystem capacity)
-│   └── capacity.py (4 subsystems: accommodation, transport, infrastructure, attractions)
+│   ├── destination.py (multi-subsystem capacity + TFI)
+│   ├── capacity.py (4 subsystems: accommodation, transport, infrastructure, attractions)
+│   └── tfi.py (Tourism Friendliness Index dynamics) ← NEW v2.1
 ├── dynamics/
 │   ├── utility.py (8-factor utility function)
 │   ├── choice.py (softmax with distance + popularity)
 │   ├── shocks.py (hybrid recovery model)
-│   └── popularity.py (log-scale feedback)
+│   ├── popularity.py (log-scale feedback)
+│   └── tfi_dynamics.py (resident attitudes → policy feedback) ← NEW v2.1
 ├── visualization/
-│   └── dashboard.py (Streamlit interface)
+│   └── dashboard.py (Streamlit interface with TFI tracking)
 └── validation/
-    ├── metrics.py (4-tier validation)
+    ├── metrics.py (4-tier validation + TFI metrics)
     └── tests.py (automated test suite)
 ```
 

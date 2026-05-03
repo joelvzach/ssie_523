@@ -60,15 +60,42 @@ class PlannedEvent:
 
     def is_active(self, tick_date: datetime) -> bool:
         """
-        Check if event is active on given date.
+        Check if event is active on given date (during event period only).
 
         Args:
             tick_date: Current simulation date
 
         Returns:
-            True if event is active
+            True if event is within start_date and end_date
         """
         return self.start_date <= tick_date <= self.end_date
+
+    def has_utility_bonus(self, tick_date: datetime) -> bool:
+        """
+        Check if event provides utility bonus on given date.
+
+        Includes pre-event ramp-up and post-event decline periods.
+
+        Args:
+            tick_date: Current simulation date
+
+        Returns:
+            True if event provides any utility bonus
+        """
+        # Pre-event period
+        if self.pre_event_start <= tick_date < self.start_date:
+            return True
+        
+        # Event period
+        if self.is_active(tick_date):
+            return True
+        
+        # Post-event period (15 days)
+        days_since_end = (tick_date - self.end_date).days
+        if 0 < days_since_end <= 15:
+            return True
+        
+        return False
 
     def get_utility_bonus(self, tourist_segment: str, tick_date: datetime) -> float:
         """
@@ -160,16 +187,38 @@ class PlannedEventManager:
         self, tick_date: datetime, country_code: Optional[str] = None
     ) -> List[PlannedEvent]:
         """
-        Get events active on given date.
+        Get events active on given date (during event period only).
 
         Args:
             tick_date: Current simulation date
             country_code: Optional filter by country
 
         Returns:
-            List of active PlannedEvent objects
+            List of active PlannedEvent objects (event period only)
         """
         active = [e for e in self.events if e.is_active(tick_date)]
+
+        if country_code:
+            active = [e for e in active if e.country_code == country_code]
+
+        return active
+
+    def get_events_with_utility_bonus(
+        self, tick_date: datetime, country_code: Optional[str] = None
+    ) -> List[PlannedEvent]:
+        """
+        Get events providing utility bonus on given date.
+
+        Includes pre-event ramp-up and post-event decline periods.
+
+        Args:
+            tick_date: Current simulation date
+            country_code: Optional filter by country
+
+        Returns:
+            List of PlannedEvent objects with non-zero utility bonus
+        """
+        active = [e for e in self.events if e.has_utility_bonus(tick_date)]
 
         if country_code:
             active = [e for e in active if e.country_code == country_code]
@@ -182,15 +231,18 @@ class PlannedEventManager:
         """
         Get total utility bonus for a destination.
 
+        Includes pre-event ramp-up and post-event decline periods.
+
         Args:
             country_code: Destination country code
             tourist_segment: Tourist segment
             tick_date: Current simulation date
 
         Returns:
-            Total utility bonus from all active events
+            Total utility bonus from all events with non-zero bonus
         """
-        active_events = self.get_active_events(tick_date, country_code)
+        # Use get_events_with_utility_bonus to include pre/post-event periods
+        active_events = self.get_events_with_utility_bonus(tick_date, country_code)
 
         total_bonus = sum(
             e.get_utility_bonus(tourist_segment, tick_date) for e in active_events

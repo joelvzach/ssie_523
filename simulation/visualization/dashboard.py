@@ -490,14 +490,14 @@ def render_top_destinations(sim):
         axis=1,
     )
 
+    # Use neutral color for bars (bar length = visitors, emoji = crowding level)
     fig = px.bar(
         top_10,
         x="visitors",
         y="display",
         orientation="h",
         title="Top 10 Destinations by Current Visitors (🟢LOW 🟡MED 🟠HIGH 🔴CRIT)",
-        color="capacity_util",
-        color_continuous_scale="RdYlGn_r",
+        color_discrete_sequence=["#1f77b4"],  # Neutral blue
     )
 
     fig.update_layout(
@@ -506,6 +506,7 @@ def render_top_destinations(sim):
         xaxis_title="Current Visitors",
         yaxis_title="Country",
         yaxis=dict(showticklabels=True),
+        showlegend=False,
     )
 
     st.plotly_chart(fig, use_container_width=True)

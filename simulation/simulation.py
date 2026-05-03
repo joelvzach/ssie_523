@@ -2,9 +2,12 @@
 Main simulation class orchestrating agents, destinations, and dynamics.
 """
 
+import logging
 import random
 from typing import Dict, List, Optional, Set
 from datetime import datetime
+
+logger = logging.getLogger(__name__)
 
 from simulation.agents.tourist import Tourist
 from simulation.destinations.destination import Destination

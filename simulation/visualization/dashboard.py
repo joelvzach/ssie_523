@@ -112,7 +112,7 @@ def create_simulation(agent_count: int = 4000):
                     magnitude=event_config["magnitude"],
                     segment_appeal=event_config["appeal"],
                     expected_footfall=500000,  # Default value (removed from UI)
-                    pre_event_days=30,  # Default value (removed from UI)
+                    pre_event_days=event_config.get("pre_event_days", 30),
                 )
                 sim.planned_events.add_event(event)
 
@@ -707,7 +707,7 @@ def main():
                     st.session_state.configured_events = [
                         {
                             "name": "FIFA World Cup 2026",
-                            "country": "US",
+                            "country": "USA",  # Use ISO3 code to match destination data
                             "start": datetime(2026, 6, 1),
                             "end": datetime(2026, 7, 15),
                             "magnitude": 0.8,
@@ -717,6 +717,7 @@ def main():
                                 "adventure": 0.5,
                                 "family": 0.9,
                             },
+                            "pre_event_days": 45,  # Start ramp-up from April 17
                         }
                     ]
 
@@ -746,17 +747,17 @@ def main():
                 new_event_country = st.selectbox(
                     "Host Country",
                     options=[
-                        "US",
-                        "FR",
-                        "ES",
-                        "IT",
-                        "GB",
-                        "DE",
-                        "CN",
-                        "JP",
-                        "AU",
-                        "BR",
-                        "MX",
+                        "USA",
+                        "FRA",
+                        "ESP",
+                        "ITA",
+                        "GBR",
+                        "DEU",
+                        "CHN",
+                        "JPN",
+                        "AUS",
+                        "BRA",
+                        "MEX",
                     ],
                     key="new_event_country",
                 )
@@ -785,6 +786,11 @@ def main():
                         "Family", 0.0, 1.0, 0.8, 0.1, key="appeal_family"
                     )
 
+                # Pre-event days input
+                pre_event_days = st.slider(
+                    "Pre-event ramp-up (days)", 0, 90, 45, 5, key="pre_event_days"
+                )
+
                 if st.button("Add Event", use_container_width=True):
                     if new_event_name:
                         st.session_state.configured_events.append(
@@ -804,6 +810,7 @@ def main():
                                     "adventure": appeal_adventure,
                                     "family": appeal_family,
                                 },
+                                "pre_event_days": pre_event_days,
                             }
                         )
                         st.success(f"Added {new_event_name}!")

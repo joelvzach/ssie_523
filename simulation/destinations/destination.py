@@ -157,7 +157,7 @@ class Destination:
 
     def add_arrival(self, count: int = 1):
         """
-        Record new arrival(s).
+        Record new arrival(s) to current day.
 
         Args:
             count: Number of arriving tourists
@@ -166,7 +166,7 @@ class Destination:
             # First arrival: initialize with count
             self.daily_arrivals.append(count)
         else:
-            # Add to most recent day
+            # Add to current day (most recent)
             self.daily_arrivals[-1] += count
 
     def update(self, tick: int):
@@ -177,6 +177,13 @@ class Destination:
             tick: Current simulation tick
         """
         self.current_tick = tick
+
+        # Add new day to daily_arrivals queue (for agents arriving this tick)
+        self.daily_arrivals.append(0)
+
+        # Remove arrivals older than 30-day rolling window
+        if len(self.daily_arrivals) > 30:
+            self.daily_arrivals.pop(0)
 
         # Update TFI based on crowding
         crowding = self.get_crowding_ratio()

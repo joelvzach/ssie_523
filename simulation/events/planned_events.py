@@ -22,6 +22,7 @@ class PlannedEvent:
         magnitude: float = 0.5,
         segment_appeal: Dict[str, float] = None,
         expected_footfall: int = 100000,
+        pre_event_days: int = 30,
     ):
         """
         Initialize planned event.
@@ -34,6 +35,7 @@ class PlannedEvent:
             magnitude: Base impact strength (0.0-1.0)
             segment_appeal: Appeal by segment (0.0-1.0)
             expected_footfall: Expected additional visitors
+            pre_event_days: Days before event for ramp-up (linear increase from 0% to 30% of full effect)
         """
         self.name = name
         self.country_code = country_code
@@ -41,6 +43,8 @@ class PlannedEvent:
         self.end_date = end_date
         self.magnitude = magnitude
         self.expected_footfall = expected_footfall
+        self.pre_event_days = pre_event_days
+        self.pre_event_start = start_date - timedelta(days=pre_event_days)
 
         # Default segment appeal (can be customized)
         self.segment_appeal = segment_appeal or {
@@ -70,32 +74,43 @@ class PlannedEvent:
         """
         Calculate utility bonus for a tourist.
 
-        Uses bell curve distribution peaking at event midpoint.
+        Uses linear ramp-up before event, bell curve during event, and linear decline after.
 
         Args:
             tourist_segment: Tourist segment
             tick_date: Current simulation date
 
         Returns:
-            Utility bonus (0.0 if not active or not appealed)
+            Utility bonus (0.0 if not in pre-event, event, or post-event period)
         """
-        if not self.is_active(tick_date):
-            return 0.0
-
         # Get segment-specific appeal
         appeal = self.segment_appeal.get(tourist_segment, 0.5)
 
-        # Bell curve distribution over event duration
-        days_from_peak = (tick_date - self.peak_date).days
-        sigma = self.duration_days / 4  # Spread parameter
+        # Pre-event linear ramp-up (0% → 30% of full magnitude)
+        if self.pre_event_start <= tick_date < self.start_date:
+            days_into_pre = (tick_date - self.pre_event_start).days
+            ramp_factor = days_into_pre / self.pre_event_days  # Linear: 0.0 → 1.0
+            return self.magnitude * 0.3 * appeal * ramp_factor
 
-        # Bell curve: exp(-0.5 * (x/σ)²)
-        curve_factor = math.exp(-0.5 * (days_from_peak / sigma) ** 2)
+        # During event: bell curve distribution
+        if self.is_active(tick_date):
+            days_from_peak = (tick_date - self.peak_date).days
+            sigma = self.duration_days / 4  # Spread parameter
 
-        # Final bonus
-        bonus = self.magnitude * appeal * curve_factor
+            # Bell curve: exp(-0.5 * (x/σ)²)
+            curve_factor = math.exp(-0.5 * (days_from_peak / sigma) ** 2)
 
-        return bonus
+            # Final bonus
+            bonus = self.magnitude * appeal * curve_factor
+            return bonus
+
+        # Post-event linear decline (20% → 0% over 15 days)
+        days_since_end = (tick_date - self.end_date).days
+        if 0 < days_since_end <= 15:
+            decline_factor = 1.0 - (days_since_end / 15)  # Linear decline
+            return self.magnitude * 0.2 * appeal * decline_factor
+
+        return 0.0
 
     def to_dict(self) -> dict:
         """Serialize event to dictionary."""
@@ -223,7 +238,7 @@ def create_fifa_world_cup_2026() -> PlannedEvent:
     """Create FIFA World Cup 2026 event (USA)."""
     return PlannedEvent(
         name="FIFA World Cup 2026",
-        country_code="US",
+        country_code="USA",  # Use ISO3 code to match destination data
         start_date=datetime(2026, 6, 1),
         end_date=datetime(2026, 7, 15),
         magnitude=0.8,
@@ -234,6 +249,7 @@ def create_fifa_world_cup_2026() -> PlannedEvent:
             "family": 0.9,
         },
         expected_footfall=1000000,
+        pre_event_days=45,  # Start ramp-up from April 17
     )
 
 

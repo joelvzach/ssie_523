@@ -266,6 +266,36 @@ class Simulation:
         for dest in self.destinations.values():
             dest.update(self.tick)
 
+        # Diagnostic logging every 100 ticks
+        if self.tick % 100 == 0 and self.tick > 0:
+            logger.info(f"=== Tick {self.tick} Diagnostic ===")
+
+            # Top 5 destinations by visitors
+            top_5 = sorted(
+                self.destinations.items(),
+                key=lambda x: x[1].get_current_visitors(),
+                reverse=True,
+            )[:5]
+
+            for code, dest in top_5:
+                logger.info(
+                    f"{code}: {dest.get_current_visitors()} visitors, "
+                    f"{dest.get_crowding_ratio() * 100:.1f}% util, "
+                    f"TFI={dest.tfi:.2f}"
+                )
+
+            # Check for anomalies
+            for code, dest in self.destinations.items():
+                if dest.get_crowding_ratio() > 2.0:
+                    logger.warning(
+                        f"{code}: CRITICAL - {dest.get_crowding_ratio() * 100:.0f}% capacity!"
+                    )
+
+                if dest.tfi < 0.50:
+                    logger.warning(
+                        f"{code}: LOW TFI - {dest.tfi:.2f} (policy response active)"
+                    )
+
         # 2. Get choice set (top 50 destinations)
         choice_set = self._get_top_destinations(self.config["choice_set_size"])
 

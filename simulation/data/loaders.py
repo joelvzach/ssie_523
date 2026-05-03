@@ -79,7 +79,8 @@ def load_country_data(data_dir: Path = None) -> List[Dict]:
         # Assumption: 30% of annual arrivals stay in hotels
         # Average stay: 7 days, occupancy rate: 60%
         # hotel_beds = (arrivals * 0.30 * 7) / (365 * 0.60)
-        arrivals = data.get("arrivals", 0)
+        # NOTE: arrivals in dataset are in THOUSANDS, convert to actual count
+        arrivals = data.get("arrivals", 0) * 1000  # Convert thousands to actual
         estimated_hotel_beds = int((arrivals * 0.30 * 7) / (365 * 0.60))
         hotel_beds = max(1000, estimated_hotel_beds)  # Minimum 1000 beds
 

@@ -40,18 +40,20 @@ class Tourist:
     Tourist agent that makes destination choices based on utility function.
     """
 
-    def __init__(self, agent_id: str, segment: str, home_country: str):
+    def __init__(self, agent_id: str, segment: str, home_country: str, home_country_code: str = None):
         """
         Initialize tourist agent.
 
         Args:
             agent_id: Unique identifier
             segment: 'budget', 'luxury', 'adventure', or 'family'
-            home_country: Home country code (ISO 3166-1 alpha-2)
+            home_country: Home country name (e.g., 'United States of America', 'France')
+            home_country_code: Home country code (e.g., '840', '250') for distance/visa lookups
         """
         self.agent_id = agent_id
         self.segment = segment
-        self.home_country = home_country
+        self.home_country = home_country  # Country name for display
+        self.home_country_code = home_country_code or home_country  # Code for lookups (fallback to name)
 
         # Determine purpose based on segment
         self.purpose = (

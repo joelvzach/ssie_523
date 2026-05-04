@@ -111,7 +111,9 @@ def choose_destination(
     accessible = []
     for dest in destinations:
         if visa_lookup_func:
-            friction = visa_lookup_func(dest.country_code, tourist.home_country)
+            # Use home_country_code for visa lookup (numeric/ISO3 code)
+            origin_code = tourist.home_country_code
+            friction = visa_lookup_func(dest.country_code, origin_code)
             if friction >= 1.0:  # BANNED
                 continue
         accessible.append(dest)
@@ -122,7 +124,9 @@ def choose_destination(
     # 2. Calculate utilities for each accessible destination
     utilities = []
     for dest in accessible:
-        distance = distance_matrix.get((tourist.home_country, dest.country_code), 0.0)
+        # Use home_country_code for distance lookup
+        origin_code = tourist.home_country_code
+        distance = distance_matrix.get((origin_code, dest.country_code), 0.0)
 
         event_bonus = 0.0
         if event_bonus_func:
@@ -130,7 +134,7 @@ def choose_destination(
 
         visa_friction = 0.0
         if visa_lookup_func:
-            visa_friction = get_visa_friction(dest.country_code, tourist.home_country)
+            visa_friction = get_visa_friction(dest.country_code, origin_code)
 
         utility = calculate_utility(
             tourist,

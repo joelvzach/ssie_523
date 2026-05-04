@@ -174,6 +174,10 @@ class Simulation:
         agent_count = self.config["agent_count"]
         shares = self.config["segment_shares"]
 
+        # Create mappings for country code/name conversion
+        code_to_name = {c["code"]: c["name"] for c in self.countries_data}
+        name_to_code = {c["name"]: c["code"] for c in self.countries_data}
+        
         # Sample home countries from country data
         country_codes = [c["code"] for c in self.countries_data]
 
@@ -181,13 +185,20 @@ class Simulation:
         for segment, share in shares.items():
             count = int(agent_count * share)
             for _ in range(count):
-                home = random.choice(country_codes)
+                home_code = random.choice(country_codes)
+                home_name = code_to_name[home_code]
                 self.agents.append(
                     Tourist(
-                        agent_id=f"T-{agent_id:05d}", segment=segment, home_country=home
+                        agent_id=f"T-{agent_id:05d}", 
+                        segment=segment, 
+                        home_country=home_name,  # Store country name for display
+                        home_country_code=home_code  # Store code for distance/visa lookups
                     )
                 )
                 agent_id += 1
+        
+        # Store name-to-code mapping for use in other modules
+        self.name_to_code = name_to_code
 
     def _select_sampled_agents(self):
         """Select 100 agents for trajectory tracking."""
@@ -322,9 +333,9 @@ class Simulation:
                     )
 
                     if dest_code and dest_code in self.destinations:
-                        # Get distance
+                        # Get distance (use country code for lookup)
                         distance = get_distance(
-                            agent.home_country, dest_code, self.distance_matrix
+                            agent.home_country_code, dest_code, self.distance_matrix
                         )
 
                         # Check shock impact (Phase 2)
@@ -340,10 +351,10 @@ class Simulation:
                             # Record arrival at destination
                             self.destinations[dest_code].add_arrival(1)
 
-                            # Record trip for data collection
+                            # Record trip for data collection (use country name for origin)
                             self.data_collector.record_trip(
                                 agent,
-                                agent.home_country,
+                                agent.home_country_code,  # Use code for data consistency
                                 dest_code,
                                 self.tick,
                                 self.tick,  # Will be updated on departure

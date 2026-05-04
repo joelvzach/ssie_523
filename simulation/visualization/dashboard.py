@@ -1203,10 +1203,6 @@ def render_agent_dashboard(sim):
                 if agent.state == "HOME":
                     days_until_next = str(agent.days_until_next_trip)
 
-                # Get home country name (agent.home_country is ISO3 code like 'USA', 'FRA')
-                home_dest = sim.destinations.get(agent.home_country)
-                home_country_name = home_dest.country_name if home_dest else agent.home_country
-
                 agent_data.append(
                     {
                         "Name": agent.agent_id,
@@ -1215,7 +1211,7 @@ def render_agent_dashboard(sim):
                         "Current Destination": agent.current_destination or "-",
                         "Duration": duration_display,
                         "Days Until Next Trip": days_until_next,
-                        "Home Country": home_country_name,
+                        "Home Country": agent.home_country,  # Now stores country name directly
                     }
                 )
 
@@ -1352,13 +1348,16 @@ def render_agent_dashboard(sim):
                     
                     # Render mini-map
                     st.write("**📍 Journey Path:**")
-                    render_mini_map(trajectory, agent.home_country, sim)
+                    # Look up country code from name for mini-map
+                    home_code = next((code for code, dest in sim.destinations.items() if dest.country_name == agent.home_country), None)
+                    render_mini_map(trajectory, home_code or agent.home_country, sim)
                 else:
                     st.info("📭 No journey data yet - agent hasn't started traveling")
                     
                     # Still show home country on map
                     st.write("**🏠 Home Location:**")
-                    render_mini_map([], agent.home_country, sim)
+                    home_code = next((code for code, dest in sim.destinations.items() if dest.country_name == agent.home_country), None)
+                    render_mini_map([], home_code or agent.home_country, sim)
 
 
 def render_mini_map(trajectory: list, home_country: str, sim):

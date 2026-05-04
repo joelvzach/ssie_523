@@ -1348,7 +1348,7 @@ def render_agent_dashboard(sim):
                 # Show decision breakdown if agent is CHOOSING
                 if agent.state == "CHOOSING" and hasattr(agent, 'last_decision') and agent.last_decision:
                     st.divider()
-                    render_decision_breakdown(agent.last_decision)
+                    render_decision_breakdown(agent.last_decision, sim)
                 
                 st.divider()
                 
@@ -1694,12 +1694,13 @@ def render_decision_map(top_destinations: list, home_country_code: str, chosen_c
     st.plotly_chart(fig, use_container_width=True)
 
 
-def render_decision_breakdown(decision: dict):
+def render_decision_breakdown(decision: dict, sim):
     """
     Render decision breakdown showing utility factors.
     
     Args:
         decision: Decision data dict with destinations, factors, chosen
+        sim: Simulation object (for current tick and destination data)
     """
     st.subheader(f"🧠 Decision Breakdown: {decision['agent_id']}")
     

@@ -73,13 +73,17 @@ def init_session_state():
         st.session_state.selected_agent = None
 
 
-def create_simulation(agent_count: int = 4000):
+def create_simulation(agent_count: int = 40000, start_date: datetime = None):
     """Create and initialize simulation with configured events.
 
     Args:
-        agent_count: Number of tourist agents (default: 4000)
+        agent_count: Number of tourist agents (default: 40,000)
+        start_date: Simulation start date (default: January 1, 2026)
     """
-    with st.spinner(f"Initializing simulation with {agent_count:,} agents..."):
+    if start_date is None:
+        start_date = datetime(2026, 1, 1)
+    
+    with st.spinner(f"Initializing simulation with {agent_count:,} agents starting {start_date.strftime('%B %d, %Y')}..."):
         countries = load_country_data()
 
         config = {
@@ -91,7 +95,7 @@ def create_simulation(agent_count: int = 4000):
                 "family": 0.25,
             },
             "choice_set_size": 50,
-            "start_date": "2026-01-01",
+            "start_date": start_date.strftime("%Y-%m-%d"),
             "duration_days": 365,
             "seed": 42,
         }
@@ -697,11 +701,22 @@ def main():
                 key="agent_count_slider",
             )
 
+            # Start Date Configuration
+            start_date = st.date_input(
+                "Simulation Start Date",
+                value=datetime(2026, 1, 1),
+                min_value=datetime(2026, 1, 1),
+                max_value=datetime(2030, 12, 31),
+                help="Choose when to start the simulation. Events like FIFA World Cup are scheduled relative to this date.",
+                key="start_date_picker",
+            )
+
             st.divider()
 
             # Event Configuration Modal (only before initialization)
             with st.expander("📅 Configure Planned Events", expanded=True):
                 st.write("Configure events before starting simulation")
+                st.info("ℹ️ Events are scheduled on fixed calendar dates. If your start date is after an event, it won't occur during the simulation.")
 
                 # Initialize event list in session state
                 if "configured_events" not in st.session_state:
@@ -822,11 +837,11 @@ def main():
                 type="primary",
                 use_container_width=True,
                 on_click=lambda: logger.info(
-                    f"Initialize button clicked with {agent_count:,} agents"
+                    f"Initialize button clicked with {agent_count:,} agents starting {start_date}"
                 ),
                 key="initialize_simulation_button",
             ):
-                create_simulation(agent_count)
+                create_simulation(agent_count, start_date)
                 st.rerun()
         else:
             # Control buttons row 1
@@ -901,22 +916,45 @@ def main():
     # Main content area
     if st.session_state.simulation is None:
         # Welcome screen
-        st.info("👈 Click **'Initialize Simulation'** in the sidebar to begin.")
+        st.info("👈 Configure and click **'Initialize Simulation'** in the sidebar to begin.")
 
         st.markdown("""
         ### Features:
-        - **4,000 tourist agents** with segment-specific behavior
-        - **177 countries** with capacity constraints and TFI dynamics
-        - **Planned events** (e.g., FIFA World Cup)
+        - **Configurable tourist agents** (1,000 - 100,000) with segment-specific behavior
+          - Budget (30%), Luxury (20%), Adventure (25%), Family (25%)
+          - Trips per year vary by segment (0.75 - 2.0 trips)
+        - **177 countries** with realistic hotel capacity and TFI dynamics
+          - Capacity derived from UN Tourism arrival data
+          - Tourism Friendliness Index responds to crowding
+          - GDP dependency modifies TFI dynamics
+        - **Planned events** (e.g., FIFA World Cup, Olympics)
+          - Pre-event ramp-up (up to 90 days before)
+          - Event period impact (bell curve distribution)
+          - Post-event decline (15 days)
         - **Unplanned events** (disasters, epidemics)
+          - Dynamic risk multipliers affecting destination choice
         - **Real-time visualization** of tourism flows
+          - Interactive choropleth map
+          - Agent-level tracking (100 sampled agents)
+          - Diagnostic logging every 100 days
         
         ### How to Use:
-        1. Initialize the simulation
-        2. Click **Run** to start
-        3. Watch agents travel between countries
-        4. Click on countries to see details
-        5. Trigger events to see impacts
+        1. **Configure simulation** in sidebar:
+           - Choose number of agents (more = realistic crowding, slower)
+           - Set start date (events scheduled relative to this)
+           - Add/modify planned events
+        2. Click **Initialize Simulation**
+        3. Click **▶️ Run** to start
+        4. Watch agents travel between countries
+        5. Click on countries for details
+        6. Trigger events to see impacts
+        7. **Pause** to explore agent dashboard
+        
+        ### Tips:
+        - **40,000 agents** recommended for balance of speed/realism
+        - Run to **Day 150+** to see FIFA World Cup impact (if starting Jan 1)
+        - Check **diagnostic logs** in console every 100 days
+        - **Agent dashboard** shows detailed status when paused
         """)
 
         return

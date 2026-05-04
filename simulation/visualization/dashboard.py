@@ -998,16 +998,74 @@ def main():
         if target_date:
             # Convert date to datetime for comparison (st.date_input returns date, sim uses datetime)
             target_datetime = datetime.combine(target_date, datetime.min.time())
+            start_tick = sim.tick
+            total_ticks = (target_datetime - sim.current_date).days
             
-            # Run in batch mode until target date (no sleep, no rendering)
+            # Create progress bar and status message
+            progress_bar = st.progress(0)
+            status_text = st.empty()
+            status_text.info(f"🚀 Running batch simulation: Day {start_tick} → Day {start_tick + total_ticks}")
+            
+            # Run in batch mode with progress tracking
+            ticks_per_log = max(1, total_ticks // 20)  # Log every 5% of progress
+            batch_start_time = time.time()
+            
             while sim.current_date < target_datetime:
                 sim.step()
                 st.session_state.tick += 1
+                
+                # Update progress every 5%
+                current_progress = (sim.current_tick - start_tick) / total_ticks
+                if current_progress <= 1.0:
+                    progress_bar.progress(current_progress)
+                
+                # Log key metrics at intervals
+                if (sim.current_tick - start_tick) % ticks_per_log == 0:
+                    summary = sim.data_collector.get_summary()
+                    elapsed = time.time() - batch_start_time
+                    ticks_per_sec = (sim.current_tick - start_tick) / elapsed if elapsed > 0 else 0
+                    
+                    status_text.info(
+                        f"⏳ Day {sim.current_tick}/{start_tick + total_ticks} | "
+                        f"Travelers: {summary['active_travelers']:,} | "
+                        f"Speed: {ticks_per_sec:.0f} ticks/sec"
+                    )
+                    
+                    # Log detailed metrics for analysis
+                    logger.info(
+                        f"BATCH PROGRESS: tick={sim.current_tick}, "
+                        f"date={sim.current_date.strftime('%Y-%m-%d')}, "
+                        f"active_travelers={summary['active_travelers']:,}, "
+                        f"speed={ticks_per_sec:.1f} ticks/sec"
+                    )
+            
+            # Final log with performance summary
+            batch_end_time = time.time()
+            total_time = batch_end_time - batch_start_time
+            final_summary = sim.data_collector.get_summary()
+            
+            logger.info(
+                f"BATCH COMPLETE: "
+                f"ticks_executed={total_ticks}, "
+                f"total_time={total_time:.2f}s, "
+                f"avg_speed={total_ticks/total_time:.1f} ticks/sec, "
+                f"final_active_travelers={final_summary['active_travelers']:,}, "
+                f"final_date={sim.current_date.strftime('%Y-%m-%d')}"
+            )
+            
+            # Update progress to 100%
+            progress_bar.progress(1.0)
+            status_text.success(
+                f"✅ Completed {total_ticks} days in {total_time:.2f}s "
+                f"({total_ticks/total_time:.0f} ticks/sec)"
+            )
             
             # Reached target - stop and clear target
             st.session_state.running = False
             st.session_state.run_to_target = None
-            logger.info(f"Reached target date {target_date}, stopped at tick {st.session_state.tick}")
+            
+            # Brief pause to show completion message
+            time.sleep(1.5)
             st.rerun()
         else:
             # Normal real-time mode with frame rate control

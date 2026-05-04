@@ -1694,6 +1694,22 @@ def render_decision_breakdown(decision: dict):
     Args:
         decision: Decision data dict with destinations, factors, chosen
     """
+    # Special debug for agent T-36217
+    if decision['agent_id'] == "T-36217":
+        st.warning(f"🔍 **DEBUG MODE FOR T-36217** - Tick {decision['tick']}")
+        st.write(f"**Raw Data:**")
+        st.write(f"- Chosen code: `{decision['chosen']}`")
+        st.write(f"- Total destinations: {len(decision['destinations'])}")
+        st.write(f"- All codes: {[d['country_code'] for d in decision['destinations']]}")
+        
+        chosen_dest = next((d for d in decision['destinations'] if d['country_code'] == decision['chosen']), None)
+        if chosen_dest:
+            st.success(f"✅ Found chosen in list: {chosen_dest['country_name']} at position {[d['country_code'] for d in decision['destinations']].index(decision['chosen']) + 1}")
+            st.json(chosen_dest)
+        else:
+            st.error(f"❌ Chosen {decision['chosen']} NOT FOUND in list!")
+        st.divider()
+    
     st.subheader(f"🧠 Decision Breakdown: {decision['agent_id']}")
     
     # Header metrics
@@ -1760,6 +1776,7 @@ def render_decision_breakdown(decision: dict):
     st.write("**Factor Breakdown (Top 3 Choices):**")
     
     factor_names = ['Attractiveness', 'Cost', 'Crowding', 'Risk', 'Distance', 'Memory', 'Event Bonus', 'Visa Friction']
+    top_dests = all_dests[:10]  # Define top_dests for chart
     
     chart_data = []
     for dest in top_dests[:3]:

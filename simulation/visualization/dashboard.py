@@ -1348,16 +1348,16 @@ def render_agent_dashboard(sim):
                     
                     # Render mini-map
                     st.write("**📍 Journey Path:**")
-                    # Look up country code from name for mini-map
-                    home_code = next((code for code, dest in sim.destinations.items() if dest.country_name == agent.home_country), None)
-                    render_mini_map(trajectory, home_code or agent.home_country, sim)
+                    # Look up country code from name for mini-map (agent.home_country is now country name)
+                    home_code = agent.home_country_code  # Use the stored code directly
+                    render_mini_map(trajectory, home_code, sim)
                 else:
                     st.info("📭 No journey data yet - agent hasn't started traveling")
                     
                     # Still show home country on map
                     st.write("**🏠 Home Location:**")
-                    home_code = next((code for code, dest in sim.destinations.items() if dest.country_name == agent.home_country), None)
-                    render_mini_map([], home_code or agent.home_country, sim)
+                    home_code = agent.home_country_code  # Use the stored code directly
+                    render_mini_map([], home_code, sim)
 
 
 def render_mini_map(trajectory: list, home_country: str, sim):

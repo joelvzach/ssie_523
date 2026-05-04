@@ -1042,6 +1042,7 @@ def render_agent_dashboard(sim):
     Shows:
     - Agent ID, Category, Status, Duration, Days Until Next Trip
     - Summary charts (state distribution, segment mix, top destinations)
+    - Journey path filter with mini-map (Phase 3)
     """
     with st.expander("👥 Sampled Agent Status (100 agents)", expanded=True):
         # Build agent data
@@ -1067,70 +1068,303 @@ def render_agent_dashboard(sim):
                         "Current Destination": agent.current_destination or "-",
                         "Duration": duration_display,
                         "Days Until Next Trip": days_until_next,
+                        "Home Country": agent.home_country,
                     }
                 )
 
         df = pd.DataFrame(agent_data)
 
-        # Main table
-        st.dataframe(df, use_container_width=True, height=350, hide_index=True)
+        # Create tabs for different views
+        tab1, tab2 = st.tabs(["📋 All Agents", "🔍 Filter by Agent"])
 
-        # Summary charts (3 columns)
-        col1, col2, col3 = st.columns(3)
+        with tab1:
+            # Main table with all agents
+            st.dataframe(df, use_container_width=True, height=350, hide_index=True)
 
-        with col1:
-            # State distribution pie chart
-            state_counts = df["Status"].value_counts()
-            if len(state_counts) > 0:
-                fig_state = px.pie(
-                    values=state_counts.values,
-                    names=state_counts.index,
-                    title="Agent State Distribution",
-                    color=state_counts.index,
-                    color_discrete_map={
-                        "HOME": "#1f77b4",
-                        "CHOOSING": "#ff7f0e",
-                        "TRAVELING": "#2ca02c",
-                        "STAYING": "#d62728",
-                    },
-                )
-                fig_state.update_layout(height=250, margin=dict(l=0, r=0, t=30, b=0))
-                st.plotly_chart(fig_state, use_container_width=True)
+            # Summary charts (3 columns)
+            col1, col2, col3 = st.columns(3)
 
-        with col2:
-            # Segment distribution bar chart
-            segment_counts = df["Category"].value_counts()
-            if len(segment_counts) > 0:
-                fig_segment = px.bar(
-                    x=segment_counts.index,
-                    y=segment_counts.values,
-                    title="Segment Distribution",
-                    color=segment_counts.index,
-                    color_discrete_map={
-                        "Budget": "#1f77b4",
-                        "Luxury": "#ff7f0e",
-                        "Adventure": "#2ca02c",
-                        "Family": "#d62728",
-                    },
-                )
-                fig_segment.update_layout(height=250, margin=dict(l=0, r=0, t=30, b=0))
-                st.plotly_chart(fig_segment, use_container_width=True)
+            with col1:
+                # State distribution pie chart
+                state_counts = df["Status"].value_counts()
+                if len(state_counts) > 0:
+                    fig_state = px.pie(
+                        values=state_counts.values,
+                        names=state_counts.index,
+                        title="Agent State Distribution",
+                        color=state_counts.index,
+                        color_discrete_map={
+                            "HOME": "#1f77b4",
+                            "CHOOSING": "#ff7f0e",
+                            "TRAVELING": "#2ca02c",
+                            "STAYING": "#d62728",
+                        },
+                    )
+                    fig_state.update_layout(height=250, margin=dict(l=0, r=0, t=30, b=0))
+                    st.plotly_chart(fig_state, use_container_width=True)
 
-        with col3:
-            # Top current destinations
-            staying_agents = df[df["Status"] == "STAYING"]
-            if len(staying_agents) > 0:
-                dest_counts = (
-                    staying_agents["Current Destination"].value_counts().head(5)
-                )
-                fig_dest = px.bar(
-                    x=dest_counts.values,
-                    y=dest_counts.index,
-                    orientation="h",
-                    title="Top Current Destinations",
-                )
-                fig_dest.update_layout(height=250, margin=dict(l=0, r=0, t=30, b=0))
-                st.plotly_chart(fig_dest, use_container_width=True)
+            with col2:
+                # Segment distribution bar chart
+                segment_counts = df["Category"].value_counts()
+                if len(segment_counts) > 0:
+                    fig_segment = px.bar(
+                        x=segment_counts.index,
+                        y=segment_counts.values,
+                        title="Segment Distribution",
+                        color=segment_counts.index,
+                        color_discrete_map={
+                            "Budget": "#1f77b4",
+                            "Luxury": "#ff7f0e",
+                            "Adventure": "#2ca02c",
+                            "Family": "#d62728",
+                        },
+                    )
+                    fig_segment.update_layout(height=250, margin=dict(l=0, r=0, t=30, b=0))
+                    st.plotly_chart(fig_segment, use_container_width=True)
+
+            with col3:
+                # Top current destinations
+                staying_agents = df[df["Status"] == "STAYING"]
+                if len(staying_agents) > 0:
+                    dest_counts = (
+                        staying_agents["Current Destination"].value_counts().head(5)
+                    )
+                    fig_dest = px.bar(
+                        x=dest_counts.values,
+                        y=dest_counts.index,
+                        orientation="h",
+                        title="Top Current Destinations",
+                    )
+                    fig_dest.update_layout(height=250, margin=dict(l=0, r=0, t=30, b=0))
+                    st.plotly_chart(fig_dest, use_container_width=True)
+
+        with tab2:
+            # Filter by individual agent
+            st.write("**Select an agent to view their journey:**")
+            
+            selected_agent = st.selectbox(
+                "Agent:",
+                options=sorted(df["Name"].unique()),
+                help="Choose an agent to view their complete journey trajectory"
+            )
+            
+            if selected_agent:
+                # Get agent data
+                agent_row = df[df["Name"] == selected_agent].iloc[0]
+                agent = next(a for a in sim.agents if a.agent_id == selected_agent)
+                
+                # Display current status
+                col_status1, col_status2, col_status3 = st.columns(3)
+                with col_status1:
+                    st.metric("Status", agent_row["Status"])
+                with col_status2:
+                    st.metric("Segment", agent_row["Category"])
+                with col_status3:
+                    st.metric("Current Location", agent_row["Current Destination"])
+                
+                st.divider()
+                
+                # Get journey trajectory from data collector
+                trajectory = sim.data_collector.agent_trajectories.get(selected_agent, [])
+                
+                # Build journey table with trip details
+                if len(trajectory) > 0:
+                    st.write("**🗺️ Journey Trajectory:**")
+                    
+                    # Group consecutive visits to same destination into trips
+                    trips = []
+                    if len(trajectory) > 0:
+                        current_trip_start = trajectory[0]
+                        prev_dest = trajectory[0][1]
+                        
+                        for i in range(1, len(trajectory)):
+                            tick, dest = trajectory[i]
+                            if dest != prev_dest:
+                                # End current trip, start new one
+                                trips.append((current_trip_start[0], trajectory[i-1][0], prev_dest))
+                                current_trip_start = trajectory[i]
+                            prev_dest = dest
+                        
+                        # Add final trip
+                        trips.append((current_trip_start[0], trajectory[-1][0], prev_dest))
+                    
+                    # Create journey dataframe
+                    journey_data = []
+                    for start_tick, end_tick, dest_code in trips:
+                        dest = sim.destinations.get(dest_code)
+                        dest_name = dest.country_name if dest else dest_code
+                        duration = end_tick - start_tick + 1
+                        journey_data.append({
+                            "Day": f"{start_tick} → {end_tick}",
+                            "Destination": f"{dest_name} ({dest_code})",
+                            "Duration": f"{duration}d",
+                        })
+                    
+                    journey_df = pd.DataFrame(journey_data)
+                    st.dataframe(journey_df, use_container_width=True, height=300, hide_index=True)
+                    
+                    # Render mini-map
+                    st.write("**📍 Journey Path:**")
+                    render_mini_map(trajectory, agent.home_country, sim)
+                else:
+                    st.info("📭 No journey data yet - agent hasn't started traveling")
+                    
+                    # Still show home country on map
+                    st.write("**🏠 Home Location:**")
+                    render_mini_map([], agent.home_country, sim)
+
+
+def render_mini_map(trajectory: list, home_country: str, sim):
+    """
+    Render mini-map showing single agent's journey path.
+    
+    Args:
+        trajectory: List of (tick, country_code) tuples
+        home_country: Agent's home country code
+        sim: Simulation object (for country coordinates)
+    """
+    # Build journey data with coordinates
+    journey_data = []
+    
+    # Add home country as starting point
+    home_dest = sim.destinations.get(home_country)
+    if home_dest:
+        journey_data.append({
+            "tick": -1,  # Before simulation start
+            "country_code": home_country,
+            "country_name": home_dest.country_name,
+            "lat": home_dest.latitude,
+            "lon": home_dest.longitude,
+            "is_home": True,
+        })
+    
+    # Add trajectory points
+    for tick, country_code in trajectory:
+        dest = sim.destinations.get(country_code)
+        if dest:
+            journey_data.append({
+                "tick": tick,
+                "country_code": country_code,
+                "country_name": dest.country_name,
+                "lat": dest.latitude,
+                "lon": dest.longitude,
+                "is_home": False,
+            })
+    
+    if len(journey_data) == 0:
+        st.info("No location data available")
+        return
+    
+    journey_df = pd.DataFrame(journey_data)
+    
+    # Create figure
+    fig = go.Figure()
+    
+    # Path lines (connect all points in order)
+    if len(journey_df) > 1:
+        fig.add_trace(go.Scattergeo(
+            lon=journey_df["lon"],
+            lat=journey_df["lat"],
+            mode="lines",
+            line=dict(width=2, color="#1f77b4"),
+            name="Journey Path",
+            hoverinfo="skip",
+        ))
+    
+    # Home country marker (green square)
+    home_data = journey_df[journey_df["is_home"] == True]
+    if len(home_data) > 0:
+        home = home_data.iloc[0]
+        fig.add_trace(go.Scattergeo(
+            lon=[home["lon"]],
+            lat=[home["lat"]],
+            mode="markers+text",
+            marker=dict(size=12, color="#2ca02c", symbol="square"),
+            text=[f"🏠 {home['country_name']}"],
+            textposition="bottom center",
+            name="Home Country",
+        ))
+    
+    # Current location marker (red circle, largest)
+    if len(trajectory) > 0:
+        current = journey_df.iloc[-1]
+        fig.add_trace(go.Scattergeo(
+            lon=[current["lon"]],
+            lat=[current["lat"]],
+            mode="markers+text",
+            marker=dict(size=18, color="#d62728", symbol="circle"),
+            text=[f"📍 {current['country_name']}"],
+            textposition="top center",
+            name="Current Location",
+        ))
+    
+    # Calculate map bounds for auto-zoom
+    if len(journey_df) > 1:
+        # Get bounding box of visited locations
+        lon_min = journey_df["lon"].min()
+        lon_max = journey_df["lon"].max()
+        lat_min = journey_df["lat"].min()
+        lat_max = journey_df["lat"].max()
+        
+        # Add padding (50% of range)
+        lon_range = lon_max - lon_min
+        lat_range = lat_max - lat_min
+        lon_padding = max(lon_range * 0.5, 30)  # Minimum 30 degrees
+        lat_padding = max(lat_range * 0.5, 20)  # Minimum 20 degrees
+        
+        # Center the view
+        lon_center = (lon_min + lon_max) / 2
+        lat_center = (lat_min + lat_max) / 2
+        
+        # Set projection scale based on spread
+        if lon_range < 20 and lat_range < 15:
+            # Regional view (small area)
+            projection_scale = 8
+        elif lon_range < 60 and lat_range < 40:
+            # Sub-continental view
+            projection_scale = 4
+        else:
+            # Continental/global view
+            projection_scale = 2
+        
+        fig.update_layout(
+            geo=dict(
+                projection=dict(
+                    type="natural earth",
+                    scale=projection_scale,
+                ),
+                center=dict(lon=lon_center, lat=lat_center),
+                scope="world",
+                showland=True,
+                landcolor="#f0f0f0",
+                countrycolor="#cccccc",
+                showcountries=True,
+                bgcolor="#ffffff",
+            ),
+            height=450,
+            margin=dict(l=0, r=0, t=40, b=0),
+            title="Agent Journey Path (Auto-zoomed to visited region)",
+        )
+    else:
+        # Single location - show world view centered on that point
+        single = journey_df.iloc[0]
+        fig.update_layout(
+            geo=dict(
+                projection=dict(type="natural earth", scale=2),
+                center=dict(lon=single["lon"], lat=single["lat"]),
+                scope="world",
+                showland=True,
+                landcolor="#f0f0f0",
+                countrycolor="#cccccc",
+                showcountries=True,
+                bgcolor="#ffffff",
+            ),
+            height=450,
+            margin=dict(l=0, r=0, t=40, b=0),
+            title="Location Map",
+        )
+    
+    st.plotly_chart(fig, use_container_width=True)
 
 
 if __name__ == "__main__":

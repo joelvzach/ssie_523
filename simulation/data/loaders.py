@@ -30,6 +30,21 @@ def load_country_data(data_dir: Path = None) -> List[Dict]:
         print(f"Warning: Data file not found: {data_file}")
         return _create_placeholder_countries()
 
+    # Load country centroids for coordinates (uses ISO3 codes)
+    centroids = load_centroids(Path(__file__).parent.parent.parent / "data" / "derived")
+
+    # Load country code mapping (numeric M49 → ISO3)
+    code_mapping = {}
+    mapping_file = Path(__file__).parent.parent.parent / "data" / "derived" / "country_code_mapping.csv"
+    if mapping_file.exists():
+        with open(mapping_file, "r", encoding="utf-8") as f:
+            reader = csv.DictReader(f)
+            for row in reader:
+                numeric_code = row.get("country_code", "")
+                iso3_code = row.get("Country Code", "")
+                if numeric_code and iso3_code:
+                    code_mapping[numeric_code] = iso3_code
+
     # Read most recent year (2024) for each country
     country_data = {}
 
@@ -60,6 +75,12 @@ def load_country_data(data_dir: Path = None) -> List[Dict]:
                     except (ValueError, TypeError):
                         return default
 
+                # Map numeric code to ISO3 for centroid lookup
+                iso3_code = code_mapping.get(code, code)
+                
+                # Get coordinates from centroids using ISO3 code
+                centroid = centroids.get(iso3_code, {})
+                
                 country_data[code] = {
                     "year": year,
                     "code": code,
@@ -69,8 +90,8 @@ def load_country_data(data_dir: Path = None) -> List[Dict]:
                     "ttdi": safe_float(row.get("ttdi_score", 3.5)),
                     "cost_index": safe_float(row.get("cost_index", 50.0)),
                     "risk_score": safe_float(row.get("risk_score", 0.2)),
-                    "lat": safe_float(row.get("latitude", 0.0)),
-                    "lon": safe_float(row.get("longitude", 0.0)),
+                    "lat": centroid.get("lat", 0.0),  # From centroids file (via ISO3 mapping)
+                    "lon": centroid.get("lon", 0.0),  # From centroids file (via ISO3 mapping)
                 }
 
     # Convert to list with estimated hotel beds from arrivals
@@ -159,14 +180,20 @@ def load_centroids(data_dir: Path = None) -> Dict[str, Dict]:
     if not centroids_file.exists():
         return {}
 
+    # Read file and skip comment lines (starting with #)
     with open(centroids_file, "r", encoding="utf-8") as f:
-        reader = csv.DictReader(f)
-        for row in reader:
-            code = row.get("code", row.get("country_code", ""))
-            if code:
-                centroids[code] = {
-                    "lat": float(row.get("lat", row.get("latitude", 0.0))),
-                    "lon": float(row.get("lon", row.get("longitude", 0.0))),
-                }
+        lines = [line for line in f if not line.startswith('#') and line.strip()]
+    
+    # Parse cleaned CSV content
+    from io import StringIO
+    reader = csv.DictReader(StringIO(''.join(lines)))
+    
+    for row in reader:
+        code = row.get("country_code", "")
+        if code:
+            centroids[code] = {
+                "lat": float(row.get("latitude", 0.0)),
+                "lon": float(row.get("longitude", 0.0)),
+            }
 
     return centroids

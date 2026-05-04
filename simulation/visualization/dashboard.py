@@ -872,20 +872,40 @@ def main():
                     key="stop_button",
                 )
 
-            # Control buttons row 2: Step button
-            st.button(
-                "⏭️ Step (1 day)",
-                use_container_width=True,
-                on_click=lambda: step_simulation(sim),
-                disabled=st.session_state.running,
-            )
+            # Control buttons row 2: Step and Run-to-Date
+            col_step, col_runto = st.columns([1, 2])
+            
+            with col_step:
+                st.button(
+                    "⏭️ Step (1 day)",
+                    use_container_width=True,
+                    on_click=lambda: step_simulation(sim),
+                    disabled=st.session_state.running,
+                )
+            
+            with col_runto:
+                # Run to specific date
+                current_date = sim.current_date
+                target_date = st.date_input(
+                    "Run to:",
+                    value=current_date + timedelta(days=30),
+                    min_value=current_date,
+                    max_value=current_date + timedelta(days=365),
+                    key="target_date_picker",
+                    label_visibility="collapsed",
+                )
+                
+                if st.button("⏩ Run to Date", use_container_width=True):
+                    st.session_state.run_to_target = target_date
+                    st.session_state.running = True
 
             # Speed control
             speed = st.select_slider(
                 "Simulation Speed",
-                options=[0.5, 1.0, 2.0, 4.0],
+                options=[0.5, 1.0, 2.0, 4.0, 10.0, 100.0],
                 value=st.session_state.speed,
                 key="speed_slider",
+                help="100× = ~3.65 days/sec (no rendering delays)"
             )
             st.session_state.speed = speed
 
@@ -963,32 +983,47 @@ def main():
 
     # Run simulation step if active
     if st.session_state.running:
-        # Control frame rate: 1 FPS at 1× speed (365 days = 6 minutes)
-        frame_time = 1.0 / st.session_state.speed
-        time.sleep(frame_time)
+        # Check if running to target date (batch mode - no rendering delays)
+        if hasattr(st.session_state, 'run_to_target') and st.session_state.run_to_target:
+            target_date = st.session_state.run_to_target
+            
+            # Run in batch mode until target date (no sleep, no rendering)
+            while sim.current_date < target_date:
+                sim.step()
+                st.session_state.tick += 1
+            
+            # Reached target - stop and clear target
+            st.session_state.running = False
+            st.session_state.run_to_target = None
+            logger.info(f"Reached target date {target_date}, stopped at tick {st.session_state.tick}")
+            st.rerun()
+        else:
+            # Normal real-time mode with frame rate control
+            frame_time = 1.0 / st.session_state.speed
+            time.sleep(frame_time)
 
-        # Run single step
-        sim.step()
-        st.session_state.tick += 1
+            # Run single step
+            sim.step()
+            st.session_state.tick += 1
 
-        # Log progress every 100 ticks
-        if st.session_state.tick % 100 == 0:
-            logger.info(
-                f"Simulation tick: {st.session_state.tick}, active travelers: {sim.data_collector.get_summary()['active_travelers']}"
-            )
+            # Log progress every 100 ticks
+            if st.session_state.tick % 100 == 0:
+                logger.info(
+                    f"Simulation tick: {st.session_state.tick}, active travelers: {sim.data_collector.get_summary()['active_travelers']}"
+                )
 
-        # Render BEFORE rerun to show updates (skip map while running to prevent flicker)
-        render_summary_metrics(sim)
-        render_event_notifications(sim)
-        render_time_series(sim)
-        render_top_destinations(sim)
-        render_segment_breakdown(sim)
+            # Render BEFORE rerun to show updates (skip map while running to prevent flicker)
+            render_summary_metrics(sim)
+            render_event_notifications(sim)
+            render_time_series(sim)
+            render_top_destinations(sim)
+            render_segment_breakdown(sim)
 
-        # Show map placeholder while running
-        st.info("🗺️ Map visualization paused during run - pause simulation to see map")
+            # Show map placeholder while running
+            st.info("🗺️ Map visualization paused during run - pause simulation to see map")
 
-        # Force rerun to continue simulation
-        st.rerun()
+            # Force rerun to continue simulation
+            st.rerun()
 
     # Render dashboard (when paused)
     render_summary_metrics(sim)

@@ -702,10 +702,6 @@ def main():
         st.session_state.tick += 1
         logger.info(f"Manual step: tick {st.session_state.tick}")
 
-    def save_scenario():
-        st.info("Scenario save - Coming in next iteration")
-        logger.info("Save scenario clicked (not implemented)")
-
     # Sidebar: Controls
     with st.sidebar:
         st.header("🎮 Controls")
@@ -996,14 +992,6 @@ def main():
                 "🦠 Epidemic Outbreak",
                 use_container_width=True,
                 on_click=trigger_epidemic,
-            )
-
-            # Scenario save/load
-            st.divider()
-            st.subheader("💾 Scenario")
-
-            st.button(
-                "Save Configuration", use_container_width=True, on_click=save_scenario
             )
 
     # Main content area

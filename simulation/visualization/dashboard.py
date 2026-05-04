@@ -716,6 +716,17 @@ def main():
                 key="start_date_picker",
             )
 
+            # Random Seed Configuration
+            seed = st.number_input(
+                "Random Seed",
+                min_value=1,
+                max_value=999999,
+                value=42,
+                step=1,
+                help="Seed for reproducibility. Same seed = identical simulation results. Use different seeds for varied outcomes.",
+                key="seed_input",
+            )
+
             st.divider()
 
             # Event Configuration Modal (only before initialization)
@@ -1305,6 +1316,11 @@ def render_agent_dashboard(sim):
                 with col_status3:
                     st.metric("Current Location", agent_row["Current Destination"])
                 
+                # Show decision breakdown if agent is CHOOSING
+                if agent.state == "CHOOSING" and hasattr(agent, 'last_decision') and agent.last_decision:
+                    st.divider()
+                    render_decision_breakdown(agent.last_decision)
+                
                 st.divider()
                 
                 # Get journey trajectory from data collector
@@ -1511,6 +1527,123 @@ def render_mini_map(trajectory: list, home_country: str, sim):
         )
     
     st.plotly_chart(fig, use_container_width=True)
+
+
+def render_decision_breakdown(decision: dict):
+    """
+    Render decision breakdown showing utility factors.
+    
+    Args:
+        decision: Decision data dict with destinations, factors, chosen
+    """
+    st.subheader(f"🧠 Decision Breakdown: {decision['agent_id']}")
+    
+    # Header metrics
+    col1, col2, col3 = st.columns(3)
+    with col1:
+        st.metric("Segment", decision['segment'].capitalize())
+    with col2:
+        st.metric("Home Country", decision['home_country'])
+    with col3:
+        chosen_name = decision['chosen']
+        if chosen_name:
+            dest = next((d for d in decision['destinations'] if d['country_code'] == chosen_name), None)
+            if dest:
+                chosen_name = f"{dest['country_name']} ({chosen_name})"
+        st.metric("Chosen Destination", chosen_name or "N/A")
+    
+    # Top 10 choices table
+    st.write("**Top 10 Destination Choices:**")
+    
+    top_dests = decision['destinations'][:10]
+    
+    table_data = []
+    for i, dest in enumerate(top_dests):
+        is_chosen = dest['country_code'] == decision['chosen']
+        table_data.append({
+            "Rank": i + 1,
+            "Destination": f"{dest['country_name']} ({dest['country_code']})",
+            "Utility": f"{dest['utility']:.3f}",
+            "Probability": f"{dest['probability']:.2%}",
+            "Chosen": "✅" if is_chosen else "",
+        })
+    
+    df = pd.DataFrame(table_data)
+    st.dataframe(df, use_container_width=True, height=280, hide_index=True)
+    
+    # Factor breakdown bar chart for top 3 choices
+    st.write("**Factor Breakdown (Top 3 Choices):**")
+    
+    factor_names = ['Attractiveness', 'Cost', 'Crowding', 'Risk', 'Distance', 'Memory', 'Event Bonus', 'Visa Friction']
+    
+    chart_data = []
+    for dest in top_dests[:3]:
+        is_chosen = dest['country_code'] == decision['chosen']
+        chart_data.append({
+            "Destination": f"{dest['country_name']}{' ✅' if is_chosen else ''}",
+            "Attractiveness": dest['attractiveness'],
+            "Cost": dest['cost'],
+            "Crowding": dest['crowding'],
+            "Risk": dest['risk'],
+            "Distance": dest['distance'],
+            "Memory": dest['memory'],
+            "Event Bonus": dest['event_bonus'],
+            "Visa Friction": dest['visa_friction'],
+        })
+    
+    factor_df = pd.DataFrame(chart_data)
+    factor_df = factor_df.set_index("Destination")
+    
+    fig = px.bar(
+        factor_df,
+        barmode="group",
+        title="Utility Factor Contributions (positive = attractive, negative = repelling)",
+        labels={"value": "Factor Contribution", "variable": "Factor"},
+    )
+    fig.update_layout(height=400, margin=dict(l=0, r=0, t=40, b=0))
+    fig.update_traces(marker_line_width=0.5)
+    st.plotly_chart(fig, use_container_width=True)
+    
+    # Why chosen explanation
+    if decision['chosen']:
+        chosen_dest = next((d for d in decision['destinations'] if d['country_code'] == decision['chosen']), None)
+        if chosen_dest:
+            st.write("**Why this destination was chosen:**")
+            
+            # Find strongest positive and negative factors
+            factors = {
+                "Attractiveness": chosen_dest['attractiveness'],
+                "Cost": chosen_dest['cost'],
+                "Crowding": chosen_dest['crowding'],
+                "Risk": chosen_dest['risk'],
+                "Distance": chosen_dest['distance'],
+                "Memory": chosen_dest['memory'],
+                "Event Bonus": chosen_dest['event_bonus'],
+                "Visa Friction": chosen_dest['visa_friction'],
+            }
+            
+            positive_factors = {k: v for k, v in factors.items() if v > 0.01}
+            negative_factors = {k: v for k, v in factors.items() if v < -0.01}
+            
+            col_pos, col_neg = st.columns(2)
+            
+            with col_pos:
+                if positive_factors:
+                    st.write("**✅ Positive Factors:**")
+                    sorted_pos = sorted(positive_factors.items(), key=lambda x: x[1], reverse=True)
+                    for factor, value in sorted_pos[:3]:
+                        st.write(f"  • **{factor}**: +{value:.3f}")
+                else:
+                    st.write("No strong positive factors")
+            
+            with col_neg:
+                if negative_factors:
+                    st.write("**❌ Negative Factors:**")
+                    sorted_neg = sorted(negative_factors.items(), key=lambda x: x[1])
+                    for factor, value in sorted_neg[:3]:
+                        st.write(f"  • **{factor}**: {value:.3f}")
+                else:
+                    st.write("No strong negative factors")
 
 
 if __name__ == "__main__":

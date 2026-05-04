@@ -345,6 +345,7 @@ class Simulation:
                         visa_lookup_func=self._get_visa_friction,
                         event_bonus_func=self._get_event_bonus,
                         tick=self.tick,
+                        capture_decision_data=True,
                     )
 
                     if dest_code and dest_code in self.destinations:

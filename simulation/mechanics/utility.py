@@ -14,6 +14,9 @@ SEGMENT_WEIGHTS = {
     "family": {"α": 0.21, "β": 0.18, "γ": 0.14, "δ": 0.14, "η": 0.40, "ζ": 0.02},
 }
 
+# Default weights for decision breakdown (use budget as default)
+WEIGHTS = SEGMENT_WEIGHTS["budget"]
+
 # Segment-specific temperature for softmax choice
 SEGMENT_TEMPERATURE = {
     "budget": 1.2,  # More random exploration

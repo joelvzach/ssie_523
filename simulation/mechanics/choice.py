@@ -89,6 +89,7 @@ def choose_destination(
     visa_lookup_func=None,
     event_bonus_func=None,
     tick: int = 0,
+    capture_decision_data: bool = False,
 ) -> Optional[str]:
     """
     Choose destination using softmax probabilistic choice.
@@ -100,11 +101,12 @@ def choose_destination(
         visa_lookup_func: Function to get visa friction (country_code, origin_code)
         event_bonus_func: Function to get event bonus (destination, tourist, tick)
         tick: Current simulation tick
+        capture_decision_data: If True, store detailed decision breakdown in tourist.last_decision
 
     Returns:
         Selected destination country code (or None if no accessible destinations)
     """
-    from simulation.mechanics.utility import calculate_utility
+    from simulation.mechanics.utility import calculate_utility, SEGMENT_WEIGHTS
     from simulation.data.visa_restrictions import get_visa_friction
 
     # 1. Filter by visa restrictions (exclude BANNED only)
@@ -123,6 +125,7 @@ def choose_destination(
 
     # 2. Calculate utilities for each accessible destination
     utilities = []
+    destination_data = []
     for dest in accessible:
         # Use home_country_code for distance lookup
         origin_code = tourist.home_country_code
@@ -145,11 +148,57 @@ def choose_destination(
         )
         utilities.append(utility)
 
+        # Capture factor breakdown for decision transparency
+        if capture_decision_data:
+            weights = SEGMENT_WEIGHTS[tourist.segment]
+            att_norm = dest.attractiveness / 5.0
+            cost_norm = dest.cost_index / 100.0
+            crowd_norm = dest.get_crowding_ratio()
+            risk_norm = dest.risk_score / 10.0
+            dist_norm = min(distance / 10000.0, 1.0)
+            memory_norm = 1.0 if dest.country_code in tourist.visited_destinations else 0.0
+
+            destination_data.append({
+                "country_code": dest.country_code,
+                "country_name": dest.country_name,
+                "utility": utility,
+                "attractiveness": weights["α"] * att_norm,
+                "cost": -weights["β"] * cost_norm,
+                "crowding": -weights["γ"] * crowd_norm,
+                "risk": -weights["δ"] * risk_norm,
+                "distance": -weights["η"] * dist_norm,
+                "memory": weights["ζ"] * memory_norm,
+                "event_bonus": event_bonus,
+                "visa_friction": -visa_friction,
+            })
+
     # 3. Apply softmax with segment temperature
     tau = SEGMENT_TEMPERATURE[tourist.segment]
     probabilities = softmax(utilities, tau)
 
     # 4. Weighted random choice
     chosen = weighted_random_choice(accessible, probabilities)
+
+    # 5. Capture decision data for dashboard visualization
+    if capture_decision_data and hasattr(tourist, 'agent_id'):
+        decision_data = {
+            "tick": tick,
+            "agent_id": tourist.agent_id,
+            "segment": tourist.segment,
+            "home_country": tourist.home_country,
+            "home_country_code": tourist.home_country_code,
+            "chosen": chosen.country_code if chosen else None,
+            "destinations": [],
+        }
+
+        for i, dest_data in enumerate(destination_data):
+            dest_data["probability"] = probabilities[i]
+            decision_data["destinations"].append(dest_data)
+
+        # Sort by probability (descending)
+        decision_data["destinations"].sort(key=lambda x: x["probability"], reverse=True)
+
+        # Store in agent for dashboard access
+        tourist.last_decision = decision_data
 
     return chosen.country_code if chosen else None

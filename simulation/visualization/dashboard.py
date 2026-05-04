@@ -979,14 +979,19 @@ def main():
 
         return
 
-    sim = st.session_state.simulation
+    # Get simulation object
+    sim = st.session_state.get('simulation')
+    
+    if not sim:
+        st.warning("Simulation not initialized. Please click 'Initialize Simulation' in the sidebar.")
+        return
 
     # Run simulation step if active
     if st.session_state.running:
         # Check if running to target date (batch mode - no rendering delays)
-        if hasattr(st.session_state, 'run_to_target') and st.session_state.run_to_target:
-            target_date = st.session_state.run_to_target
-            
+        target_date = st.session_state.get('run_to_target')
+        
+        if target_date:
             # Run in batch mode until target date (no sleep, no rendering)
             while sim.current_date < target_date:
                 sim.step()

@@ -1015,12 +1015,12 @@ def main():
                 st.session_state.tick += 1
                 
                 # Update progress every 5%
-                current_progress = (sim.current_tick - start_tick) / total_ticks
+                current_progress = (sim.tick - start_tick) / total_ticks
                 if current_progress <= 1.0:
                     progress_bar.progress(current_progress)
                 
                 # Log key metrics at intervals
-                if (sim.current_tick - start_tick) % ticks_per_log == 0:
+                if (sim.tick - start_tick) % ticks_per_log == 0:
                     summary = sim.data_collector.get_summary()
                     elapsed = time.time() - batch_start_time
                     ticks_per_sec = (sim.current_tick - start_tick) / elapsed if elapsed > 0 else 0

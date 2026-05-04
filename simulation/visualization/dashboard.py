@@ -996,8 +996,11 @@ def main():
         target_date = st.session_state.get('run_to_target')
         
         if target_date:
+            # Convert date to datetime for comparison (st.date_input returns date, sim uses datetime)
+            target_datetime = datetime.combine(target_date, datetime.min.time())
+            
             # Run in batch mode until target date (no sleep, no rendering)
-            while sim.current_date < target_date:
+            while sim.current_date < target_datetime:
                 sim.step()
                 st.session_state.tick += 1
             

@@ -1236,12 +1236,19 @@ def render_agent_dashboard(sim):
                 elif agent.state == "CHOOSING":
                     days_until_next = f"Planning: {agent.days_in_choosing}d left"
 
+                # Show destination with clear status for CHOOSING state
+                if agent.state == "CHOOSING":
+                    # Show that decision is made but distinguish from actual travel
+                    current_dest_display = f"Planning... (departs in {agent.days_in_choosing}d)"
+                else:
+                    current_dest_display = agent.current_destination or "-"
+
                 agent_data.append(
                     {
                         "Name": agent.agent_id,
                         "Category": agent.segment.capitalize(),
                         "Status": agent.state,
-                        "Current Destination": agent.current_destination or ("Planning..." if agent.state == "CHOOSING" else "-"),
+                        "Current Destination": current_dest_display,
                         "Duration": duration_display,
                         "Days Until Next Trip": days_until_next,
                         "Home Country": agent.home_country,  # Now stores country name directly
@@ -1694,22 +1701,6 @@ def render_decision_breakdown(decision: dict):
     Args:
         decision: Decision data dict with destinations, factors, chosen
     """
-    # Special debug for agent T-36217
-    if decision['agent_id'] == "T-36217":
-        st.warning(f"🔍 **DEBUG MODE FOR T-36217** - Tick {decision['tick']}")
-        st.write(f"**Raw Data:**")
-        st.write(f"- Chosen code: `{decision['chosen']}`")
-        st.write(f"- Total destinations: {len(decision['destinations'])}")
-        st.write(f"- All codes: {[d['country_code'] for d in decision['destinations']]}")
-        
-        chosen_dest = next((d for d in decision['destinations'] if d['country_code'] == decision['chosen']), None)
-        if chosen_dest:
-            st.success(f"✅ Found chosen in list: {chosen_dest['country_name']} at position {[d['country_code'] for d in decision['destinations']].index(decision['chosen']) + 1}")
-            st.json(chosen_dest)
-        else:
-            st.error(f"❌ Chosen {decision['chosen']} NOT FOUND in list!")
-        st.divider()
-    
     st.subheader(f"🧠 Decision Breakdown: {decision['agent_id']}")
     
     # Header metrics
@@ -1767,6 +1758,47 @@ def render_decision_breakdown(decision: dict):
     
     df = pd.DataFrame(table_data)
     st.dataframe(df, use_container_width=True, height=320, hide_index=True)
+    
+    # What-if analysis: Show how rankings would differ if choosing today
+    if decision['tick'] < sim.tick:
+        st.write("**🔄 What-If: Current Rankings (Day {})**".format(sim.tick))
+        st.caption("*Rankings if agent were choosing today vs. original decision on Day {}*".format(decision['tick']))
+        
+        # Recalculate utilities for top 10 destinations using current crowding
+        current_rankings = []
+        for dest_code in [d['country_code'] for d in all_dests[:10]]:
+            dest = sim.destinations.get(dest_code)
+            if dest:
+                # Recalculate crowding with current visitors
+                current_crowding = dest.get_crowding_ratio()
+                
+                # Find original factor data
+                orig_data = next((d for d in all_dests if d['country_code'] == dest_code), None)
+                if orig_data:
+                    # Recalculate utility with new crowding
+                    weights = SEGMENT_WEIGHTS.get(decision['segment'], SEGMENT_WEIGHTS['budget'])
+                    new_crowding_factor = -weights["γ"] * current_crowding
+                    
+                    # Approximate new utility (keeping other factors constant)
+                    utility_change = new_crowding_factor - orig_data['crowding']
+                    new_utility = orig_data['utility'] + utility_change
+                    
+                    crowding_change = current_crowding - (abs(orig_data['crowding']) / weights["γ"])
+                    
+                    current_rankings.append({
+                        "Destination": dest.country_name,
+                        "Original Rank": all_dests.index(orig_data) + 1,
+                        "Crowding Change": f"{crowding_change:+.1%}",
+                        "Est. New Utility": f"{new_utility:.3f}",
+                    })
+        
+        if current_rankings:
+            current_df = pd.DataFrame(current_rankings)
+            current_df = current_df.sort_values("Est. New Utility", ascending=False)
+            current_df["Current Rank"] = range(1, len(current_df) + 1)
+            current_df = current_df[["Current Rank", "Destination", "Original Rank", "Crowding Change", "Est. New Utility"]]
+            st.dataframe(current_df, use_container_width=True, height=280, hide_index=True)
+            st.caption("*Note: This is an approximation showing crowding impact. Full recalculation would also consider events, risk changes, etc.*")
     
     # Geographic mini-map showing all top 10 options
     st.write("**🌍 Geographic View of Options (Top 10):**")

@@ -200,28 +200,6 @@ def choose_destination(
         # Sort by probability (descending)
         decision_data["destinations"].sort(key=lambda x: x["probability"], reverse=True)
 
-        # Special debug for agent T-36217
-        if tourist.agent_id == "T-36217":
-            chosen_code = chosen.country_code if chosen else None
-            print(f"\n{'='*80}")
-            print(f"🔍 DEBUG T-36217 - Tick {tick}")
-            print(f"{'='*80}")
-            print(f"Chosen: {chosen_code}")
-            print(f"Segment: {tourist.segment}")
-            print(f"Home: {tourist.home_country}")
-            print(f"\nTop 15 Destinations:")
-            for i, d in enumerate(decision_data['destinations'][:15]):
-                marker = "✅ CHOSEN" if d['country_code'] == chosen_code else ""
-                print(f"  {i+1:2d}. {d['country_name']:30s} ({d['country_code']:3s}): {d['probability']:5.2%} (utility: {d['utility']:.3f}) {marker}")
-            
-            if chosen_code:
-                chosen_pos = next((i for i, d in enumerate(decision_data['destinations']) if d['country_code'] == chosen_code), None)
-                if chosen_pos is not None:
-                    print(f"\n✅ Chosen {chosen_code} is at position {chosen_pos + 1}")
-                else:
-                    print(f"\n❌ ERROR: Chosen {chosen_code} NOT FOUND in destination list!")
-            print(f"{'='*80}\n")
-
         # Store in agent for dashboard access
         tourist.last_decision = decision_data
 

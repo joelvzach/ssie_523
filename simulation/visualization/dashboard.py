@@ -1023,17 +1023,17 @@ def main():
                 if (sim.tick - start_tick) % ticks_per_log == 0:
                     summary = sim.data_collector.get_summary()
                     elapsed = time.time() - batch_start_time
-                    ticks_per_sec = (sim.current_tick - start_tick) / elapsed if elapsed > 0 else 0
+                    ticks_per_sec = (sim.tick - start_tick) / elapsed if elapsed > 0 else 0
                     
                     status_text.info(
-                        f"⏳ Day {sim.current_tick}/{start_tick + total_ticks} | "
+                        f"⏳ Day {sim.tick}/{start_tick + total_ticks} | "
                         f"Travelers: {summary['active_travelers']:,} | "
                         f"Speed: {ticks_per_sec:.0f} ticks/sec"
                     )
                     
                     # Log detailed metrics for analysis
                     logger.info(
-                        f"BATCH PROGRESS: tick={sim.current_tick}, "
+                        f"BATCH PROGRESS: tick={sim.tick}, "
                         f"date={sim.current_date.strftime('%Y-%m-%d')}, "
                         f"active_travelers={summary['active_travelers']:,}, "
                         f"speed={ticks_per_sec:.1f} ticks/sec"

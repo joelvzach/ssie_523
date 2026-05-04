@@ -1366,7 +1366,7 @@ def render_mini_map(trajectory: list, home_country: str, sim):
     
     Args:
         trajectory: List of (tick, country_code) tuples
-        home_country: Agent's home country code
+        home_country: Agent's home country code (numeric M49 code like '156', '840')
         sim: Simulation object (for country coordinates)
     """
     # Build journey data with coordinates

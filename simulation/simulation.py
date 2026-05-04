@@ -174,6 +174,19 @@ class Simulation:
         agent_count = self.config["agent_count"]
         shares = self.config["segment_shares"]
 
+        # Load country code mapping (numeric M49 → ISO3)
+        import csv
+        from pathlib import Path
+        numeric_to_iso3 = {}
+        # Project root is 2 levels up from simulation.py
+        project_root = Path(__file__).parent.parent
+        mapping_file = project_root / "data" / "derived" / "country_code_mapping.csv"
+        if mapping_file.exists():
+            with open(mapping_file, "r", encoding="utf-8") as f:
+                reader = csv.DictReader(f)
+                for row in reader:
+                    numeric_to_iso3[row["country_code"]] = row["Country Code"]
+        
         # Create mappings for country code/name conversion
         code_to_name = {c["code"]: c["name"] for c in self.countries_data}
         name_to_code = {c["name"]: c["code"] for c in self.countries_data}
@@ -185,14 +198,16 @@ class Simulation:
         for segment, share in shares.items():
             count = int(agent_count * share)
             for _ in range(count):
-                home_code = random.choice(country_codes)
-                home_name = code_to_name[home_code]
+                home_numeric = random.choice(country_codes)
+                home_name = code_to_name[home_numeric]
+                home_iso3 = numeric_to_iso3.get(home_numeric, home_numeric)  # Convert to ISO3 for lookups
+                
                 self.agents.append(
                     Tourist(
                         agent_id=f"T-{agent_id:05d}", 
                         segment=segment, 
                         home_country=home_name,  # Store country name for display
-                        home_country_code=home_code  # Store code for distance/visa lookups
+                        home_country_code=home_iso3  # Store ISO3 code for distance/visa lookups (matches destinations keys)
                     )
                 )
                 agent_id += 1

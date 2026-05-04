@@ -879,25 +879,29 @@ def main():
                 st.button(
                     "⏭️ Step (1 day)",
                     use_container_width=True,
-                    on_click=lambda: step_simulation(sim),
+                    on_click=lambda: step_simulation(st.session_state.simulation),
                     disabled=st.session_state.running,
                 )
             
             with col_runto:
                 # Run to specific date
-                current_date = sim.current_date
-                target_date = st.date_input(
-                    "Run to:",
-                    value=current_date + timedelta(days=30),
-                    min_value=current_date,
-                    max_value=current_date + timedelta(days=365),
-                    key="target_date_picker",
-                    label_visibility="collapsed",
-                )
-                
-                if st.button("⏩ Run to Date", use_container_width=True):
-                    st.session_state.run_to_target = target_date
-                    st.session_state.running = True
+                sim_obj = st.session_state.get('simulation')
+                if sim_obj:
+                    current_date = sim_obj.current_date
+                    target_date = st.date_input(
+                        "Run to:",
+                        value=current_date + timedelta(days=30),
+                        min_value=current_date,
+                        max_value=current_date + timedelta(days=365),
+                        key="target_date_picker",
+                        label_visibility="collapsed",
+                    )
+                    
+                    if st.button("⏩ Run to Date", use_container_width=True):
+                        st.session_state.run_to_target = target_date
+                        st.session_state.running = True
+                else:
+                    st.write("Initialize simulation first")
 
             # Speed control
             speed = st.select_slider(

@@ -192,6 +192,24 @@ def get_agent_sample_data(sim):
                             "latitude": dest.latitude,
                             "longitude": dest.longitude,
                             "color": segment_colors.get(agent.segment, "#999999"),
+                            "state": "TRAVELING",
+                        }
+                    )
+            elif agent.state == "CHOOSING":
+                # Show CHOOSING agents at home location with purple color
+                dest = sim.destinations.get(agent.home_country_code)
+                if dest:
+                    data.append(
+                        {
+                            "agent_id": agent.agent_id,
+                            "segment": agent.segment,
+                            "home_country": agent.home_country,
+                            "current_destination": "PLANNING",
+                            "days_remaining": agent.days_in_choosing,
+                            "latitude": dest.latitude,
+                            "longitude": dest.longitude,
+                            "color": "#9b59b6",  # Purple for planning state
+                            "state": "CHOOSING",
                         }
                     )
 
@@ -294,6 +312,7 @@ def render_map(sim):
                     lambda row: (
                         f"Agent: {row['agent_id']}<br>"
                         f"Segment: {row['segment']}<br>"
+                        f"State: {row['state']}<br>"
                         f"Destination: {row['current_destination']}<br>"
                         f"Days Remaining: {row['days_remaining']}"
                     ),
@@ -1213,13 +1232,15 @@ def render_agent_dashboard(sim):
                 days_until_next = ""
                 if agent.state == "HOME":
                     days_until_next = str(agent.days_until_next_trip)
+                elif agent.state == "CHOOSING":
+                    days_until_next = f"Planning: {agent.days_in_choosing}d left"
 
                 agent_data.append(
                     {
                         "Name": agent.agent_id,
                         "Category": agent.segment.capitalize(),
                         "Status": agent.state,
-                        "Current Destination": agent.current_destination or "-",
+                        "Current Destination": agent.current_destination or ("Planning..." if agent.state == "CHOOSING" else "-"),
                         "Duration": duration_display,
                         "Days Until Next Trip": days_until_next,
                         "Home Country": agent.home_country,  # Now stores country name directly
@@ -1249,7 +1270,7 @@ def render_agent_dashboard(sim):
                         color=state_counts.index,
                         color_discrete_map={
                             "HOME": "#1f77b4",
-                            "CHOOSING": "#ff7f0e",
+                            "CHOOSING": "#9b59b6",  # Purple for planning
                             "TRAVELING": "#2ca02c",
                             "STAYING": "#d62728",
                         },

@@ -73,6 +73,10 @@ class Tourist:
         self.trips_per_year = TRIPS_PER_YEAR[segment]
         self.days_until_next_trip = self._sample_next_trip_interval()
 
+        # Planning phase (CHOOSING state duration)
+        self.planning_days = 10  # Fixed 10-day planning period
+        self.days_in_choosing = 0
+
         # Memory (visited destinations → satisfaction scores)
         self.visited_destinations: Dict[str, float] = {}
 
@@ -180,6 +184,8 @@ class Tourist:
         from simulation.mechanics.choice import choose_destination as choice_func
 
         self.state = "CHOOSING"
+        self.days_in_choosing = self.planning_days
+        self._chosen_destination = None  # Store chosen destination for travel_to call
 
         chosen_code = choice_func(
             self,
@@ -191,7 +197,26 @@ class Tourist:
             capture_decision_data=capture_decision_data,
         )
 
+        self._chosen_destination = chosen_code
         return chosen_code
+
+    def ready_to_travel(self) -> bool:
+        """
+        Check if agent has completed planning and is ready to travel.
+
+        Returns:
+            True if planning period is complete
+        """
+        return self.state == "CHOOSING" and self.days_in_choosing <= 0
+
+    def get_chosen_destination(self) -> Optional[str]:
+        """
+        Get the destination chosen during planning phase.
+
+        Returns:
+            Destination country code
+        """
+        return self._chosen_destination
 
     def travel_to(
         self, destination_code: str, arrival_tick: int, distance_km: float = 0.0
@@ -209,20 +234,23 @@ class Tourist:
         self.arrival_tick = arrival_tick
         self.stay_duration = self._calculate_stay_duration(distance_km)
         self.days_remaining = self.stay_duration
+        self._chosen_destination = None  # Clear after trip starts
 
     def step(self):
         """
         Advance agent state by one day.
 
-        Call this daily for TRAVELING agents.
+        Call this daily for CHOOSING and TRAVELING agents.
         """
-        if self.state != "TRAVELING":
-            return
+        if self.state == "CHOOSING":
+            # Count down planning days
+            self.days_in_choosing -= 1
+            # State transition to TRAVELING handled by simulation
+        elif self.state == "TRAVELING":
+            self.days_remaining -= 1
 
-        self.days_remaining -= 1
-
-        if self.days_remaining <= 0:
-            self.return_home()
+            if self.days_remaining <= 0:
+                self.return_home()
 
     def return_home(self):
         """

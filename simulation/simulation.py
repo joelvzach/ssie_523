@@ -338,7 +338,7 @@ class Simulation:
                 event_mod = 1.0
 
                 if agent.should_start_trip(current_month, seasonal_mod, event_mod):
-                    # Choose destination
+                    # Choose destination (enters CHOOSING state for 10-day planning)
                     dest_code = agent.choose_destination(
                         choice_set,
                         self.distance_matrix,
@@ -348,6 +348,14 @@ class Simulation:
                         capture_decision_data=True,
                     )
 
+            elif agent.state == "CHOOSING":
+                # Count down planning days
+                agent.step()
+                
+                # Check if planning complete and ready to travel
+                if agent.ready_to_travel():
+                    dest_code = agent.get_chosen_destination()
+                    
                     if dest_code and dest_code in self.destinations:
                         # Get distance (use country code for lookup)
                         distance = get_distance(

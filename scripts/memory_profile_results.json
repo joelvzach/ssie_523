@@ -1,0 +1,122 @@
+[
+  {
+    "tick": 0,
+    "visitor_points": 0,
+    "capacity_points": 0,
+    "tfi_points": 0,
+    "trajectory_points": 0,
+    "trip_records": 0,
+    "estimated_mb": 0.02835845947265625,
+    "total_memory_mb": 86.375
+  },
+  {
+    "tick": 3,
+    "visitor_points": 525,
+    "capacity_points": 525,
+    "tfi_points": 525,
+    "trajectory_points": 0,
+    "trip_records": 103,
+    "estimated_mb": 0.09399032592773438,
+    "total_memory_mb": 86.734375,
+    "performance_ticks_per_sec": 2.2331485111825033
+  },
+  {
+    "tick": 6,
+    "visitor_points": 1050,
+    "capacity_points": 1050,
+    "tfi_points": 1050,
+    "trajectory_points": 3,
+    "trip_records": 218,
+    "estimated_mb": 0.16252899169921875,
+    "total_memory_mb": 86.875,
+    "performance_ticks_per_sec": 2.1592654293404063
+  },
+  {
+    "tick": 9,
+    "visitor_points": 1575,
+    "capacity_points": 1575,
+    "tfi_points": 1575,
+    "trajectory_points": 16,
+    "trip_records": 329,
+    "estimated_mb": 0.23068618774414062,
+    "total_memory_mb": 87.03125,
+    "performance_ticks_per_sec": 2.1603560981254577
+  },
+  {
+    "tick": 12,
+    "visitor_points": 2100,
+    "capacity_points": 2100,
+    "tfi_points": 2100,
+    "trajectory_points": 33,
+    "trip_records": 444,
+    "estimated_mb": 0.2999725341796875,
+    "total_memory_mb": 87.109375,
+    "performance_ticks_per_sec": 2.1409688909072333
+  },
+  {
+    "tick": 15,
+    "visitor_points": 2625,
+    "capacity_points": 2625,
+    "tfi_points": 2625,
+    "trajectory_points": 43,
+    "trip_records": 549,
+    "estimated_mb": 0.3665962219238281,
+    "total_memory_mb": 87.234375,
+    "performance_ticks_per_sec": 2.167958686960772
+  },
+  {
+    "tick": 18,
+    "visitor_points": 3150,
+    "capacity_points": 3150,
+    "tfi_points": 3150,
+    "trajectory_points": 53,
+    "trip_records": 648,
+    "estimated_mb": 0.43184661865234375,
+    "total_memory_mb": 87.40625,
+    "performance_ticks_per_sec": 2.2079262997013176
+  },
+  {
+    "tick": 21,
+    "visitor_points": 3675,
+    "capacity_points": 3675,
+    "tfi_points": 3675,
+    "trajectory_points": 59,
+    "trip_records": 756,
+    "estimated_mb": 0.4989433288574219,
+    "total_memory_mb": 87.515625,
+    "performance_ticks_per_sec": 2.2105426261182104
+  },
+  {
+    "tick": 24,
+    "visitor_points": 4200,
+    "capacity_points": 4200,
+    "tfi_points": 4200,
+    "trajectory_points": 67,
+    "trip_records": 856,
+    "estimated_mb": 0.5643157958984375,
+    "total_memory_mb": 87.609375,
+    "performance_ticks_per_sec": 2.2322676249121955
+  },
+  {
+    "tick": 27,
+    "visitor_points": 4725,
+    "capacity_points": 4725,
+    "tfi_points": 4725,
+    "trajectory_points": 75,
+    "trip_records": 972,
+    "estimated_mb": 0.6333503723144531,
+    "total_memory_mb": 87.78125,
+    "performance_ticks_per_sec": 2.2124731475890327
+  },
+  {
+    "tick": 30,
+    "visitor_points": 5250,
+    "capacity_points": 5250,
+    "tfi_points": 5250,
+    "trajectory_points": 76,
+    "trip_records": 1087,
+    "estimated_mb": 0.7017822265625,
+    "total_memory_mb": 87.875,
+    "performance_ticks_per_sec": 2.199524467280643
+  }
+]

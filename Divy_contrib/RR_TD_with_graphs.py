@@ -9,9 +9,9 @@ import pandas as pd
 # FILE PATHS
 # ------------------------------------------------------------
 DATA_FILES = [
-    r"D:\RDTS\US-and-Canada_aggregated_data_up_to_week_of-2026-03-28.csv",
-    r"D:\RDTS\Asia-Pacific_aggregated_data_up_to_week_of-2026-03-28.csv",
-    r"D:\RDTS\Europe-Central-Asia_aggregated_data_up_to_week_of-2026-03-28.csv",
+    "data/ACLED/csv/US-and-Canada_aggregated_data_up_to_week_of-2026-03-28.csv",
+    "data/ACLED/csv/Asia-Pacific_aggregated_data_up_to_week_of-2026-03-28.csv",
+    "data/ACLED/csv/Europe-Central-Asia_aggregated_data_up_to_week_of-2026-03-28.csv",
 ]
 
 # ------------------------------------------------------------

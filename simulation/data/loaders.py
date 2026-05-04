@@ -64,7 +64,7 @@ def load_country_data(data_dir: Path = None) -> List[Dict]:
                     "year": year,
                     "code": code,
                     "name": row.get("country_name", row.get("Country", "")),
-                    "arrivals": safe_float(row.get("inbound_arrivals", 0)),
+                    "arrivals": safe_float(row.get("tourist_arrivals", 0)),  # Fixed: was "inbound_arrivals"
                     "hotel_beds": None,  # Will estimate from arrivals
                     "ttdi": safe_float(row.get("ttdi_score", 3.5)),
                     "cost_index": safe_float(row.get("cost_index", 50.0)),

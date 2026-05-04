@@ -161,6 +161,7 @@ class Tourist:
         visa_lookup_func=None,
         event_bonus_func=None,
         tick: int = 0,
+        capture_decision_data: bool = False,
     ) -> Optional[str]:
         """
         Choose destination using utility-based softmax choice.
@@ -171,6 +172,7 @@ class Tourist:
             visa_lookup_func: Visa friction lookup function
             event_bonus_func: Event bonus function
             tick: Current simulation tick
+            capture_decision_data: If True, store detailed decision breakdown
 
         Returns:
             Selected destination country code
@@ -186,6 +188,7 @@ class Tourist:
             visa_lookup_func=visa_lookup_func,
             event_bonus_func=event_bonus_func,
             tick=tick,
+            capture_decision_data=capture_decision_data,
         )
 
         return chosen_code

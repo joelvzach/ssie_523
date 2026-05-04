@@ -10,7 +10,14 @@ from collections import defaultdict
 class DataCollector:
     """
     Collects and stores simulation metrics at various aggregation levels.
+    
+    Uses circular buffers with configurable max size to prevent unbounded memory growth.
     """
+
+    # Memory limits - prevent unbounded growth
+    MAX_DAYS = 365  # Keep last 365 days of time-series data
+    MAX_TRAJECTORIES = 200  # Keep last 200 trajectory points per agent
+    MAX_TRIP_RECORDS = 10000  # Keep last 10,000 trip records
 
     def __init__(self, sampled_agent_ids: Set[str] = None):
         """
@@ -21,11 +28,11 @@ class DataCollector:
         """
         self.sampled_agent_ids = sampled_agent_ids or set()
 
-        # Aggregate metrics (every tick)
+        # Aggregate metrics (every tick) - limited to MAX_DAYS
         self.global_arrivals: List[int] = []
         self.global_active: List[int] = []
 
-        # Segment-level metrics (every tick)
+        # Segment-level metrics (every tick) - limited to MAX_DAYS
         self.segment_arrivals: Dict[str, List[int]] = {
             "budget": [],
             "luxury": [],
@@ -39,23 +46,34 @@ class DataCollector:
             "family": [],
         }
 
-        # Destination-level metrics (every tick)
+        # Destination-level metrics (every tick) - limited to MAX_DAYS per country
         self.dest_visitors: Dict[str, List[int]] = defaultdict(list)
         self.dest_capacity_util: Dict[str, List[float]] = defaultdict(list)
         self.dest_tfi: Dict[str, List[float]] = defaultdict(list)
 
-        # Sampled agent trajectories
+        # Sampled agent trajectories - limited to MAX_TRAJECTORIES per agent
         self.agent_trajectories: Dict[str, List[tuple]] = defaultdict(list)
 
-        # Trip records (all trips)
+        # Trip records - limited to MAX_TRIP_RECORDS total
         self.trip_records: List[dict] = []
 
         # Current tick
         self.current_tick = 0
 
+    def _trim_to_max(self, list_obj, max_size):
+        """
+        Trim list to max_size by removing oldest elements.
+        
+        Args:
+            list_obj: List to trim
+            max_size: Maximum allowed size
+        """
+        while len(list_obj) > max_size:
+            list_obj.pop(0)
+
     def record(self, tick: int, agents: list, destinations: dict):
         """
-        Record metrics for current tick.
+        Record metrics for current tick with memory limits.
 
         Args:
             tick: Current simulation tick
@@ -73,26 +91,39 @@ class DataCollector:
                 active_travelers += 1
                 arrivals_by_segment[agent.segment] += 1
 
-                # Track sampled agents
+                # Track sampled agents (with limit)
                 if agent.agent_id in self.sampled_agent_ids:
                     self.agent_trajectories[agent.agent_id].append(
                         (tick, agent.current_destination)
                     )
+                    # Trim trajectory to prevent unbounded growth
+                    self._trim_to_max(
+                        self.agent_trajectories[agent.agent_id], 
+                        self.MAX_TRAJECTORIES
+                    )
 
-        # Record aggregate metrics
+        # Record aggregate metrics (with limit)
         total_arrivals = sum(arrivals_by_segment.values())
         self.global_arrivals.append(total_arrivals)
         self.global_active.append(active_travelers)
+        self._trim_to_max(self.global_arrivals, self.MAX_DAYS)
+        self._trim_to_max(self.global_active, self.MAX_DAYS)
 
-        # Record segment metrics
+        # Record segment metrics (with limit)
         for segment in ["budget", "luxury", "adventure", "family"]:
             self.segment_arrivals[segment].append(arrivals_by_segment[segment])
+            self._trim_to_max(self.segment_arrivals[segment], self.MAX_DAYS)
 
-        # Record destination metrics
+        # Record destination metrics (with limit per country)
         for code, dest in destinations.items():
             self.dest_visitors[code].append(dest.get_current_visitors())
             self.dest_capacity_util[code].append(dest.get_crowding_ratio())
             self.dest_tfi[code].append(dest.tfi)
+            
+            # Trim each country's data to MAX_DAYS
+            self._trim_to_max(self.dest_visitors[code], self.MAX_DAYS)
+            self._trim_to_max(self.dest_capacity_util[code], self.MAX_DAYS)
+            self._trim_to_max(self.dest_tfi[code], self.MAX_DAYS)
 
     def record_trip(
         self,
@@ -122,6 +153,9 @@ class DataCollector:
             "duration": (departure_tick - arrival_tick) if departure_tick else None,
         }
         self.trip_records.append(trip_record)
+        
+        # Trim trip records to prevent unbounded growth
+        self._trim_to_max(self.trip_records, self.MAX_TRIP_RECORDS)
 
         # Store reference for updating later
         agent._current_trip_record = trip_record
@@ -194,4 +228,61 @@ class DataCollector:
             },
             "sampled_agents": dict(self.agent_trajectories),
             "trip_records": self.trip_records,
+        }
+
+    def clear(self):
+        """
+        Clear all collected data to free memory.
+        
+        Call this before re-initializing simulation to prevent memory accumulation.
+        """
+        self.global_arrivals.clear()
+        self.global_active.clear()
+        
+        for segment in self.segment_arrivals:
+            self.segment_arrivals[segment].clear()
+            self.segment_avg_stay[segment].clear()
+        
+        self.dest_visitors.clear()
+        self.dest_capacity_util.clear()
+        self.dest_tfi.clear()
+        
+        self.agent_trajectories.clear()
+        self.trip_records.clear()
+        
+        self.current_tick = 0
+
+    def get_memory_stats(self) -> dict:
+        """
+        Get memory usage statistics for collected data.
+        
+        Returns:
+            Dictionary with data point counts and estimates
+        """
+        total_visitor_points = sum(len(v) for v in self.dest_visitors.values())
+        total_capacity_points = sum(len(c) for c in self.dest_capacity_util.values())
+        total_tfi_points = sum(len(t) for t in self.dest_tfi.values())
+        total_trajectory_points = sum(len(t) for t in self.agent_trajectories.values())
+        
+        # Estimate memory (Python int/float ≈ 28 bytes, dict overhead ≈ 240 bytes)
+        estimated_bytes = (
+            (total_visitor_points + total_capacity_points + total_tfi_points) * 28 +
+            total_trajectory_points * 56 +
+            len(self.trip_records) * 240 +
+            177 * 3 * 56  # List overhead
+        )
+        
+        return {
+            'tick': self.current_tick,
+            'visitor_points': total_visitor_points,
+            'capacity_points': total_capacity_points,
+            'tfi_points': total_tfi_points,
+            'trajectory_points': total_trajectory_points,
+            'trip_records': len(self.trip_records),
+            'estimated_mb': estimated_bytes / 1024 / 1024,
+            'limits': {
+                'max_days': self.MAX_DAYS,
+                'max_trajectories': self.MAX_TRAJECTORIES,
+                'max_trip_records': self.MAX_TRIP_RECORDS,
+            }
         }

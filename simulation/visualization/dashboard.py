@@ -84,6 +84,11 @@ def create_simulation(agent_count: int = 40000, start_date: datetime = None):
         start_date = datetime(2026, 1, 1)
     
     with st.spinner(f"Initializing simulation with {agent_count:,} agents starting {start_date.strftime('%B %d, %Y')}..."):
+        # Clear old simulation data to prevent memory accumulation
+        if st.session_state.simulation and hasattr(st.session_state.simulation, 'data_collector'):
+            st.session_state.simulation.data_collector.clear()
+            logger.info("Cleared old simulation data collector")
+        
         countries = load_country_data()
 
         config = {
@@ -912,6 +917,39 @@ def main():
                 help="100× = ~3.65 days/sec (no rendering delays)"
             )
             st.session_state.speed = speed
+
+            # Memory monitoring
+            st.divider()
+            st.subheader("💾 System")
+            
+            try:
+                import psutil
+                import os
+                process = psutil.Process(os.getpid())
+                memory_mb = process.memory_info().rss / 1024 / 1024
+                
+                # Color coding based on usage
+                if memory_mb > 2000:
+                    st.error(f"⚠️ RAM Usage: **{memory_mb:.0f} MB**")
+                    st.warning("High memory usage! Consider refreshing the page.")
+                elif memory_mb > 1000:
+                    st.warning(f"⚡ RAM Usage: **{memory_mb:.0f} MB**")
+                else:
+                    st.success(f"✅ RAM Usage: **{memory_mb:.0f} MB**")
+                
+                # Show memory stats from data collector
+                if st.session_state.simulation:
+                    mem_stats = st.session_state.simulation.data_collector.get_memory_stats()
+                    with st.expander("📊 Memory Details"):
+                        st.write(f"**Day:** {mem_stats['tick']}")
+                        st.write(f"**Data points:**")
+                        st.write(f"  - Visitors: {mem_stats['visitor_points']:,}")
+                        st.write(f"  - Trajectories: {mem_stats['trajectory_points']:,}")
+                        st.write(f"  - Trip records: {mem_stats['trip_records']:,}")
+                        st.write(f"**Estimated collector memory:** {mem_stats['estimated_mb']:.2f} MB")
+                        st.write(f"**Limits:** {mem_stats['limits']['max_days']} days, {mem_stats['limits']['max_trajectories']} trajectories, {mem_stats['limits']['max_trip_records']:,} trips")
+            except ImportError:
+                st.info("Install psutil for memory monitoring: `pip install psutil`")
 
             # Trigger event button
             st.divider()

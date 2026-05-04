@@ -171,6 +171,8 @@ def choose_destination(
                 "event_bonus": event_bonus,
                 "visa_friction": -visa_friction,
             })
+    
+
 
     # 3. Apply softmax with segment temperature
     tau = SEGMENT_TEMPERATURE[tourist.segment]

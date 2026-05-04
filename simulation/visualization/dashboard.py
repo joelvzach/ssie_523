@@ -24,8 +24,9 @@ logger = logging.getLogger(__name__)
 sys.path.insert(0, str(Path(__file__).parent.parent.parent))
 
 from simulation.simulation import Simulation
-from simulation.data.loaders import load_country_data
+from simulation.data.loaders import load_country_data, load_centroids
 from simulation.events.planned_events import create_fifa_world_cup_2026
+from simulation.mechanics.utility import SEGMENT_WEIGHTS
 
 
 # Page configuration
@@ -1550,6 +1551,142 @@ def render_mini_map(trajectory: list, home_country: str, sim):
     st.plotly_chart(fig, use_container_width=True)
 
 
+def render_decision_map(top_destinations: list, home_country_code: str, chosen_code: str):
+    """
+    Render geographic map showing top destination options.
+    
+    Args:
+        top_destinations: List of top 10 destination dicts
+        home_country_code: Agent's home country code
+        chosen_code: Chosen destination country code
+    """
+    from simulation.data.loaders import load_centroids
+    from pathlib import Path
+    
+    # Load centroids for coordinates
+    centroids = load_centroids(Path('data/derived'))
+    
+    # Build marker data
+    markers = []
+    
+    # Add home country (green)
+    home_centroid = centroids.get(home_country_code)
+    if home_centroid:
+        markers.append({
+            'lat': home_centroid['lat'],
+            'lon': home_centroid['lon'],
+            'type': 'home',
+            'label': f"🏠 Home",
+            'size': 12,
+            'color': '#27ae60',
+        })
+    
+    # Add top 10 destinations
+    for i, dest in enumerate(top_destinations):
+        dest_centroid = centroids.get(dest['country_code'])
+        if dest_centroid:
+            is_chosen = dest['country_code'] == chosen_code
+            markers.append({
+                'lat': dest_centroid['lat'],
+                'lon': dest_centroid['lon'],
+                'type': 'chosen' if is_chosen else 'option',
+                'label': f"{'✅ ' if is_chosen else ''}{dest['country_name']} ({dest['probability']:.1%})",
+                'size': 14 if is_chosen else 8,
+                'color': '#e74c3c' if is_chosen else '#9b59b6',
+                'rank': i + 1,
+            })
+    
+    if not markers:
+        st.warning("No location data available for map")
+        return
+    
+    # Create map
+    fig = go.Figure()
+    
+    # Add home marker
+    home_markers = [m for m in markers if m['type'] == 'home']
+    if home_markers:
+        fig.add_trace(go.Scattergeo(
+            lon=[m['lon'] for m in home_markers],
+            lat=[m['lat'] for m in home_markers],
+            mode='markers+text',
+            marker=dict(size=12, color='#27ae60', symbol='circle', line=dict(width=1, color='white')),
+            text=[m['label'] for m in home_markers],
+            textposition='top center',
+            name='Home',
+            hoverinfo='text',
+        ))
+    
+    # Add chosen destination marker
+    chosen_markers = [m for m in markers if m['type'] == 'chosen']
+    if chosen_markers:
+        fig.add_trace(go.Scattergeo(
+            lon=[m['lon'] for m in chosen_markers],
+            lat=[m['lat'] for m in chosen_markers],
+            mode='markers+text',
+            marker=dict(size=14, color='#e74c3c', symbol='circle', line=dict(width=2, color='white')),
+            text=[m['label'] for m in chosen_markers],
+            textposition='top center',
+            name='Chosen',
+            hoverinfo='text',
+        ))
+    
+    # Add other options
+    option_markers = [m for m in markers if m['type'] == 'option']
+    if option_markers:
+        fig.add_trace(go.Scattergeo(
+            lon=[m['lon'] for m in option_markers],
+            lat=[m['lat'] for m in option_markers],
+            mode='markers',
+            marker=dict(size=8, color='#9b59b6', symbol='circle', line=dict(width=1, color='white')),
+            text=[m['label'] for m in option_markers],
+            name='Other Options',
+            hoverinfo='text',
+        ))
+    
+    # Calculate bounds for auto-zoom
+    lats = [m['lat'] for m in markers]
+    lons = [m['lon'] for m in markers]
+    
+    lat_range = max(lats) - min(lats)
+    lon_range = max(lons) - min(lons)
+    
+    # Add padding
+    lat_padding = max(lat_range * 0.3, 15)
+    lon_padding = max(lon_range * 0.3, 20)
+    
+    # Center view
+    lat_center = sum(lats) / len(lats)
+    lon_center = sum(lons) / len(lons)
+    
+    # Determine scale based on spread
+    if lat_range < 20 and lon_range < 30:
+        scale = 8  # Regional view
+    elif lat_range < 50 and lon_range < 60:
+        scale = 4  # Sub-continental
+    else:
+        scale = 2  # Continental/global
+    
+    fig.update_layout(
+        geo=dict(
+            projection=dict(type='natural earth', scale=scale),
+            center=dict(lon=lon_center, lat=lat_center),
+            scope='world',
+            showland=True,
+            landcolor='#f0f0f0',
+            countrycolor='#cccccc',
+            showcountries=True,
+            bgcolor='#ffffff',
+        ),
+        height=400,
+        margin=dict(l=0, r=0, t=30, b=0),
+        title=f"Top 10 Destination Options (Green=Home, Red=Chosen, Purple=Alternatives)",
+        legend=dict(orientation='h', y=1.05, x=0),
+    )
+    
+    st.plotly_chart(fig, use_container_width=True)
+
+
 def render_decision_breakdown(decision: dict):
     """
     Render decision breakdown showing utility factors.
@@ -1573,16 +1710,39 @@ def render_decision_breakdown(decision: dict):
                 chosen_name = f"{dest['country_name']} ({chosen_name})"
         st.metric("Chosen Destination", chosen_name or "N/A")
     
-    # Top 10 choices table
-    st.write("**Top 10 Destination Choices:**")
+    # Top choices table - show chosen destination even if outside top 10
+    st.write("**📊 Destination Choice Analysis:**")
     
-    top_dests = decision['destinations'][:10]
+    chosen_code = decision['chosen']
+    all_dests = decision['destinations']
+    
+    # Find chosen destination position
+    chosen_dest = next((d for d in all_dests if d['country_code'] == chosen_code), None)
+    chosen_rank = None
+    if chosen_dest:
+        chosen_rank = all_dests.index(chosen_dest) + 1
+    
+    # Show chosen destination highlight if outside top 10
+    if chosen_rank and chosen_rank > 10:
+        st.info(f"🎯 **Chosen destination ranked #{chosen_rank}**: {chosen_dest['country_name']} ({chosen_code}) with {chosen_dest['probability']:.2%} probability")
+        st.write("*Note: Lower-probability destinations can still be selected through probabilistic choice - this demonstrates exploration behavior!*")
+    
+    # Build table showing top 10 PLUS chosen destination if outside top 10
+    table_dests = all_dests[:10].copy()
+    
+    # Add chosen destination if not already in top 10
+    if chosen_rank and chosen_rank > 10 and chosen_dest:
+        table_dests.append(chosen_dest)
+    
+    # Sort by rank for display
+    table_dests.sort(key=lambda x: all_dests.index(x))
     
     table_data = []
-    for i, dest in enumerate(top_dests):
+    for i, dest in enumerate(table_dests):
         is_chosen = dest['country_code'] == decision['chosen']
+        rank = all_dests.index(dest) + 1
         table_data.append({
-            "Rank": i + 1,
+            "Rank": rank,
             "Destination": f"{dest['country_name']} ({dest['country_code']})",
             "Utility": f"{dest['utility']:.3f}",
             "Probability": f"{dest['probability']:.2%}",
@@ -1590,7 +1750,11 @@ def render_decision_breakdown(decision: dict):
         })
     
     df = pd.DataFrame(table_data)
-    st.dataframe(df, use_container_width=True, height=280, hide_index=True)
+    st.dataframe(df, use_container_width=True, height=320, hide_index=True)
+    
+    # Geographic mini-map showing all top 10 options
+    st.write("**🌍 Geographic View of Options (Top 10):**")
+    render_decision_map(all_dests[:10], decision['home_country_code'], chosen_code)
     
     # Factor breakdown bar chart for top 3 choices
     st.write("**Factor Breakdown (Top 3 Choices):**")
@@ -1623,7 +1787,50 @@ def render_decision_breakdown(decision: dict):
     )
     fig.update_layout(height=400, margin=dict(l=0, r=0, t=40, b=0))
     fig.update_traces(marker_line_width=0.5)
+    
+    # Add annotations for factors with no impact
+    for i, factor in enumerate(factor_names):
+        values = [chart_data[j][factor] for j in range(3)]
+        if all(abs(v) < 0.01 for v in values):
+            fig.add_annotation(
+                x=i,
+                text="No impact",
+                showarrow=False,
+                font=dict(size=9, color="gray"),
+                yref="paper",
+                y=0.02,
+            )
+    
     st.plotly_chart(fig, use_container_width=True)
+    
+    # Show parameter values table for transparency
+    st.write("**📊 Factor Parameters (Why Some Bars Are Empty):**")
+    
+    param_table = []
+    for dest in top_dests[:3]:
+        # Calculate normalized values from weighted contributions
+        weights = SEGMENT_WEIGHTS.get(decision['segment'], SEGMENT_WEIGHTS['budget'])
+        
+        param_table.append({
+            "Destination": dest['country_name'],
+            "Attractiveness (norm)": f"{dest['attractiveness'] / weights['α']:.3f}",
+            "→ Weighted": f"{dest['attractiveness']:+.3f}",
+            "Cost (norm)": f"{abs(dest['cost']) / weights['β']:.3f}",
+            "→ Weighted": f"{dest['cost']:+.3f}",
+            "Crowding (norm)": f"{abs(dest['crowding']) / weights['γ']:.3f}",
+            "→ Weighted": f"{dest['crowding']:+.3f}",
+            "Risk (norm)": f"{abs(dest['risk']) / weights['δ']:.3f}",
+            "→ Weighted": f"{dest['risk']:+.3f}",
+            "Distance (norm)": f"{abs(dest['distance']) / weights['η']:.3f}",
+            "→ Weighted": f"{dest['distance']:+.3f}",
+            "Memory (norm)": f"{dest['memory'] / weights['ζ']:.3f}",
+            "→ Weighted": f"{dest['memory']:+.3f}",
+        })
+    
+    param_df = pd.DataFrame(param_table)
+    st.dataframe(param_df, use_container_width=True, height=180, hide_index=True)
+    
+    st.caption("*Note: Factors with '0.000' normalized values have no impact on the decision (e.g., no crowding, no risk, no memory). The weighted contribution is the normalized value × segment weight.*")
     
     # Why chosen explanation
     if decision['chosen']:

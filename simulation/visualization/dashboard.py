@@ -863,7 +863,7 @@ def render_visitor_origin_map(sim, country_code):
             z=[max(df['visitors']) * 1.5],  # Make it stand out
             locationmode='ISO-3',  # Fixed: use 'ISO-3'
             colorscale=[[0, 'red'], [1, 'red']],  # Red highlight
-            showslegend=True,
+            showlegend=True,
             name='Destination',
             hovertemplate=f'{dest.country_name}: Destination<extra></extra>',
         ))

@@ -77,17 +77,17 @@ class Destination:
         # Previous: 0.80 × 0.15 = 0.12 (12% of hotel beds) - still too large
         # Current: 0.0003 (0.03% of hotel beds) - makes crowding visible at 40K agents
         #
-        # Rationale for 100x reduction:
-        # - With 40,000 agents and ~1.5 trips/year average: ~164 active travelers daily
-        # - Global hotel beds: ~15.5M → 12% capacity = 1.86M beds → 0.01% utilization
-        # - Scaled capacity: ~4,658 beds → 3.5% average utilization (visible crowding!)
-        # - Popular destinations (France, Spain): 10-20%+ utilization (overtourism dynamics)
+        # Rationale for capacity scaling:
+        # - With 100,000 agents and ~1.5 trips/year: ~411 active travelers daily
+        # - France hotel beds: ~1.35M → needs ~41 capacity for visible crowding
+        # - Scaled capacity: ~41 beds → 100% utilization (RED!) for popular destinations
+        # - Less popular: 10-50% utilization (GREEN/YELLOW)
         #
         # This scaling allows demonstration of:
         # - TFI feedback loops (crowding → policy → capacity reduction)
-        # - Non-linear dynamics (threshold effects at 80%, 100%)
+        # - Non-linear dynamics (threshold effects at 55%, 80%, 100%)
         # - Emergent patterns (some destinations overcrowded, others underutilized)
-        self.base_capacity = int(hotel_beds * 0.0003)
+        self.base_capacity = int(hotel_beds * 0.00003)
 
         # Tourism dependency (for TFI dynamics)
         self.tourism_gdp_pct = tourism_gdp_pct if tourism_gdp_pct is not None else 0.0

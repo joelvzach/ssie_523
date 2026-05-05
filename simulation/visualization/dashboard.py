@@ -452,14 +452,19 @@ def render_event_notifications(sim):
 
 
 def render_time_series(sim, selected_country=None):
-    """Render time series chart of arrivals (global or country-specific)."""
+    """Render time series chart of arrivals (global or country-specific) with dates."""
     if selected_country and selected_country != "Global":
         # Country-specific time series
         if selected_country in sim.data_collector.dest_visitors:
             country_arrivals = sim.data_collector.dest_visitors[selected_country]
+            # Generate dates from simulation start date
+            from datetime import timedelta
+            start_date = sim.current_date - timedelta(days=len(country_arrivals))
+            dates = [(start_date + timedelta(days=i)).strftime("%b %d") for i in range(len(country_arrivals))]
+            
             df = pd.DataFrame(
                 {
-                    "Day": range(1, len(country_arrivals) + 1),
+                    "Date": dates,
                     "Arrivals": country_arrivals,
                 }
             )
@@ -475,9 +480,13 @@ def render_time_series(sim, selected_country=None):
             st.info("Run simulation for at least 2 ticks to see time series data.")
             return
 
+        from datetime import timedelta
+        start_date = sim.current_date - timedelta(days=len(arrivals))
+        dates = [(start_date + timedelta(days=i)).strftime("%b %d") for i in range(len(arrivals))]
+        
         df = pd.DataFrame(
             {
-                "Day": range(1, len(arrivals) + 1),
+                "Date": dates,
                 "Arrivals": arrivals,
             }
         )
@@ -485,7 +494,7 @@ def render_time_series(sim, selected_country=None):
 
     fig = px.line(
         df,
-        x="Day",
+        x="Date",
         y="Arrivals",
         title=title,
         markers=False,
@@ -494,8 +503,9 @@ def render_time_series(sim, selected_country=None):
     fig.update_layout(
         height=300,
         margin=dict(l=0, r=0, t=40, b=0),
-        xaxis_title="Simulation Day",
+        xaxis_title="Date",
         yaxis_title="Number of Arrivals",
+        xaxis_tickangle=-45,
     )
 
     st.plotly_chart(fig, use_container_width=True)
@@ -780,6 +790,109 @@ def render_visitor_origins(sim, country_code):
     )
     
     st.plotly_chart(fig, use_container_width=True)
+
+
+def render_visitor_origin_map(sim, country_code):
+    """Render world map showing visitor origins with highlighted countries."""
+    # Get trip records for this destination
+    trips = [
+        t for t in sim.data_collector.trip_records
+        if t['destination'] == country_code
+    ]
+    
+    if not trips:
+        st.info("No visitor data available yet.")
+        return
+    
+    # Filter to last 90 days
+    current_tick = sim.tick
+    recent_trips = [
+        t for t in trips
+        if t['arrival_tick'] >= (current_tick - 90)
+    ]
+    
+    if not recent_trips:
+        st.info("No visitors in last 90 days.")
+        return
+    
+    # Count by origin
+    from collections import Counter
+    origin_counts = Counter(t['origin'] for t in recent_trips)
+    
+    # Build map data with coordinates
+    origin_data = []
+    for code, count in origin_counts.items():
+        origin_dest = sim.destinations.get(code)
+        if origin_dest:
+            origin_data.append({
+                'country': origin_dest.country_name,
+                'code': code,
+                'visitors': count,
+                'lat': origin_dest.latitude,
+                'lon': origin_dest.longitude,
+            })
+    
+    if not origin_data:
+        st.info("Could not map visitor origins.")
+        return
+    
+    # Sort by visitors for color scale
+    origin_data.sort(key=lambda x: x['visitors'], reverse=True)
+    
+    # Create map
+    df = pd.DataFrame(origin_data)
+    
+    fig = go.Figure()
+    
+    # Base world map
+    fig.add_trace(go.Choropleth(
+        locations=df['code'],
+        z=df['visitors'],
+        locationmode='country codes',
+        colorscale='Blues',
+        colorbar_title='Visitors',
+        hovertemplate='%{location}: %{z} visitors<extra></extra>',
+    ))
+    
+    # Highlight destination country
+    dest = sim.destinations.get(country_code)
+    if dest:
+        fig.add_trace(go.Choropleth(
+            locations=[country_code],
+            z=[max(df['visitors']) * 1.5],  # Make it stand out
+            locationmode='country codes',
+            colorscale=[[0, 'red'], [1, 'red']],  # Red highlight
+            showslegend=True,
+            name='Destination',
+            hovertemplate=f'{dest.country_name}: Destination<extra></extra>',
+        ))
+    
+    fig.update_layout(
+        title=f"Visitor Origins Map for {dest.country_name if dest else country_code}",
+        geo=dict(
+            showframe=True,
+            showcoastlines=True,
+            projection_type='equirectangular',
+        ),
+        height=500,
+    )
+    
+    st.plotly_chart(fig, use_container_width=True)
+    
+    # Show summary statistics
+    st.write(f"**📊 Visitor Origin Summary (Last 90 Days):**")
+    total_visitors = sum(origin_counts.values())
+    unique_origins = len(origin_counts)
+    
+    col_sum1, col_sum2, col_sum3 = st.columns(3)
+    with col_sum1:
+        st.metric("Total Visitors", f"{total_visitors:,}")
+    with col_sum2:
+        st.metric("Countries of Origin", f"{unique_origins}")
+    with col_sum3:
+        top_origin = origin_counts.most_common(1)[0]
+        top_name = sim.destinations.get(top_origin[0])
+        st.metric("Top Origin", f"{top_name.country_name if top_name else top_origin[0]} ({top_origin[1]})")
 
 
 def render_segment_breakdown(sim):
@@ -1480,6 +1593,40 @@ def main():
         fig_map = render_map(sim)
         st.plotly_chart(fig_map, use_container_width=True, key="map")
         
+        # Agent type legend
+        st.divider()
+        st.subheader("🎨 Agent Types")
+        
+        col_leg1, col_leg2, col_leg3, col_leg4 = st.columns(4)
+        with col_leg1:
+            st.markdown("""
+            **🔵 Budget (30%)**
+            - Cost-sensitive
+            - Short-haul preference
+            - 1-2 trips/year
+            """)
+        with col_leg2:
+            st.markdown("""
+            **🟠 Luxury (20%)**
+            - Quality-focused
+            - Less price-sensitive
+            - 2-3 trips/year
+            """)
+        with col_leg3:
+            st.markdown("""
+            **🟢 Adventure (25%)**
+            - Risk-tolerant
+            - Off-the-beaten-path
+            - 1-2 trips/year
+            """)
+        with col_leg4:
+            st.markdown("""
+            **🔴 Family (25%)**
+            - Safety-conscious
+            - Strong distance penalty
+            - 1 trip/year
+            """)
+        
         # Continent-level statistics below map
         st.divider()
         st.subheader("🌍 Continental Tourism Distribution")
@@ -1513,10 +1660,13 @@ def main():
         if selected_country and selected_country != "Global":
             # Show comprehensive destination details
             render_destination_details(sim, selected_country)
+            
+            # Add visitor origin map
+            st.divider()
+            st.subheader("🌍 Visitor Origins Map")
+            render_visitor_origin_map(sim, selected_country)
         else:
             # Show overview with time series and top destinations
-            st.info("👈 Select a country from the dropdown above for detailed analysis")
-            
             st.divider()
             
             # Time series and top destinations
@@ -1681,14 +1831,22 @@ def render_agent_dashboard(sim):
                     st.plotly_chart(fig_state, use_container_width=True)
 
             with col2:
-                # Segment distribution bar chart
-                segment_counts = df["Category"].value_counts()
-                if len(segment_counts) > 0:
-                    fig_segment = px.bar(
-                        x=segment_counts.index,
-                        y=segment_counts.values,
-                        title="Segment Distribution",
-                        color=segment_counts.index,
+                # Trip frequency by segment
+                trip_freq = {}
+                for segment in ['Budget', 'Luxury', 'Adventure', 'Family']:
+                    segment_agents = [a for a in sim.agents if a.segment == segment.lower() and a.agent_id in sim.sampled_agent_ids]
+                    if segment_agents:
+                        # Calculate average trips per agent (based on trips in history)
+                        total_trips = sum(len([t for t in sim.data_collector.trip_records if t['segment'] == segment.lower()]) for _ in range(1))
+                        avg_trips = total_trips / len(segment_agents) * (365 / max(1, sim.tick))
+                        trip_freq[segment] = avg_trips
+                
+                if trip_freq:
+                    fig_freq = px.bar(
+                        x=list(trip_freq.keys()),
+                        y=list(trip_freq.values()),
+                        title="Avg Trips/Year by Segment",
+                        color=list(trip_freq.keys()),
                         color_discrete_map={
                             "Budget": "#1f77b4",
                             "Luxury": "#ff7f0e",
@@ -1696,8 +1854,8 @@ def render_agent_dashboard(sim):
                             "Family": "#d62728",
                         },
                     )
-                    fig_segment.update_layout(height=250, margin=dict(l=0, r=0, t=30, b=0))
-                    st.plotly_chart(fig_segment, use_container_width=True)
+                    fig_freq.update_layout(height=250, margin=dict(l=0, r=0, t=30, b=0))
+                    st.plotly_chart(fig_freq, use_container_width=True)
 
             with col3:
                 # Top current destinations
@@ -2140,20 +2298,63 @@ def render_decision_breakdown(decision: dict, sim):
     # Sort by rank for display
     table_dests.sort(key=lambda x: all_dests.index(x))
     
+    # Enhanced table with detailed factor breakdown
     table_data = []
     for i, dest in enumerate(table_dests):
         is_chosen = dest['country_code'] == decision['chosen']
         rank = all_dests.index(dest) + 1
+        
+        # Get detailed factors
+        weights = SEGMENT_WEIGHTS.get(decision['segment'], SEGMENT_WEIGHTS['budget'])
+        
         table_data.append({
             "Rank": rank,
             "Destination": f"{dest['country_name']} ({dest['country_code']})",
             "Utility": f"{dest['utility']:.3f}",
             "Probability": f"{dest['probability']:.2%}",
-            "Chosen": "✅" if is_chosen else "",
+            "Attractiveness": f"+{dest['attractiveness']:.3f}",
+            "Distance": f"{dest['distance']:.3f}",
+            "Crowding": f"{dest['crowding']:.3f}",
+            "Chosen": "✅ WINNER" if is_chosen else "",
         })
     
     df = pd.DataFrame(table_data)
-    st.dataframe(df, use_container_width=True, height=320, hide_index=True)
+    st.dataframe(df, use_container_width=True, height=350, hide_index=True)
+    
+    # Winner explanation
+    if decision['chosen']:
+        chosen_data = next((d for d in all_dests if d['country_code'] == decision['chosen']), None)
+        if chosen_data:
+            st.divider()
+            st.write("**🏆 Why {0} Won:**".format(chosen_data['country_name']))
+            
+            # Find strongest positive factors
+            factors = {
+                "Attractiveness": chosen_data['attractiveness'],
+                "Distance": chosen_data['distance'],
+                "Crowding": chosen_data['crowding'],
+                "Risk": chosen_data['risk'],
+                "Memory": chosen_data['memory'],
+                "Event Bonus": chosen_data['event_bonus'],
+            }
+            
+            positive_factors = [(k, v) for k, v in factors.items() if v > 0.01]
+            positive_factors.sort(key=lambda x: x[1], reverse=True)
+            
+            if positive_factors:
+                st.write("**Key Advantages:**")
+                for factor, value in positive_factors[:3]:
+                    st.write(f"  • **{factor}**: +{value:.3f}")
+            
+            # Compare to #2 choice
+            runner_up = next((d for d in all_dests if d['country_code'] != decision['chosen']), None)
+            if runner_up:
+                utility_diff = chosen_data['utility'] - runner_up['utility']
+                prob_diff = chosen_data['probability'] - runner_up['probability']
+                
+                st.write(f"\n**vs. #{2} ({runner_up['country_name']}):**")
+                st.write(f"  • Utility advantage: +{utility_diff:.3f}")
+                st.write(f"  • Probability advantage: +{prob_diff:.2%}")
     
     # What-if analysis: Show how rankings would differ if choosing today
     if decision['tick'] < sim.tick:
@@ -2732,12 +2933,19 @@ def render_power_law_chart(sim, power_law_params):
     
     with col2:
         # Top countries by population bar chart
+        # Load population data from file
+        from pathlib import Path
+        from simulation.data.loaders import load_population_data
+        
+        pop_lookup = load_population_data(Path("/Users/joelvzach/Code/ssie_523/data/derived"))
+        
         pop_data = []
         for code, dest in sim.destinations.items():
-            if hasattr(dest, 'population') and dest.population > 0:
+            population = pop_lookup.get(code, 0)
+            if population > 0:
                 pop_data.append({
                     'country': dest.country_name,
-                    'population': dest.population,
+                    'population': population,
                     'visitors': dest.get_current_visitors(),
                 })
         
@@ -2759,7 +2967,7 @@ def render_power_law_chart(sim, power_law_params):
             )
             st.plotly_chart(fig_pop, use_container_width=True)
         else:
-            st.info("Population data not available")
+            st.info("Population data not available - check data/derived/country_population.csv")
     
     # Interpretation
     col_m1, col_m2 = st.columns(2)

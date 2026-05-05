@@ -482,7 +482,7 @@ def render_time_series(sim, selected_country=None):
     st.plotly_chart(fig, use_container_width=True)
 
 
-def render_country_selector(sim):
+def render_country_selector(sim, key="country_selector"):
     """Render country filter dropdown."""
     countries = sorted(
         [(code, dest.country_name) for code, dest in sim.destinations.items()],
@@ -494,11 +494,11 @@ def render_country_selector(sim):
     country_names["Global"] = "🌍 Global"
 
     selected = st.selectbox(
-        "📍 Filter Graphs by Country",
+        "📍 Filter by Country",
         options=country_options,
         format_func=lambda code: country_names.get(code, code),
         index=0,
-        key="country_selector",
+        key=key,
         help="Select a country to see its specific arrival trends",
     )
 
@@ -1231,7 +1231,7 @@ def main():
             # Force rerun to continue simulation
             st.rerun()
 
-    # Render dashboard (when paused)
+    # Render dashboard with tabbed organization (when paused)
     render_summary_metrics(sim)
 
     # Render event notifications (if any active events)
@@ -1239,41 +1239,121 @@ def main():
 
     st.divider()
 
-    # Main layout: Map (left) + Charts (right)
-    col_map, col_charts = st.columns([6, 4])
+    # Main dashboard tabs
+    tab_overview, tab_agents, tab_destinations, tab_analytics, tab_settings = st.tabs([
+        "🗺️ Overview",
+        "👥 Agents",
+        "🏨 Destinations",
+        "📈 Analytics",
+        "⚙️ Settings",
+    ])
 
-    with col_map:
-        # Interactive map
-        fig_map = render_map(sim)
-        st.plotly_chart(fig_map, use_container_width=True, key="map")
+    with tab_overview:
+        st.header("🗺️ Global Overview")
+        
+        # Main layout: Map (left) + Key Metrics (right)
+        col_map, col_metrics = st.columns([6, 4])
 
-        # Click handler (using session state)
-        st.info(
-            "💡 **Tip**: Click on a country in the map to see details (feature coming soon)"
-        )
+        with col_map:
+            # Interactive map
+            fig_map = render_map(sim)
+            st.plotly_chart(fig_map, use_container_width=True, key="map")
 
-    with col_charts:
-        # Country filter dropdown
-        selected_country = render_country_selector(sim)
+        with col_metrics:
+            # Quick stats
+            st.subheader("📊 Key Metrics")
+            summary = sim.data_collector.get_summary()
+            
+            st.metric("Current Day", f"Day {sim.tick} ({sim.current_date.strftime('%Y-%m-%d')})")
+            st.metric("Active Travelers", f"{summary['active_travelers']:,}")
+            st.metric("Total Trips", f"{summary['total_trips']:,}")
+            
+            st.divider()
+            
+            # Country selector for quick view
+            selected_country = render_country_selector(sim)
+            
+            if st.session_state.selected_country:
+                render_destination_details(sim, st.session_state.selected_country)
 
-        # Time series (filtered by country)
-        render_time_series(sim, selected_country)
+    with tab_agents:
+        st.header("👥 Agent Analysis")
+        
+        if not st.session_state.running:
+            render_agent_dashboard(sim)
+        else:
+            st.info("⏸️ Pause simulation to view detailed agent dashboard")
+            
+            # Show mini summary even while running
+            col1, col2 = st.columns(2)
+            with col1:
+                st.metric("Sampled Agents", f"{len(sim.sampled_agent_ids):,}")
+            with col2:
+                summary = sim.data_collector.get_summary()
+                st.metric("Active Travelers", f"{summary['active_travelers']:,}")
 
-        # Top destinations
-        render_top_destinations(sim)
+    with tab_destinations:
+        st.header("🏨 Destination Details")
+        
+        # Time series and top destinations
+        col1, col2 = st.columns([2, 1])
+        
+        with col1:
+            selected_country = render_country_selector(sim, key="dest_selector")
+            render_time_series(sim, selected_country)
+        
+        with col2:
+            render_top_destinations(sim)
+            st.divider()
+            render_segment_breakdown(sim)
 
-        # Segment breakdown
-        render_segment_breakdown(sim)
+    with tab_analytics:
+        st.header("📈 Analytics & Insights")
+        
+        # What-if analysis and complexity metrics
+        st.markdown("""
+        ### System Dynamics Analysis
+        
+        This section shows emergent patterns and feedback loops in the tourism system.
+        """)
+        
+        # Placeholder for Phase 5 charts
+        st.info("🚧 Complex systems analysis charts coming soon: TFI feedback, Gini coefficient, capacity dynamics")
+        
+        # Show what-if analysis from agent decisions if available
+        if not st.session_state.running:
+            st.divider()
+            st.subheader("🧠 Recent Decision Analysis")
+            st.write("Select an agent in CHOOSING state from the Agents tab to see decision breakdown with what-if analysis.")
 
-    # Country details panel (if selected)
-    if st.session_state.selected_country:
+    with tab_settings:
+        st.header("⚙️ Simulation Settings")
+        
+        st.markdown("""
+        ### Event Management
+        
+        Trigger negative events to test system resilience and policy responses.
+        """)
+        
+        # Show negative event trigger (moved from sidebar)
+        # Note: Keep in sidebar for now, add reference here
+        st.info("⬅️ Use the sidebar to trigger negative events and configure simulation parameters")
+        
+        # Memory monitoring
         st.divider()
-        render_destination_details(sim, st.session_state.selected_country)
-
-    # Agent dashboard (when paused)
-    if sim and not st.session_state.running:
-        st.divider()
-        render_agent_dashboard(sim)
+        st.subheader("💾 System Monitoring")
+        try:
+            import psutil
+            process = psutil.Process()
+            mem_info = process.memory_info()
+            
+            col1, col2 = st.columns(2)
+            with col1:
+                st.metric("RAM Usage", f"{mem_info.rss / 1024 / 1024:.1f} MB")
+            with col2:
+                st.metric("CPU Usage", f"{process.cpu_percent():.1f}%")
+        except ImportError:
+            st.info("Install psutil for system monitoring: `pip install psutil`")
 
 
 def render_agent_dashboard(sim):

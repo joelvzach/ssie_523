@@ -194,6 +194,7 @@ def load_centroids(data_dir: Path = None) -> Dict[str, Dict]:
             centroids[code] = {
                 "lat": float(row.get("latitude", 0.0)),
                 "lon": float(row.get("longitude", 0.0)),
+                "region": row.get("region", "Unknown"),
             }
 
     return centroids

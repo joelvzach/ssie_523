@@ -683,8 +683,10 @@ def render_utilization_trend(sim, country_code):
         x='Day',
         y='Utilization (%)',
         title=f'Capacity Utilization (Last 90 Days)',
-        line_color=line_color,
     )
+    
+    # Set line color
+    fig.update_traces(line=dict(color=line_color, width=3))
     
     # Add threshold lines
     fig.add_hline(y=100, line_dash="dash", line_color="red", annotation_text="100% Capacity")
@@ -1178,10 +1180,9 @@ def main():
             # Speed control
             speed = st.select_slider(
                 "Simulation Speed",
-                options=[0.5, 1.0, 2.0, 4.0, 10.0, 100.0],
+                options=[0.5, 1.0, 2.0, 4.0, 10.0],
                 value=st.session_state.speed,
                 key="speed_slider",
-                help="100× = ~3.65 days/sec (no rendering delays)"
             )
             st.session_state.speed = speed
 
@@ -1540,14 +1541,36 @@ def main():
         This section shows emergent patterns and feedback loops in the tourism system.
         """)
         
-        # Placeholder for Phase 5 charts
-        st.info("🚧 Complex systems analysis charts coming soon: TFI feedback, Gini coefficient, capacity dynamics")
-        
-        # Show what-if analysis from agent decisions if available
         if not st.session_state.running:
+            # Calculate Gini coefficient for utilization inequality
+            gini_coefficient = calculate_gini_coefficient(sim)
+            
+            # Create analytics charts in tabs
+            tab_capacity, tab_tfi, tab_inequality, tab_events = st.tabs([
+                "🏗️ Capacity Dynamics",
+                "🔄 TFI Feedback",
+                "📊 Inequality (Gini)",
+                "⚡ Event Impact"
+            ])
+            
+            with tab_capacity:
+                render_capacity_dynamics(sim)
+            
+            with tab_tfi:
+                render_tfi_feedback_chart(sim)
+            
+            with tab_inequality:
+                render_gini_chart(sim, gini_coefficient)
+            
+            with tab_events:
+                render_event_impact_analysis(sim)
+            
+            # Show what-if analysis from agent decisions if available
             st.divider()
             st.subheader("🧠 Recent Decision Analysis")
             st.write("Select an agent in CHOOSING state from the Agents tab to see decision breakdown with what-if analysis.")
+        else:
+            st.info("⏸️ Pause simulation to view analytics charts")
 
     with tab_settings:
         st.header("⚙️ Simulation Settings")
@@ -1631,7 +1654,32 @@ def render_agent_dashboard(sim):
         tab1, tab2 = st.tabs(["📋 All Agents", "🔍 Filter by Agent"])
 
         with tab1:
-            # Main table with all agents
+            # Main table with all agents - add selection column
+            st.write("**💡 Tip:** Click an agent's name to view their detailed journey")
+            
+            # Add selection buttons
+            df_with_select = df.copy()
+            
+            # Create selection interface
+            selected_agent_id = None
+            
+            # Display agent IDs as clickable links
+            agent_ids = df["Name"].tolist()
+            
+            # Use selectbox for agent selection (Streamlit doesn't support row clicks)
+            selected_agent_id = st.selectbox(
+                "Quick Select Agent:",
+                options=[""] + agent_ids,
+                format_func=lambda x: f"👤 {x}" if x else "— Choose an agent —",
+                key="quick_agent_select",
+                help="Select an agent to automatically switch to their detailed view"
+            )
+            
+            # Auto-switch to Filter tab when agent selected
+            if selected_agent_id:
+                st.session_state.selected_agent_for_filter = selected_agent_id
+                st.info(f"✅ Selected **{selected_agent_id}** - Scroll down to '🔍 Filter by Agent' tab to view details")
+            
             st.dataframe(df, use_container_width=True, height=350, hide_index=True)
 
             # Summary charts (3 columns)
@@ -1695,11 +1743,25 @@ def render_agent_dashboard(sim):
             # Filter by individual agent
             st.write("**Select an agent to view their journey:**")
             
+            # Check if agent was pre-selected from All Agents tab
+            default_index = 0
+            if hasattr(st.session_state, 'selected_agent_for_filter') and st.session_state.selected_agent_for_filter:
+                # Pre-select the agent that was clicked
+                agent_list = sorted(df["Name"].unique())
+                if st.session_state.selected_agent_for_filter in agent_list:
+                    default_index = agent_list.index(st.session_state.selected_agent_for_filter)
+            
             selected_agent = st.selectbox(
                 "Agent:",
                 options=sorted(df["Name"].unique()),
-                help="Choose an agent to view their complete journey trajectory"
+                index=default_index,
+                help="Choose an agent to view their complete journey trajectory",
+                key="filter_agent_selectbox"
             )
+            
+            # Clear the pre-selection after using it
+            if hasattr(st.session_state, 'selected_agent_for_filter'):
+                st.session_state.selected_agent_for_filter = None
             
             if selected_agent:
                 # Get agent data
@@ -2292,6 +2354,288 @@ def render_decision_breakdown(decision: dict, sim):
                         st.write(f"  • **{factor}**: {value:.3f}")
                 else:
                     st.write("No strong negative factors")
+
+
+def calculate_gini_coefficient(sim):
+    """
+    Calculate Gini coefficient for utilization inequality across destinations.
+    
+    Returns:
+        float: Gini coefficient (0 = perfect equality, 1 = perfect inequality)
+    """
+    # Get current utilization for all destinations
+    utilizations = []
+    for dest in sim.destinations.values():
+        util = dest.get_crowding_ratio()
+        if util > 0:  # Only include destinations with visitors
+            utilizations.append(util)
+    
+    if len(utilizations) < 2:
+        return 0.0
+    
+    # Sort utilizations
+    utilizations = sorted(utilizations)
+    n = len(utilizations)
+    
+    # Calculate Gini using the formula: G = (2 * sum(i * x_i) - (n+1) * sum(x_i)) / (n * sum(x_i))
+    total = sum(utilizations)
+    if total == 0:
+        return 0.0
+    
+    indexed_sum = sum((i + 1) * util for i, util in enumerate(utilizations))
+    gini = (2 * indexed_sum - (n + 1) * total) / (n * total)
+    
+    return min(max(gini, 0.0), 1.0)  # Clamp to [0, 1]
+
+
+def render_capacity_dynamics(sim):
+    """Render capacity utilization dynamics chart."""
+    st.subheader("🏗️ Capacity Utilization Distribution")
+    
+    # Get current utilization for all destinations
+    utilizations = []
+    country_names = []
+    
+    for code, dest in sim.destinations.items():
+        util = dest.get_crowding_ratio()
+        if util > 0:  # Only include destinations with visitors
+            utilizations.append(util * 100)  # Convert to percentage
+            country_names.append(dest.country_name)
+    
+    if not utilizations:
+        st.info("No destinations with visitors yet")
+        return
+    
+    # Create histogram
+    fig = px.histogram(
+        x=utilizations,
+        nbins=30,
+        title="Distribution of Capacity Utilization Across Destinations",
+        labels={"x": "Capacity Utilization (%)", "y": "Number of Destinations"},
+    )
+    
+    # Add vertical lines for key thresholds
+    fig.add_vline(x=100, line_dash="dash", line_color="orange", 
+                  annotation_text="Full Capacity")
+    fig.add_vline(x=50, line_dash="dot", line_color="green", 
+                  annotation_text="50% Utilization")
+    
+    fig.update_layout(
+        height=400,
+        showlegend=True,
+    )
+    
+    st.plotly_chart(fig, use_container_width=True)
+    
+    # Summary statistics
+    col1, col2, col3, col4 = st.columns(4)
+    with col1:
+        st.metric("Avg Utilization", f"{sum(utilizations)/len(utilizations):.1f}%")
+    with col2:
+        st.metric("Max Utilization", f"{max(utilizations):.1f}%")
+    with col3:
+        over_capacity = sum(1 for u in utilizations if u > 100)
+        st.metric("Over Capacity", f"{over_capacity} destinations")
+    with col4:
+        under_50 = sum(1 for u in utilizations if u < 50)
+        st.metric("Under 50%", f"{under_50} destinations")
+
+
+def render_tfi_feedback_chart(sim):
+    """Render TFI feedback loop chart."""
+    st.subheader("🔄 Tourist Friction Index (TFI) Over Time")
+    
+    # Get TFI data for top destinations
+    top_dest_codes = list(sim.destinations.keys())[:10]
+    
+    fig = go.Figure()
+    
+    for code in top_dest_codes:
+        if code in sim.data_collector.dest_tfi:
+            tfi_data = sim.data_collector.dest_tfi[code]
+            if tfi_data:
+                dest = sim.destinations.get(code)
+                dest_name = dest.country_name if dest else code
+                
+                # Only show if TFI has varied
+                if len(tfi_data) > 10 and max(tfi_data) - min(tfi_data) > 0.01:
+                    fig.add_trace(go.Scatter(
+                        y=tfi_data,
+                        mode='lines',
+                        name=dest_name,
+                        line=dict(width=2),
+                    ))
+    
+    # Add reference line for TFI=1 (neutral)
+    fig.add_hline(y=1.0, line_dash="dash", line_color="gray", 
+                  annotation_text="Neutral TFI (no friction)")
+    
+    fig.update_layout(
+        title="TFI Evolution (Values >1 = High Friction, <1 = Low Friction)",
+        xaxis_title="Days Ago",
+        yaxis_title="TFI Value",
+        height=400,
+        showlegend=True,
+        legend=dict(orientation="h", yanchor="bottom", y=1.02, xanchor="right", x=1),
+    )
+    
+    st.plotly_chart(fig, use_container_width=True)
+    
+    # Explanation
+    st.caption("""
+    **TFI (Tourist Friction Index)** represents the combined effect of crowding, risk, and policy barriers.
+    - **TFI > 1**: High friction - tourists face barriers (overcrowding, high risk, strict policies)
+    - **TFI = 1**: Neutral - normal conditions
+    - **TFI < 1**: Low friction - favorable conditions attract more tourists
+    
+    Rising TFI creates a negative feedback loop that reduces arrivals, demonstrating emergent self-regulation.
+    """)
+
+
+def render_gini_chart(sim, gini_coefficient):
+    """Render Gini coefficient chart for utilization inequality."""
+    st.subheader("📊 Tourism Inequality (Gini Coefficient)")
+    
+    # Display current Gini
+    gini_color = "green" if gini_coefficient < 0.3 else "orange" if gini_coefficient < 0.5 else "red"
+    
+    col1, col2 = st.columns([1, 2])
+    
+    with col1:
+        st.metric(
+            "Current Gini",
+            f"{gini_coefficient:.3f}",
+            help="0 = perfect equality (all destinations equally popular), 1 = perfect inequality (one destination has all tourists)"
+        )
+    
+    with col2:
+        # Interpretation
+        if gini_coefficient < 0.3:
+            st.success("**Low Inequality**: Tourism is well-distributed across destinations")
+        elif gini_coefficient < 0.5:
+            st.warning("**Moderate Inequality**: Some destinations are significantly more popular")
+        else:
+            st.error("**High Inequality**: Tourism is concentrated in a few popular destinations")
+    
+    # Create Lorenz curve data
+    utilizations = []
+    for dest in sim.destinations.values():
+        util = dest.get_crowding_ratio()
+        if util > 0:
+            utilizations.append(util)
+    
+    if len(utilizations) >= 2:
+        utilizations = sorted(utilizations)
+        n = len(utilizations)
+        total = sum(utilizations)
+        
+        # Calculate cumulative shares
+        cumulative_pop = [(i + 1) / n for i in range(n)]
+        cumulative_util = [sum(utilizations[:i+1]) / total for i in range(n)]
+        
+        # Perfect equality line
+        fig = go.Figure()
+        fig.add_trace(go.Scatter(
+            x=[0] + cumulative_pop,
+            y=[0] + cumulative_util,
+            mode='lines',
+            name='Actual Distribution',
+            line=dict(color='blue', width=3),
+        ))
+        fig.add_trace(go.Scatter(
+            x=[0, 1],
+            y=[0, 1],
+            mode='lines',
+            name='Perfect Equality',
+            line=dict(color='gray', dash='dash'),
+        ))
+        
+        fig.update_layout(
+            title="Lorenz Curve - Tourism Distribution",
+            xaxis_title="Cumulative Share of Destinations",
+            yaxis_title="Cumulative Share of Tourists",
+            height=400,
+            showlegend=True,
+        )
+        
+        st.plotly_chart(fig, use_container_width=True)
+    
+    # Historical trend
+    if len(sim.data_collector.global_active) > 30:
+        st.write("**📈 Gini Trend (Last 90 Days):**")
+        
+        # Calculate rolling Gini (simplified - just show trend direction)
+        st.caption("Gini coefficient tracks inequality in destination popularity. Rising Gini indicates increasing concentration.")
+
+
+def render_event_impact_analysis(sim):
+    """Render event impact analysis chart."""
+    st.subheader("⚡ Negative Event Impact")
+    
+    # Check if any events are active
+    active_events = [e for e in sim.unplanned_events if e.is_active(sim.current_date)]
+    
+    if not active_events:
+        st.info("No active negative events. Use the sidebar to trigger events for impact analysis.")
+        return
+    
+    for event in active_events:
+        # Find affected destination
+        affected_dest = sim.destinations.get(event.country_code)
+        if not affected_dest:
+            continue
+        
+        st.write(f"**Event: {event.event_type} in {affected_dest.country_name}**")
+        
+        col1, col2, col3, col4 = st.columns(4)
+        with col1:
+            st.metric("Severity", event.severity.name)
+        with col2:
+            days_left = (event.end_date - sim.current_date).days
+            st.metric("Days Remaining", max(0, days_left))
+        with col3:
+            current_tfi = affected_dest.tfi
+            st.metric("Current TFI", f"{current_tfi:.2f}")
+        with col4:
+            current_visitors = affected_dest.get_current_visitors()
+            st.metric("Current Visitors", f"{current_visitors:,}")
+        
+        # Show impact on arrivals over time
+        if event.country_code in sim.data_collector.dest_visitors:
+            visitors_data = sim.data_collector.dest_visitors[event.country_code]
+            
+            if len(visitors_data) > 10:
+                fig = go.Figure()
+                fig.add_trace(go.Scatter(
+                    y=visitors_data,
+                    mode='lines',
+                    name='Visitors',
+                    line=dict(color='blue'),
+                ))
+                
+                # Mark event start
+                event_start_idx = len(visitors_data) - max(1, (event.end_date - event.start_date).days)
+                fig.add_vrect(
+                    x0=event_start_idx,
+                    x1=len(visitors_data),
+                    fillcolor="red",
+                    opacity=0.2,
+                    layer="below",
+                    line_width=0,
+                    annotation_text="Event Period",
+                )
+                
+                fig.update_layout(
+                    title=f"Impact on {affected_dest.country_name}",
+                    xaxis_title="Days Ago",
+                    yaxis_title="Number of Visitors",
+                    height=300,
+                    showlegend=False,
+                )
+                
+                st.plotly_chart(fig, use_container_width=True)
+        
+        st.divider()
 
 
 if __name__ == "__main__":

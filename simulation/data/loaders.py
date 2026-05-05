@@ -95,7 +95,8 @@ def load_country_data(data_dir: Path = None) -> List[Dict]:
                 }
 
     # Convert to list with estimated hotel beds from arrivals
-    for code, data in country_data.items():
+    # IMPORTANT: Use ISO3 codes for Plotly choropleth compatibility
+    for numeric_code, data in country_data.items():
         # Estimate hotel beds from annual arrivals
         # Assumption: 30% of annual arrivals stay in hotels
         # Average stay: 7 days, occupancy rate: 60%
@@ -105,9 +106,12 @@ def load_country_data(data_dir: Path = None) -> List[Dict]:
         estimated_hotel_beds = int((arrivals * 0.30 * 7) / (365 * 0.60))
         hotel_beds = max(1000, estimated_hotel_beds)  # Minimum 1000 beds
 
+        # Convert numeric code to ISO3 for Plotly choropleth
+        iso3_code = code_mapping.get(numeric_code, numeric_code)
+
         countries.append(
             {
-                "code": data["code"],
+                "code": iso3_code,  # Use ISO3 code (e.g., "ALB") not numeric (e.g., "8")
                 "name": data["name"],
                 "hotel_beds": hotel_beds,
                 "attractiveness": data["ttdi"] if data["ttdi"] > 0 else 3.5,

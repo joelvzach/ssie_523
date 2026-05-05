@@ -194,10 +194,11 @@ def get_agent_sample_data(sim):
                             "longitude": dest.longitude,
                             "color": segment_colors.get(agent.segment, "#999999"),
                             "state": "TRAVELING",
+                            "is_home": False,
                         }
                     )
             elif agent.state == "CHOOSING":
-                # Show CHOOSING agents at home location with purple color
+                # Show CHOOSING agents at home location with purple color (planning state)
                 dest = sim.destinations.get(agent.home_country_code)
                 if dest:
                     data.append(
@@ -211,10 +212,11 @@ def get_agent_sample_data(sim):
                             "longitude": dest.longitude,
                             "color": "#9b59b6",  # Purple for planning state
                             "state": "CHOOSING",
+                            "is_home": False,
                         }
                     )
             elif agent.state == "HOME":
-                # Show HOME agents at home location with gray color
+                # Show HOME agents at home location with segment color outline, gray fill
                 dest = sim.destinations.get(agent.home_country_code)
                 if dest:
                     data.append(
@@ -226,8 +228,9 @@ def get_agent_sample_data(sim):
                             "days_remaining": agent.days_until_next_trip,
                             "latitude": dest.latitude,
                             "longitude": dest.longitude,
-                            "color": "#95a5a6",  # Gray for home state
+                            "color": segment_colors.get(agent.segment, "#999999"),
                             "state": "HOME",
+                            "is_home": True,  # Flag for hollow marker styling
                         }
                     )
 
@@ -300,7 +303,7 @@ def render_map(sim):
         color="capacity_util",
         color_continuous_scale="RdYlGn_r",  # Red (high) to Green (low)
         range_color=(0, dynamic_max),
-        title=f"Global Tourism Map (🟢=Traveling Agents, ⬜=Home Countries)",
+        title=f"Global Tourism Map (●=Active, ◐=Home - colored by segment)",
         hover_name="country_name",
         hover_data={
             "country_code": True,
@@ -313,54 +316,67 @@ def render_map(sim):
         },
     )
 
-    # Add traveling agents as scatter overlay
+    # Add traveling agents as scatter overlay with differentiated styling
     if len(agent_data) > 0:
-        fig.add_trace(
-            go.Scattergeo(
-                lon=agent_data["longitude"],
-                lat=agent_data["latitude"],
-                mode="markers",
-                marker=dict(
-                    size=6,
-                    color=agent_data["color"],
-                    symbol="circle",
-                    line=dict(width=1, color="white"),
-                ),
-                text=agent_data.apply(
-                    lambda row: (
-                        f"Agent: {row['agent_id']}<br>"
-                        f"Segment: {row['segment']}<br>"
-                        f"State: {row['state']}<br>"
-                        f"Destination: {row['current_destination']}<br>"
-                        f"Days Remaining: {row['days_remaining']}"
+        # Separate HOME agents (hollow) from TRAVELING/CHOOSING agents (solid)
+        home_agents = agent_data[agent_data["is_home"] == True]
+        traveling_agents = agent_data[agent_data["is_home"] != True]
+        
+        # Render TRAVELING/CHOOSING agents as solid colored circles
+        if len(traveling_agents) > 0:
+            fig.add_trace(
+                go.Scattergeo(
+                    lon=traveling_agents["longitude"],
+                    lat=traveling_agents["latitude"],
+                    mode="markers",
+                    marker=dict(
+                        size=6,
+                        color=traveling_agents["color"],
+                        symbol="circle",
+                        line=dict(width=1, color="white"),
                     ),
-                    axis=1,
-                ),
-                hoverinfo="text",
-                name="Traveling Agents",
+                    text=traveling_agents.apply(
+                        lambda row: (
+                            f"Agent: {row['agent_id']}<br>"
+                            f"Segment: {row['segment']}<br>"
+                            f"State: {row['state']}<br>"
+                            f"Destination: {row['current_destination']}<br>"
+                            f"Days Remaining: {row['days_remaining']}"
+                        ),
+                        axis=1,
+                    ),
+                    hoverinfo="text",
+                    name="Active Agents",
+                )
             )
-        )
-
-    # Add home country markers
-    home_data = get_agent_home_data(sim)
-    if len(home_data) > 0:
-        fig.add_trace(
-            go.Scattergeo(
-                lon=home_data["longitude"],
-                lat=home_data["latitude"],
-                mode="markers",
-                marker=dict(
-                    size=home_data["agent_count"] * 0.5 + 4,  # Scale with agent count
-                    color="gray",
-                    symbol="square",
-                    line=dict(width=1, color="white"),
-                    opacity=0.6,
-                ),
-                text=home_data["tooltip"],
-                hoverinfo="text",
-                name="Agent Home Countries",
+        
+        # Render HOME agents as hollow circles (segment color outline, gray fill)
+        if len(home_agents) > 0:
+            fig.add_trace(
+                go.Scattergeo(
+                    lon=home_agents["longitude"],
+                    lat=home_agents["latitude"],
+                    mode="markers",
+                    marker=dict(
+                        size=6,
+                        color="gray",  # Gray fill for HOME state
+                        symbol="circle-open",  # Hollow circle with colored outline
+                        line=dict(width=3, color=home_agents["color"]),  # Segment color outline
+                    ),
+                    text=home_agents.apply(
+                        lambda row: (
+                            f"Agent: {row['agent_id']}<br>"
+                            f"Segment: {row['segment']}<br>"
+                            f"State: {row['state']}<br>"
+                            f"Location: {row['home_country']} (Home)<br>"
+                            f"Days Until Next Trip: {row['days_remaining']}"
+                        ),
+                        axis=1,
+                    ),
+                    hoverinfo="text",
+                    name="Home Agents",
+                )
             )
-        )
 
     fig.update_layout(
         height=600,

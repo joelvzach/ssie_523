@@ -298,13 +298,13 @@ def render_map(sim):
     else:
         dynamic_max = 0.5  # Default range
 
-    # Create choropleth base
+    # Create choropleth base - minimal config for maximum compatibility
     fig = px.choropleth(
         dest_data,
         locations="country_code",
-        locationmode='ISO-3',  # Explicit ISO3 code matching
+        locationmode='ISO-3',
         color="capacity_util",
-        color_continuous_scale="RdYlGn_r",  # Red (high) to Green (low)
+        color_continuous_scale="RdYlGn_r",
         range_color=(0, dynamic_max),
         title=f"Global Tourism Map (colored by segment, faded=at home)",
         hover_name="country_name",
@@ -319,16 +319,14 @@ def render_map(sim):
         },
     )
     
-    # Update layout with geo settings (more reliable than update_geos for choropleth)
+    # Minimal geo config - just enable borders without breaking coloring
     fig.update_layout(
         geo=dict(
             showframe=True,
-            showcoastlines=True,
-            showcountries=True,  # Explicitly enable country borders
+            showcoastlines=False,
+            showcountries=True,
             projection_type="equirectangular",
-            bgcolor="rgba(0,0,0,0)",  # Transparent background
-        ),
-        margin=dict(l=0, r=0, t=50, b=0),  # Minimize margins for full-width display
+        )
     )
 
     # Add traveling agents as scatter overlay with differentiated styling

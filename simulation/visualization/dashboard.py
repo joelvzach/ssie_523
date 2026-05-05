@@ -213,6 +213,23 @@ def get_agent_sample_data(sim):
                             "state": "CHOOSING",
                         }
                     )
+            elif agent.state == "HOME":
+                # Show HOME agents at home location with gray color
+                dest = sim.destinations.get(agent.home_country_code)
+                if dest:
+                    data.append(
+                        {
+                            "agent_id": agent.agent_id,
+                            "segment": agent.segment,
+                            "home_country": agent.home_country,
+                            "current_destination": "HOME",
+                            "days_remaining": agent.days_until_next_trip,
+                            "latitude": dest.latitude,
+                            "longitude": dest.longitude,
+                            "color": "#95a5a6",  # Gray for home state
+                            "state": "HOME",
+                        }
+                    )
 
     return pd.DataFrame(data)
 

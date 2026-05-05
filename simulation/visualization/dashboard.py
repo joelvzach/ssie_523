@@ -482,7 +482,7 @@ def render_time_series(sim, selected_country=None):
     st.plotly_chart(fig, use_container_width=True)
 
 
-def render_country_selector(sim, key="country_selector"):
+def render_country_selector(sim, key="country_selector", store_in_session=True):
     """Render country filter dropdown."""
     countries = sorted(
         [(code, dest.country_name) for code, dest in sim.destinations.items()],
@@ -501,7 +501,11 @@ def render_country_selector(sim, key="country_selector"):
         key=key,
         help="Select a country to see its specific arrival trends",
     )
-
+    
+    # Store in session state for destination details panel
+    if store_in_session:
+        st.session_state.selected_country = selected if selected != "Global" else None
+    
     return selected
 
 
@@ -644,6 +648,119 @@ def render_continent_stats(sim):
     )
 
 
+def render_utilization_trend(sim, country_code):
+    """Render utilization percentage trend over last 90 days."""
+    if country_code not in sim.data_collector.dest_capacity_util:
+        st.info("No utilization data available yet.")
+        return
+    
+    util_data = sim.data_collector.dest_capacity_util[country_code]
+    
+    # Get last 90 days
+    last_90 = util_data[-90:] if len(util_data) > 90 else util_data
+    
+    if not last_90:
+        st.info("No recent utilization data.")
+        return
+    
+    # Create dataframe
+    df = pd.DataFrame({
+        'Day': range(len(last_90)),
+        'Utilization (%)': [u * 100 for u in last_90],
+    })
+    
+    # Determine color based on current utilization
+    current_util = last_90[-1] if last_90 else 0
+    if current_util > 1.0:
+        line_color = '#e74c3c'  # Red (over capacity)
+    elif current_util > 0.8:
+        line_color = '#f39c12'  # Orange (high)
+    else:
+        line_color = '#27ae60'  # Green (healthy)
+    
+    fig = px.line(
+        df,
+        x='Day',
+        y='Utilization (%)',
+        title=f'Capacity Utilization (Last 90 Days)',
+        line_color=line_color,
+    )
+    
+    # Add threshold lines
+    fig.add_hline(y=100, line_dash="dash", line_color="red", annotation_text="100% Capacity")
+    fig.add_hline(y=80, line_dash="dash", line_color="orange", annotation_text="80% Threshold")
+    
+    fig.update_layout(
+        height=300,
+        margin=dict(l=0, r=0, t=40, b=0),
+        xaxis_title='Days Ago',
+        yaxis_title='Utilization (%)',
+    )
+    
+    st.plotly_chart(fig, use_container_width=True)
+
+
+def render_visitor_origins(sim, country_code):
+    """Render pie chart of visitor origins (last 90 days)."""
+    # Get trip records for this destination
+    trips = [
+        t for t in sim.data_collector.trip_records
+        if t['destination'] == country_code
+    ]
+    
+    if not trips:
+        st.info("No visitor data available yet.")
+        return
+    
+    # Filter to last 90 days (approximate)
+    current_tick = sim.tick
+    recent_trips = [
+        t for t in trips
+        if t['arrival_tick'] >= (current_tick - 90)
+    ]
+    
+    if not recent_trips:
+        st.info("No visitors in last 90 days.")
+        return
+    
+    # Count by origin
+    from collections import Counter
+    origin_counts = Counter(t['origin'] for t in recent_trips)
+    
+    # Get top 10 origins
+    top_origins = origin_counts.most_common(10)
+    
+    # Get country names for origins
+    origin_names = []
+    origin_values = []
+    for code, count in top_origins:
+        origin_dest = sim.destinations.get(code)
+        name = origin_dest.country_name if origin_dest else code
+        origin_names.append(name)
+        origin_values.append(count)
+    
+    # Create dataframe
+    df = pd.DataFrame({
+        'Origin': origin_names,
+        'Visitors': origin_values,
+    })
+    
+    fig = px.pie(
+        df,
+        names='Origin',
+        values='Visitors',
+        title=f'Visitor Origins (Last 90 Days, n={sum(origin_values):,})',
+        hole=0.3,
+    )
+    
+    fig.update_layout(
+        height=300,
+        margin=dict(l=0, r=0, t=40, b=0),
+    )
+    
+    st.plotly_chart(fig, use_container_width=True)
+
+
 def render_segment_breakdown(sim):
     """Render segment breakdown pie chart."""
     # Count active travelers by segment
@@ -697,11 +814,13 @@ def render_destination_details(sim, country_code):
     st.subheader(f"📍 {dest.country_name}")
 
     # Key metrics
-    col1, col2, col3 = st.columns(3)
+    col1, col2, col3, col4 = st.columns(4)
 
     with col1:
         st.metric(
-            label="Current Visitors", value=dest_dict["current_visitors"], delta=None
+            label="Current Visitors", 
+            value=dest_dict["current_visitors"], 
+            delta=None
         )
 
     with col2:
@@ -719,9 +838,29 @@ def render_destination_details(sim, country_code):
             if dest_dict["tfi_trend"] == "stable"
             else "↓ Declining",
         )
+    
+    with col4:
+        st.metric(
+            label="Effective Capacity",
+            value=f"{dest_dict['effective_capacity']:,}",
+            delta=f"{dest_dict['base_capacity']:,} base",
+        )
+
+    # Charts section
+    st.divider()
+    col_chart1, col_chart2 = st.columns(2)
+    
+    with col_chart1:
+        # Utilization trend (last 90 days)
+        render_utilization_trend(sim, country_code)
+    
+    with col_chart2:
+        # Visitor origins pie chart (last 90 days)
+        render_visitor_origins(sim, country_code)
 
     # Additional details
-    with st.expander("Detailed Information", expanded=False):
+    st.divider()
+    with st.expander("📋 Detailed Information", expanded=False):
         st.write(f"**Country Code**: {dest_dict['country_code']}")
         st.write(f"**Base Capacity**: {dest_dict['base_capacity']:,}")
         st.write(f"**Effective Capacity**: {dest_dict['effective_capacity']:,}")
@@ -729,16 +868,16 @@ def render_destination_details(sim, country_code):
         st.write(f"**Cost Index**: {dest_dict['cost_index']:.1f}")
         st.write(f"**Risk Score**: {dest_dict['risk_score']:.2f}")
         st.write(f"**Climate Zone**: {dest_dict['climate_zone']}")
+        st.write(f"**Current TFI**: {dest_dict['tfi']:.3f}")
+        st.write(f"**TFI Trend**: {dest_dict['tfi_trend']}")
 
     # Policy suggestions
     suggestions = dest.get_rectification_suggestions()
     if suggestions:
-        st.warning("⚠️ **Rectification Suggestions**:")
+        st.divider()
+        st.warning("⚠️ **Policy Recommendations**:")
         for suggestion in suggestions:
             st.write(f"- {suggestion}")
-
-    # Visitor origins (placeholder - would need origin tracking)
-    st.info("📊 Visitor origins chart - Coming in next iteration")
 
 
 def main():
@@ -1346,12 +1485,8 @@ def main():
         st.subheader("🌍 Continental Tourism Distribution")
         render_continent_stats(sim)
         
-        # Country selector below stats
-        st.divider()
-        selected_country = render_country_selector(sim)
-        
-        if st.session_state.selected_country:
-            render_destination_details(sim, st.session_state.selected_country)
+        # Note: For country-specific details, use the Destinations tab
+        st.info("💡 **Tip**: Select a specific country in the 🏨 Destinations tab for detailed analysis")
 
     with tab_agents:
         st.header("👥 Agent Analysis")

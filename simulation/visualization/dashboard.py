@@ -1507,17 +1507,28 @@ def main():
     with tab_destinations:
         st.header("🏨 Destination Details")
         
-        # Time series and top destinations
-        col1, col2 = st.columns([2, 1])
+        # Country selector at top
+        selected_country = render_country_selector(sim, key="dest_selector")
         
-        with col1:
-            selected_country = render_country_selector(sim, key="dest_selector")
-            render_time_series(sim, selected_country)
-        
-        with col2:
-            render_top_destinations(sim)
+        if selected_country and selected_country != "Global":
+            # Show comprehensive destination details
+            render_destination_details(sim, selected_country)
+        else:
+            # Show overview with time series and top destinations
+            st.info("👈 Select a country from the dropdown above for detailed analysis")
+            
             st.divider()
-            render_segment_breakdown(sim)
+            
+            # Time series and top destinations
+            col1, col2 = st.columns([2, 1])
+            
+            with col1:
+                render_time_series(sim, "Global")
+            
+            with col2:
+                render_top_destinations(sim)
+                st.divider()
+                render_segment_breakdown(sim)
 
     with tab_analytics:
         st.header("📈 Analytics & Insights")

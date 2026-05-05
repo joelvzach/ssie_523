@@ -74,17 +74,18 @@ def init_session_state():
         st.session_state.selected_agent = None
 
 
-def create_simulation(agent_count: int = 40000, start_date: datetime = None):
+def create_simulation(agent_count: int = 40000, start_date: datetime = None, sampled_agents: int = 100):
     """Create and initialize simulation with configured events.
 
     Args:
         agent_count: Number of tourist agents (default: 40,000)
         start_date: Simulation start date (default: January 1, 2026)
+        sampled_agents: Number of agents to sample for visualization (default: 100)
     """
     if start_date is None:
         start_date = datetime(2026, 1, 1)
     
-    with st.spinner(f"Initializing simulation with {agent_count:,} agents starting {start_date.strftime('%B %d, %Y')}..."):
+    with st.spinner(f"Initializing simulation with {agent_count:,} agents ({sampled_agents} sampled) starting {start_date.strftime('%B %d, %Y')}..."):
         # Clear old simulation data to prevent memory accumulation
         if st.session_state.simulation and hasattr(st.session_state.simulation, 'data_collector'):
             st.session_state.simulation.data_collector.clear()
@@ -104,6 +105,7 @@ def create_simulation(agent_count: int = 40000, start_date: datetime = None):
             "start_date": start_date.strftime("%Y-%m-%d"),
             "duration_days": 365,
             "seed": 42,
+            "sampled_agents": sampled_agents,
         }
 
         sim = Simulation(config=config, countries_data=countries)
@@ -981,6 +983,19 @@ def main():
                 key="agent_count_slider",
             )
 
+            # Sampled Agents for Visualization
+            sampled_agents = st.slider(
+                "Agents to Sample for Visualization",
+                min_value=50,
+                max_value=500,
+                value=100,
+                step=50,
+                help="Number of agents to track individually for detailed visualization. "
+                "More sampled agents = more detailed agent dashboard, but slightly slower rendering. "
+                "100 agents recommended for most use cases.",
+                key="sampled_agents_slider",
+            )
+
             # Start Date Configuration
             start_date = st.date_input(
                 "Simulation Start Date",
@@ -1128,11 +1143,11 @@ def main():
                 type="primary",
                 use_container_width=True,
                 on_click=lambda: logger.info(
-                    f"Initialize button clicked with {agent_count:,} agents starting {start_date}"
+                    f"Initialize button clicked with {agent_count:,} agents ({sampled_agents} sampled) starting {start_date}"
                 ),
                 key="initialize_simulation_button",
             ):
-                create_simulation(agent_count, start_date)
+                create_simulation(agent_count, start_date, sampled_agents)
                 st.rerun()
         else:
             # Control buttons row 1

@@ -216,18 +216,23 @@ class Simulation:
         self.name_to_code = name_to_code
 
     def _select_sampled_agents(self):
-        """Select 100 agents for trajectory tracking."""
-        # Stratified sampling: 25 from each segment
+        """Select sampled agents for trajectory tracking (stratified by segment)."""
         from collections import defaultdict
 
+        # Get sample size from config (default 100)
+        sample_size = getattr(self, 'config', {}).get('sampled_agents', 100)
+        
+        # Stratified sampling: equal representation from each segment
         by_segment = defaultdict(list)
 
         for agent in self.agents:
             by_segment[agent.segment].append(agent.agent_id)
 
         sampled = []
+        per_segment = sample_size // len(by_segment)  # Divide equally among 4 segments
+        
         for segment, ids in by_segment.items():
-            sampled.extend(random.sample(ids, min(25, len(ids))))
+            sampled.extend(random.sample(ids, min(per_segment, len(ids))))
 
         self.sampled_agent_ids = set(sampled)
 

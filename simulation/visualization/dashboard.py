@@ -3241,7 +3241,7 @@ def render_feedback_loop_chart(sim):
         
         **What you'll see:**
         - Scatter plot: Each point = one day for one destination
-        - X-axis: TFI (Tourist Friction Index) - higher = more crowding/barriers
+        - X-axis: TFI (Tourism Friendliness Index) - higher = more welcoming
         - Y-axis: Daily arrivals
         - Trend line: Negative slope = self-regulating system
         
@@ -3288,8 +3288,8 @@ def render_feedback_loop_chart(sim):
         y='Arrivals',
         color='Destination',
         opacity=0.5,
-        title="TFI vs Arrivals (Negative Feedback: Higher TFI → Fewer Arrivals)",
-        labels={'TFI': 'Tourist Friction Index', 'Arrivals': 'Daily Arrivals'},
+        title="TFI vs Arrivals (Negative Feedback: Lower Friendliness → Fewer Arrivals)",
+        labels={'TFI': 'Tourism Friendliness Index', 'Arrivals': 'Daily Arrivals'},
     )
     
     # Add trend line

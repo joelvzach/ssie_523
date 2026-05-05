@@ -169,7 +169,7 @@ def load_centroids(data_dir: Path = None) -> Dict[str, Dict]:
         data_dir: Path to data directory
 
     Returns:
-        Dict of country_code → {lat, lon}
+        Dict of country_code → {lat, lon, region}
     """
     if data_dir is None:
         data_dir = Path(__file__).parent.parent.parent / "data" / "derived"
@@ -198,3 +198,36 @@ def load_centroids(data_dir: Path = None) -> Dict[str, Dict]:
             }
 
     return centroids
+
+
+def load_population_data(data_dir: Path = None) -> Dict[str, int]:
+    """
+    Load country population data.
+
+    Args:
+        data_dir: Path to data directory
+
+    Returns:
+        Dict of country_code → population
+    """
+    if data_dir is None:
+        data_dir = Path(__file__).parent.parent.parent / "data" / "derived"
+
+    populations = {}
+    population_file = data_dir / "country_population.csv"
+
+    if not population_file.exists():
+        return {}
+
+    with open(population_file, "r", encoding="utf-8") as f:
+        reader = csv.DictReader(f)
+        for row in reader:
+            code = row.get("cca3", "")
+            pop = row.get("population", "")
+            if code and pop:
+                try:
+                    populations[code] = int(pop)
+                except ValueError:
+                    pass
+
+    return populations

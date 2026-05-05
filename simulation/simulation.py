@@ -137,6 +137,10 @@ class Simulation:
                     if numeric_code and iso3_code:
                         numeric_to_iso3[numeric_code] = iso3_code
 
+        # Load population data
+        from simulation.data.loaders import load_population_data
+        population_data = load_population_data(project_root / "data" / "derived")
+
         for country in self.countries_data:
             numeric_code = str(country["code"])
             iso3_code = numeric_to_iso3.get(numeric_code, numeric_code)
@@ -155,6 +159,9 @@ class Simulation:
                 dependency_category = gdp_info["dependency_category"]
                 tfi_modifier = gdp_info["tfi_decline_modifier"]
 
+            # Get population data
+            population = population_data.get(iso3_code, 0)
+
             dest = Destination(
                 country_code=iso3_code,  # Use ISO3 code for consistency
                 country_name=country["name"],
@@ -166,6 +173,7 @@ class Simulation:
                 longitude=country.get("lon", 0.0),
                 tourism_gdp_pct=tourism_gdp_pct,
                 dependency_category=dependency_category,
+                population=population,
             )
             self.destinations[iso3_code] = dest
 

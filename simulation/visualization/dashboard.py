@@ -1646,33 +1646,8 @@ def render_agent_dashboard(sim):
         tab1, tab2 = st.tabs(["📋 All Agents", "🔍 Filter by Agent"])
 
         with tab1:
-            # Main table with all agents - add selection column
-            st.write("**💡 Tip:** Click an agent's name to view their detailed journey")
-            
-            # Add selection buttons
-            df_with_select = df.copy()
-            
-            # Create selection interface
-            selected_agent_id = None
-            
-            # Display agent IDs as clickable links
-            agent_ids = df["Name"].tolist()
-            
-            # Use selectbox for agent selection (Streamlit doesn't support row clicks)
-            selected_agent_id = st.selectbox(
-                "Quick Select Agent:",
-                options=[""] + agent_ids,
-                format_func=lambda x: f"👤 {x}" if x else "— Choose an agent —",
-                key="quick_agent_select",
-                help="Select an agent to automatically switch to their detailed view"
-            )
-            
-            # Auto-switch to Filter tab when agent selected
-            if selected_agent_id:
-                st.session_state.selected_agent_for_filter = selected_agent_id
-                st.info(f"✅ Selected **{selected_agent_id}** - Scroll down to '🔍 Filter by Agent' tab to view details")
-            
-            st.dataframe(df, use_container_width=True, height=350, hide_index=True)
+            # Main table with all agents
+            st.dataframe(df, use_container_width=True, height=400, hide_index=True)
 
             # Summary charts (3 columns)
             col1, col2, col3 = st.columns(3)
@@ -1735,25 +1710,12 @@ def render_agent_dashboard(sim):
             # Filter by individual agent
             st.write("**Select an agent to view their journey:**")
             
-            # Check if agent was pre-selected from All Agents tab
-            default_index = 0
-            if hasattr(st.session_state, 'selected_agent_for_filter') and st.session_state.selected_agent_for_filter:
-                # Pre-select the agent that was clicked
-                agent_list = sorted(df["Name"].unique())
-                if st.session_state.selected_agent_for_filter in agent_list:
-                    default_index = agent_list.index(st.session_state.selected_agent_for_filter)
-            
             selected_agent = st.selectbox(
                 "Agent:",
                 options=sorted(df["Name"].unique()),
-                index=default_index,
                 help="Choose an agent to view their complete journey trajectory",
                 key="filter_agent_selectbox"
             )
-            
-            # Clear the pre-selection after using it
-            if hasattr(st.session_state, 'selected_agent_for_filter'):
-                st.session_state.selected_agent_for_filter = None
             
             if selected_agent:
                 # Get agent data
@@ -2676,54 +2638,89 @@ def fit_power_law(sim):
 
 
 def render_power_law_chart(sim, power_law_params):
-    """Render power law distribution chart."""
+    """Render power law distribution chart with population comparison."""
     st.subheader("⚡ Power Law in Destination Popularity")
     
     if not power_law_params:
         st.info("Not enough data yet to fit power law (need destinations with visitors)")
         return
     
-    # Create rank-frequency plot
-    fig = go.Figure()
+    # Create two-column layout
+    col1, col2 = st.columns(2)
     
-    # Actual data
-    fig.add_trace(go.Scatter(
-        x=power_law_params['ranks'],
-        y=power_law_params['visitors'],
-        mode='markers',
-        name='Actual Data',
-        marker=dict(size=8, color='blue', opacity=0.6),
-    ))
+    with col1:
+        # Create rank-frequency plot
+        fig = go.Figure()
+        
+        # Actual data
+        fig.add_trace(go.Scatter(
+            x=power_law_params['ranks'],
+            y=power_law_params['visitors'],
+            mode='markers',
+            name='Actual Data',
+            marker=dict(size=8, color='blue', opacity=0.6),
+        ))
+        
+        # Power law fit line
+        import numpy as np
+        fit_values = np.exp(power_law_params['intercept']) * (power_law_params['ranks'] ** power_law_params['slope'])
+        fig.add_trace(go.Scatter(
+            x=power_law_params['ranks'],
+            y=fit_values,
+            mode='lines',
+            name=f'Power Law Fit (α={power_law_params["alpha"]:.2f})',
+            line=dict(color='red', width=3),
+        ))
+        
+        fig.update_layout(
+            title="Tourism Popularity (Log-Log Scale)",
+            xaxis_title="Rank (1 = Most Popular)",
+            yaxis_title="Number of Visitors",
+            xaxis_type="log",
+            yaxis_type="log",
+            height=400,
+            showlegend=True,
+        )
+        
+        st.plotly_chart(fig, use_container_width=True)
     
-    # Power law fit line
-    import numpy as np
-    fit_values = np.exp(power_law_params['intercept']) * (power_law_params['ranks'] ** power_law_params['slope'])
-    fig.add_trace(go.Scatter(
-        x=power_law_params['ranks'],
-        y=fit_values,
-        mode='lines',
-        name=f'Power Law Fit (α={power_law_params["alpha"]:.2f})',
-        line=dict(color='red', width=3),
-    ))
-    
-    fig.update_layout(
-        title="Destination Popularity Distribution (Log-Log Scale)",
-        xaxis_title="Rank (1 = Most Popular)",
-        yaxis_title="Number of Visitors",
-        xaxis_type="log",
-        yaxis_type="log",
-        height=500,
-        showlegend=True,
-    )
-    
-    st.plotly_chart(fig, use_container_width=True)
+    with col2:
+        # Top countries by population bar chart
+        pop_data = []
+        for code, dest in sim.destinations.items():
+            if hasattr(dest, 'population') and dest.population > 0:
+                pop_data.append({
+                    'country': dest.country_name,
+                    'population': dest.population,
+                    'visitors': dest.get_current_visitors(),
+                })
+        
+        if pop_data:
+            # Sort by population and take top 15
+            pop_data = sorted(pop_data, key=lambda x: x['population'], reverse=True)[:15]
+            pop_df = pd.DataFrame(pop_data)
+            
+            fig_pop = px.bar(
+                pop_df,
+                x='country',
+                y='population',
+                title="Top 15 Countries by Population",
+                labels={'country': 'Country', 'population': 'Population'},
+            )
+            fig_pop.update_layout(
+                height=400,
+                xaxis_tickangle=-45,
+            )
+            st.plotly_chart(fig_pop, use_container_width=True)
+        else:
+            st.info("Population data not available")
     
     # Interpretation
-    col1, col2 = st.columns(2)
-    with col1:
+    col_m1, col_m2 = st.columns(2)
+    with col_m1:
         st.metric("Power Law Exponent (α)", f"{power_law_params['alpha']:.3f}",
                   help="Typical range: 0.5-2.0. Lower = more unequal (winner-take-all)")
-    with col2:
+    with col_m2:
         r2 = power_law_params['r_squared']
         fit_quality = "Excellent" if r2 > 0.9 else "Good" if r2 > 0.7 else "Moderate" if r2 > 0.5 else "Weak"
         st.metric("R² (Fit Quality)", f"{r2:.3f}",
@@ -2733,6 +2730,9 @@ def render_power_law_chart(sim, power_law_params):
     **Power Law Interpretation**: A few destinations attract most tourists (winner-take-all dynamics).
     This emerges from preferential attachment: popular destinations become more popular through memory effects
     and positive feedback loops, while less popular ones struggle to attract visitors.
+    
+    **Note**: Tourism popularity does NOT correlate strongly with population - small countries (e.g., UAE, Croatia)
+    can be tourism leaders through targeted investment and natural/cultural attractions.
     """)
 
 
@@ -2816,6 +2816,23 @@ def render_feedback_loop_chart(sim):
     """Render TFI feedback loop (arrivals vs friction)."""
     st.subheader("🔄 Negative Feedback Loop: TFI → Arrivals")
     
+    # Check if we have enough data
+    if not sim.data_collector.dest_tfi or not sim.data_collector.dest_visitors:
+        st.info("""
+        **Data Requirements for Feedback Loop Analysis:**
+        
+        This chart needs at least 30 days of simulation data to show the TFI-Arrivals relationship.
+        
+        **What you'll see:**
+        - Scatter plot: Each point = one day for one destination
+        - X-axis: TFI (Tourist Friction Index) - higher = more crowding/barriers
+        - Y-axis: Daily arrivals
+        - Trend line: Negative slope = self-regulating system
+        
+        **Expected pattern:** Downward-sloping trend (high TFI → fewer arrivals)
+        """)
+        return
+    
     # Get destinations with sufficient TFI variation
     feedback_data = []
     
@@ -2833,7 +2850,17 @@ def render_feedback_loop_chart(sim):
                 })
     
     if not feedback_data:
-        st.info("Not enough data yet to show feedback loops")
+        st.info(f"""
+        **Insufficient Data Yet**
+        
+        Current simulation: {sim.tick} days
+        Minimum required: 30 days with TFI variation
+        
+        **Tips to see feedback loops faster:**
+        1. Run simulation for 60+ days
+        2. Trigger negative events (sidebar) to create TFI spikes
+        3. Focus on popular destinations (France, Spain, USA)
+        """)
         return
     
     df_feedback = pd.DataFrame(feedback_data)
@@ -2881,13 +2908,19 @@ def render_feedback_loop_chart(sim):
         correlation = df_feedback['TFI'].corr(df_feedback['Arrivals'])
         feedback_strength = "Strong Negative" if correlation < -0.5 else "Moderate Negative" if correlation < -0.2 else "Weak" if correlation < 0 else "Positive (unusual)"
         
-        st.metric("TFI-Arrivals Correlation", f"{correlation:.3f}",
-                  help=f"{feedback_strength} feedback - negative correlation shows self-regulation")
+        col_fb1, col_fb2 = st.columns(2)
+        with col_fb1:
+            st.metric("TFI-Arrivals Correlation", f"{correlation:.3f}",
+                      help=f"{feedback_strength} feedback - negative correlation shows self-regulation")
+        with col_fb2:
+            st.metric("Feedback Type", feedback_strength)
     
     st.caption("""
     **Negative Feedback Loop**: As destinations become crowded (high TFI), they become less
     attractive, causing tourists to choose alternatives. This self-regulating mechanism
     prevents runaway overcrowding and demonstrates emergent homeostasis.
+    
+    **Causal Chain**: Crowding → Higher TFI → Lower Utility → Fewer Arrivals → Reduced Crowding
     """)
 
 
@@ -3087,60 +3120,114 @@ def render_emergence_chart(sim):
     st.subheader("🌟 Emergent Spatial Patterns")
     
     # Create spatial clustering visualization
-    # Group destinations by region/continent
+    # Group destinations by continent using centroid region data
     from collections import defaultdict
     
-    region_visitors = defaultdict(int)
-    region_destinations = defaultdict(int)
+    # Load region mapping from centroids
+    from pathlib import Path
+    from simulation.data.loaders import load_centroids
+    project_root = Path("/Users/joelvzach/Code/ssie_523")
+    centroids = load_centroids(project_root / "data" / "derived")
+    
+    continent_visitors = defaultdict(int)
+    continent_destinations = defaultdict(int)
+    continent_countries = defaultdict(list)
     
     for code, dest in sim.destinations.items():
         visitors = dest.get_current_visitors()
+        
+        # Get continent from centroids
+        centroid_info = centroids.get(code, {})
+        continent = centroid_info.get('region', 'Unknown')
+        
+        # Map region names to continent names
+        continent_mapping = {
+            'Americas': 'Americas',
+            'Europe': 'Europe',
+            'Asia': 'Asia',
+            'Africa': 'Africa',
+            'Oceania': 'Oceania',
+            'Unknown': 'Unknown',
+        }
+        continent = continent_mapping.get(continent, continent)
+        
         if visitors > 0:
-            # Determine region from country data
-            region = getattr(dest, 'region', 'Unknown')
-            if region == 'Unknown' and hasattr(dest, 'continent'):
-                region = dest.continent
-            
-            region_visitors[region] += visitors
-            region_destinations[region] += 1
+            continent_visitors[continent] += visitors
+            continent_destinations[continent] += 1
+            continent_countries[continent].append(dest.country_name)
     
-    if not region_visitors:
-        st.info("Not enough data yet to show emergent patterns")
+    # Filter out Unknown if we have other continents
+    if 'Unknown' in continent_visitors and len(continent_visitors) > 1:
+        del continent_visitors['Unknown']
+        del continent_destinations['Unknown']
+        del continent_countries['Unknown']
+    
+    if not continent_visitors:
+        st.info("""
+        **Not enough data yet to show emergent patterns**
+        
+        Run the simulation for more days to see tourism patterns emerge.
+        
+        **What you'll see:**
+        - Treemap: Tourism concentration by continent
+        - HHI: Concentration index (0-1, higher = more concentrated)
+        - Tourism corridors: Most-traveled origin→destination pairs
+        """)
         return
     
-    # Create treemap of tourism concentration
-    fig = px.treemap(
-        names=list(region_visitors.keys()),
-        parents=[''] * len(region_visitors),
-        values=list(region_visitors.values()),
-        title="Emergent Tourism Concentration by Region",
-        color=[region_visitors[r] / region_destinations[r] for r in region_visitors.keys()],
-        color_continuous_scale='RdYlGn',
-    )
+    # Create two-column layout
+    col_left, col_right = st.columns(2)
     
-    fig.update_layout(
-        height=500,
-    )
+    with col_left:
+        # Create treemap of tourism concentration
+        fig = px.treemap(
+            names=list(continent_visitors.keys()),
+            parents=[''] * len(continent_visitors),
+            values=list(continent_visitors.values()),
+            title="Tourism Concentration by Continent",
+            color=[continent_visitors[c] / max(1, continent_destinations[c]) for c in continent_visitors.keys()],
+            color_continuous_scale='RdYlGn',
+        )
+        
+        fig.update_layout(
+            height=450,
+        )
+        
+        st.plotly_chart(fig, use_container_width=True)
     
-    st.plotly_chart(fig, use_container_width=True)
+    with col_right:
+        # Pie chart for market share
+        fig_pie = px.pie(
+            values=list(continent_visitors.values()),
+            names=list(continent_visitors.keys()),
+            title="Continental Market Share",
+            hole=0.4,
+        )
+        fig_pie.update_layout(
+            height=450,
+        )
+        st.plotly_chart(fig_pie, use_container_width=True)
     
     # Emergence metrics
     st.write("**📊 Emergence Metrics:**")
     
     # Calculate Herfindahl-Hirschman Index (concentration)
-    total_visitors = sum(region_visitors.values())
+    total_visitors = sum(continent_visitors.values())
     if total_visitors > 0:
-        hhi = sum((v / total_visitors) ** 2 for v in region_visitors.values())
+        hhi = sum((v / total_visitors) ** 2 for v in continent_visitors.values())
         concentration = "Fragmented" if hhi < 0.2 else "Moderate" if hhi < 0.4 else "Concentrated"
         
-        col1, col2 = st.columns(2)
+        col1, col2, col3 = st.columns(3)
         with col1:
             st.metric("Regional Concentration (HHI)", f"{hhi:.3f}",
                       help="Higher = more concentrated tourism")
         with col2:
             st.metric("Pattern Type", concentration)
+        with col3:
+            st.metric("Continents with Tourism", len(continent_visitors))
     
     # Show top tourism corridors (origin-destination pairs)
+    st.divider()
     st.write("**🛣️ Emergent Tourism Corridors:**")
     
     # Sample from trip records
@@ -3150,21 +3237,36 @@ def render_emergence_chart(sim):
             corridor = f"{trip['origin']} → {trip['destination']}"
             corridor_counts[corridor] += 1
         
-        top_corridors = sorted(corridor_counts.items(), key=lambda x: x[1], reverse=True)[:5]
-        
-        for corridor, count in top_corridors:
-            origin_code = corridor.split(' → ')[0]
-            dest_code = corridor.split(' → ')[1]
-            origin_name = sim.destinations.get(origin_code)
-            dest_name = sim.destinations.get(dest_code)
+        if corridor_counts:
+            top_corridors = sorted(corridor_counts.items(), key=lambda x: x[1], reverse=True)[:10]
             
-            if origin_name and dest_name:
-                st.write(f"  • **{origin_name.country_name} → {dest_name.country_name}**: {count} trips")
+            # Display in two columns
+            col_corr1, col_corr2 = st.columns(2)
+            
+            for i, (corridor, count) in enumerate(top_corridors):
+                origin_code = corridor.split(' → ')[0]
+                dest_code = corridor.split(' → ')[1]
+                origin_name = sim.destinations.get(origin_code)
+                dest_name = sim.destinations.get(dest_code)
+                
+                corridor_text = f"  • **{origin_name.country_name if origin_name else origin_code} → {dest_name.country_name if dest_name else dest_code}**: {count} trips"
+                
+                if i < 5:
+                    col_corr1.write(corridor_text)
+                else:
+                    col_corr2.write(corridor_text)
+        else:
+            st.info("No trip records yet - run simulation longer")
+    else:
+        st.info("Trip records not available - run simulation longer")
     
     st.caption("""
     **Emergence**: Global tourism patterns arise from individual agent decisions without
     central coordination. Tourism corridors, regional clusters, and seasonal waves are
     emergent phenomena that cannot be predicted from individual behavior alone.
+    
+    **Self-Organization**: Notice how certain corridors become dominant (e.g., USA→Europe, China→Asia)
+    even though each agent makes independent decisions based on personal preferences.
     """)
 
 

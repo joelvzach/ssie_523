@@ -49,6 +49,7 @@ class Destination:
         climate_zone: Optional[str] = None,
         tourism_gdp_pct: Optional[float] = None,
         dependency_category: Optional[str] = None,
+        population: int = 0,
     ):
         """
         Initialize destination.
@@ -65,9 +66,11 @@ class Destination:
             climate_zone: 'Northern', 'Southern', or 'Tropical' (auto-assigned if None)
             tourism_gdp_pct: Tourism GDP percentage (0-100+)
             dependency_category: 'highly_dependent', 'moderately_dependent', 'low_dependency', or 'minimal_dependency'
+            population: Country population
         """
         self.country_code = country_code
         self.country_name = country_name
+        self.population = population
 
         # Capacity: hotel beds × 0.0003 (scaled for visible crowding with 40K agents)
         # Original: 0.80 × 1.10 = 0.88 (88% of hotel beds) - too large, no crowding visible

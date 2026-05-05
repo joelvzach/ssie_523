@@ -848,7 +848,7 @@ def render_visitor_origin_map(sim, country_code):
     fig.add_trace(go.Choropleth(
         locations=df['code'],
         z=df['visitors'],
-        locationmode='country codes',
+        locationmode='ISO-3',  # Fixed: use 'ISO-3' not 'country codes'
         colorscale='Blues',
         colorbar_title='Visitors',
         hovertemplate='%{location}: %{z} visitors<extra></extra>',
@@ -860,7 +860,7 @@ def render_visitor_origin_map(sim, country_code):
         fig.add_trace(go.Choropleth(
             locations=[country_code],
             z=[max(df['visitors']) * 1.5],  # Make it stand out
-            locationmode='country codes',
+            locationmode='ISO-3',  # Fixed: use 'ISO-3'
             colorscale=[[0, 'red'], [1, 'red']],  # Red highlight
             showslegend=True,
             name='Destination',
@@ -1908,6 +1908,12 @@ def render_agent_dashboard(sim):
                 # Get journey trajectory from data collector
                 trajectory = sim.data_collector.agent_trajectories.get(selected_agent, [])
                 
+                # Get trip records for this agent (includes decision data)
+                agent_trips = [
+                    t for t in sim.data_collector.trip_records 
+                    if t['agent_id'] == selected_agent and t.get('decision_data')
+                ]
+                
                 # Build journey table with trip details
                 if len(trajectory) > 0:
                     st.write("**🗺️ Journey Trajectory:**")
@@ -1929,20 +1935,55 @@ def render_agent_dashboard(sim):
                         # Add final trip
                         trips.append((current_trip_start[0], trajectory[-1][0], prev_dest))
                     
-                    # Create journey dataframe
+                    # Create journey dataframe with clickable rows
                     journey_data = []
-                    for start_tick, end_tick, dest_code in trips:
+                    for idx, (start_tick, end_tick, dest_code) in enumerate(trips):
                         dest = sim.destinations.get(dest_code)
                         dest_name = dest.country_name if dest else dest_code
                         duration = end_tick - start_tick + 1
+                        
+                        # Check if this trip has decision data
+                        has_decision = any(
+                            abs(t['arrival_tick'] - start_tick) <= 1  # Match arrival tick
+                            for t in agent_trips
+                        )
+                        
                         journey_data.append({
+                            "Trip #": idx + 1,
                             "Day": f"{start_tick} → {end_tick}",
                             "Destination": f"{dest_name} ({dest_code})",
                             "Duration": f"{duration}d",
+                            "View Decision": "🔍 Click below" if has_decision else "-",
                         })
                     
                     journey_df = pd.DataFrame(journey_data)
                     st.dataframe(journey_df, use_container_width=True, height=300, hide_index=True)
+                    
+                    # Trip selector for viewing decisions
+                    if agent_trips:
+                        st.write("**🔍 View Past Decisions:**")
+                        
+                        # Build trip options
+                        trip_options = {}
+                        for trip in agent_trips:
+                            dest = sim.destinations.get(trip['destination'])
+                            dest_name = dest.country_name if dest else trip['destination']
+                            label = f"Trip to {dest_name} (Day {trip['arrival_tick']})"
+                            trip_options[label] = trip
+                        
+                        selected_trip_label = st.selectbox(
+                            "Select a trip to view its decision breakdown:",
+                            options=list(trip_options.keys()),
+                            help="View the factor breakdown that led to this destination choice"
+                        )
+                        
+                        if selected_trip_label:
+                            selected_trip = trip_options[selected_trip_label]
+                            decision_data = selected_trip.get('decision_data')
+                            
+                            if decision_data:
+                                st.write(f"**Decision Details for {selected_trip_label}:**")
+                                render_decision_breakdown(decision_data, sim)
                     
                     # Render mini-map
                     st.write("**📍 Journey Path:**")
@@ -2736,12 +2777,30 @@ def render_event_impact_analysis(sim):
     """Render event impact analysis chart."""
     st.subheader("⚡ Negative Event Impact")
     
-    # Check if any events are active
-    active_events = [e for e in sim.unplanned_events.events if e.is_active(sim.current_date)]
+    # Check if any events exist (active or past)
+    all_events = sim.unplanned_events.events
     
-    if not active_events:
-        st.info("No active negative events. Use the sidebar to trigger events for impact analysis.")
+    if not all_events:
+        st.info("""
+        **No negative events triggered yet.**
+        
+        To see resilience analysis:
+        1. Go to sidebar → '⚠️ Trigger Negative Event'
+        2. Select a country, event type, severity, and duration
+        3. Click '⚡ Trigger Event'
+        4. Run simulation for 30+ days to see impact
+        5. Return to this tab to see resilience metrics
+        
+        **What you'll see:**
+        - Visitor drop during event
+        - Recovery rate after event ends
+        - Substitution effect (where tourists went instead)
+        """)
         return
+    
+    # Show both active and past events
+    active_events = [e for e in all_events if e.is_active(sim.current_date)]
+    past_events = [e for e in all_events if not e.is_active(sim.current_date)]
     
     for event in active_events:
         # Find affected destination
@@ -2841,7 +2900,7 @@ def render_event_impact_analysis(sim):
 
 def fit_power_law(sim):
     """
-    Fit power law to destination popularity distribution.
+    Fit power law to destination popularity distribution using historical arrival data.
     
     Returns:
         dict: Power law parameters (alpha, r_squared)
@@ -2849,12 +2908,22 @@ def fit_power_law(sim):
     import numpy as np
     from scipy import stats
     
-    # Get visitor counts for all destinations
-    visitors = []
-    for dest in sim.destinations.values():
-        v = dest.get_current_visitors()
-        if v > 0:
-            visitors.append(v)
+    # Use cumulative arrivals over time for better power law fit
+    # This smooths out temporary fluctuations
+    cumulative_visitors = {}
+    for code, dest in sim.destinations.items():
+        arrivals_history = sim.data_collector.dest_visitors.get(code, [])
+        if arrivals_history:
+            # Sum all arrivals (more stable than current snapshot)
+            cumulative_visitors[code] = sum(arrivals_history)
+    
+    visitors = list(cumulative_visitors.values())
+    
+    if len(visitors) < 10 or max(visitors) == 0:
+        return None
+    
+    # Filter out zeros
+    visitors = [v for v in visitors if v > 0]
     
     if len(visitors) < 10:
         return None

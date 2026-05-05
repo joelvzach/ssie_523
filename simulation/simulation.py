@@ -432,6 +432,11 @@ class Simulation:
                             
                             # Only record trip if tourist was actually accommodated
                             if accommodated > 0:
+                                # Capture decision data before clearing (for sampled agents)
+                                decision_data = None
+                                if agent.agent_id in self.sampled_agent_ids and hasattr(agent, 'last_decision'):
+                                    decision_data = agent.last_decision
+                                
                                 # Record trip for data collection (use country name for origin)
                                 self.data_collector.record_trip(
                                     agent,
@@ -439,6 +444,7 @@ class Simulation:
                                     dest_code,
                                     self.tick,
                                     self.tick,  # Will be updated on departure
+                                    decision_data=decision_data,  # Store decision breakdown
                                 )
                             else:
                                 # Tourist couldn't find accommodation - return home

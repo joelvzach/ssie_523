@@ -132,6 +132,7 @@ class DataCollector:
         destination: str,
         arrival_tick: int,
         departure_tick: int = None,
+        decision_data: dict = None,
     ):
         """
         Record trip (can be updated later with departure tick).
@@ -142,6 +143,7 @@ class DataCollector:
             destination: Destination country code
             arrival_tick: Arrival tick
             departure_tick: Departure tick (None if still traveling)
+            decision_data: Optional decision breakdown data from agent.last_decision
         """
         trip_record = {
             "agent_id": agent.agent_id,
@@ -151,6 +153,7 @@ class DataCollector:
             "arrival_tick": arrival_tick,
             "departure_tick": departure_tick,
             "duration": (departure_tick - arrival_tick) if departure_tick else None,
+            "decision_data": decision_data,  # Store decision breakdown if available
         }
         self.trip_records.append(trip_record)
         

@@ -140,7 +140,9 @@ def choose_destination(
     # Load ISO3 to numeric mapping for distance lookup
     import csv
     from pathlib import Path
-    project_root = Path("/Users/joelvzach/Code/ssie_523")
+    
+    # Use relative path from this file (works on local and Streamlit Cloud)
+    project_root = Path(__file__).parent.parent
     mapping_file = project_root / "data" / "derived" / "country_code_mapping.csv"
     iso3_to_numeric = {}
     if mapping_file.exists():

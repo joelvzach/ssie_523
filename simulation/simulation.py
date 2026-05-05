@@ -123,8 +123,8 @@ class Simulation:
         from pathlib import Path
         import csv
 
-        # Use hardcoded project root (ssie_523 directory)
-        project_root = Path("/Users/joelvzach/Code/ssie_523")
+        # Use relative path from this file (works on local and Streamlit Cloud)
+        project_root = Path(__file__).parent.parent
         mapping_file = project_root / "data" / "derived" / "country_code_mapping.csv"
         numeric_to_iso3 = {}
 

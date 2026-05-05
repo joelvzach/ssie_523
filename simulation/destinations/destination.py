@@ -69,16 +69,22 @@ class Destination:
         self.country_code = country_code
         self.country_name = country_name
 
-        # Capacity: hotel beds × 0.80 × 0.15 (reduced for realistic crowding dynamics)
-        # Original: 0.80 × 1.10 = 0.88 (88% of hotel beds)
-        # Adjusted: 0.80 × 0.15 = 0.12 (12% of hotel beds) to trigger TFI dynamics
-        # Rationale: Real destinations experience crowding at lower occupancy due to:
-        #            - Geographic concentration (tourists cluster in specific areas)
-        #            - Seasonal peaks (10x average during high season)
-        #            - Infrastructure limits (roads, attractions, restaurants)
-        #            - Day trippers not counted in hotel stays
-        #            - Overtourism occurs at specific sites, not country-wide
-        self.base_capacity = int(hotel_beds * 0.80 * 0.15)
+        # Capacity: hotel beds × 0.0003 (scaled for visible crowding with 40K agents)
+        # Original: 0.80 × 1.10 = 0.88 (88% of hotel beds) - too large, no crowding visible
+        # Previous: 0.80 × 0.15 = 0.12 (12% of hotel beds) - still too large
+        # Current: 0.0003 (0.03% of hotel beds) - makes crowding visible at 40K agents
+        #
+        # Rationale for 100x reduction:
+        # - With 40,000 agents and ~1.5 trips/year average: ~164 active travelers daily
+        # - Global hotel beds: ~15.5M → 12% capacity = 1.86M beds → 0.01% utilization
+        # - Scaled capacity: ~4,658 beds → 3.5% average utilization (visible crowding!)
+        # - Popular destinations (France, Spain): 10-20%+ utilization (overtourism dynamics)
+        #
+        # This scaling allows demonstration of:
+        # - TFI feedback loops (crowding → policy → capacity reduction)
+        # - Non-linear dynamics (threshold effects at 80%, 100%)
+        # - Emergent patterns (some destinations overcrowded, others underutilized)
+        self.base_capacity = int(hotel_beds * 0.0003)
 
         # Tourism dependency (for TFI dynamics)
         self.tourism_gdp_pct = tourism_gdp_pct if tourism_gdp_pct is not None else 0.0

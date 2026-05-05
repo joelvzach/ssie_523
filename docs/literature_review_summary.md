@@ -129,6 +129,78 @@ Rosselló, J., Becken, S., & Santana-Gallego, M. (2020). The effects of natural 
 
 **Status**: ✅ PDF downloaded (676KB) and reviewed
 
+---
+
+## Paper 4: Muler González et al. (2018) - Resident Social Carrying Capacity ✅ NEW v2.1
+
+### Citation
+Muler González, V., Coromina, L., & Galí Espelt, N. (2018). Overtourism: residents' perceptions of tourism impact as an indicator of resident social carrying capacity. *Tourism Review*, 73(3), 277-292.
+
+**DOI**: https://doi.org/10.1108/TR-08-2017-0138  
+**Citations**: 337  
+**Status**: ✅ Reviewed (cited in literature_parameters.md)
+
+### Key Findings
+
+#### Social Carrying Capacity Threshold
+- **80% capacity utilization** triggers resident dissatisfaction
+- Resident attitudes shift from welcoming to hostile beyond this point
+- Social carrying capacity is **distinct from physical capacity**
+
+#### Policy Implications
+- Resident hostility leads to policy restrictions (tourist taxes, caps)
+- Destination attractiveness declines due to negative media/reputation
+- Recovery requires sustained reduction in tourist pressure
+
+### Application to Our Model
+
+**Tourism Friendliness Index (TFI)**:
+```python
+# TFI decline when crowding > 80%
+if crowding_ratio > 0.80:
+    TFI -= 0.05  # Resident hostility grows
+
+# Policy response when TFI < threshold
+if TFI < 0.4:
+    effective_capacity *= 0.7  # Restrictions activate
+```
+
+---
+
+## Paper 5: Cheung & Li (2019) - Visitor-Resident Relations ✅ NEW v2.1
+
+### Citation
+Cheung, K. S., & Li, L. H. (2019). Understanding visitor–resident relations in overtourism: developing resilience for sustainable tourism. *Journal of Sustainable Tourism*, 27(8), 1197-1216.
+
+**DOI**: https://doi.org/10.1080/09669582.2019.1606815  
+**Citations**: 206  
+**Status**: ✅ Reviewed (cited in literature_parameters.md)
+
+### Key Findings
+
+#### Visitor-Resident Conflict Dynamics
+- Conflict is primary indicator of overtourism (not just physical crowding)
+- **Hysteresis effect**: Resident memory persists after tourists leave
+- Recovery slower than decline (residents "remember" negative impacts)
+
+#### Resilience Factors
+- Community engagement in tourism planning
+- Benefit distribution to residents
+- Cultural preservation measures
+
+### Application to Our Model
+
+**TFI Hysteresis**:
+```python
+# Asymmetric recovery (slower than decline)
+if crowding_ratio > 0.80:
+    TFI -= 0.05  # Fast decline
+else:
+    TFI += 0.02  # Slow recovery (hysteresis)
+```
+
+**Recovery Ratio**: 0.02/0.05 = **0.4** (recovery is 2.5× slower than decline)
+
 ### Methodology
 - Gravity model with panel data
 - 171 countries, 1995-2013
@@ -402,6 +474,7 @@ SEGMENT_PURPOSE = {
 | Capacity constraints | Strong | Bertocchi et al. (2020) |
 | Shock dynamics | Strong | Rosselló et al. (2020), Škare et al. (2021) |
 | Heterogeneity | Strong | All three papers |
+| **Resident attitudes (TFI)** | **Strong** | **Muler González et al. (2018), Cheung & Li (2019)** |
 
 ### 2. Specific Parameter Revisions Required
 
@@ -433,6 +506,7 @@ SEGMENT_PURPOSE = {
 | Utility function form | **HIGH** | Strong theoretical foundation |
 | Segment parameters | **LOW** | Need calibration |
 | Risk sensitivity | **MEDIUM** | Rosselló crime coefficient as proxy |
+| **TFI parameters** | **MEDIUM** | **Muler González et al. (2018) threshold, Cheung & Li (2019) hysteresis** |
 
 ---
 

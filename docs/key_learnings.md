@@ -381,6 +381,84 @@ An agent-based simulation where:
 
 ---
 
-**Document Status**: Ready for Stage 2 implementation  
-**Last Updated**: 2026-04-17  
+## Phase 4 Learnings (May 1, 2026)
+
+### GDP Integration
+
+**Key Finding**: Tourism dependency (share of GDP from tourism) moderates resident attitudes toward overtourism.
+
+**Implementation**:
+- World Bank GDP parser with pickle cache (262 countries, ~0.3s initialization)
+- Tourism-GDP % calculator: `tourism_expenditure / GDP * 100`
+- TFI modifier: Highly dependent economies (>30%) decline 50% slower
+
+**Validation**:
+- 98 countries with tourism-GDP data
+- Top 5: Aruba (98.9%), Andorra (94.6%), Antigua & Barbuda (90.1%), Seychelles (81.6%), Sint Maarten (78.8%)
+- OECD correlation: r = 0.795 (valid for relative ranking)
+
+### Data Quality Lessons
+
+**Critical Discovery**: UN Tourism dataset contains 3 expenditure indicators per country-year:
+1. Passenger transport services
+2. Travel services (incl. goods)
+3. **TOTAL** (= passenger + travel)
+
+**Impact**: Loading all 3 without filtering created 3× duplication (8,911 → 3,794 rows after fix).
+
+**Fix**: Filter to `expenditure_indicator == 'TOTAL'` in merge script.
+
+### Calibration Insights
+
+**Segment Distribution Problem**: Original trip frequencies caused over-representation:
+- Luxury: 3.0 trips/year → 43.8% (target 20%)
+- Adventure: 1.5 trips/year → 37.5% (target 25%)
+- Budget: 0.75 trips/year → 7.4% (target 30%)
+- Family: 0.75 trips/year → 11.4% (target 25%)
+
+**Calibrated Frequencies** (RMSE reduced from 15.2% → 3.1%):
+- Budget: 0.75 → 2.0 trips/year
+- Luxury: 3.0 → 1.0 trips/year
+- Adventure: 1.5 → 0.75 trips/year
+- Family: 0.75 → 1.0 trips/year
+
+### Validation Framework
+
+**4-Tier Approach**:
+1. **Tier 1 (Aggregate)**: CAGR, shock magnitude, recovery rate
+2. **Tier 2 (Distributional)**: Gini coefficient, top 10 share, regional flows
+3. **Tier 3 (Emergent)**: Hub formation, clustering, spillover (qualitative)
+4. **Tier 4 (Robustness)**: Sensitivity to parameter variations
+
+**Results**:
+- Gini: 0.735 ✅ (target 0.60-0.80)
+- OECD: r = 0.795 ✅ (target > 0.7)
+- Segment RMSE: 3.1% ✅ (target < 10%)
+- Code mapping: 100% ✅ (177/177 countries)
+
+### Limitations Addressed
+
+| Issue | Before | After | Status |
+|-------|--------|-------|--------|
+| Segment distribution | RMSE 15.2% | RMSE 3.1% | ✅ Fixed |
+| Country code mapping | 77% (137/177) | 100% (177/177) | ✅ Fixed |
+| TFI dynamics | 0 destinations declining | 50 destinations (28.6%) | ✅ Fixed |
+| Data duplication | 3× rows (8,911) | Correct (3,794) | ✅ Fixed |
+
+### Remaining Challenges
+
+1. **Low crowding levels**: Average 1-2% utilization, TFI decline rarely triggers
+   - Solution: Increase agent count (10K-20K) or add stress scenarios
+
+2. **Risk score zero variance**: All countries have risk_score = 0.0 in 2019
+   - Handled gracefully in visualizations (text annotation instead of trend line)
+
+3. **TTDI low explanatory power**: r² = 0.13-0.20
+   - Reframe as exploratory sandbox, not predictive model
+   - Justifies agent-based approach (heterogeneity matters)
+
+---
+
+**Document Status**: ✅ Phase 4 Complete  
+**Last Updated**: 2026-05-01  
 **Owner**: Simulation Development Team

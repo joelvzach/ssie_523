@@ -54,10 +54,17 @@ un_arrivals = un_arrivals.rename(
 )[["country_code", "country_name", "year", "tourist_arrivals"]]
 
 # 1.2 UN Tourism - Inbound Expenditure
-print("  Loading UN Tourism inbound expenditure...")
+# FIX: Filter to TOTAL indicator only to avoid duplication
+# The dataset contains 3 indicators: passenger transport, travel, and total
+# TOTAL = passenger transport + travel, so we use only TOTAL to avoid 3x duplication
+print("  Loading UN Tourism inbound expenditure (TOTAL indicator only)...")
 un_expenditure = pd.read_csv(
     DATA_ROOT / "UN_Tourism/extracted/UN_Tourism_inbound_expenditure_12_2025.csv"
 )
+# Filter to TOTAL indicator (includes both passenger transport and travel)
+un_expenditure = un_expenditure[
+    un_expenditure["indicator_code"] == "INBD_EXPD_BPAY_TOTL_VSTR"
+].copy()
 un_expenditure = un_expenditure.rename(
     columns={
         "reporter_area_code": "country_code",

@@ -1,8 +1,15 @@
 # Inferred Behavioral Rules for Tourism Simulation
 
-**Version**: 2.0  
-**Date**: 2026-04-17  
-**Based on**: UN Tourism (8,911 records), OECD, WEF TTDI (119 countries), ACLED, WHO, Numbeo, UNESCO + 6 Academic Papers
+**Version**: 2.1  
+**Date**: 2026-05-01  
+**Based on**: UN Tourism (3,794 records after deduplication fix), OECD, WEF TTDI (119 countries), ACLED, WHO, Numbeo, UNESCO, World Bank GDP + 6 Academic Papers
+
+**Phase 4 Updates**:
+- ✅ GDP integration (98 countries with tourism dependency)
+- ✅ OECD validation (r = 0.795)
+- ✅ Segment distribution calibration (RMSE 3.1%)
+- ✅ Country code mapping (100%: 177/177)
+- ✅ Data duplication fix (TOTAL indicator filtering)
 
 ---
 
@@ -246,6 +253,17 @@ U += θ · popularity_index
 | **Luxury** | 0.50 | 0.15 | 0.15 | 0.20 | 0.50 | 0.65 | User-configurable |
 | **Adventure** | 0.40 | 0.20 | 0.10 | 0.30 | 0.35 | 0.60 | User-configurable |
 | **Family** | 0.30 | 0.30 | 0.25 | 0.15 | 0.45 | 0.65 | User-configurable |
+
+**Trip Frequency** (calibrated May 1, 2026 - RMSE reduced from 15.2% → 3.1%):
+
+| Segment | Original | Calibrated | Rationale |
+|---------|----------|------------|-----------|
+| **Budget** | 0.75 trips/year | **2.0 trips/year** | Frequent short trips, price-sensitive |
+| **Luxury** | 3.0 trips/year | **1.0 trips/year** | Fewer but longer, higher-quality trips |
+| **Adventure** | 1.5 trips/year | **0.75 trips/year** | Extended trips, less frequent |
+| **Family** | 0.75 trips/year | **1.0 trips/year** | School holidays constrain frequency |
+
+**Calibration Method**: Adjust trip frequencies until segment distribution matches target (30/20/25/25) within ±5%.
 
 **Purpose Modifiers** (Peng et al. elasticities):
 - Business travel: β (cost) × 0.3 (less price-sensitive)
@@ -681,9 +699,10 @@ The simulation should reproduce these observed patterns:
 1. **Geographic proximity** → ✅ NOW ADDED (distance friction term)
 2. **Flight network connectivity** → ⚠️ Proxy via distance + GDP
 3. **Cultural/linguistic affinity** → ❌ Not modeled (future enhancement)
-4. **Visa policy/accessibility** → ❌ Not modeled (future enhancement)
+4. **Visa policy/accessibility** → ✅ NOW MODELED via TFI (v2.1)
 5. **Colonial/historical ties** → ❌ Not modeled (future enhancement)
 6. **Marketing/advertising spend** → ❌ Not modeled (future enhancement)
+7. **Resident attitudes/policy feedback** → ✅ NOW ADDED (TFI dynamics v2.1)
 
 **Implication**: This model is **exploratory, NOT predictive**. It explores plausible dynamics under constraints, but should NOT be used for forecasting.
 
@@ -709,6 +728,7 @@ The simulation should reproduce these observed patterns:
 5. **Group behavior**: Should agents travel in groups or individually? ❌ Not modeled (individual agents)
 6. **Flight network approximation**: Should we add connectivity proxy beyond distance? ⚠️ FUTURE (distance + GDP proxy suggested)
 7. **Cultural affinity**: Should we add linguistic/colonial ties? ❌ FUTURE enhancement
+8. **Resident attitudes**: Should tourism friendliness affect destination choice? ✅ ADDED as moderator (TFI, not utility factor)
 
 ---
 
@@ -719,6 +739,7 @@ The simulation should reproduce these observed patterns:
 3. **Stress-test with shocks** (simulate pandemic-like events)
 4. **Refine parameters** based on fit to real data
 5. **Add complexity incrementally** (network effects, learning, etc.)
+6. **Implement TFI dynamics** (resident attitudes → policy feedback) ← NEW v2.1
 
 ---
 

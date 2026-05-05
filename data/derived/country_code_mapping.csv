@@ -1,0 +1,178 @@
+country_code,country_name,Country Code
+8,Albania,ALB
+12,Algeria,DZA
+16,American Samoa,ASM
+20,Andorra,AND
+28,Antigua and Barbuda,ATG
+31,Azerbaijan,AZE
+32,Argentina,ARG
+36,Australia,AUS
+44,Bahamas,BHS
+48,Bahrain,BHR
+51,Armenia,ARM
+52,Barbados,BRB
+56,Belgium,BEL
+60,Bermuda,BMU
+68,Bolivia (Plurinational State of),BOL
+70,Bosnia and Herzegovina,BIH
+72,Botswana,BWA
+76,Brazil,BRA
+84,Belize,BLZ
+92,British Virgin Islands,VGB
+96,Brunei Darussalam,BRN
+100,Bulgaria,BGR
+104,Myanmar,MMR
+112,Belarus,BLR
+120,Cameroon,CMR
+124,Canada,CAN
+136,Cayman Islands,CYM
+144,Sri Lanka,LKA
+148,Chad,TCD
+152,Chile,CHL
+156,China,CHN
+158,Taiwan Province of China,TWN
+170,Colombia,COL
+174,Comoros,COM
+178,Congo,COG
+180,Democratic Republic of the Congo,COD
+188,Costa Rica,CRI
+191,Croatia,HRV
+192,Cuba,CUB
+196,Cyprus,CYP
+203,Czechia,CZE
+204,Benin,BEN
+208,Denmark,DNK
+212,Dominica,DMA
+214,Dominican Republic,DOM
+218,Ecuador,ECU
+222,El Salvador,SLV
+231,Ethiopia,ETH
+232,Eritrea,ERI
+233,Estonia,EST
+242,Fiji,FJI
+246,Finland,FIN
+250,France,FRA
+254,French Guiana,GUF
+258,French Polynesia,PYF
+266,Gabon,GAB
+268,Georgia,GEO
+270,Gambia,GMB
+275,State of Palestine,PSE
+276,Germany,DEU
+296,Kiribati,KIR
+300,Greece,GRC
+308,Grenada,GRD
+312,Guadeloupe,GLP
+316,Guam,GUM
+320,Guatemala,GTM
+324,Guinea,GIN
+332,Haiti,HTI
+340,Honduras,HND
+344,"China, Hong Kong Special Administrative Region",HKG
+348,Hungary,HUN
+352,Iceland,ISL
+356,India,IND
+360,Indonesia,IDN
+364,Iran (Islamic Republic of),IRN
+368,Iraq,IRQ
+376,Israel,ISR
+380,Italy,ITA
+384,Côte d’Ivoire,CIV
+388,Jamaica,JAM
+392,Japan,JPN
+398,Kazakhstan,KAZ
+400,Jordan,JOR
+404,Kenya,KEN
+410,Republic of Korea,KOR
+417,Kyrgyzstan,KGZ
+418,Lao People's Democratic Republic,LAO
+426,Lesotho,LSO
+428,Latvia,LVA
+434,Libya,LBY
+438,Liechtenstein,LIE
+440,Lithuania,LTU
+446,"China, Macao Special Administrative Region",MAC
+450,Madagascar,MDG
+458,Malaysia,MYS
+470,Malta,MLT
+474,Martinique,MTQ
+480,Mauritius,MUS
+484,Mexico,MEX
+492,Monaco,MCO
+496,Mongolia,MNG
+498,Republic of Moldova,MDA
+500,Montserrat,MSR
+504,Morocco,MAR
+508,Mozambique,MOZ
+512,Oman,OMN
+516,Namibia,NAM
+531,Curaçao,CUW
+533,Aruba,ABW
+534,Sint Maarten (Dutch part),SXM
+540,New Caledonia,NCL
+548,Vanuatu,VUT
+554,New Zealand,NZL
+558,Nicaragua,NIC
+566,Nigeria,NGA
+570,Niue,NIU
+580,Northern Mariana Islands,MNP
+584,Marshall Islands,MHL
+591,Panama,PAN
+598,Papua New Guinea,PNG
+600,Paraguay,PRY
+604,Peru,PER
+608,Philippines,PHL
+616,Poland,POL
+620,Portugal,PRT
+630,Puerto Rico,PRI
+634,Qatar,QAT
+638,Réunion,REU
+642,Romania,ROU
+643,Russia,RUS
+646,Rwanda,RWA
+659,Saint Kitts and Nevis,KNA
+660,Anguilla,AIA
+662,Saint Lucia,LCA
+670,Saint Vincent and the Grenadines,VCT
+674,San Marino,SMR
+678,Sao Tome and Principe,STP
+682,Saudi Arabia,SAU
+686,Senegal,SEN
+688,Serbia,SRB
+690,Seychelles,SYC
+694,Sierra Leone,SLE
+702,Singapore,SGP
+704,Vietnam,VNM
+705,Slovenia,SVN
+710,South Africa,ZAF
+716,Zimbabwe,ZWE
+724,Spain,ESP
+740,Suriname,SUR
+748,Eswatini,SWZ
+756,Switzerland,CHE
+760,Syrian Arab Republic,SYR
+762,Tajikistan,TJK
+764,Thailand,THA
+776,Tonga,TON
+780,Trinidad and Tobago,TTO
+784,United Arab Emirates,ARE
+788,Tunisia,TUN
+792,Turkey,TUR
+795,Turkmenistan,TKM
+796,Turks and Caicos Islands,TCA
+804,Ukraine,UKR
+807,North Macedonia,MKD
+818,Egypt,EGY
+826,United Kingdom of Great Britain and Northern Ireland,GBR
+834,United Republic of Tanzania,TZA
+840,United States of America,USA
+850,United States Virgin Islands,VIR
+854,Burkina Faso,BFA
+858,Uruguay,URY
+860,Uzbekistan,UZB
+862,Venezuela (Bolivarian Republic of),VEN
+882,Samoa,WSM
+887,Yemen,YEM
+5351,Bonaire,BES
+5352,Saba,BES
+5353,St. Eustatius,BES

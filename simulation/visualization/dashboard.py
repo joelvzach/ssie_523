@@ -319,12 +319,16 @@ def render_map(sim):
         },
     )
     
-    # Explicitly enable country borders and frame
-    fig.update_geos(
-        showframe=True,
-        showcoastlines=True,
-        showcountries=True,  # Explicitly enable country borders
-        projection_type="equirectangular",
+    # Update layout with geo settings (more reliable than update_geos for choropleth)
+    fig.update_layout(
+        geo=dict(
+            showframe=True,
+            showcoastlines=True,
+            showcountries=True,  # Explicitly enable country borders
+            projection_type="equirectangular",
+            bgcolor="rgba(0,0,0,0)",  # Transparent background
+        ),
+        margin=dict(l=0, r=0, t=50, b=0),  # Minimize margins for full-width display
     )
 
     # Add traveling agents as scatter overlay with differentiated styling

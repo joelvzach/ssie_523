@@ -558,6 +558,92 @@ def render_top_destinations(sim):
     st.plotly_chart(fig, use_container_width=True)
 
 
+def render_continent_stats(sim):
+    """Render continent-level tourism distribution chart."""
+    from pathlib import Path
+    from simulation.data.loaders import load_centroids
+    
+    # Load centroids to get region data
+    centroids = load_centroids(Path('data/derived'))
+    
+    # Aggregate by continent/region
+    continent_data = {}
+    
+    for code, dest in sim.destinations.items():
+        # Get region from centroids
+        centroid = centroids.get(code, {})
+        region = centroid.get('region', 'Unknown')
+        
+        visitors = dest.get_current_visitors()
+        capacity = dest.base_capacity
+        utilization = visitors / capacity if capacity > 0 else 0.0
+        
+        if region not in continent_data:
+            continent_data[region] = {
+                'visitors': 0,
+                'capacity': 0,
+                'countries': 0,
+                'utilization_sum': 0.0,
+            }
+        
+        continent_data[region]['visitors'] += visitors
+        continent_data[region]['capacity'] += capacity
+        continent_data[region]['countries'] += 1
+        continent_data[region]['utilization_sum'] += utilization
+    
+    if not continent_data:
+        st.info("No continental data available yet.")
+        return
+    
+    # Build dataframe
+    rows = []
+    for region, data in continent_data.items():
+        avg_utilization = data['utilization_sum'] / data['countries'] if data['countries'] > 0 else 0.0
+        rows.append({
+            'Continent': region,
+            'Visitors': data['visitors'],
+            'Capacity': data['capacity'],
+            'Countries': data['countries'],
+            'Utilization (%)': avg_utilization * 100,
+        })
+    
+    df = pd.DataFrame(rows)
+    
+    # Create visualization
+    fig = px.bar(
+        df,
+        x='Continent',
+        y='Utilization (%)',
+        title='Tourism Utilization by Continent (Visitors / Capacity)',
+        color='Utilization (%)',
+        color_continuous_scale='RdYlGn_r',  # Red (high) to Green (low)
+        hover_data={
+            'Visitors': True,
+            'Capacity': True,
+            'Countries': True,
+            'Utilization (%)': ':.1f',
+        },
+    )
+    
+    fig.update_layout(
+        height=350,
+        margin=dict(l=0, r=0, t=40, b=0),
+        xaxis_title='Continent',
+        yaxis_title='Utilization (%)',
+    )
+    
+    st.plotly_chart(fig, use_container_width=True)
+    
+    # Show summary table below chart
+    st.write("**📊 Continental Summary:**")
+    st.dataframe(
+        df.sort_values('Utilization (%)', ascending=False),
+        use_container_width=True,
+        height=200,
+        hide_index=True,
+    )
+
+
 def render_segment_breakdown(sim):
     """Render segment breakdown pie chart."""
     # Count active travelers by segment
@@ -1251,27 +1337,16 @@ def main():
     with tab_overview:
         st.header("🗺️ Global Overview")
         
-        # Key Metrics - Horizontal row at top (doesn't obstruct map)
-        st.subheader("📊 Key Metrics")
-        summary = sim.data_collector.get_summary()
-        
-        col1, col2, col3, col4 = st.columns(4)
-        with col1:
-            st.metric("Current Day", f"Day {sim.tick}")
-        with col2:
-            st.metric("Date", sim.current_date.strftime('%Y-%m-%d'))
-        with col3:
-            st.metric("Active Travelers", f"{summary['active_travelers']:,}")
-        with col4:
-            st.metric("Total Trips", f"{summary['total_trips_recorded']:,}")
-        
-        st.divider()
-        
         # Map - Full width (no obstruction)
         fig_map = render_map(sim)
         st.plotly_chart(fig_map, use_container_width=True, key="map")
         
-        # Country selector below map (doesn't obstruct)
+        # Continent-level statistics below map
+        st.divider()
+        st.subheader("🌍 Continental Tourism Distribution")
+        render_continent_stats(sim)
+        
+        # Country selector below stats
         st.divider()
         selected_country = render_country_selector(sim)
         

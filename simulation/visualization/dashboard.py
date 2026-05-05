@@ -1203,39 +1203,6 @@ def main():
             )
             st.session_state.speed = speed
 
-            # Memory monitoring
-            st.divider()
-            st.subheader("💾 System")
-            
-            try:
-                import psutil
-                import os
-                process = psutil.Process(os.getpid())
-                memory_mb = process.memory_info().rss / 1024 / 1024
-                
-                # Color coding based on usage
-                if memory_mb > 2000:
-                    st.error(f"⚠️ RAM Usage: **{memory_mb:.0f} MB**")
-                    st.warning("High memory usage! Consider refreshing the page.")
-                elif memory_mb > 1000:
-                    st.warning(f"⚡ RAM Usage: **{memory_mb:.0f} MB**")
-                else:
-                    st.success(f"✅ RAM Usage: **{memory_mb:.0f} MB**")
-                
-                # Show memory stats from data collector
-                if st.session_state.simulation:
-                    mem_stats = st.session_state.simulation.data_collector.get_memory_stats()
-                    with st.expander("📊 Memory Details"):
-                        st.write(f"**Day:** {mem_stats['tick']}")
-                        st.write(f"**Data points:**")
-                        st.write(f"  - Visitors: {mem_stats['visitor_points']:,}")
-                        st.write(f"  - Trajectories: {mem_stats['trajectory_points']:,}")
-                        st.write(f"  - Trip records: {mem_stats['trip_records']:,}")
-                        st.write(f"**Estimated collector memory:** {mem_stats['estimated_mb']:.2f} MB")
-                        st.write(f"**Limits:** {mem_stats['limits']['max_days']} days, {mem_stats['limits']['max_trajectories']} trajectories, {mem_stats['limits']['max_trip_records']:,} trips")
-            except ImportError:
-                st.info("Install psutil for memory monitoring: `pip install psutil`")
-
             # Trigger negative event
             st.divider()
             st.subheader("⚠️ Trigger Negative Event")
@@ -1553,34 +1520,44 @@ def main():
         
         # What-if analysis and complexity metrics
         st.markdown("""
-        ### System Dynamics Analysis
+        ### Complexity Science Concepts
         
-        This section shows emergent patterns and feedback loops in the tourism system.
+        This simulation demonstrates key concepts from complexity science:
+        **Power Laws**, **Heterogeneity**, **Emergence**, **Feedback Loops**, **Path Dependence**, and **Resilience**.
         """)
         
         if not st.session_state.running:
-            # Calculate Gini coefficient for utilization inequality
+            # Calculate complexity metrics
             gini_coefficient = calculate_gini_coefficient(sim)
+            power_law_params = fit_power_law(sim)
             
-            # Create analytics charts in tabs
-            tab_capacity, tab_tfi, tab_inequality, tab_events = st.tabs([
-                "🏗️ Capacity Dynamics",
-                "🔄 TFI Feedback",
-                "📊 Inequality (Gini)",
-                "⚡ Event Impact"
+            # Create analytics tabs organized by complexity concept
+            tab_power, tab_hetero, tab_feedback, tab_path, tab_resilience, tab_emergence = st.tabs([
+                "⚡ Power Law",
+                "🎭 Heterogeneity", 
+                "🔄 Feedback Loops",
+                "📊 Path Dependence",
+                "🛡️ Resilience",
+                "🌟 Emergence"
             ])
             
-            with tab_capacity:
-                render_capacity_dynamics(sim)
+            with tab_power:
+                render_power_law_chart(sim, power_law_params)
             
-            with tab_tfi:
-                render_tfi_feedback_chart(sim)
+            with tab_hetero:
+                render_heterogeneity_chart(sim)
             
-            with tab_inequality:
-                render_gini_chart(sim, gini_coefficient)
+            with tab_feedback:
+                render_feedback_loop_chart(sim)
             
-            with tab_events:
-                render_event_impact_analysis(sim)
+            with tab_path:
+                render_path_dependence_chart(sim, gini_coefficient)
+            
+            with tab_resilience:
+                render_resilience_chart(sim)
+            
+            with tab_emergence:
+                render_emergence_chart(sim)
             
             # Show what-if analysis from agent decisions if available
             st.divider()
@@ -1599,24 +1576,7 @@ def main():
         """)
         
         # Show negative event trigger (moved from sidebar)
-        # Note: Keep in sidebar for now, add reference here
         st.info("⬅️ Use the sidebar to trigger negative events and configure simulation parameters")
-        
-        # Memory monitoring
-        st.divider()
-        st.subheader("💾 System Monitoring")
-        try:
-            import psutil
-            process = psutil.Process()
-            mem_info = process.memory_info()
-            
-            col1, col2 = st.columns(2)
-            with col1:
-                st.metric("RAM Usage", f"{mem_info.rss / 1024 / 1024:.1f} MB")
-            with col2:
-                st.metric("CPU Usage", f"{process.cpu_percent():.1f}%")
-        except ImportError:
-            st.info("Install psutil for system monitoring: `pip install psutil`")
 
 
 def render_agent_dashboard(sim):
@@ -2590,7 +2550,7 @@ def render_event_impact_analysis(sim):
     st.subheader("⚡ Negative Event Impact")
     
     # Check if any events are active
-    active_events = [e for e in sim.unplanned_events if e.is_active(sim.current_date)]
+    active_events = [e for e in sim.unplanned_events.events if e.is_active(sim.current_date)]
     
     if not active_events:
         st.info("No active negative events. Use the sidebar to trigger events for impact analysis.")
@@ -2653,6 +2613,547 @@ def render_event_impact_analysis(sim):
                 st.plotly_chart(fig, use_container_width=True)
         
         st.divider()
+
+
+def fit_power_law(sim):
+    """
+    Fit power law to destination popularity distribution.
+    
+    Returns:
+        dict: Power law parameters (alpha, r_squared)
+    """
+    import numpy as np
+    from scipy import stats
+    
+    # Get visitor counts for all destinations
+    visitors = []
+    for dest in sim.destinations.values():
+        v = dest.get_current_visitors()
+        if v > 0:
+            visitors.append(v)
+    
+    if len(visitors) < 10:
+        return None
+    
+    # Sort by rank (descending)
+    visitors = sorted(visitors, reverse=True)
+    
+    # Log-transform for power law fit: log(rank) vs log(value)
+    ranks = np.arange(1, len(visitors) + 1)
+    log_ranks = np.log(ranks)
+    log_values = np.log(visitors)
+    
+    # Fit linear regression (power law: value ~ rank^(-alpha))
+    slope, intercept, r_value, p_value, std_err = stats.linregress(log_ranks, log_values)
+    
+    # Power law exponent (alpha = -slope)
+    alpha = -slope
+    r_squared = r_value ** 2
+    
+    return {
+        'alpha': alpha,
+        'r_squared': r_squared,
+        'ranks': ranks,
+        'visitors': visitors,
+        'slope': slope,
+        'intercept': intercept,
+    }
+
+
+def render_power_law_chart(sim, power_law_params):
+    """Render power law distribution chart."""
+    st.subheader("⚡ Power Law in Destination Popularity")
+    
+    if not power_law_params:
+        st.info("Not enough data yet to fit power law (need destinations with visitors)")
+        return
+    
+    # Create rank-frequency plot
+    fig = go.Figure()
+    
+    # Actual data
+    fig.add_trace(go.Scatter(
+        x=power_law_params['ranks'],
+        y=power_law_params['visitors'],
+        mode='markers',
+        name='Actual Data',
+        marker=dict(size=8, color='blue', opacity=0.6),
+    ))
+    
+    # Power law fit line
+    import numpy as np
+    fit_values = np.exp(power_law_params['intercept']) * (power_law_params['ranks'] ** power_law_params['slope'])
+    fig.add_trace(go.Scatter(
+        x=power_law_params['ranks'],
+        y=fit_values,
+        mode='lines',
+        name=f'Power Law Fit (α={power_law_params["alpha"]:.2f})',
+        line=dict(color='red', width=3),
+    ))
+    
+    fig.update_layout(
+        title="Destination Popularity Distribution (Log-Log Scale)",
+        xaxis_title="Rank (1 = Most Popular)",
+        yaxis_title="Number of Visitors",
+        xaxis_type="log",
+        yaxis_type="log",
+        height=500,
+        showlegend=True,
+    )
+    
+    st.plotly_chart(fig, use_container_width=True)
+    
+    # Interpretation
+    col1, col2 = st.columns(2)
+    with col1:
+        st.metric("Power Law Exponent (α)", f"{power_law_params['alpha']:.3f}",
+                  help="Typical range: 0.5-2.0. Lower = more unequal (winner-take-all)")
+    with col2:
+        r2 = power_law_params['r_squared']
+        fit_quality = "Excellent" if r2 > 0.9 else "Good" if r2 > 0.7 else "Moderate" if r2 > 0.5 else "Weak"
+        st.metric("R² (Fit Quality)", f"{r2:.3f}",
+                  help=f"{fit_quality} fit - measures how well power law explains the data")
+    
+    st.caption("""
+    **Power Law Interpretation**: A few destinations attract most tourists (winner-take-all dynamics).
+    This emerges from preferential attachment: popular destinations become more popular through memory effects
+    and positive feedback loops, while less popular ones struggle to attract visitors.
+    """)
+
+
+def render_heterogeneity_chart(sim):
+    """Render segment heterogeneity chart."""
+    st.subheader("🎭 Segment Heterogeneity")
+    
+    # Get arrivals by segment over time
+    if not sim.data_collector.segment_arrivals.get('budget'):
+        st.info("Not enough data yet to show segment heterogeneity")
+        return
+    
+    fig = go.Figure()
+    
+    segment_colors = {
+        'budget': '#1f77b4',
+        'luxury': '#ff7f0e',
+        'adventure': '#2ca02c',
+        'family': '#d62728',
+    }
+    
+    # Plot arrivals over time for each segment
+    for segment, color in segment_colors.items():
+        arrivals = sim.data_collector.segment_arrivals.get(segment, [])
+        if arrivals:
+            # Calculate rolling average for smoother visualization
+            window = min(30, len(arrivals) // 4) if len(arrivals) > 4 else 1
+            if window > 1:
+                smoothed = np.convolve(arrivals, np.ones(window)/window, mode='valid')
+                days = list(range(len(arrivals) - window + 1))
+            else:
+                smoothed = arrivals
+                days = list(range(len(arrivals)))
+            
+            fig.add_trace(go.Scatter(
+                x=days,
+                y=smoothed,
+                mode='lines',
+                name=segment.capitalize(),
+                line=dict(color=color, width=2),
+            ))
+    
+    fig.update_layout(
+        title="Tourism Arrivals by Segment (30-day Rolling Average)",
+        xaxis_title="Days Ago",
+        yaxis_title="Arrivals",
+        height=400,
+        showlegend=True,
+    )
+    
+    st.plotly_chart(fig, use_container_width=True)
+    
+    # Segment divergence metric
+    st.write("**📊 Segment Divergence Analysis:**")
+    
+    # Calculate coefficient of variation between segments
+    recent_arrivals = []
+    for segment in ['budget', 'luxury', 'adventure', 'family']:
+        arrivals = sim.data_collector.segment_arrivals.get(segment, [])
+        if arrivals and len(arrivals) >= 7:
+            recent_arrivals.append(np.mean(arrivals[-7:]))
+    
+    if len(recent_arrivals) == 4:
+        cv = np.std(recent_arrivals) / np.mean(recent_arrivals)
+        col1, col2 = st.columns(2)
+        with col1:
+            st.metric("Segment CV (Heterogeneity)", f"{cv:.3f}",
+                      help="Higher = more divergent segment behaviors")
+        with col2:
+            interpretation = "High" if cv > 0.5 else "Moderate" if cv > 0.2 else "Low"
+            st.metric("Behavioral Divergence", interpretation)
+    
+    st.caption("""
+    **Heterogeneity**: Different traveler segments exhibit distinct behaviors due to varying
+    preferences (budget sensitivity, luxury preference, risk tolerance). This diversity
+    creates system resilience through distributed response patterns.
+    """)
+
+
+def render_feedback_loop_chart(sim):
+    """Render TFI feedback loop (arrivals vs friction)."""
+    st.subheader("🔄 Negative Feedback Loop: TFI → Arrivals")
+    
+    # Get destinations with sufficient TFI variation
+    feedback_data = []
+    
+    for code, dest in sim.destinations.items():
+        tfi_history = sim.data_collector.dest_tfi.get(code, [])
+        arrivals_history = sim.data_collector.dest_visitors.get(code, [])
+        
+        if len(tfi_history) > 30 and len(arrivals_history) > 30:
+            # Use recent data
+            for i in range(len(tfi_history)):
+                feedback_data.append({
+                    'TFI': tfi_history[i],
+                    'Arrivals': arrivals_history[i],
+                    'Destination': dest.country_name,
+                })
+    
+    if not feedback_data:
+        st.info("Not enough data yet to show feedback loops")
+        return
+    
+    df_feedback = pd.DataFrame(feedback_data)
+    
+    # Create scatter plot with time arrows
+    fig = px.scatter(
+        df_feedback,
+        x='TFI',
+        y='Arrivals',
+        color='Destination',
+        opacity=0.5,
+        title="TFI vs Arrivals (Negative Feedback: Higher TFI → Fewer Arrivals)",
+        labels={'TFI': 'Tourist Friction Index', 'Arrivals': 'Daily Arrivals'},
+    )
+    
+    # Add trend line
+    import numpy as np
+    from scipy import stats
+    
+    if len(df_feedback) > 10:
+        slope, intercept, r_value, p_value, std_err = stats.linregress(
+            df_feedback['TFI'], df_feedback['Arrivals']
+        )
+        
+        x_range = np.linspace(df_feedback['TFI'].min(), df_feedback['TFI'].max(), 100)
+        y_fit = slope * x_range + intercept
+        
+        fig.add_trace(go.Scatter(
+            x=x_range,
+            y=y_fit,
+            mode='lines',
+            name=f'Trend (r={r_value:.2f})',
+            line=dict(color='red', width=2, dash='dash'),
+        ))
+    
+    fig.update_layout(
+        height=500,
+        showlegend=True,
+    )
+    
+    st.plotly_chart(fig, use_container_width=True)
+    
+    # Feedback strength
+    if len(df_feedback) > 10:
+        correlation = df_feedback['TFI'].corr(df_feedback['Arrivals'])
+        feedback_strength = "Strong Negative" if correlation < -0.5 else "Moderate Negative" if correlation < -0.2 else "Weak" if correlation < 0 else "Positive (unusual)"
+        
+        st.metric("TFI-Arrivals Correlation", f"{correlation:.3f}",
+                  help=f"{feedback_strength} feedback - negative correlation shows self-regulation")
+    
+    st.caption("""
+    **Negative Feedback Loop**: As destinations become crowded (high TFI), they become less
+    attractive, causing tourists to choose alternatives. This self-regulating mechanism
+    prevents runaway overcrowding and demonstrates emergent homeostasis.
+    """)
+
+
+def render_path_dependence_chart(sim, gini_coefficient):
+    """Render path dependence via Gini coefficient trend."""
+    st.subheader("📊 Path Dependence: Rich-Get-Richer Dynamics")
+    
+    # Calculate historical Gini from destination data
+    gini_history = []
+    
+    # Sample points in time (every 10 days for efficiency)
+    max_days = len(sim.data_collector.global_arrivals)
+    if max_days < 20:
+        st.info("Not enough historical data yet")
+        return
+    
+    for day in range(0, max_days, max(1, max_days // 50)):  # Sample 50 points
+        # Reconstruct utilization at this point in time
+        utilizations_at_day = []
+        for code, dest in sim.destinations.items():
+            util_history = sim.data_collector.dest_capacity_util.get(code, [])
+            if day < len(util_history):
+                util = util_history[day]
+                if util > 0:
+                    utilizations_at_day.append(util)
+        
+        if len(utilizations_at_day) >= 2:
+            # Calculate Gini for this day
+            utilizations_at_day = sorted(utilizations_at_day)
+            n = len(utilizations_at_day)
+            total = sum(utilizations_at_day)
+            if total > 0:
+                indexed_sum = sum((i + 1) * util for i, util in enumerate(utilizations_at_day))
+                gini = (2 * indexed_sum - (n + 1) * total) / (n * total)
+                gini_history.append({'Day': day, 'Gini': min(max(gini, 0), 1)})
+    
+    if not gini_history:
+        st.info("Could not calculate historical Gini")
+        return
+    
+    df_gini = pd.DataFrame(gini_history)
+    
+    # Plot Gini trend
+    fig = px.line(
+        df_gini,
+        x='Day',
+        y='Gini',
+        title="Gini Coefficient Over Time (Rising = Increasing Inequality)",
+        labels={'Day': 'Simulation Day', 'Gini': 'Gini Coefficient'},
+    )
+    
+    fig.update_layout(
+        height=400,
+        showlegend=False,
+    )
+    
+    # Add reference lines
+    fig.add_hrect(y0=0, y1=0.3, fillcolor="green", opacity=0.1, annotation_text="Low Inequality")
+    fig.add_hrect(y0=0.3, y1=0.5, fillcolor="orange", opacity=0.1, annotation_text="Moderate")
+    fig.add_hrect(y0=0.5, y1=1, fillcolor="red", opacity=0.1, annotation_text="High Inequality")
+    
+    st.plotly_chart(fig, use_container_width=True)
+    
+    # Trend analysis
+    if len(df_gini) > 10:
+        first_half = df_gini.head(len(df_gini)//2)['Gini'].mean()
+        second_half = df_gini.tail(len(df_gini)//2)['Gini'].mean()
+        trend = "Increasing" if second_half > first_half * 1.05 else "Stable" if second_half > first_half * 0.95 else "Decreasing"
+        
+        col1, col2, col3 = st.columns(3)
+        with col1:
+            st.metric("Current Gini", f"{gini_coefficient:.3f}")
+        with col2:
+            st.metric("Historical Trend", trend)
+        with col3:
+            st.metric("Early Gini", f"{first_half:.3f}",
+                      help="Gini from first half of simulation")
+    
+    st.caption("""
+    **Path Dependence**: Early advantages compound over time. Destinations that attract
+    tourists early gain memory bonuses, making them more attractive later. This creates
+    a "rich-get-richer" dynamic where initial conditions determine long-term outcomes.
+    Rising Gini coefficient indicates increasing concentration and lock-in effects.
+    """)
+
+
+def render_resilience_chart(sim):
+    """Render resilience analysis (recovery from shocks)."""
+    st.subheader("🛡️ System Resilience")
+    
+    # Check for historical events
+    if not hasattr(sim, 'unplanned_events') or not sim.unplanned_events.events:
+        st.info("No negative events have occurred yet. Trigger an event from the sidebar to analyze resilience.")
+        return
+    
+    # Find past (completed) events
+    past_events = [e for e in sim.unplanned_events.events 
+                   if e.end_date < sim.current_date and (e.start_date - sim.current_date).days > -90]
+    
+    if not past_events:
+        st.info("No recent events to analyze. Events need to complete before resilience can be measured.")
+        return
+    
+    for event in past_events[:3]:  # Show up to 3 events
+        affected_dest = sim.destinations.get(event.country_code)
+        if not affected_dest:
+            continue
+        
+        st.write(f"**Event: {event.event_type} in {affected_dest.country_name}**")
+        
+        # Get visitor data around event
+        visitors_data = sim.data_collector.dest_visitors.get(event.country_code, [])
+        if len(visitors_data) < 30:
+            continue
+        
+        # Find event indices
+        days_before = 30
+        days_after = min(30, len(visitors_data) - 1)
+        
+        # Estimate event center (when impact was strongest)
+        event_center = len(visitors_data) - days_after
+        
+        # Calculate pre-event baseline and post-event recovery
+        pre_event = visitors_data[max(0, event_center-days_before):event_center]
+        post_event = visitors_data[event_center:min(len(visitors_data), event_center+days_after)]
+        
+        if not pre_event or not post_event:
+            continue
+        
+        baseline = np.mean(pre_event) if pre_event else 0
+        min_impact = min(post_event) if post_event else 0
+        current = post_event[-1] if post_event else 0
+        
+        # Calculate resilience metrics
+        impact_depth = (baseline - min_impact) / baseline if baseline > 0 else 0
+        recovery_rate = (current - min_impact) / (baseline - min_impact) if baseline > min_impact else 1.0
+        
+        # Plot
+        fig = go.Figure()
+        
+        x_pre = list(range(event_center - len(pre_event), event_center))
+        x_post = list(range(event_center, event_center + len(post_event)))
+        
+        fig.add_trace(go.Scatter(
+            x=x_pre,
+            y=pre_event,
+            mode='lines',
+            name='Pre-Event',
+            line=dict(color='green'),
+        ))
+        
+        fig.add_trace(go.Scatter(
+            x=x_post,
+            y=post_event,
+            mode='lines',
+            name='Recovery',
+            line=dict(color='blue'),
+        ))
+        
+        # Mark event
+        fig.add_vline(x=event_center, line_dash='dash', line_color='red', 
+                      annotation_text='Event')
+        
+        fig.update_layout(
+            title=f"Impact & Recovery (Baseline: {baseline:.0f} visitors/day)",
+            xaxis_title=f"Days Relative to Event (0 = Event)",
+            yaxis_title="Daily Visitors",
+            height=300,
+            showlegend=True,
+        )
+        
+        st.plotly_chart(fig, use_container_width=True)
+        
+        # Metrics
+        col1, col2, col3 = st.columns(3)
+        with col1:
+            st.metric("Impact Depth", f"{impact_depth:.1%}",
+                      help="Percentage drop from baseline")
+        with col2:
+            st.metric("Recovery Rate", f"{recovery_rate:.1%}",
+                      help="How much of lost tourism recovered")
+        with col3:
+            resilience = "High" if recovery_rate > 0.7 else "Moderate" if recovery_rate > 0.4 else "Low"
+            st.metric("Resilience", resilience)
+        
+        st.divider()
+    
+    st.caption("""
+    **Resilience**: The system's ability to absorb shocks and recover. High resilience
+    indicates distributed tourism (alternatives available), while low resilience suggests
+    over-dependence on specific destinations.
+    """)
+
+
+def render_emergence_chart(sim):
+    """Render emergence (spatial clustering, self-organization)."""
+    st.subheader("🌟 Emergent Spatial Patterns")
+    
+    # Create spatial clustering visualization
+    # Group destinations by region/continent
+    from collections import defaultdict
+    
+    region_visitors = defaultdict(int)
+    region_destinations = defaultdict(int)
+    
+    for code, dest in sim.destinations.items():
+        visitors = dest.get_current_visitors()
+        if visitors > 0:
+            # Determine region from country data
+            region = getattr(dest, 'region', 'Unknown')
+            if region == 'Unknown' and hasattr(dest, 'continent'):
+                region = dest.continent
+            
+            region_visitors[region] += visitors
+            region_destinations[region] += 1
+    
+    if not region_visitors:
+        st.info("Not enough data yet to show emergent patterns")
+        return
+    
+    # Create treemap of tourism concentration
+    fig = px.treemap(
+        names=list(region_visitors.keys()),
+        parents=[''] * len(region_visitors),
+        values=list(region_visitors.values()),
+        title="Emergent Tourism Concentration by Region",
+        color=[region_visitors[r] / region_destinations[r] for r in region_visitors.keys()],
+        color_continuous_scale='RdYlGn',
+    )
+    
+    fig.update_layout(
+        height=500,
+    )
+    
+    st.plotly_chart(fig, use_container_width=True)
+    
+    # Emergence metrics
+    st.write("**📊 Emergence Metrics:**")
+    
+    # Calculate Herfindahl-Hirschman Index (concentration)
+    total_visitors = sum(region_visitors.values())
+    if total_visitors > 0:
+        hhi = sum((v / total_visitors) ** 2 for v in region_visitors.values())
+        concentration = "Fragmented" if hhi < 0.2 else "Moderate" if hhi < 0.4 else "Concentrated"
+        
+        col1, col2 = st.columns(2)
+        with col1:
+            st.metric("Regional Concentration (HHI)", f"{hhi:.3f}",
+                      help="Higher = more concentrated tourism")
+        with col2:
+            st.metric("Pattern Type", concentration)
+    
+    # Show top tourism corridors (origin-destination pairs)
+    st.write("**🛣️ Emergent Tourism Corridors:**")
+    
+    # Sample from trip records
+    if sim.data_collector.trip_records:
+        corridor_counts = defaultdict(int)
+        for trip in sim.data_collector.trip_records[-1000:]:  # Last 1000 trips
+            corridor = f"{trip['origin']} → {trip['destination']}"
+            corridor_counts[corridor] += 1
+        
+        top_corridors = sorted(corridor_counts.items(), key=lambda x: x[1], reverse=True)[:5]
+        
+        for corridor, count in top_corridors:
+            origin_code = corridor.split(' → ')[0]
+            dest_code = corridor.split(' → ')[1]
+            origin_name = sim.destinations.get(origin_code)
+            dest_name = sim.destinations.get(dest_code)
+            
+            if origin_name and dest_name:
+                st.write(f"  • **{origin_name.country_name} → {dest_name.country_name}**: {count} trips")
+    
+    st.caption("""
+    **Emergence**: Global tourism patterns arise from individual agent decisions without
+    central coordination. Tourism corridors, regional clusters, and seasonal waves are
+    emergent phenomena that cannot be predicted from individual behavior alone.
+    """)
+
+
+import numpy as np
 
 
 if __name__ == "__main__":

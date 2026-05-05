@@ -1625,8 +1625,17 @@ def render_agent_dashboard(sim):
                 if agent.state == "CHOOSING":
                     # Show that decision is made but distinguish from actual travel
                     current_dest_display = f"Planning... (departs in {agent.days_in_choosing}d)"
+                elif agent.state == "HOME":
+                    current_dest_display = "-"
+                elif agent.current_destination:
+                    # Convert country code to full name
+                    dest = sim.destinations.get(agent.current_destination)
+                    if dest:
+                        current_dest_display = f"{dest.country_name} ({agent.current_destination})"
+                    else:
+                        current_dest_display = agent.current_destination
                 else:
-                    current_dest_display = agent.current_destination or "-"
+                    current_dest_display = "-"
 
                 agent_data.append(
                     {

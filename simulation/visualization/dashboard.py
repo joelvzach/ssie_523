@@ -302,6 +302,7 @@ def render_map(sim):
     fig = px.choropleth(
         dest_data,
         locations="country_code",
+        locationmode='ISO-3',  # Explicit ISO3 code matching
         color="capacity_util",
         color_continuous_scale="RdYlGn_r",  # Red (high) to Green (low)
         range_color=(0, dynamic_max),

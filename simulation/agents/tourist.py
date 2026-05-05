@@ -34,6 +34,15 @@ TRIPS_PER_YEAR = {
     "family": 1.5,  # Increased from 0.75 (school holidays, regular trips)
 }
 
+# Planning duration ranges by segment (days spent in CHOOSING state)
+# Reflects realistic trip planning behavior differences
+PLANNING_RANGE = {
+    "budget": (3, 7),     # Spontaneous, less planning needed
+    "luxury": (7, 14),    # More research, bookings, itineraries
+    "adventure": (3, 10), # Moderate planning, some spontaneity
+    "family": (5, 12),    # Coordinate schedules, school holidays
+}
+
 
 class Tourist:
     """
@@ -73,8 +82,8 @@ class Tourist:
         self.trips_per_year = TRIPS_PER_YEAR[segment]
         self.days_until_next_trip = self._sample_next_trip_interval()
 
-        # Planning phase (CHOOSING state duration)
-        self.planning_days = 10  # Fixed 10-day planning period
+        # Planning phase (CHOOSING state duration) - segment-specific
+        self.planning_days = random.randint(*PLANNING_RANGE[segment])
         self.days_in_choosing = 0
 
         # Memory (visited destinations → satisfaction scores)
@@ -184,6 +193,8 @@ class Tourist:
         from simulation.mechanics.choice import choose_destination as choice_func
 
         self.state = "CHOOSING"
+        # Sample new planning duration for this trip (segment-specific)
+        self.planning_days = random.randint(*PLANNING_RANGE[self.segment])
         self.days_in_choosing = self.planning_days
         self._chosen_destination = None  # Store chosen destination for travel_to call
 

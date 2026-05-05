@@ -141,6 +141,14 @@ class Simulation:
         from simulation.data.loaders import load_population_data
         population_data = load_population_data(project_root / "data" / "derived")
 
+        # DEBUG: Log country data
+        import logging
+        logger = logging.getLogger(__name__)
+        logger.info(f"_create_destinations: {len(self.countries_data)} countries")
+        if self.countries_data:
+            sample_codes = [str(c["code"]) for c in self.countries_data[:5]]
+            logger.info(f"_create_destinations: Sample codes = {sample_codes}")
+
         for country in self.countries_data:
             numeric_code = str(country["code"])
             iso3_code = numeric_to_iso3.get(numeric_code, numeric_code)
@@ -176,6 +184,11 @@ class Simulation:
                 population=population,
             )
             self.destinations[iso3_code] = dest
+        
+        logger.info(f"_create_destinations: Created {len(self.destinations)} destinations with ISO3 codes")
+        if self.destinations:
+            sample_keys = list(self.destinations.keys())[:5]
+            logger.info(f"_create_destinations: Sample destination keys = {sample_keys}")
 
     def _create_agents(self):
         """Create tourist agents with segment distribution."""

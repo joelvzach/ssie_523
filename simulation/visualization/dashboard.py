@@ -290,6 +290,13 @@ def render_map(sim):
     dest_data = get_destination_data(sim)
     agent_data = get_agent_sample_data(sim)
 
+    # DEBUG: Log destination data
+    logger.info(f"render_map: {len(dest_data)} destinations")
+    if len(dest_data) > 0:
+        logger.info(f"render_map: Sample codes = {dest_data['country_code'].head(5).tolist()}")
+        logger.info(f"render_map: Sample capacity_util = {dest_data['capacity_util'].head(5).tolist()}")
+        logger.info(f"render_map: capacity_util range = {dest_data['capacity_util'].min():.4f} to {dest_data['capacity_util'].max():.4f}")
+
     # Calculate dynamic color range based on current crowding levels
     if len(dest_data) > 0:
         max_crowding = max(dest_data["capacity_util"])

@@ -7,22 +7,24 @@ from typing import Dict
 
 
 # Segment-specific utility weights (sum to 1.0)
+# Tuned for realistic destination selection with stronger distance penalty
 SEGMENT_WEIGHTS = {
-    "budget": {"α": 0.20, "β": 0.27, "γ": 0.11, "δ": 0.08, "η": 0.34, "ζ": 0.05},
-    "luxury": {"α": 0.28, "β": 0.12, "γ": 0.09, "δ": 0.09, "η": 0.17, "ζ": 0.15},
-    "adventure": {"α": 0.28, "β": 0.10, "γ": 0.09, "δ": 0.11, "η": 0.22, "ζ": 0.15},
-    "family": {"α": 0.21, "β": 0.18, "γ": 0.14, "δ": 0.14, "η": 0.40, "ζ": 0.02},
+    "budget": {"α": 0.18, "β": 0.22, "γ": 0.10, "δ": 0.07, "η": 0.50, "ζ": 0.05},  # η increased from 0.34
+    "luxury": {"α": 0.25, "β": 0.10, "γ": 0.08, "δ": 0.08, "η": 0.30, "ζ": 0.15},  # η increased from 0.17
+    "adventure": {"α": 0.24, "β": 0.09, "γ": 0.08, "δ": 0.10, "η": 0.35, "ζ": 0.15},  # η increased from 0.22
+    "family": {"α": 0.18, "β": 0.15, "γ": 0.12, "δ": 0.12, "η": 0.60, "ζ": 0.02},  # η increased from 0.40
 }
 
 # Default weights for decision breakdown (use budget as default)
 WEIGHTS = SEGMENT_WEIGHTS["budget"]
 
 # Segment-specific temperature for softmax choice
+# Balanced for realistic destination selection
 SEGMENT_TEMPERATURE = {
-    "budget": 1.2,  # More random exploration
-    "luxury": 0.8,  # More deterministic
-    "adventure": 1.5,  # Highly exploratory
-    "family": 1.0,  # Moderate
+    "budget": 0.8,   # Moderate exploration
+    "luxury": 0.5,   # More deterministic
+    "adventure": 1.0,  # Balanced exploration
+    "family": 0.6,   # Moderate
 }
 
 # Business probability by segment (produces ~11% overall)

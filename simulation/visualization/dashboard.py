@@ -2548,11 +2548,11 @@ def render_event_impact_analysis(sim):
         if not affected_dest:
             continue
         
-        st.write(f"**Event: {event.event_type} in {affected_dest.country_name}**")
+        st.write(f"**Event: {event.event_type.replace('_', ' ').title()} in {affected_dest.country_name}**")
         
         col1, col2, col3, col4 = st.columns(4)
         with col1:
-            st.metric("Severity", event.severity.name)
+            st.metric("Severity", f"{event.severity:.0%}")
         with col2:
             days_left = (event.end_date - sim.current_date).days
             st.metric("Days Remaining", max(0, days_left))
@@ -2573,30 +2573,67 @@ def render_event_impact_analysis(sim):
                     y=visitors_data,
                     mode='lines',
                     name='Visitors',
-                    line=dict(color='blue'),
+                    line=dict(color='blue', width=2),
                 ))
                 
-                # Mark event start
-                event_start_idx = len(visitors_data) - max(1, (event.end_date - event.start_date).days)
-                fig.add_vrect(
-                    x0=event_start_idx,
-                    x1=len(visitors_data),
-                    fillcolor="red",
-                    opacity=0.2,
-                    layer="below",
-                    line_width=0,
-                    annotation_text="Event Period",
-                )
+                # Calculate event period indices relative to data length
+                total_days = len(visitors_data)
+                days_since_start = (sim.current_date - event.start_date).days
+                event_duration = (event.end_date - event.start_date).days
+                
+                # Event started X days ago from current data
+                event_start_idx = max(0, total_days - days_since_start)
+                event_end_idx = min(total_days, event_start_idx + event_duration)
+                
+                # Mark event period
+                if event_start_idx < total_days:
+                    fig.add_vrect(
+                        x0=event_start_idx,
+                        x1=min(event_end_idx, total_days),
+                        fillcolor="red",
+                        opacity=0.25,
+                        layer="below",
+                        line_width=0,
+                        annotation_text="Event Period",
+                    )
+                
+                # Mark event start with vertical line
+                if event_start_idx < total_days:
+                    fig.add_vline(
+                        x=event_start_idx,
+                        line_dash="dash",
+                        line_color="red",
+                        line_width=2,
+                        annotation_text=f"Event Started ({event.start_date.strftime('%b %d')})",
+                    )
                 
                 fig.update_layout(
-                    title=f"Impact on {affected_dest.country_name}",
-                    xaxis_title="Days Ago",
+                    title=f"Impact on {affected_dest.country_name} - Daily Visitors",
+                    xaxis_title=f"Day (0 = {sim.current_date - timedelta(days=total_days-1):%b %d})",
                     yaxis_title="Number of Visitors",
-                    height=300,
+                    height=350,
                     showlegend=False,
                 )
                 
                 st.plotly_chart(fig, use_container_width=True)
+                
+                # Show statistics
+                pre_event = visitors_data[:event_start_idx] if event_start_idx > 0 else []
+                during_event = visitors_data[event_start_idx:event_end_idx] if event_start_idx < total_days else []
+                
+                if pre_event and during_event:
+                    avg_pre = sum(pre_event) / len(pre_event)
+                    avg_during = sum(during_event) / len(during_event) if during_event else 0
+                    impact_pct = ((avg_pre - avg_during) / avg_pre * 100) if avg_pre > 0 else 0
+                    
+                    col_imp1, col_imp2, col_imp3 = st.columns(3)
+                    with col_imp1:
+                        st.metric("Avg Before Event", f"{avg_pre:.1f}")
+                    with col_imp2:
+                        st.metric("Avg During Event", f"{avg_during:.1f}")
+                    with col_imp3:
+                        impact_emoji = "📉" if impact_pct > 0 else "📈"
+                        st.metric("Impact", f"{impact_emoji} {impact_pct:.1f}%")
         
         st.divider()
 

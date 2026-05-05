@@ -179,6 +179,10 @@ class Destination:
         effective_cap = self.get_effective_capacity()
         current = self.get_current_visitors()
         
+        # Handle zero capacity edge case
+        if effective_cap <= 0:
+            effective_cap = 1  # Minimum capacity of 1
+        
         # Calculate how many can actually be accommodated
         available = max(0, effective_cap - current)
         

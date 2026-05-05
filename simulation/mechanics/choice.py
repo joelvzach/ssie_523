@@ -123,13 +123,66 @@ def choose_destination(
     if not accessible:
         return None
 
-    # 2. Calculate utilities for each accessible destination
+    # 2. Two-stage choice: First decide trip type (regional vs long-haul)
+    # This mimics real tourism: people first decide "nearby or far?" then pick place
+    import random
+    
+    regional_prob = {
+        'budget': 0.70,
+        'luxury': 0.60,
+        'adventure': 0.55,
+        'family': 0.75,
+    }.get(tourist.segment, 0.65)
+    
+    trip_type_roll = random.random()
+    prefer_regional = trip_type_roll < regional_prob
+    
+    # Load ISO3 to numeric mapping for distance lookup
+    import csv
+    from pathlib import Path
+    project_root = Path("/Users/joelvzach/Code/ssie_523")
+    mapping_file = project_root / "data" / "derived" / "country_code_mapping.csv"
+    iso3_to_numeric = {}
+    if mapping_file.exists():
+        with open(mapping_file, "r", encoding="utf-8") as f:
+            reader = csv.DictReader(f)
+            for row in reader:
+                numeric_code = row.get("country_code", "")
+                iso3_code = row.get("Country Code", "")
+                if numeric_code and iso3_code:
+                    iso3_to_numeric[iso3_code] = numeric_code
+    
+    # Convert ISO3 codes to numeric for distance lookup
+    origin_numeric = iso3_to_numeric.get(tourist.home_country_code, tourist.home_country_code)
+    
+    # Filter destinations based on trip type preference
+    # This ensures agents actually choose from their preferred category
+    filtered_accessible = []
+    for dest in accessible:
+        dest_numeric = iso3_to_numeric.get(dest.country_code, dest.country_code)
+        distance = distance_matrix.get((origin_numeric, dest_numeric), 0.0)
+        is_regional = distance < 4000
+        
+        # Keep destination if it matches preference, OR if it's a top global destination
+        # (allows some long-haul to major attractions even for regional-preferring agents)
+        if prefer_regional:
+            if is_regional or dest.base_capacity > 5000:  # Keep mega-destinations
+                filtered_accessible.append((dest, distance))
+        else:
+            if not is_regional or dest.base_capacity > 10000:  # Keep only far or mega
+                filtered_accessible.append((dest, distance))
+    
+    # If filtering left us with nothing, use all accessible
+    if not filtered_accessible:
+        filtered_accessible = [(dest, distance_matrix.get((origin_numeric, iso3_to_numeric.get(dest.country_code, dest.country_code)), 0.0)) 
+                               for dest in accessible]
+    
+    # 3. Calculate utilities for filtered destinations
     utilities = []
     destination_data = []
-    for dest in accessible:
-        # Use home_country_code for distance lookup
-        origin_code = tourist.home_country_code
-        distance = distance_matrix.get((origin_code, dest.country_code), 0.0)
+    for dest, distance in filtered_accessible:
+        dest_numeric = iso3_to_numeric.get(dest.country_code, dest.country_code)
+        origin_code = tourist.home_country_code  # Keep ISO3 for visa lookup
 
         event_bonus = 0.0
         if event_bonus_func:
@@ -171,6 +224,9 @@ def choose_destination(
                 "event_bonus": event_bonus,
                 "visa_friction": -visa_friction,
             })
+    
+    # Replace accessible with filtered list for choice
+    accessible = [dest for dest, _ in filtered_accessible]
     
 
 

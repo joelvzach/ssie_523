@@ -244,21 +244,57 @@ class Simulation:
 
         self.sampled_agent_ids = set(sampled)
 
-    def _get_top_destinations(self, n: int = 50) -> List[Destination]:
+    def _get_top_destinations(self, n: int = 50, origin_code: str = None) -> List[Destination]:
         """
-        Get top N destinations by capacity (proxy for popularity).
+        Get top N destinations with origin-aware consideration set.
+        
+        Mix of global popular destinations + nearby regional options.
 
         Args:
             n: Number of destinations
+            origin_code: Origin country code (optional, for regional bias)
 
         Returns:
             List of top Destination objects
         """
-        # Sort by base_capacity (proxy for 2019 arrivals)
-        sorted_dests = sorted(
+        if not origin_code:
+            # Fallback to global top N
+            sorted_dests = sorted(
+                self.destinations.values(), key=lambda d: d.base_capacity, reverse=True
+            )
+            return sorted_dests[:n]
+        
+        # Build origin-aware choice set:
+        # - 30% from global top destinations (15 destinations)
+        # - 70% from regional/nearby destinations (35 destinations)
+        
+        # Global top destinations (smaller set)
+        global_top = sorted(
             self.destinations.values(), key=lambda d: d.base_capacity, reverse=True
-        )
-        return sorted_dests[:n]
+        )[:int(n * 0.3)]
+        global_top_codes = {d.country_code for d in global_top}
+        
+        # Regional/nearby destinations (sorted by distance from origin)
+        origin_dest = self.destinations.get(origin_code)
+        if not origin_dest:
+            return global_top
+        
+        # Calculate distances and sort
+        regional_candidates = []
+        for code, dest in self.destinations.items():
+            if code in global_top_codes or code == origin_code:
+                continue  # Skip already included
+            
+            distance = self.distance_matrix.get((origin_code, code), float('inf'))
+            regional_candidates.append((distance, dest))
+        
+        # Sort by distance (nearest first) and take top regional
+        regional_candidates.sort(key=lambda x: x[0])
+        regional_top = [dest for _, dest in regional_candidates[:int(n * 0.7)]]
+        
+        # Combine and return
+        choice_set = global_top + regional_top
+        return choice_set
 
     def _get_event_bonus(self, destination, tourist, tick: int) -> float:
         """
@@ -338,10 +374,7 @@ class Simulation:
                         f"{code}: LOW TFI - {dest.tfi:.2f} (policy response active)"
                     )
 
-        # 2. Get choice set (top 50 destinations)
-        choice_set = self._get_top_destinations(self.config["choice_set_size"])
-
-        # 3. Process agents
+        # 2. Process agents (each gets origin-aware choice set)
         for agent in self.agents:
             if agent.state == "HOME":
                 # Check if agent should start trip
@@ -351,9 +384,15 @@ class Simulation:
                 event_mod = 1.0
 
                 if agent.should_start_trip(current_month, seasonal_mod, event_mod):
+                    # Get origin-aware choice set (60% global top + 40% regional)
+                    agent_choice_set = self._get_top_destinations(
+                        self.config["choice_set_size"],
+                        agent.home_country_code
+                    )
+                    
                     # Choose destination (enters CHOOSING state for 10-day planning)
                     dest_code = agent.choose_destination(
-                        choice_set,
+                        agent_choice_set,
                         self.distance_matrix,
                         visa_lookup_func=self._get_visa_friction,
                         event_bonus_func=self._get_event_bonus,
@@ -381,7 +420,10 @@ class Simulation:
                         )
 
                         # Shock reduces probability of travel
-                        if random.random() < (1.0 / risk_mult):
+                        # risk_mult=1.0 → 100% travel, risk_mult=2.0 → 50% travel, risk_mult=3.0 → 33% travel
+                        travel_probability = 1.0 / risk_mult
+                        
+                        if random.random() < travel_probability:
                             # Begin trip
                             agent.travel_to(dest_code, self.tick, distance)
 
@@ -401,6 +443,9 @@ class Simulation:
                             else:
                                 # Tourist couldn't find accommodation - return home
                                 agent.return_home()
+                        else:
+                            # Tourist cancels trip due to elevated risk - return home
+                            agent.return_home()
 
             elif agent.state == "TRAVELING":
                 # Advance trip

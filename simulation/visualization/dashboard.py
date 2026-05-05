@@ -3021,7 +3021,9 @@ def render_power_law_chart(sim, power_law_params):
         from pathlib import Path
         from simulation.data.loaders import load_population_data
         
-        pop_lookup = load_population_data(Path("/Users/joelvzach/Code/ssie_523/data/derived"))
+        # Use relative path (works on local and Streamlit Cloud)
+        PROJECT_ROOT = Path(__file__).parent.parent.parent
+        pop_lookup = load_population_data(PROJECT_ROOT / "data" / "derived")
         
         pop_data = []
         for code, dest in sim.destinations.items():
@@ -3553,8 +3555,10 @@ def render_emergence_chart(sim):
     # Load region mapping from centroids
     from pathlib import Path
     from simulation.data.loaders import load_centroids
-    project_root = Path("/Users/joelvzach/Code/ssie_523")
-    centroids = load_centroids(project_root / "data" / "derived")
+    
+    # Use relative path (works on local and Streamlit Cloud)
+    PROJECT_ROOT = Path(__file__).parent.parent.parent
+    centroids = load_centroids(PROJECT_ROOT / "data" / "derived")
     
     continent_visitors = defaultdict(int)
     continent_destinations = defaultdict(int)

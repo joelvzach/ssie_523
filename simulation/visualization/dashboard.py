@@ -303,7 +303,7 @@ def render_map(sim):
         color="capacity_util",
         color_continuous_scale="RdYlGn_r",  # Red (high) to Green (low)
         range_color=(0, dynamic_max),
-        title=f"Global Tourism Map (●=Active, ◐=Home - colored by segment)",
+        title=f"Global Tourism Map (colored by segment, faded=at home)",
         hover_name="country_name",
         hover_data={
             "country_code": True,
@@ -350,7 +350,7 @@ def render_map(sim):
                 )
             )
         
-        # Render HOME agents as hollow circles (segment color outline, gray fill)
+        # Render HOME agents as smaller circles with segment color (at home location)
         if len(home_agents) > 0:
             fig.add_trace(
                 go.Scattergeo(
@@ -358,10 +358,11 @@ def render_map(sim):
                     lat=home_agents["latitude"],
                     mode="markers",
                     marker=dict(
-                        size=6,
-                        color="gray",  # Gray fill for HOME state
-                        symbol="circle-open",  # Hollow circle with colored outline
-                        line=dict(width=3, color=home_agents["color"]),  # Segment color outline
+                        size=4,  # Smaller for home agents
+                        color=home_agents["color"],  # Segment color
+                        symbol="circle",  # Same symbol, smaller size
+                        opacity=0.5,  # Semi-transparent to indicate "at home"
+                        line=dict(width=1, color="white"),
                     ),
                     text=home_agents.apply(
                         lambda row: (

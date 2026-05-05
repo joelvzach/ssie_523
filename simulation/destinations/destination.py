@@ -163,17 +163,52 @@ class Destination:
 
     def add_arrival(self, count: int = 1):
         """
-        Record new arrival(s) to current day.
+        Record new arrival(s) to current day with capacity enforcement.
 
         Args:
             count: Number of arriving tourists
+
+        Returns:
+            Number of tourists actually accommodated (may be < count if over capacity)
         """
-        if len(self.daily_arrivals) == 0:
-            # First arrival: initialize with count
-            self.daily_arrivals.append(count)
+        import random
+        
+        effective_cap = self.get_effective_capacity()
+        current = self.get_current_visitors()
+        
+        # Calculate how many can actually be accommodated
+        available = max(0, effective_cap - current)
+        
+        if available <= 0:
+            # Destination is at or over capacity
+            # Soft limit: reject arrivals with high probability
+            rejection_prob = min(0.95, 0.7 + (current - effective_cap) / effective_cap * 0.25)
+            
+            accommodated = 0
+            for _ in range(count):
+                if random.random() >= rejection_prob:
+                    accommodated += 1  # Lucky tourist found accommodation
+            
+            if accommodated > 0 and len(self.daily_arrivals) > 0:
+                self.daily_arrivals[-1] += accommodated
+            
+            return accommodated
+        
+        # Within capacity: can accommodate some or all
+        if count <= available:
+            # All tourists can be accommodated
+            if len(self.daily_arrivals) == 0:
+                self.daily_arrivals.append(count)
+            else:
+                self.daily_arrivals[-1] += count
+            return count
         else:
-            # Add to current day (most recent)
-            self.daily_arrivals[-1] += count
+            # Partial accommodation
+            if len(self.daily_arrivals) == 0:
+                self.daily_arrivals.append(available)
+            else:
+                self.daily_arrivals[-1] += available
+            return available
 
     def update(self, tick: int):
         """

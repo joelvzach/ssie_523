@@ -372,17 +372,22 @@ class Simulation:
                             # Begin trip
                             agent.travel_to(dest_code, self.tick, distance)
 
-                            # Record arrival at destination
-                            self.destinations[dest_code].add_arrival(1)
-
-                            # Record trip for data collection (use country name for origin)
-                            self.data_collector.record_trip(
-                                agent,
-                                agent.home_country_code,  # Use code for data consistency
-                                dest_code,
-                                self.tick,
-                                self.tick,  # Will be updated on departure
-                            )
+                            # Record arrival at destination (may be rejected if over capacity)
+                            accommodated = self.destinations[dest_code].add_arrival(1)
+                            
+                            # Only record trip if tourist was actually accommodated
+                            if accommodated > 0:
+                                # Record trip for data collection (use country name for origin)
+                                self.data_collector.record_trip(
+                                    agent,
+                                    agent.home_country_code,  # Use code for data consistency
+                                    dest_code,
+                                    self.tick,
+                                    self.tick,  # Will be updated on departure
+                                )
+                            else:
+                                # Tourist couldn't find accommodation - return home
+                                agent.return_home()
 
             elif agent.state == "TRAVELING":
                 # Advance trip

@@ -1,0 +1,4818 @@
+origin,destination,distance_km,segment,origin_continent,dest_continent
+PRY,FRA,0,budget,Americas,Europe
+LSO,BLR,0,budget,Africa,Europe
+GEO,BGR,0,budget,Europe,Europe
+NIU,TUR,0,budget,Oceania,Europe
+CUW,ESP,0,budget,Americas,Europe
+KIR,ROU,0,budget,Asia-Pacific,Europe
+LCA,AND,0,budget,Americas,Europe
+NGA,ESP,0,budget,Africa,Europe
+WSM,COL,0,budget,Asia-Pacific,Americas
+VNM,MYS,0,budget,Unknown,Asia-Pacific
+KNA,CZE,0,adventure,Americas,Europe
+CRI,JPN,0,adventure,Americas,Asia-Pacific
+CAN,HKG,0,adventure,Americas,Asia-Pacific
+VUT,CZE,0,budget,Asia-Pacific,Europe
+PSE,COL,0,budget,Asia-Pacific,Americas
+BIH,SGP,0,budget,Europe,Asia-Pacific
+AIA,KAZ,0,budget,Unknown,Asia-Pacific
+MCO,EGY,0,budget,Europe,Middle East
+MAC,USA,0,budget,Asia-Pacific,Americas
+IRN,FRA,0,budget,Middle East,Europe
+SGP,ARG,0,budget,Asia-Pacific,Americas
+IRN,MYS,0,budget,Middle East,Asia-Pacific
+QAT,BRA,0,budget,Middle East,Americas
+GUF,GRC,0,budget,Americas,Europe
+GLP,HKG,0,budget,Americas,Asia-Pacific
+POL,KGZ,0,budget,Europe,Asia-Pacific
+GRC,IND,0,budget,Europe,Asia-Pacific
+SYR,ESP,0,budget,Middle East,Europe
+CMR,KGZ,0,budget,Africa,Asia-Pacific
+NIU,COL,0,budget,Oceania,Americas
+HRV,SAU,0,budget,Europe,Middle East
+BWA,BHS,0,budget,Africa,Americas
+DMA,KGZ,0,budget,Americas,Asia-Pacific
+SYR,KGZ,0,budget,Middle East,Asia-Pacific
+COG,FRA,0,budget,Africa,Europe
+ZAF,MEX,0,budget,Africa,Americas
+BFA,ALB,0,budget,Africa,Europe
+GEO,EGY,0,budget,Europe,Middle East
+FRA,HRV,0,budget,Europe,Europe
+SYC,USA,0,budget,Africa,Americas
+ISR,ARE,0,budget,Middle East,Middle East
+BES,UZB,0,budget,Unknown,Asia-Pacific
+BLZ,AUS,0,budget,Americas,Asia-Pacific
+GRD,ROU,0,budget,Americas,Europe
+MDA,IND,0,budget,Europe,Asia-Pacific
+FJI,BHS,0,adventure,Asia-Pacific,Americas
+CHE,BGR,0,adventure,Europe,Europe
+LIE,ZAF,0,adventure,Europe,Africa
+TON,DOM,0,adventure,Asia-Pacific,Americas
+CZE,THA,0,budget,Europe,Asia-Pacific
+BRA,DEU,0,budget,Americas,Europe
+VGB,BGR,0,budget,Americas,Europe
+SYR,DNK,0,budget,Middle East,Europe
+GIN,DEU,0,budget,Africa,Europe
+SLV,ITA,0,budget,Americas,Europe
+GMB,COL,0,budget,Africa,Americas
+BEN,ROU,0,budget,Africa,Europe
+BWA,KOR,0,budget,Africa,Asia-Pacific
+JPN,POL,0,budget,Asia-Pacific,Europe
+CHN,USA,0,budget,Asia-Pacific,Americas
+GAB,SAU,0,budget,Africa,Middle East
+PRT,CAN,0,budget,Europe,Americas
+ZAF,HKG,0,budget,Africa,Asia-Pacific
+CUB,JPN,0,budget,Americas,Asia-Pacific
+UKR,GBR,0,budget,Europe,Europe
+UKR,TWN,0,budget,Europe,Asia-Pacific
+MAC,CAN,0,budget,Asia-Pacific,Americas
+ZAF,IND,0,budget,Africa,Asia-Pacific
+HKG,SAU,0,budget,Asia-Pacific,Middle East
+BRN,SGP,0,budget,Asia-Pacific,Asia-Pacific
+DMA,CHN,0,budget,Americas,Asia-Pacific
+FJI,FRA,0,budget,Asia-Pacific,Europe
+KIR,THA,0,budget,Asia-Pacific,Asia-Pacific
+CUW,AND,0,budget,Americas,Europe
+BLR,ARG,0,budget,Europe,Americas
+HND,BLR,0,budget,Americas,Europe
+COG,ARG,0,budget,Africa,Americas
+HKG,SGP,0,budget,Asia-Pacific,Asia-Pacific
+URY,TUR,0,budget,Americas,Europe
+CHL,ARG,0,budget,Americas,Americas
+BRN,SAU,0,budget,Asia-Pacific,Middle East
+CHN,SGP,0,budget,Asia-Pacific,Asia-Pacific
+ZWE,COL,0,budget,Unknown,Americas
+SYC,IND,0,budget,Africa,Asia-Pacific
+SUR,CZE,0,adventure,Americas,Europe
+BES,AND,0,adventure,Unknown,Europe
+BOL,SAU,0,adventure,Americas,Middle East
+KIR,SGP,0,adventure,Asia-Pacific,Asia-Pacific
+YEM,BEL,0,adventure,Unknown,Europe
+ARG,BHR,0,adventure,Americas,Middle East
+AZE,CHE,0,adventure,Europe,Europe
+ESP,ALB,0,adventure,Europe,Europe
+CHL,BGR,0,adventure,Americas,Europe
+MEX,BRA,0,family,Americas,Americas
+ECU,CHE,0,family,Americas,Europe
+CRI,CHN,0,family,Americas,Asia-Pacific
+LAO,SAU,0,family,Asia-Pacific,Middle East
+CYM,ITA,0,family,Americas,Europe
+TON,BHS,0,family,Asia-Pacific,Americas
+TJK,SGP,0,family,Asia-Pacific,Asia-Pacific
+SWZ,AND,0,budget,Africa,Europe
+IRN,SAU,0,budget,Middle East,Middle East
+YEM,ITA,0,budget,Unknown,Europe
+NGA,ARG,0,budget,Africa,Americas
+QAT,SAU,0,budget,Middle East,Middle East
+TWN,KGZ,0,budget,Asia-Pacific,Asia-Pacific
+FRA,KGZ,0,budget,Europe,Asia-Pacific
+TUN,PRI,0,budget,Middle East,Unknown
+SAU,BEL,0,budget,Middle East,Europe
+THA,KAZ,0,budget,Asia-Pacific,Asia-Pacific
+POL,AND,0,budget,Europe,Europe
+GAB,KOR,0,budget,Africa,Asia-Pacific
+TUR,CHE,0,budget,Europe,Europe
+LVA,KAZ,0,budget,Europe,Asia-Pacific
+ZWE,GRC,0,budget,Unknown,Europe
+PER,ZAF,0,budget,Americas,Africa
+ITA,SAU,0,budget,Europe,Middle East
+ERI,ALB,0,budget,Africa,Europe
+KOR,BRA,0,budget,Asia-Pacific,Americas
+COL,AUS,0,budget,Americas,Asia-Pacific
+ERI,ROU,0,budget,Africa,Europe
+STP,AUS,0,budget,Africa,Asia-Pacific
+PRI,SAU,0,budget,Unknown,Middle East
+GAB,BHS,0,budget,Africa,Americas
+MNG,KOR,0,budget,Asia-Pacific,Asia-Pacific
+VUT,THA,0,budget,Asia-Pacific,Asia-Pacific
+STP,AND,0,budget,Africa,Europe
+PSE,BRA,0,budget,Asia-Pacific,Americas
+ARE,ARE,0,budget,Middle East,Middle East
+NIC,AUS,0,budget,Americas,Asia-Pacific
+BLR,HKG,0,budget,Europe,Asia-Pacific
+JAM,BLR,0,budget,Americas,Europe
+GUF,ARG,0,budget,Americas,Americas
+ISL,AND,0,budget,Europe,Europe
+MKD,BLR,0,budget,Europe,Europe
+FRA,SAU,0,budget,Europe,Middle East
+TWN,MYS,0,budget,Asia-Pacific,Asia-Pacific
+RUS,PRI,0,budget,Europe,Unknown
+UZB,CZE,0,budget,Asia-Pacific,Europe
+LAO,UZB,0,budget,Asia-Pacific,Asia-Pacific
+LIE,BGR,0,budget,Europe,Europe
+MCO,CAN,0,budget,Europe,Americas
+KEN,PRT,0,budget,Africa,Europe
+UZB,ROU,0,budget,Asia-Pacific,Europe
+ECU,SGP,0,budget,Americas,Asia-Pacific
+BIH,HKG,0,budget,Europe,Asia-Pacific
+JPN,JPN,0,budget,Asia-Pacific,Asia-Pacific
+VGB,CAN,0,budget,Americas,Americas
+MNG,CAN,0,budget,Asia-Pacific,Americas
+SMR,HKG,0,budget,Europe,Asia-Pacific
+ARG,CZE,0,adventure,Americas,Europe
+PRY,JPN,0,adventure,Americas,Asia-Pacific
+ARE,BHS,0,adventure,Middle East,Americas
+MNG,MAR,0,adventure,Asia-Pacific,Africa
+LAO,USA,0,adventure,Asia-Pacific,Americas
+BWA,ROU,0,adventure,Africa,Europe
+WSM,EGY,0,adventure,Asia-Pacific,Middle East
+CHN,ITA,0,adventure,Asia-Pacific,Europe
+GEO,AND,0,adventure,Europe,Europe
+USA,CHE,0,adventure,Americas,Europe
+AIA,HKG,0,family,Unknown,Asia-Pacific
+ASM,BEL,0,family,Oceania,Europe
+SLV,COL,0,family,Americas,Americas
+ETH,ROU,0,family,Africa,Europe
+AUS,GRC,0,family,Asia-Pacific,Europe
+LKA,CZE,0,family,Asia-Pacific,Europe
+ATG,PRI,0,family,Americas,Unknown
+DOM,IND,0,family,Americas,Asia-Pacific
+BWA,DOM,0,family,Africa,Americas
+IND,HKG,0,family,Asia-Pacific,Asia-Pacific
+ALB,ARG,0,family,Europe,Americas
+TUR,POL,0,family,Europe,Europe
+PNG,IND,0,family,Asia-Pacific,Asia-Pacific
+SLE,MAR,0,budget,Africa,Africa
+RUS,KOR,0,budget,Europe,Asia-Pacific
+IRN,BRA,0,budget,Middle East,Americas
+SLE,SGP,0,budget,Africa,Asia-Pacific
+SAU,EGY,0,budget,Middle East,Middle East
+CYP,BHR,0,budget,Europe,Middle East
+KOR,FRA,0,budget,Asia-Pacific,Europe
+TJK,ZAF,0,budget,Asia-Pacific,Africa
+COD,AUS,0,budget,Africa,Asia-Pacific
+MTQ,DEU,0,budget,Americas,Europe
+GMB,MAC,0,budget,Africa,Asia-Pacific
+BRA,MAR,0,budget,Americas,Africa
+COG,HRV,0,budget,Africa,Europe
+ETH,MYS,0,budget,Africa,Asia-Pacific
+KAZ,KOR,0,budget,Asia-Pacific,Asia-Pacific
+HND,ZAF,0,budget,Americas,Africa
+MUS,DEU,0,budget,Africa,Europe
+HTI,JPN,0,budget,Americas,Asia-Pacific
+YEM,THA,0,budget,Unknown,Asia-Pacific
+NAM,USA,0,budget,Africa,Americas
+LIE,AUS,0,budget,Europe,Asia-Pacific
+GAB,BHR,0,budget,Africa,Middle East
+SVN,PRI,0,budget,Europe,Unknown
+PHL,ESP,0,budget,Asia-Pacific,Europe
+RWA,BLR,0,budget,Africa,Europe
+ALB,HUN,0,budget,Europe,Europe
+EGY,GBR,0,budget,Middle East,Europe
+AND,POL,0,budget,Europe,Europe
+TON,KGZ,0,budget,Asia-Pacific,Asia-Pacific
+CZE,SAU,0,budget,Europe,Middle East
+TCD,UZB,0,budget,Africa,Asia-Pacific
+ECU,BRA,0,budget,Americas,Americas
+SRB,ZAF,0,budget,Europe,Africa
+STP,UZB,0,budget,Africa,Asia-Pacific
+MEX,CHE,0,budget,Americas,Europe
+MMR,JPN,0,budget,Asia-Pacific,Asia-Pacific
+GRC,MAR,0,budget,Europe,Africa
+IDN,HRV,0,budget,Asia-Pacific,Europe
+PRY,PRT,0,budget,Americas,Europe
+OMN,GBR,0,budget,Middle East,Europe
+SAU,DOM,0,budget,Middle East,Americas
+COM,USA,0,budget,Africa,Americas
+ARM,ALB,0,budget,Europe,Europe
+ISR,PRI,0,budget,Middle East,Unknown
+POL,CHE,0,budget,Europe,Europe
+THA,THA,0,budget,Asia-Pacific,Asia-Pacific
+ITA,HRV,0,budget,Europe,Europe
+SGP,BRA,0,budget,Asia-Pacific,Americas
+NIC,COL,0,budget,Americas,Americas
+POL,CHN,0,budget,Europe,Asia-Pacific
+LSO,COL,0,budget,Africa,Americas
+CRI,IDN,0,budget,Americas,Asia-Pacific
+MCO,DEU,0,budget,Europe,Europe
+MDA,THA,0,budget,Europe,Asia-Pacific
+GUF,GBR,0,budget,Americas,Europe
+CMR,GBR,0,budget,Africa,Europe
+LIE,ARE,0,budget,Europe,Middle East
+CMR,KGZ,0,budget,Africa,Asia-Pacific
+GUF,THA,0,budget,Americas,Asia-Pacific
+KNA,ARG,0,budget,Americas,Americas
+SUR,MYS,0,budget,Americas,Asia-Pacific
+KGZ,ARE,0,budget,Asia-Pacific,Middle East
+BRN,COL,0,budget,Asia-Pacific,Americas
+GUF,CAN,0,budget,Americas,Americas
+BMU,CHE,0,budget,Americas,Europe
+BGR,HRV,0,budget,Europe,Europe
+USA,ESP,0,budget,Americas,Europe
+HTI,BEL,0,budget,Americas,Europe
+ISL,AND,0,budget,Europe,Europe
+CHE,ALB,0,budget,Europe,Europe
+MKD,USA,0,budget,Europe,Americas
+SMR,PRI,0,budget,Europe,Unknown
+STP,POL,0,budget,Africa,Europe
+KOR,IDN,0,budget,Asia-Pacific,Asia-Pacific
+HTI,PRT,0,budget,Americas,Europe
+AND,KOR,0,luxury,Europe,Asia-Pacific
+SMR,ARE,0,luxury,Europe,Middle East
+AND,IDN,0,luxury,Europe,Asia-Pacific
+KGZ,SGP,0,adventure,Asia-Pacific,Asia-Pacific
+STP,CAN,0,adventure,Africa,Americas
+UKR,FRA,0,adventure,Europe,Europe
+MCO,KOR,0,adventure,Europe,Asia-Pacific
+MLT,ITA,0,adventure,Europe,Europe
+BMU,HKG,0,adventure,Americas,Asia-Pacific
+TJK,AUS,0,family,Asia-Pacific,Asia-Pacific
+BFA,IND,0,family,Africa,Asia-Pacific
+BHS,COL,0,family,Americas,Americas
+MLT,BGR,0,family,Europe,Europe
+SYC,BHR,0,family,Africa,Middle East
+CUW,SAU,0,family,Americas,Middle East
+GIN,TUR,0,family,Africa,Europe
+MSR,ARE,0,family,Americas,Middle East
+YEM,ALB,0,family,Unknown,Europe
+PRT,POL,0,family,Europe,Europe
+ESP,KGZ,0,family,Europe,Asia-Pacific
+GUM,USA,0,family,Asia-Pacific,Americas
+ITA,BGR,0,budget,Europe,Europe
+POL,KOR,0,budget,Europe,Asia-Pacific
+FRA,BEL,0,budget,Europe,Europe
+LIE,BHR,0,budget,Europe,Middle East
+PRT,GRC,0,budget,Europe,Europe
+MOZ,DEU,0,budget,Africa,Europe
+ASM,CHE,0,budget,Oceania,Europe
+BEN,BHR,0,budget,Africa,Middle East
+COL,FRA,0,budget,Americas,Europe
+HTI,BRA,0,budget,Americas,Americas
+KIR,SGP,0,budget,Asia-Pacific,Asia-Pacific
+ABW,IND,0,budget,Americas,Asia-Pacific
+RUS,EGY,0,budget,Europe,Middle East
+GUM,BHR,0,budget,Asia-Pacific,Middle East
+VIR,FRA,0,budget,Unknown,Europe
+GAB,MAR,0,budget,Africa,Africa
+JOR,DNK,0,budget,Middle East,Europe
+DMA,BLR,0,budget,Americas,Europe
+TUN,BHS,0,budget,Middle East,Americas
+VNM,CHN,0,budget,Unknown,Asia-Pacific
+AUS,ARE,0,budget,Asia-Pacific,Middle East
+MOZ,SGP,0,budget,Africa,Asia-Pacific
+ARE,IND,0,budget,Middle East,Asia-Pacific
+GLP,MAC,0,budget,Americas,Asia-Pacific
+TKM,IND,0,budget,Asia-Pacific,Asia-Pacific
+MNP,HKG,0,budget,Asia-Pacific,Asia-Pacific
+PHL,JPN,0,budget,Asia-Pacific,Asia-Pacific
+LVA,IDN,0,budget,Europe,Asia-Pacific
+CHN,MAR,0,budget,Asia-Pacific,Africa
+GEO,ALB,0,budget,Europe,Europe
+GLP,ARE,0,budget,Americas,Middle East
+MAR,THA,0,budget,Africa,Asia-Pacific
+KAZ,ALB,0,budget,Asia-Pacific,Europe
+DNK,DEU,0,budget,Europe,Europe
+COD,GRC,0,budget,Africa,Europe
+MDG,BEL,0,budget,Africa,Europe
+GLP,JPN,0,budget,Americas,Asia-Pacific
+BRN,CZE,0,budget,Asia-Pacific,Europe
+BES,CHE,0,budget,Unknown,Europe
+LTU,FRA,0,budget,Europe,Europe
+QAT,MEX,0,budget,Middle East,Americas
+MDG,MEX,0,budget,Africa,Americas
+KIR,ESP,0,budget,Asia-Pacific,Europe
+GTM,DEU,0,budget,Americas,Europe
+GEO,MAR,0,budget,Europe,Africa
+ZAF,MAR,0,budget,Africa,Africa
+SGP,KOR,0,budget,Asia-Pacific,Asia-Pacific
+ATG,KOR,0,budget,Americas,Asia-Pacific
+SUR,MAR,0,budget,Americas,Africa
+NGA,BHS,0,budget,Africa,Americas
+MKD,BEL,0,budget,Europe,Europe
+KAZ,GBR,0,budget,Asia-Pacific,Europe
+JOR,ROU,0,budget,Middle East,Europe
+LCA,AUS,0,budget,Americas,Asia-Pacific
+HTI,GRC,0,budget,Americas,Europe
+ISL,HRV,0,luxury,Europe,Europe
+AND,BHR,0,luxury,Europe,Middle East
+AZE,SAU,0,luxury,Europe,Middle East
+CMR,CHN,0,luxury,Africa,Asia-Pacific
+GIN,DEU,0,luxury,Africa,Europe
+COD,HRV,0,luxury,Africa,Europe
+KNA,ROU,0,luxury,Americas,Europe
+PNG,DEU,0,luxury,Asia-Pacific,Europe
+MTQ,MYS,0,adventure,Americas,Asia-Pacific
+ALB,TWN,0,adventure,Europe,Asia-Pacific
+BRA,TWN,0,adventure,Americas,Asia-Pacific
+MAC,COL,0,adventure,Asia-Pacific,Americas
+ARG,KOR,0,adventure,Americas,Asia-Pacific
+DMA,BRA,0,adventure,Americas,Americas
+BFA,KAZ,0,adventure,Africa,Asia-Pacific
+KOR,PRI,0,adventure,Asia-Pacific,Unknown
+LCA,FRA,0,adventure,Americas,Europe
+UZB,CHE,0,adventure,Asia-Pacific,Europe
+KOR,PRI,0,adventure,Asia-Pacific,Unknown
+CUB,MEX,0,adventure,Americas,Americas
+HKG,SGP,0,adventure,Asia-Pacific,Asia-Pacific
+ETH,ITA,0,family,Africa,Europe
+MTQ,KOR,0,family,Americas,Asia-Pacific
+BGR,COL,0,family,Europe,Americas
+CAN,CAN,0,family,Americas,Americas
+FIN,SGP,0,family,Europe,Asia-Pacific
+LAO,AUS,0,family,Asia-Pacific,Asia-Pacific
+BWA,SGP,0,family,Africa,Asia-Pacific
+YEM,UZB,0,family,Unknown,Asia-Pacific
+SEN,DOM,0,family,Africa,Americas
+MOZ,PRT,0,family,Africa,Europe
+GLP,ROU,0,family,Americas,Europe
+REU,MYS,0,family,Unknown,Asia-Pacific
+SXM,GRC,0,family,Americas,Europe
+VEN,HUN,0,family,Unknown,Europe
+CAN,CZE,0,family,Americas,Europe
+JAM,PRT,0,budget,Americas,Europe
+SRB,CHE,0,budget,Europe,Europe
+GLP,BLR,0,budget,Americas,Europe
+JPN,IDN,0,budget,Asia-Pacific,Asia-Pacific
+PER,ALB,0,budget,Americas,Europe
+ECU,BEL,0,budget,Americas,Europe
+BES,DOM,0,budget,Unknown,Americas
+EST,ESP,0,budget,Europe,Europe
+NIU,ARE,0,budget,Oceania,Middle East
+MAR,AND,0,budget,Africa,Europe
+NZL,IND,0,budget,Asia-Pacific,Asia-Pacific
+GAB,SAU,0,budget,Africa,Middle East
+SRB,POL,0,budget,Europe,Europe
+AND,ZAF,0,budget,Europe,Africa
+BFA,UZB,0,budget,Africa,Asia-Pacific
+ARM,BEL,0,budget,Europe,Europe
+MDA,IND,0,budget,Europe,Asia-Pacific
+REU,CHN,0,budget,Unknown,Asia-Pacific
+LVA,ARG,0,budget,Europe,Americas
+CYM,EGY,0,budget,Americas,Middle East
+SXM,SGP,0,budget,Americas,Asia-Pacific
+TJK,ESP,0,budget,Asia-Pacific,Europe
+TJK,KAZ,0,budget,Asia-Pacific,Asia-Pacific
+ZAF,HUN,0,budget,Africa,Europe
+MUS,THA,0,budget,Africa,Asia-Pacific
+KOR,FRA,0,budget,Asia-Pacific,Europe
+SEN,CZE,0,budget,Africa,Europe
+POL,ARG,0,budget,Europe,Americas
+EGY,MEX,0,budget,Middle East,Americas
+COL,KAZ,0,budget,Americas,Asia-Pacific
+MDG,UZB,0,budget,Africa,Asia-Pacific
+CRI,ITA,0,budget,Americas,Europe
+TON,KOR,0,budget,Asia-Pacific,Asia-Pacific
+NIU,BHS,0,budget,Oceania,Americas
+TTO,ESP,0,budget,Americas,Europe
+LSO,ROU,0,budget,Africa,Europe
+SUR,TUR,0,budget,Americas,Europe
+BHR,COL,0,budget,Middle East,Americas
+RUS,POL,0,budget,Europe,Europe
+HUN,ZAF,0,budget,Europe,Africa
+BMU,SGP,0,budget,Americas,Asia-Pacific
+ALB,KAZ,0,budget,Europe,Asia-Pacific
+FIN,JPN,0,budget,Europe,Asia-Pacific
+MHL,CHE,0,budget,Asia-Pacific,Europe
+VEN,CHN,0,budget,Unknown,Asia-Pacific
+NIU,JPN,0,budget,Oceania,Asia-Pacific
+MSR,GRC,0,budget,Americas,Europe
+BRB,CZE,0,budget,Americas,Europe
+PRT,GRC,0,budget,Europe,Europe
+VUT,ALB,0,budget,Asia-Pacific,Europe
+TKM,TWN,0,budget,Asia-Pacific,Asia-Pacific
+GLP,IDN,0,budget,Americas,Asia-Pacific
+MSR,IND,0,budget,Americas,Asia-Pacific
+IDN,AUS,0,budget,Asia-Pacific,Asia-Pacific
+ERI,TUR,0,budget,Africa,Europe
+VCT,CAN,0,budget,Americas,Americas
+LTU,KOR,0,budget,Europe,Asia-Pacific
+YEM,SAU,0,budget,Unknown,Middle East
+AUS,MEX,0,budget,Asia-Pacific,Americas
+SVN,AUS,0,budget,Europe,Asia-Pacific
+ATG,ESP,0,budget,Americas,Europe
+HUN,JPN,0,budget,Europe,Asia-Pacific
+FRA,TUR,0,budget,Europe,Europe
+ISL,KOR,0,budget,Europe,Asia-Pacific
+BGR,HKG,0,luxury,Europe,Asia-Pacific
+BEL,CHE,0,luxury,Europe,Europe
+MDA,KAZ,0,luxury,Europe,Asia-Pacific
+NGA,SAU,0,luxury,Africa,Middle East
+JPN,POL,0,luxury,Asia-Pacific,Europe
+QAT,POL,0,luxury,Middle East,Europe
+KOR,BGR,0,adventure,Asia-Pacific,Europe
+BES,KAZ,0,adventure,Unknown,Asia-Pacific
+BES,ARE,0,adventure,Unknown,Middle East
+DEU,COL,0,adventure,Europe,Americas
+CIV,EGY,0,adventure,Africa,Middle East
+BMU,ARG,0,adventure,Americas,Americas
+CZE,PRT,0,adventure,Europe,Europe
+CYP,AUS,0,adventure,Europe,Asia-Pacific
+SUR,ZAF,0,adventure,Americas,Africa
+KGZ,GRC,0,family,Asia-Pacific,Europe
+NAM,SGP,0,family,Africa,Asia-Pacific
+BLZ,JPN,0,family,Americas,Asia-Pacific
+TON,DOM,0,family,Asia-Pacific,Americas
+BRA,ARE,0,family,Americas,Middle East
+PHL,THA,0,family,Asia-Pacific,Asia-Pacific
+MKD,JPN,0,family,Europe,Asia-Pacific
+RUS,HRV,0,family,Europe,Europe
+EGY,ALB,0,family,Middle East,Europe
+COD,PRI,0,family,Africa,Unknown
+MEX,AND,0,family,Americas,Europe
+TJK,UZB,0,family,Asia-Pacific,Asia-Pacific
+BRA,SGP,0,family,Americas,Asia-Pacific
+CYM,COL,0,family,Americas,Americas
+SVN,TUR,0,family,Europe,Europe
+BOL,THA,0,family,Americas,Asia-Pacific
+KEN,CHE,0,family,Africa,Europe
+SMR,AUS,0,family,Europe,Asia-Pacific
+GRC,HRV,0,family,Europe,Europe
+BMU,EGY,0,family,Americas,Middle East
+SRB,GBR,0,family,Europe,Europe
+SVN,SAU,0,family,Europe,Middle East
+VGB,POL,0,family,Americas,Europe
+CMR,ESP,0,family,Africa,Europe
+GMB,UZB,0,budget,Africa,Asia-Pacific
+HRV,HUN,0,budget,Europe,Europe
+REU,EGY,0,budget,Unknown,Middle East
+SRB,BLR,0,budget,Europe,Europe
+MCO,HRV,0,budget,Europe,Europe
+BLZ,PRT,0,budget,Americas,Europe
+MDA,ARE,0,budget,Europe,Middle East
+BES,SGP,0,budget,Unknown,Asia-Pacific
+IRN,AND,0,budget,Middle East,Europe
+ETH,ARE,0,budget,Africa,Middle East
+SLE,ARG,0,budget,Africa,Americas
+BLZ,UZB,0,budget,Americas,Asia-Pacific
+THA,JPN,0,budget,Asia-Pacific,Asia-Pacific
+AZE,ARE,0,budget,Europe,Middle East
+LAO,ALB,0,budget,Asia-Pacific,Europe
+CYM,HRV,0,budget,Americas,Europe
+UZB,DEU,0,budget,Asia-Pacific,Europe
+REU,USA,0,budget,Unknown,Americas
+FRA,SGP,0,budget,Europe,Asia-Pacific
+NIU,CZE,0,budget,Oceania,Europe
+UKR,BEL,0,budget,Europe,Europe
+NCL,DEU,0,budget,Oceania,Europe
+UZB,FRA,0,budget,Asia-Pacific,Europe
+PHL,JPN,0,budget,Asia-Pacific,Asia-Pacific
+NAM,AND,0,budget,Africa,Europe
+GRD,BGR,0,budget,Americas,Europe
+TWN,POL,0,budget,Asia-Pacific,Europe
+NCL,ZAF,0,budget,Oceania,Africa
+COL,BRA,0,budget,Americas,Americas
+JAM,BLR,0,budget,Americas,Europe
+ETH,JPN,0,budget,Africa,Asia-Pacific
+BIH,GRC,0,budget,Europe,Europe
+NGA,CZE,0,budget,Africa,Europe
+RWA,BLR,0,budget,Africa,Europe
+ZWE,BGR,0,budget,Unknown,Europe
+WSM,TWN,0,budget,Asia-Pacific,Asia-Pacific
+MNG,COL,0,budget,Asia-Pacific,Americas
+SRB,ESP,0,budget,Europe,Europe
+JOR,FRA,0,budget,Middle East,Europe
+BHR,CHE,0,budget,Middle East,Europe
+KEN,ZAF,0,budget,Africa,Africa
+GTM,SAU,0,budget,Americas,Middle East
+BES,ARG,0,budget,Unknown,Americas
+SWZ,ROU,0,budget,Africa,Europe
+TUR,CHE,0,budget,Europe,Europe
+GLP,MAC,0,budget,Americas,Asia-Pacific
+TTO,COL,0,budget,Americas,Americas
+SRB,EGY,0,budget,Europe,Middle East
+UZB,BHR,0,budget,Asia-Pacific,Middle East
+PNG,ITA,0,budget,Asia-Pacific,Europe
+LTU,IDN,0,budget,Europe,Asia-Pacific
+UKR,KGZ,0,budget,Europe,Asia-Pacific
+SUR,KOR,0,budget,Americas,Asia-Pacific
+GUF,BRA,0,budget,Americas,Americas
+SUR,MEX,0,budget,Americas,Americas
+MCO,KGZ,0,budget,Europe,Asia-Pacific
+LTU,BLR,0,budget,Europe,Europe
+POL,POL,0,luxury,Europe,Europe
+IRQ,KAZ,0,luxury,Middle East,Asia-Pacific
+MLT,ROU,0,luxury,Europe,Europe
+SUR,CAN,0,luxury,Americas,Americas
+STP,ARE,0,luxury,Africa,Middle East
+PAN,KOR,0,luxury,Americas,Asia-Pacific
+SWZ,TUR,0,luxury,Africa,Europe
+LCA,IDN,0,luxury,Americas,Asia-Pacific
+HRV,DOM,0,luxury,Europe,Americas
+BIH,HKG,0,luxury,Europe,Asia-Pacific
+BHS,ESP,0,luxury,Americas,Europe
+RWA,AND,0,luxury,Africa,Europe
+MSR,DEU,0,adventure,Americas,Europe
+LTU,BHR,0,adventure,Europe,Middle East
+CIV,PRI,0,adventure,Africa,Unknown
+ETH,MAC,0,adventure,Africa,Asia-Pacific
+ZAF,AND,0,adventure,Africa,Europe
+HKG,THA,0,adventure,Asia-Pacific,Asia-Pacific
+AIA,GBR,0,adventure,Unknown,Europe
+FIN,ESP,0,adventure,Europe,Europe
+MDG,AUS,0,adventure,Africa,Asia-Pacific
+BLZ,POL,0,adventure,Americas,Europe
+ETH,DEU,0,adventure,Africa,Europe
+ALB,TUR,0,adventure,Europe,Europe
+ROU,ROU,0,adventure,Europe,Europe
+BGR,BGR,0,adventure,Europe,Europe
+BES,UZB,0,adventure,Unknown,Asia-Pacific
+HRV,FRA,0,adventure,Europe,Europe
+SAU,BRA,0,adventure,Middle East,Americas
+MMR,HUN,0,adventure,Asia-Pacific,Europe
+TCD,BGR,0,adventure,Africa,Europe
+MCO,ZAF,0,adventure,Europe,Africa
+VIR,GRC,0,adventure,Unknown,Europe
+AND,MYS,0,adventure,Europe,Asia-Pacific
+MNP,BLR,0,adventure,Asia-Pacific,Europe
+ERI,POL,0,adventure,Africa,Europe
+LVA,DEU,0,family,Europe,Europe
+MNP,TUR,0,family,Asia-Pacific,Europe
+SVN,HKG,0,family,Europe,Asia-Pacific
+BRA,POL,0,family,Americas,Europe
+RUS,SAU,0,family,Europe,Middle East
+SLE,KGZ,0,family,Africa,Asia-Pacific
+PYF,AUS,0,family,Oceania,Asia-Pacific
+HKG,ROU,0,family,Asia-Pacific,Europe
+BHR,ALB,0,family,Middle East,Europe
+BES,AUS,0,family,Unknown,Asia-Pacific
+MUS,SGP,0,family,Africa,Asia-Pacific
+BES,TUR,0,family,Unknown,Europe
+LIE,MAR,0,family,Europe,Africa
+BIH,CHN,0,family,Europe,Asia-Pacific
+BLR,PRI,0,family,Europe,Unknown
+MAC,KOR,0,family,Asia-Pacific,Asia-Pacific
+MAR,IDN,0,family,Africa,Asia-Pacific
+BRN,BHR,0,family,Asia-Pacific,Middle East
+PHL,TUR,0,family,Asia-Pacific,Europe
+PYF,MEX,0,family,Oceania,Americas
+SXM,IDN,0,family,Americas,Asia-Pacific
+ECU,DEU,0,family,Americas,Europe
+SUR,HRV,0,family,Americas,Europe
+PRI,BGR,0,family,Unknown,Europe
+VCT,AND,0,family,Americas,Europe
+WSM,EGY,0,family,Asia-Pacific,Middle East
+NGA,FRA,0,family,Africa,Europe
+TUR,BHS,0,family,Europe,Americas
+CRI,ROU,0,family,Americas,Europe
+CYP,ZAF,0,family,Europe,Africa
+ISL,ALB,0,family,Europe,Europe
+MOZ,KGZ,0,family,Africa,Asia-Pacific
+STP,SGP,0,budget,Africa,Asia-Pacific
+ISR,CAN,0,budget,Middle East,Americas
+KIR,ESP,0,budget,Asia-Pacific,Europe
+YEM,THA,0,budget,Unknown,Asia-Pacific
+CYM,BHR,0,budget,Americas,Middle East
+KEN,ALB,0,budget,Africa,Europe
+IDN,DOM,0,budget,Asia-Pacific,Americas
+FRA,JPN,0,budget,Europe,Asia-Pacific
+SLV,ROU,0,budget,Americas,Europe
+UKR,USA,0,budget,Europe,Americas
+BMU,GRC,0,budget,Americas,Europe
+CAN,MAC,0,budget,Americas,Asia-Pacific
+AUS,ARE,0,budget,Asia-Pacific,Middle East
+EGY,ITA,0,budget,Middle East,Europe
+LCA,HRV,0,budget,Americas,Europe
+BGR,TWN,0,budget,Europe,Asia-Pacific
+MOZ,AUS,0,budget,Africa,Asia-Pacific
+DNK,BGR,0,budget,Europe,Europe
+AZE,KAZ,0,budget,Europe,Asia-Pacific
+TUN,JPN,0,budget,Middle East,Asia-Pacific
+CHN,DEU,0,budget,Asia-Pacific,Europe
+BIH,DOM,0,budget,Europe,Americas
+JAM,PRI,0,budget,Americas,Unknown
+SVN,ALB,0,budget,Europe,Europe
+SVN,TUR,0,budget,Europe,Europe
+FIN,ARE,0,budget,Europe,Middle East
+LBY,DNK,0,budget,Middle East,Europe
+PER,ZAF,0,budget,Americas,Africa
+ATG,SGP,0,budget,Americas,Asia-Pacific
+CHE,GRC,0,budget,Europe,Europe
+ASM,JPN,0,budget,Oceania,Asia-Pacific
+SGP,SGP,0,budget,Asia-Pacific,Asia-Pacific
+OMN,IDN,0,budget,Middle East,Asia-Pacific
+CYM,BGR,0,budget,Americas,Europe
+IRN,ZAF,0,budget,Middle East,Africa
+JAM,MAR,0,budget,Americas,Africa
+BRB,COL,0,budget,Americas,Americas
+MDA,AUS,0,budget,Europe,Asia-Pacific
+ASM,TWN,0,budget,Oceania,Asia-Pacific
+JOR,ALB,0,budget,Middle East,Europe
+TON,IND,0,budget,Asia-Pacific,Asia-Pacific
+NGA,KOR,0,budget,Africa,Asia-Pacific
+ZWE,GBR,0,budget,Unknown,Europe
+JAM,COL,0,budget,Americas,Americas
+BEN,COL,0,budget,Africa,Americas
+BRN,MAC,0,budget,Asia-Pacific,Asia-Pacific
+HRV,FRA,0,budget,Europe,Europe
+RWA,CHN,0,budget,Africa,Asia-Pacific
+SWZ,THA,0,budget,Africa,Asia-Pacific
+SVN,BRA,0,budget,Europe,Americas
+CUW,TUR,0,budget,Americas,Europe
+GLP,JPN,0,budget,Americas,Asia-Pacific
+ESP,CZE,0,budget,Europe,Europe
+MNP,CAN,0,budget,Asia-Pacific,Americas
+BOL,AUS,0,budget,Americas,Asia-Pacific
+PRT,TWN,0,budget,Europe,Asia-Pacific
+PAN,MAR,0,budget,Americas,Africa
+BES,HKG,0,budget,Unknown,Asia-Pacific
+BMU,SGP,0,luxury,Americas,Asia-Pacific
+PYF,ZAF,0,luxury,Oceania,Africa
+REU,THA,0,luxury,Unknown,Asia-Pacific
+PNG,DOM,0,luxury,Asia-Pacific,Americas
+NCL,CZE,0,luxury,Oceania,Europe
+UZB,ITA,0,luxury,Asia-Pacific,Europe
+NIC,DEU,0,luxury,Americas,Europe
+SAU,KOR,0,luxury,Middle East,Asia-Pacific
+MCO,BGR,0,luxury,Europe,Europe
+ISR,MEX,0,luxury,Middle East,Americas
+MKD,DOM,0,adventure,Europe,Americas
+NIU,PRT,0,adventure,Oceania,Europe
+IRN,ARG,0,adventure,Middle East,Americas
+BRA,PRI,0,adventure,Americas,Unknown
+PRI,MAR,0,adventure,Unknown,Africa
+FIN,THA,0,adventure,Europe,Asia-Pacific
+PRT,ZAF,0,adventure,Europe,Africa
+TJK,TUR,0,adventure,Asia-Pacific,Europe
+UZB,KAZ,0,adventure,Asia-Pacific,Asia-Pacific
+SWZ,MYS,0,adventure,Africa,Asia-Pacific
+SMR,GBR,0,adventure,Europe,Europe
+NCL,CHN,0,adventure,Oceania,Asia-Pacific
+IRN,EGY,0,family,Middle East,Middle East
+MOZ,GRC,0,family,Africa,Europe
+VGB,GRC,0,family,Americas,Europe
+HND,ITA,0,family,Americas,Europe
+IRQ,MAC,0,family,Middle East,Asia-Pacific
+SYC,BRA,0,family,Africa,Americas
+MKD,USA,0,family,Europe,Americas
+MDG,CZE,0,family,Africa,Europe
+WSM,GRC,0,family,Asia-Pacific,Europe
+GBR,HUN,0,family,Europe,Europe
+VNM,COL,0,family,Unknown,Americas
+TCD,JPN,0,family,Africa,Asia-Pacific
+AND,DNK,0,family,Europe,Europe
+JAM,ESP,0,family,Americas,Europe
+IDN,FRA,0,family,Asia-Pacific,Europe
+TWN,CAN,0,family,Asia-Pacific,Americas
+ABW,CZE,0,family,Americas,Europe
+HTI,BRA,0,family,Americas,Americas
+LVA,SGP,0,family,Europe,Asia-Pacific
+COL,GBR,0,family,Americas,Europe
+GUM,DEU,0,family,Asia-Pacific,Europe
+LAO,TUR,0,family,Asia-Pacific,Europe
+ATG,DOM,0,family,Americas,Americas
+PRI,GRC,0,family,Unknown,Europe
+SYC,SGP,0,family,Africa,Asia-Pacific
+GRC,MYS,0,family,Europe,Asia-Pacific
+URY,ZAF,0,family,Americas,Africa
+PSE,ESP,0,family,Asia-Pacific,Europe
+BRN,TWN,0,family,Asia-Pacific,Asia-Pacific
+MEX,CZE,0,family,Americas,Europe
+FIN,DNK,0,family,Europe,Europe
+VEN,CHE,0,family,Unknown,Europe
+BEN,CAN,0,family,Africa,Americas
+TUN,BHR,0,family,Middle East,Middle East
+TUR,IDN,0,family,Europe,Asia-Pacific
+MMR,KGZ,0,budget,Asia-Pacific,Asia-Pacific
+PSE,KGZ,0,budget,Asia-Pacific,Asia-Pacific
+JAM,ESP,0,budget,Americas,Europe
+BHR,THA,0,budget,Middle East,Asia-Pacific
+CHN,THA,0,budget,Asia-Pacific,Asia-Pacific
+TKM,SAU,0,budget,Asia-Pacific,Middle East
+POL,HKG,0,budget,Europe,Asia-Pacific
+COM,GBR,0,budget,Africa,Europe
+BEN,ESP,0,budget,Africa,Europe
+DZA,HRV,0,budget,Africa,Europe
+LAO,ESP,0,budget,Asia-Pacific,Europe
+BRB,FRA,0,budget,Americas,Europe
+BEN,BGR,0,budget,Africa,Europe
+TCA,ZAF,0,budget,Unknown,Africa
+COM,ALB,0,budget,Africa,Europe
+LAO,ALB,0,budget,Asia-Pacific,Europe
+PRI,USA,0,budget,Unknown,Americas
+HKG,USA,0,budget,Asia-Pacific,Americas
+ZWE,ITA,0,budget,Unknown,Europe
+NIC,ITA,0,budget,Americas,Europe
+EGY,TUR,0,budget,Middle East,Europe
+DEU,CAN,0,budget,Europe,Americas
+JOR,ITA,0,budget,Middle East,Europe
+ETH,ESP,0,budget,Africa,Europe
+MDA,TWN,0,budget,Europe,Asia-Pacific
+PHL,HRV,0,budget,Asia-Pacific,Europe
+GTM,JPN,0,budget,Americas,Asia-Pacific
+CHE,BGR,0,budget,Europe,Europe
+BES,ALB,0,budget,Unknown,Europe
+GRD,GBR,0,budget,Americas,Europe
+MDG,AND,0,budget,Africa,Europe
+SEN,TUR,0,budget,Africa,Europe
+BHR,JPN,0,budget,Middle East,Asia-Pacific
+MTQ,USA,0,budget,Americas,Americas
+PRI,KGZ,0,budget,Unknown,Asia-Pacific
+SXM,PRI,0,budget,Americas,Unknown
+MCO,ITA,0,budget,Europe,Europe
+ATG,SAU,0,budget,Americas,Middle East
+ZWE,BRA,0,budget,Unknown,Americas
+VCT,TWN,0,budget,Americas,Asia-Pacific
+MKD,BLR,0,budget,Europe,Europe
+CUW,AND,0,budget,Americas,Europe
+GRD,PRT,0,budget,Americas,Europe
+AUS,IND,0,budget,Asia-Pacific,Asia-Pacific
+UZB,MAR,0,budget,Asia-Pacific,Africa
+NZL,BHS,0,budget,Asia-Pacific,Americas
+EGY,USA,0,budget,Middle East,Americas
+BES,PRI,0,budget,Unknown,Unknown
+IDN,ROU,0,budget,Asia-Pacific,Europe
+ETH,CAN,0,budget,Africa,Americas
+BES,MYS,0,budget,Unknown,Asia-Pacific
+MLT,MYS,0,budget,Europe,Asia-Pacific
+ECU,PRT,0,budget,Americas,Europe
+FJI,TWN,0,budget,Asia-Pacific,Asia-Pacific
+COL,DOM,0,budget,Americas,Americas
+COD,ARE,0,budget,Africa,Middle East
+OMN,AND,0,luxury,Middle East,Europe
+MAR,CHN,0,luxury,Africa,Asia-Pacific
+ISL,PRI,0,luxury,Europe,Unknown
+PRY,ARE,0,luxury,Americas,Middle East
+ASM,ESP,0,luxury,Oceania,Europe
+TON,SGP,0,luxury,Asia-Pacific,Asia-Pacific
+BRB,ALB,0,luxury,Americas,Europe
+MCO,CAN,0,luxury,Europe,Americas
+TUN,AUS,0,luxury,Middle East,Asia-Pacific
+MOZ,KGZ,0,luxury,Africa,Asia-Pacific
+BGR,DEU,0,luxury,Europe,Europe
+MCO,PRT,0,luxury,Europe,Europe
+RUS,KGZ,0,luxury,Europe,Asia-Pacific
+CUB,ROU,0,luxury,Americas,Europe
+PAN,ARG,0,luxury,Americas,Americas
+GRD,ARE,0,luxury,Americas,Middle East
+EST,POL,0,luxury,Europe,Europe
+WSM,TUR,0,luxury,Asia-Pacific,Europe
+BES,DNK,0,adventure,Unknown,Europe
+PYF,JPN,0,adventure,Oceania,Asia-Pacific
+USA,KAZ,0,adventure,Americas,Asia-Pacific
+MAC,BRA,0,adventure,Asia-Pacific,Americas
+SLE,BHS,0,adventure,Africa,Americas
+PRT,ROU,0,adventure,Europe,Europe
+ALB,MYS,0,adventure,Europe,Asia-Pacific
+ARM,MAC,0,adventure,Europe,Asia-Pacific
+YEM,GRC,0,adventure,Unknown,Europe
+PRY,DEU,0,adventure,Americas,Europe
+USA,EGY,0,adventure,Americas,Middle East
+SRB,TWN,0,adventure,Europe,Asia-Pacific
+KIR,TUR,0,adventure,Asia-Pacific,Europe
+GIN,DOM,0,family,Africa,Americas
+ARM,IDN,0,family,Europe,Asia-Pacific
+BWA,GRC,0,family,Africa,Europe
+GTM,MEX,0,family,Americas,Americas
+SYC,AUS,0,family,Africa,Asia-Pacific
+TJK,MEX,0,family,Asia-Pacific,Americas
+MDA,TWN,0,family,Europe,Asia-Pacific
+CUB,DNK,0,family,Americas,Europe
+KNA,EGY,0,family,Americas,Middle East
+MMR,SAU,0,family,Asia-Pacific,Middle East
+DOM,BLR,0,family,Americas,Europe
+ESP,IDN,0,family,Europe,Asia-Pacific
+PER,JPN,0,family,Americas,Asia-Pacific
+EGY,PRT,0,family,Middle East,Europe
+ISR,HRV,0,family,Middle East,Europe
+VUT,KGZ,0,family,Asia-Pacific,Asia-Pacific
+BHR,BGR,0,family,Middle East,Europe
+BEN,BGR,0,family,Africa,Europe
+CAN,GBR,0,family,Americas,Europe
+BWA,JPN,0,family,Africa,Asia-Pacific
+VEN,ITA,0,family,Unknown,Europe
+SLV,TWN,0,family,Americas,Asia-Pacific
+TUR,POL,0,family,Europe,Europe
+PYF,ITA,0,family,Oceania,Europe
+VNM,IND,0,family,Unknown,Asia-Pacific
+GBR,MAR,0,family,Europe,Africa
+LVA,CHE,0,family,Europe,Europe
+USA,GBR,0,family,Americas,Europe
+NIU,GRC,0,family,Oceania,Europe
+CYM,CHE,0,family,Americas,Europe
+BES,GRC,0,family,Unknown,Europe
+ERI,PRI,0,family,Africa,Unknown
+SAU,PRT,0,family,Middle East,Europe
+RUS,BHS,0,family,Europe,Americas
+BIH,MYS,0,budget,Europe,Asia-Pacific
+ESP,KOR,0,budget,Europe,Asia-Pacific
+CZE,PRT,0,budget,Europe,Europe
+MDA,CAN,0,budget,Europe,Americas
+YEM,POL,0,budget,Unknown,Europe
+MYS,BEL,0,budget,Asia-Pacific,Europe
+FJI,SAU,0,budget,Asia-Pacific,Middle East
+GRD,GBR,0,budget,Americas,Europe
+BHR,CZE,0,budget,Middle East,Europe
+ARM,USA,0,budget,Europe,Americas
+NIC,DEU,0,budget,Americas,Europe
+GMB,ARE,0,budget,Africa,Middle East
+GLP,ZAF,0,budget,Americas,Africa
+IRQ,MYS,0,budget,Middle East,Asia-Pacific
+TWN,ZAF,0,budget,Asia-Pacific,Africa
+PYF,BHS,0,budget,Oceania,Americas
+CHL,SGP,0,budget,Americas,Asia-Pacific
+RUS,CZE,0,budget,Europe,Europe
+LAO,KOR,0,budget,Asia-Pacific,Asia-Pacific
+MDA,ARG,0,budget,Europe,Americas
+BFA,PRI,0,budget,Africa,Unknown
+EST,MYS,0,budget,Europe,Asia-Pacific
+SMR,FRA,0,budget,Europe,Europe
+THA,PRT,0,budget,Asia-Pacific,Europe
+SYC,AUS,0,budget,Africa,Asia-Pacific
+TWN,USA,0,budget,Asia-Pacific,Americas
+KAZ,CAN,0,budget,Asia-Pacific,Americas
+ARG,BRA,0,budget,Americas,Americas
+SLV,DOM,0,budget,Americas,Americas
+VUT,PRI,0,budget,Asia-Pacific,Unknown
+MOZ,BRA,0,budget,Africa,Americas
+BFA,KOR,0,budget,Africa,Asia-Pacific
+SEN,EGY,0,budget,Africa,Middle East
+JAM,ARG,0,budget,Americas,Americas
+JPN,FRA,0,budget,Asia-Pacific,Europe
+COM,AUS,0,budget,Africa,Asia-Pacific
+LAO,KOR,0,budget,Asia-Pacific,Asia-Pacific
+BRA,ARG,0,budget,Americas,Americas
+HKG,ITA,0,budget,Asia-Pacific,Europe
+MEX,KAZ,0,budget,Americas,Asia-Pacific
+TWN,CHN,0,budget,Asia-Pacific,Asia-Pacific
+TTO,PRT,0,budget,Americas,Europe
+ARE,KAZ,0,budget,Middle East,Asia-Pacific
+PRT,MEX,0,budget,Europe,Americas
+DMA,AND,0,budget,Americas,Europe
+YEM,CAN,0,budget,Unknown,Americas
+PRY,DOM,0,budget,Americas,Americas
+SEN,ALB,0,budget,Africa,Europe
+SYR,KAZ,0,budget,Middle East,Asia-Pacific
+URY,USA,0,budget,Americas,Americas
+YEM,CZE,0,budget,Unknown,Europe
+FRA,TWN,0,budget,Europe,Asia-Pacific
+NGA,CHN,0,budget,Africa,Asia-Pacific
+MKD,POL,0,budget,Europe,Europe
+CZE,GBR,0,budget,Europe,Europe
+NAM,GBR,0,budget,Africa,Europe
+BES,CZE,0,budget,Unknown,Europe
+MTQ,TUR,0,budget,Americas,Europe
+MAR,AND,0,budget,Africa,Europe
+BIH,GBR,0,budget,Europe,Europe
+FRA,ALB,0,budget,Europe,Europe
+LIE,HKG,0,budget,Europe,Asia-Pacific
+POL,DNK,0,budget,Europe,Europe
+USA,BRA,0,budget,Americas,Americas
+ZAF,ARE,0,budget,Africa,Middle East
+QAT,JPN,0,budget,Middle East,Asia-Pacific
+GIN,KOR,0,budget,Africa,Asia-Pacific
+ZAF,HUN,0,budget,Africa,Europe
+BRA,THA,0,luxury,Americas,Asia-Pacific
+MCO,PRI,0,luxury,Europe,Unknown
+CYM,EGY,0,luxury,Americas,Middle East
+QAT,MAC,0,luxury,Middle East,Asia-Pacific
+PRI,ALB,0,luxury,Unknown,Europe
+BRN,MAC,0,luxury,Asia-Pacific,Asia-Pacific
+GUF,ALB,0,luxury,Americas,Europe
+JPN,BEL,0,luxury,Asia-Pacific,Europe
+SYR,EGY,0,luxury,Middle East,Middle East
+CZE,CHN,0,luxury,Europe,Asia-Pacific
+WSM,ITA,0,luxury,Asia-Pacific,Europe
+KOR,IDN,0,luxury,Asia-Pacific,Asia-Pacific
+EGY,JPN,0,luxury,Middle East,Asia-Pacific
+NCL,JPN,0,luxury,Oceania,Asia-Pacific
+NIC,DEU,0,luxury,Americas,Europe
+CHL,KOR,0,luxury,Americas,Asia-Pacific
+WSM,MAC,0,luxury,Asia-Pacific,Asia-Pacific
+GIN,BHR,0,luxury,Africa,Middle East
+ARG,ARG,0,adventure,Americas,Americas
+DZA,SGP,0,adventure,Africa,Asia-Pacific
+MOZ,GBR,0,adventure,Africa,Europe
+LKA,SAU,0,adventure,Asia-Pacific,Middle East
+JPN,SAU,0,adventure,Asia-Pacific,Middle East
+ISL,PRI,0,adventure,Europe,Unknown
+ZAF,HUN,0,adventure,Africa,Europe
+TKM,MAC,0,adventure,Asia-Pacific,Asia-Pacific
+BES,JPN,0,adventure,Unknown,Asia-Pacific
+TCD,IND,0,adventure,Africa,Asia-Pacific
+GMB,DEU,0,adventure,Africa,Europe
+KNA,DEU,0,adventure,Americas,Europe
+VCT,SAU,0,adventure,Americas,Middle East
+BEN,ALB,0,family,Africa,Europe
+BHS,CHN,0,family,Americas,Asia-Pacific
+SGP,MAC,0,family,Asia-Pacific,Asia-Pacific
+MNP,BHS,0,family,Asia-Pacific,Americas
+DMA,AND,0,family,Americas,Europe
+LSO,MAC,0,family,Africa,Asia-Pacific
+CHE,JPN,0,family,Europe,Asia-Pacific
+NCL,CAN,0,family,Oceania,Americas
+COG,GRC,0,family,Africa,Europe
+LTU,ARE,0,family,Europe,Middle East
+TKM,JPN,0,family,Asia-Pacific,Asia-Pacific
+CUB,JPN,0,family,Americas,Asia-Pacific
+LIE,HUN,0,family,Europe,Europe
+BHS,IDN,0,family,Americas,Asia-Pacific
+UKR,SAU,0,family,Europe,Middle East
+BHS,ESP,0,family,Americas,Europe
+BLZ,ESP,0,family,Americas,Europe
+PER,POL,0,family,Americas,Europe
+CYP,PRT,0,family,Europe,Europe
+BLR,CAN,0,family,Europe,Americas
+AZE,TUR,0,family,Europe,Europe
+ROU,ROU,0,family,Europe,Europe
+UKR,HRV,0,family,Europe,Europe
+DNK,IND,0,family,Europe,Asia-Pacific
+KOR,BHS,0,family,Asia-Pacific,Americas
+ATG,USA,0,family,Americas,Americas
+TTO,BHR,0,family,Americas,Middle East
+COG,ROU,0,family,Africa,Europe
+JPN,MAR,0,family,Asia-Pacific,Africa
+SYC,KAZ,0,family,Africa,Asia-Pacific
+MNG,ALB,0,family,Asia-Pacific,Europe
+BRA,CAN,0,family,Americas,Americas
+UKR,PRT,0,family,Europe,Europe
+CUW,ROU,0,family,Americas,Europe
+URY,SGP,0,family,Americas,Asia-Pacific
+BRA,BLR,0,family,Americas,Europe
+BEN,BLR,0,family,Africa,Europe
+TON,TUR,0,family,Asia-Pacific,Europe
+CAN,BLR,0,family,Americas,Europe
+GRD,SGP,0,family,Americas,Asia-Pacific
+SLV,ARG,0,family,Americas,Americas
+RWA,HRV,0,family,Africa,Europe
+RWA,ARG,0,family,Africa,Americas
+SXM,MEX,0,family,Americas,Americas
+ESP,IND,0,family,Europe,Asia-Pacific
+ESP,ARE,0,budget,Europe,Middle East
+GMB,MEX,0,budget,Africa,Americas
+KAZ,IND,0,budget,Asia-Pacific,Asia-Pacific
+VGB,PRI,0,budget,Americas,Unknown
+CHE,IND,0,budget,Europe,Asia-Pacific
+COL,ESP,0,budget,Americas,Europe
+UKR,ITA,0,budget,Europe,Europe
+ESP,UZB,0,budget,Europe,Asia-Pacific
+CUB,DEU,0,budget,Americas,Europe
+EST,USA,0,budget,Europe,Americas
+IDN,TUR,0,budget,Asia-Pacific,Europe
+GRD,TWN,0,budget,Americas,Asia-Pacific
+NGA,CHE,0,budget,Africa,Europe
+ERI,DEU,0,budget,Africa,Europe
+FRA,POL,0,budget,Europe,Europe
+BES,UZB,0,budget,Unknown,Asia-Pacific
+CYP,DNK,0,budget,Europe,Europe
+BHR,SAU,0,budget,Middle East,Middle East
+QAT,HKG,0,budget,Middle East,Asia-Pacific
+COL,GRC,0,budget,Americas,Europe
+VCT,HKG,0,budget,Americas,Asia-Pacific
+THA,FRA,0,budget,Asia-Pacific,Europe
+DZA,SGP,0,budget,Africa,Asia-Pacific
+BHR,PRT,0,budget,Middle East,Europe
+PYF,ARG,0,budget,Oceania,Americas
+SLV,MEX,0,budget,Americas,Americas
+CYP,FRA,0,budget,Europe,Europe
+NCL,MYS,0,budget,Oceania,Asia-Pacific
+URY,AND,0,budget,Americas,Europe
+VEN,FRA,0,budget,Unknown,Europe
+BRB,PRI,0,budget,Americas,Unknown
+GRD,CHE,0,budget,Americas,Europe
+MLT,PRT,0,budget,Europe,Europe
+EGY,HKG,0,budget,Middle East,Asia-Pacific
+EGY,DEU,0,budget,Middle East,Europe
+PRT,ZAF,0,budget,Europe,Africa
+ROU,BHR,0,budget,Europe,Middle East
+DZA,AND,0,budget,Africa,Europe
+SVN,DOM,0,budget,Europe,Americas
+GRC,KOR,0,budget,Europe,Asia-Pacific
+AIA,CHN,0,budget,Unknown,Asia-Pacific
+OMN,SGP,0,budget,Middle East,Asia-Pacific
+USA,ALB,0,budget,Americas,Europe
+NAM,MYS,0,budget,Africa,Asia-Pacific
+PYF,BLR,0,budget,Oceania,Europe
+GBR,DOM,0,budget,Europe,Americas
+ZAF,HUN,0,budget,Africa,Europe
+NIU,DOM,0,budget,Oceania,Americas
+ERI,CZE,0,budget,Africa,Europe
+COM,ARG,0,budget,Africa,Americas
+NIU,HUN,0,budget,Oceania,Europe
+GRC,HUN,0,budget,Europe,Europe
+SVN,JPN,0,budget,Europe,Asia-Pacific
+ARE,IDN,0,budget,Middle East,Asia-Pacific
+PRY,ZAF,0,budget,Americas,Africa
+TCD,PRI,0,budget,Africa,Unknown
+AIA,DNK,0,budget,Unknown,Europe
+ECU,BLR,0,luxury,Americas,Europe
+DMA,UZB,0,luxury,Americas,Asia-Pacific
+FJI,TUR,0,luxury,Asia-Pacific,Europe
+PER,BHS,0,luxury,Americas,Americas
+ATG,CAN,0,luxury,Americas,Americas
+BEL,MAR,0,luxury,Europe,Africa
+GBR,CHN,0,luxury,Europe,Asia-Pacific
+PRT,ARG,0,adventure,Europe,Americas
+BIH,HUN,0,adventure,Europe,Europe
+YEM,THA,0,adventure,Unknown,Asia-Pacific
+BIH,BEL,0,adventure,Europe,Europe
+SYC,BRA,0,adventure,Africa,Americas
+NGA,ROU,0,adventure,Africa,Europe
+DMA,POL,0,adventure,Americas,Europe
+URY,DNK,0,adventure,Americas,Europe
+SEN,KAZ,0,adventure,Africa,Asia-Pacific
+BES,TWN,0,adventure,Unknown,Asia-Pacific
+CIV,MEX,0,adventure,Africa,Americas
+BHS,TUR,0,adventure,Americas,Europe
+TJK,CHE,0,adventure,Asia-Pacific,Europe
+MNP,BHR,0,family,Asia-Pacific,Middle East
+BES,GBR,0,family,Unknown,Europe
+SAU,THA,0,family,Middle East,Asia-Pacific
+LBY,ESP,0,family,Middle East,Europe
+SGP,AND,0,family,Asia-Pacific,Europe
+SYC,ITA,0,family,Africa,Europe
+GTM,KOR,0,family,Americas,Asia-Pacific
+TTO,ESP,0,family,Americas,Europe
+COD,MYS,0,family,Africa,Asia-Pacific
+GBR,KAZ,0,family,Europe,Asia-Pacific
+MHL,USA,0,family,Asia-Pacific,Americas
+BES,ITA,0,family,Unknown,Europe
+VNM,TUR,0,family,Unknown,Europe
+IRN,THA,0,family,Middle East,Asia-Pacific
+URY,TWN,0,family,Americas,Asia-Pacific
+MUS,AUS,0,family,Africa,Asia-Pacific
+TON,GRC,0,family,Asia-Pacific,Europe
+TCD,USA,0,family,Africa,Americas
+BRA,IDN,0,family,Americas,Asia-Pacific
+COL,ITA,0,family,Americas,Europe
+BWA,HRV,0,family,Africa,Europe
+TTO,DOM,0,family,Americas,Americas
+LSO,HKG,0,family,Africa,Asia-Pacific
+GTM,ARE,0,family,Americas,Middle East
+KIR,FRA,0,family,Asia-Pacific,Europe
+TUN,BGR,0,family,Middle East,Europe
+GBR,BHR,0,family,Europe,Middle East
+SLV,TWN,0,family,Americas,Asia-Pacific
+MLT,ITA,0,family,Europe,Europe
+TWN,KOR,0,family,Asia-Pacific,Asia-Pacific
+EST,TUR,0,family,Europe,Europe
+HKG,BEL,0,family,Asia-Pacific,Europe
+SAU,CHN,0,family,Middle East,Asia-Pacific
+MKD,KAZ,0,family,Europe,Asia-Pacific
+LBY,SGP,0,family,Middle East,Asia-Pacific
+MNP,AUS,0,family,Asia-Pacific,Asia-Pacific
+SYC,CHN,0,family,Africa,Asia-Pacific
+JOR,THA,0,family,Middle East,Asia-Pacific
+FJI,UZB,0,family,Asia-Pacific,Asia-Pacific
+VUT,AND,0,family,Asia-Pacific,Europe
+CHE,AND,0,family,Europe,Europe
+VIR,DOM,0,family,Unknown,Americas
+SEN,TUR,0,budget,Africa,Europe
+BES,CHE,0,budget,Unknown,Europe
+MSR,TUR,0,budget,Americas,Europe
+BLZ,MAC,0,budget,Americas,Asia-Pacific
+MNP,PRI,0,budget,Asia-Pacific,Unknown
+VIR,ARG,0,budget,Unknown,Americas
+STP,BHS,0,budget,Africa,Americas
+OMN,HKG,0,budget,Middle East,Asia-Pacific
+MUS,KAZ,0,budget,Africa,Asia-Pacific
+TKM,THA,0,budget,Asia-Pacific,Asia-Pacific
+ECU,ALB,0,budget,Americas,Europe
+GRC,JPN,0,budget,Europe,Asia-Pacific
+GIN,ROU,0,budget,Africa,Europe
+SLE,CHN,0,budget,Africa,Asia-Pacific
+YEM,KAZ,0,budget,Unknown,Asia-Pacific
+BFA,ARE,0,budget,Africa,Middle East
+GRD,GBR,0,budget,Americas,Europe
+TUR,BLR,0,budget,Europe,Europe
+PNG,HKG,0,budget,Asia-Pacific,Asia-Pacific
+UZB,CAN,0,budget,Asia-Pacific,Americas
+JOR,KAZ,0,budget,Middle East,Asia-Pacific
+BRN,DEU,0,budget,Asia-Pacific,Europe
+QAT,POL,0,budget,Middle East,Europe
+MNG,PRT,0,budget,Asia-Pacific,Europe
+MNP,IDN,0,budget,Asia-Pacific,Asia-Pacific
+VGB,POL,0,budget,Americas,Europe
+NGA,HUN,0,budget,Africa,Europe
+NIC,CAN,0,budget,Americas,Americas
+EGY,HKG,0,budget,Middle East,Asia-Pacific
+BIH,UZB,0,budget,Europe,Asia-Pacific
+BOL,GBR,0,budget,Americas,Europe
+TON,MAR,0,budget,Asia-Pacific,Africa
+CRI,BHR,0,budget,Americas,Middle East
+HTI,DEU,0,budget,Americas,Europe
+URY,USA,0,budget,Americas,Americas
+QAT,GRC,0,budget,Middle East,Europe
+BES,THA,0,budget,Unknown,Asia-Pacific
+TCA,CHE,0,budget,Unknown,Europe
+GUF,GBR,0,budget,Americas,Europe
+PER,THA,0,budget,Americas,Asia-Pacific
+CMR,BHS,0,budget,Africa,Americas
+IDN,EGY,0,budget,Asia-Pacific,Middle East
+VNM,GBR,0,budget,Unknown,Europe
+PER,ITA,0,budget,Americas,Europe
+ISR,CHE,0,budget,Middle East,Europe
+PNG,ARE,0,budget,Asia-Pacific,Middle East
+BLZ,ARE,0,budget,Americas,Middle East
+LKA,PRT,0,budget,Asia-Pacific,Europe
+MAR,CAN,0,budget,Africa,Americas
+FIN,GBR,0,budget,Europe,Europe
+TCA,CHE,0,budget,Unknown,Europe
+VIR,BHR,0,budget,Unknown,Middle East
+KOR,DEU,0,budget,Asia-Pacific,Europe
+BRA,ARE,0,budget,Americas,Middle East
+TON,CHN,0,budget,Asia-Pacific,Asia-Pacific
+VGB,GRC,0,budget,Americas,Europe
+KOR,THA,0,budget,Asia-Pacific,Asia-Pacific
+ROU,ALB,0,budget,Europe,Europe
+TKM,BHR,0,budget,Asia-Pacific,Middle East
+CYP,THA,0,budget,Europe,Asia-Pacific
+ABW,IND,0,budget,Americas,Asia-Pacific
+PSE,MYS,0,budget,Asia-Pacific,Asia-Pacific
+FIN,CAN,0,budget,Europe,Americas
+SRB,TUR,0,budget,Europe,Europe
+SLV,PRI,0,luxury,Americas,Unknown
+AIA,SGP,0,luxury,Unknown,Asia-Pacific
+ERI,SGP,0,luxury,Africa,Asia-Pacific
+PHL,BGR,0,luxury,Asia-Pacific,Europe
+CYP,THA,0,luxury,Europe,Asia-Pacific
+CUB,SAU,0,luxury,Americas,Middle East
+CUW,PRT,0,luxury,Americas,Europe
+CHL,HRV,0,luxury,Americas,Europe
+PRY,GBR,0,luxury,Americas,Europe
+BMU,ZAF,0,luxury,Americas,Africa
+QAT,BGR,0,luxury,Middle East,Europe
+COL,HRV,0,luxury,Americas,Europe
+MMR,IND,0,luxury,Asia-Pacific,Asia-Pacific
+HUN,ZAF,0,luxury,Europe,Africa
+CAN,MEX,0,luxury,Americas,Americas
+KEN,GRC,0,luxury,Africa,Europe
+CAN,JPN,0,luxury,Americas,Asia-Pacific
+TJK,PRT,0,luxury,Asia-Pacific,Europe
+CIV,HKG,0,luxury,Africa,Asia-Pacific
+AIA,TUR,0,luxury,Unknown,Europe
+CYP,KAZ,0,luxury,Europe,Asia-Pacific
+SMR,BGR,0,luxury,Europe,Europe
+PYF,EGY,0,luxury,Oceania,Middle East
+BES,MEX,0,luxury,Unknown,Americas
+IRQ,BLR,0,luxury,Middle East,Europe
+VCT,CAN,0,luxury,Americas,Americas
+PRT,IND,0,luxury,Europe,Asia-Pacific
+SXM,IND,0,luxury,Americas,Asia-Pacific
+AND,THA,0,adventure,Europe,Asia-Pacific
+LCA,MYS,0,adventure,Americas,Asia-Pacific
+MTQ,THA,0,adventure,Americas,Asia-Pacific
+ROU,JPN,0,adventure,Europe,Asia-Pacific
+EST,CHE,0,adventure,Europe,Europe
+BOL,HUN,0,adventure,Americas,Europe
+ERI,BHR,0,adventure,Africa,Middle East
+PRY,ESP,0,adventure,Americas,Europe
+SWZ,ZAF,0,adventure,Africa,Africa
+ROU,MEX,0,adventure,Europe,Americas
+TON,BHS,0,adventure,Asia-Pacific,Americas
+PYF,CZE,0,adventure,Oceania,Europe
+FJI,PRT,0,adventure,Asia-Pacific,Europe
+LAO,ESP,0,adventure,Asia-Pacific,Europe
+AIA,USA,0,family,Unknown,Americas
+UZB,DEU,0,family,Asia-Pacific,Europe
+ALB,KOR,0,family,Europe,Asia-Pacific
+BFA,UZB,0,family,Africa,Asia-Pacific
+LSO,BHR,0,family,Africa,Middle East
+FJI,DOM,0,family,Asia-Pacific,Americas
+NCL,HKG,0,family,Oceania,Asia-Pacific
+MNG,HKG,0,family,Asia-Pacific,Asia-Pacific
+NIC,FRA,0,family,Americas,Europe
+FIN,HKG,0,family,Europe,Asia-Pacific
+BOL,THA,0,family,Americas,Asia-Pacific
+LKA,POL,0,family,Asia-Pacific,Europe
+IDN,HRV,0,family,Asia-Pacific,Europe
+GTM,HRV,0,family,Americas,Europe
+GUF,IDN,0,family,Americas,Asia-Pacific
+QAT,ITA,0,family,Middle East,Europe
+MSR,AUS,0,family,Americas,Asia-Pacific
+KEN,MAR,0,family,Africa,Africa
+MTQ,HRV,0,family,Americas,Europe
+MDA,CHE,0,family,Europe,Europe
+BLR,BHR,0,family,Europe,Middle East
+VNM,USA,0,family,Unknown,Americas
+EGY,CAN,0,family,Middle East,Americas
+PAN,TUR,0,family,Americas,Europe
+BRA,ALB,0,family,Americas,Europe
+FRA,COL,0,family,Europe,Americas
+COD,CHN,0,family,Africa,Asia-Pacific
+MAC,ARE,0,family,Asia-Pacific,Middle East
+MNG,CZE,0,family,Asia-Pacific,Europe
+NAM,FRA,0,family,Africa,Europe
+ESP,TWN,0,budget,Europe,Asia-Pacific
+TCA,CAN,0,budget,Unknown,Americas
+SVN,MYS,0,budget,Europe,Asia-Pacific
+UKR,ARG,0,budget,Europe,Americas
+KNA,GBR,0,budget,Americas,Europe
+CHE,AND,0,budget,Europe,Europe
+COM,GBR,0,budget,Africa,Europe
+CAN,ITA,0,budget,Americas,Europe
+AND,MYS,0,budget,Europe,Asia-Pacific
+PRY,ALB,0,budget,Americas,Europe
+HTI,BHR,0,budget,Americas,Middle East
+ATG,DNK,0,budget,Americas,Europe
+LTU,DNK,0,budget,Europe,Europe
+BMU,FRA,0,budget,Americas,Europe
+URY,ARG,0,budget,Americas,Americas
+AZE,SAU,0,budget,Europe,Middle East
+BOL,DNK,0,budget,Americas,Europe
+PRT,ZAF,0,budget,Europe,Africa
+ARM,IND,0,budget,Europe,Asia-Pacific
+JPN,IDN,0,budget,Asia-Pacific,Asia-Pacific
+TZA,COL,0,budget,Africa,Americas
+CHE,TWN,0,budget,Europe,Asia-Pacific
+ETH,USA,0,budget,Africa,Americas
+MCO,MAC,0,budget,Europe,Asia-Pacific
+JOR,SAU,0,budget,Middle East,Middle East
+PAN,HUN,0,budget,Americas,Europe
+MCO,DOM,0,budget,Europe,Americas
+AIA,CHN,0,budget,Unknown,Asia-Pacific
+MDA,MEX,0,budget,Europe,Americas
+GRC,EGY,0,budget,Europe,Middle East
+SLE,GRC,0,budget,Africa,Europe
+COL,HUN,0,budget,Americas,Europe
+GRC,GBR,0,budget,Europe,Europe
+CYP,GRC,0,budget,Europe,Europe
+CRI,ARG,0,budget,Americas,Americas
+LBY,EGY,0,budget,Middle East,Middle East
+UZB,MEX,0,budget,Asia-Pacific,Americas
+ABW,SGP,0,budget,Americas,Asia-Pacific
+JPN,FRA,0,budget,Asia-Pacific,Europe
+SYR,ARG,0,budget,Middle East,Americas
+GTM,EGY,0,budget,Americas,Middle East
+VCT,MEX,0,budget,Americas,Americas
+BIH,ESP,0,budget,Europe,Europe
+AND,ROU,0,budget,Europe,Europe
+ZAF,KOR,0,budget,Africa,Asia-Pacific
+PRY,ESP,0,budget,Americas,Europe
+BHS,MAC,0,budget,Americas,Asia-Pacific
+COD,KAZ,0,budget,Africa,Asia-Pacific
+RWA,KGZ,0,budget,Africa,Asia-Pacific
+RUS,BGR,0,budget,Europe,Europe
+TWN,FRA,0,budget,Asia-Pacific,Europe
+IND,MAC,0,budget,Asia-Pacific,Asia-Pacific
+BOL,ARE,0,budget,Americas,Middle East
+DMA,BEL,0,luxury,Americas,Europe
+CUW,ROU,0,luxury,Americas,Europe
+THA,ARE,0,luxury,Asia-Pacific,Middle East
+ITA,MAC,0,luxury,Europe,Asia-Pacific
+CHE,ITA,0,luxury,Europe,Europe
+VGB,MAC,0,luxury,Americas,Asia-Pacific
+PRY,ESP,0,luxury,Americas,Europe
+PHL,PRT,0,luxury,Asia-Pacific,Europe
+RUS,HKG,0,luxury,Europe,Asia-Pacific
+STP,BHS,0,luxury,Africa,Americas
+GAB,MAR,0,adventure,Africa,Africa
+TON,HUN,0,adventure,Asia-Pacific,Europe
+CYM,SAU,0,adventure,Americas,Middle East
+NGA,IND,0,adventure,Africa,Asia-Pacific
+PRY,CHE,0,adventure,Americas,Europe
+ALB,JPN,0,adventure,Europe,Asia-Pacific
+BES,BGR,0,adventure,Unknown,Europe
+ISL,ROU,0,adventure,Europe,Europe
+NIU,ESP,0,adventure,Oceania,Europe
+SUR,HRV,0,adventure,Americas,Europe
+VNM,EGY,0,adventure,Unknown,Middle East
+UZB,BRA,0,adventure,Asia-Pacific,Americas
+KGZ,BRA,0,adventure,Asia-Pacific,Americas
+LTU,PRT,0,adventure,Europe,Europe
+HTI,IND,0,adventure,Americas,Asia-Pacific
+GAB,TUR,0,adventure,Africa,Europe
+BES,BRA,0,adventure,Unknown,Americas
+BLZ,GRC,0,adventure,Americas,Europe
+PSE,TUR,0,family,Asia-Pacific,Europe
+CUB,ARE,0,family,Americas,Middle East
+PSE,CHN,0,family,Asia-Pacific,Asia-Pacific
+NCL,CZE,0,family,Oceania,Europe
+ZAF,HUN,0,family,Africa,Europe
+ERI,ZAF,0,family,Africa,Africa
+CHL,CAN,0,family,Americas,Americas
+COM,ESP,0,family,Africa,Europe
+KIR,AND,0,family,Asia-Pacific,Europe
+GTM,PRT,0,family,Americas,Europe
+MYS,DNK,0,family,Asia-Pacific,Europe
+VCT,BGR,0,family,Americas,Europe
+MOZ,ROU,0,family,Africa,Europe
+BLZ,CHN,0,family,Americas,Asia-Pacific
+SEN,ESP,0,family,Africa,Europe
+TON,BGR,0,family,Asia-Pacific,Europe
+ESP,KAZ,0,family,Europe,Asia-Pacific
+PRY,KAZ,0,family,Americas,Asia-Pacific
+JAM,KGZ,0,family,Americas,Asia-Pacific
+CRI,ARG,0,family,Americas,Americas
+IRQ,KAZ,0,family,Middle East,Asia-Pacific
+CUW,MEX,0,family,Americas,Americas
+SYR,TUR,0,family,Middle East,Europe
+DZA,ALB,0,family,Africa,Europe
+SEN,GRC,0,family,Africa,Europe
+NCL,ARE,0,family,Oceania,Middle East
+BHS,BEL,0,budget,Americas,Europe
+KAZ,JPN,0,budget,Asia-Pacific,Asia-Pacific
+CRI,CHN,0,budget,Americas,Asia-Pacific
+BLR,FRA,0,budget,Europe,Europe
+PAN,HRV,0,budget,Americas,Europe
+BEL,USA,0,budget,Europe,Americas
+SXM,ZAF,0,budget,Americas,Africa
+NAM,BHS,0,budget,Africa,Americas
+BWA,HRV,0,budget,Africa,Europe
+TUR,ZAF,0,budget,Europe,Africa
+IND,DEU,0,budget,Asia-Pacific,Europe
+JAM,AUS,0,budget,Americas,Asia-Pacific
+VGB,IDN,0,budget,Americas,Asia-Pacific
+KNA,MEX,0,budget,Americas,Americas
+ZWE,BEL,0,budget,Unknown,Europe
+BIH,AND,0,budget,Europe,Europe
+KAZ,BEL,0,budget,Asia-Pacific,Europe
+VCT,USA,0,budget,Americas,Americas
+MAC,KAZ,0,budget,Asia-Pacific,Asia-Pacific
+DNK,PRT,0,budget,Europe,Europe
+IDN,MAR,0,budget,Asia-Pacific,Africa
+PRT,MAR,0,budget,Europe,Africa
+CRI,ARG,0,budget,Americas,Americas
+PNG,MEX,0,budget,Asia-Pacific,Americas
+KAZ,CAN,0,budget,Asia-Pacific,Americas
+FJI,IDN,0,budget,Asia-Pacific,Asia-Pacific
+MUS,FRA,0,budget,Africa,Europe
+SXM,BEL,0,budget,Americas,Europe
+LVA,BHR,0,budget,Europe,Middle East
+TUN,ARE,0,budget,Middle East,Middle East
+ESP,CAN,0,budget,Europe,Americas
+VEN,TUR,0,budget,Unknown,Europe
+SXM,SGP,0,budget,Americas,Asia-Pacific
+BES,IDN,0,budget,Unknown,Asia-Pacific
+GMB,DOM,0,budget,Africa,Americas
+IRQ,DNK,0,budget,Middle East,Europe
+HUN,POL,0,budget,Europe,Europe
+LBY,FRA,0,budget,Middle East,Europe
+BFA,MAC,0,luxury,Africa,Asia-Pacific
+SGP,CAN,0,luxury,Asia-Pacific,Americas
+HRV,JPN,0,luxury,Europe,Asia-Pacific
+MHL,SAU,0,luxury,Asia-Pacific,Middle East
+UKR,ROU,0,luxury,Europe,Europe
+LBY,DEU,0,luxury,Middle East,Europe
+MMR,JPN,0,luxury,Asia-Pacific,Asia-Pacific
+TUR,SGP,0,luxury,Europe,Asia-Pacific
+PHL,KAZ,0,luxury,Asia-Pacific,Asia-Pacific
+ATG,AND,0,luxury,Americas,Europe
+HND,HRV,0,luxury,Americas,Europe
+SGP,PRT,0,luxury,Asia-Pacific,Europe
+MEX,ARG,0,luxury,Americas,Americas
+ROU,ZAF,0,luxury,Europe,Africa
+CRI,ARE,0,luxury,Americas,Middle East
+NGA,MAC,0,luxury,Africa,Asia-Pacific
+BLZ,BGR,0,luxury,Americas,Europe
+ISR,JPN,0,luxury,Middle East,Asia-Pacific
+BGR,TWN,0,luxury,Europe,Asia-Pacific
+REU,POL,0,luxury,Unknown,Europe
+CYP,DOM,0,adventure,Europe,Americas
+MUS,PRT,0,adventure,Africa,Europe
+CAN,ZAF,0,adventure,Americas,Africa
+MAR,PRT,0,adventure,Africa,Europe
+ETH,ESP,0,adventure,Africa,Europe
+HKG,ITA,0,adventure,Asia-Pacific,Europe
+CHL,EGY,0,adventure,Americas,Middle East
+VIR,FRA,0,adventure,Unknown,Europe
+BHS,MYS,0,adventure,Americas,Asia-Pacific
+PAN,PRT,0,adventure,Americas,Europe
+KEN,JPN,0,adventure,Africa,Asia-Pacific
+GUM,DNK,0,adventure,Asia-Pacific,Europe
+KIR,HRV,0,adventure,Asia-Pacific,Europe
+GRC,EGY,0,adventure,Europe,Middle East
+SRB,CAN,0,adventure,Europe,Americas
+VGB,MYS,0,adventure,Americas,Asia-Pacific
+PYF,BEL,0,adventure,Oceania,Europe
+MSR,DEU,0,adventure,Americas,Europe
+DMA,EGY,0,family,Americas,Middle East
+GRC,ZAF,0,family,Europe,Africa
+BGR,TUR,0,family,Europe,Europe
+GRD,DOM,0,family,Americas,Americas
+HUN,CAN,0,family,Europe,Americas
+BEN,TUR,0,family,Africa,Europe
+MMR,ITA,0,family,Asia-Pacific,Europe
+LBY,CHN,0,family,Middle East,Asia-Pacific
+EGY,TUR,0,family,Middle East,Europe
+NIC,PRT,0,family,Americas,Europe
+MLT,DOM,0,family,Europe,Americas
+LSO,IDN,0,family,Africa,Asia-Pacific
+KOR,IND,0,family,Asia-Pacific,Asia-Pacific
+ROU,BHS,0,family,Europe,Americas
+ZWE,CHN,0,family,Unknown,Asia-Pacific
+CAN,MEX,0,family,Americas,Americas
+ARG,BHS,0,family,Americas,Americas
+COD,BGR,0,family,Africa,Europe
+VCT,MEX,0,family,Americas,Americas
+ISL,HRV,0,family,Europe,Europe
+MMR,DNK,0,family,Asia-Pacific,Europe
+SLE,CHN,0,family,Africa,Asia-Pacific
+DOM,FRA,0,family,Americas,Europe
+ASM,CZE,0,family,Oceania,Europe
+MNP,EGY,0,family,Asia-Pacific,Middle East
+PRY,JPN,0,family,Americas,Asia-Pacific
+LKA,GRC,0,family,Asia-Pacific,Europe
+COM,BHR,0,family,Africa,Middle East
+MCO,BHR,0,family,Europe,Middle East
+TKM,SAU,0,family,Asia-Pacific,Middle East
+ALB,CZE,0,family,Europe,Europe
+MOZ,KOR,0,family,Africa,Asia-Pacific
+UKR,SGP,0,family,Europe,Asia-Pacific
+CHE,AND,0,budget,Europe,Europe
+JOR,CAN,0,budget,Middle East,Americas
+FRA,HUN,0,budget,Europe,Europe
+CAN,IDN,0,budget,Americas,Asia-Pacific
+RUS,FRA,0,budget,Europe,Europe
+IRN,KOR,0,budget,Middle East,Asia-Pacific
+LAO,KOR,0,budget,Asia-Pacific,Asia-Pacific
+CUW,KAZ,0,budget,Americas,Asia-Pacific
+BHR,PRT,0,budget,Middle East,Europe
+CYM,BEL,0,budget,Americas,Europe
+KAZ,TUR,0,budget,Asia-Pacific,Europe
+COD,HKG,0,budget,Africa,Asia-Pacific
+BLR,HUN,0,budget,Europe,Europe
+ARE,GRC,0,budget,Middle East,Europe
+KAZ,JPN,0,budget,Asia-Pacific,Asia-Pacific
+QAT,KOR,0,budget,Middle East,Asia-Pacific
+HRV,CHN,0,budget,Europe,Asia-Pacific
+VIR,DOM,0,budget,Unknown,Americas
+MUS,MYS,0,budget,Africa,Asia-Pacific
+UZB,MYS,0,budget,Asia-Pacific,Asia-Pacific
+BES,HKG,0,budget,Unknown,Asia-Pacific
+RWA,HRV,0,budget,Africa,Europe
+CRI,POL,0,budget,Americas,Europe
+ZWE,GBR,0,budget,Unknown,Europe
+SAU,JPN,0,budget,Middle East,Asia-Pacific
+IRN,ROU,0,budget,Middle East,Europe
+FJI,DEU,0,budget,Asia-Pacific,Europe
+CHE,TUR,0,budget,Europe,Europe
+BHS,CAN,0,budget,Americas,Americas
+PRT,ROU,0,budget,Europe,Europe
+LSO,BGR,0,budget,Africa,Europe
+CUW,JPN,0,budget,Americas,Asia-Pacific
+TKM,MAC,0,budget,Asia-Pacific,Asia-Pacific
+USA,ZAF,0,budget,Americas,Africa
+COL,HKG,0,budget,Americas,Asia-Pacific
+AZE,DOM,0,budget,Europe,Americas
+VIR,HRV,0,budget,Unknown,Europe
+PHL,DNK,0,budget,Asia-Pacific,Europe
+LSO,BRA,0,budget,Africa,Americas
+GRC,JPN,0,budget,Europe,Asia-Pacific
+SWZ,SGP,0,budget,Africa,Asia-Pacific
+CRI,MAC,0,budget,Americas,Asia-Pacific
+ASM,ESP,0,budget,Oceania,Europe
+BIH,HKG,0,budget,Europe,Asia-Pacific
+KIR,FRA,0,budget,Asia-Pacific,Europe
+PNG,ITA,0,budget,Asia-Pacific,Europe
+DNK,ITA,0,budget,Europe,Europe
+VUT,ALB,0,budget,Asia-Pacific,Europe
+PRY,ESP,0,budget,Americas,Europe
+TCD,POL,0,budget,Africa,Europe
+LCA,PRT,0,budget,Americas,Europe
+UZB,MAC,0,budget,Asia-Pacific,Asia-Pacific
+MDG,MAR,0,budget,Africa,Africa
+ATG,BHR,0,budget,Americas,Middle East
+GIN,AUS,0,budget,Africa,Asia-Pacific
+KAZ,KGZ,0,budget,Asia-Pacific,Asia-Pacific
+SGP,CHE,0,budget,Asia-Pacific,Europe
+AZE,ITA,0,luxury,Europe,Europe
+VGB,GBR,0,luxury,Americas,Europe
+ECU,FRA,0,luxury,Americas,Europe
+GMB,GBR,0,luxury,Africa,Europe
+MEX,BEL,0,luxury,Americas,Europe
+HRV,GBR,0,luxury,Europe,Europe
+MDG,POL,0,luxury,Africa,Europe
+VIR,PRT,0,luxury,Unknown,Europe
+TCD,FRA,0,luxury,Africa,Europe
+MNG,GRC,0,luxury,Asia-Pacific,Europe
+NIU,ITA,0,luxury,Oceania,Europe
+BES,CZE,0,luxury,Unknown,Europe
+DOM,PRT,0,luxury,Americas,Europe
+AZE,ROU,0,luxury,Europe,Europe
+IRN,BHS,0,adventure,Middle East,Americas
+MNP,ITA,0,adventure,Asia-Pacific,Europe
+NGA,TWN,0,adventure,Africa,Asia-Pacific
+NIU,DEU,0,adventure,Oceania,Europe
+WSM,TUR,0,adventure,Asia-Pacific,Europe
+VUT,MAR,0,adventure,Asia-Pacific,Africa
+EGY,MAR,0,adventure,Middle East,Africa
+CHL,ITA,0,adventure,Americas,Europe
+CZE,EGY,0,adventure,Europe,Middle East
+LCA,COL,0,adventure,Americas,Americas
+MEX,CHN,0,adventure,Americas,Asia-Pacific
+KEN,GRC,0,adventure,Africa,Europe
+VEN,ESP,0,adventure,Unknown,Europe
+ZWE,GBR,0,adventure,Unknown,Europe
+ARM,DEU,0,adventure,Europe,Europe
+MKD,TUR,0,family,Europe,Europe
+ETH,SAU,0,family,Africa,Middle East
+KIR,HUN,0,family,Asia-Pacific,Europe
+VNM,MEX,0,family,Unknown,Americas
+IRN,THA,0,family,Middle East,Asia-Pacific
+HND,CHN,0,family,Americas,Asia-Pacific
+KIR,SGP,0,family,Asia-Pacific,Asia-Pacific
+UZB,MAC,0,family,Asia-Pacific,Asia-Pacific
+WSM,FRA,0,family,Asia-Pacific,Europe
+BLZ,CAN,0,family,Americas,Americas
+DOM,KOR,0,family,Americas,Asia-Pacific
+COG,BEL,0,family,Africa,Europe
+ARM,TUR,0,family,Europe,Europe
+BHS,AUS,0,family,Americas,Asia-Pacific
+VIR,PRT,0,family,Unknown,Europe
+ABW,AUS,0,family,Americas,Asia-Pacific
+MUS,DEU,0,family,Africa,Europe
+PNG,ROU,0,family,Asia-Pacific,Europe
+BGR,CAN,0,family,Europe,Americas
+ESP,BHR,0,family,Europe,Middle East
+VNM,BEL,0,budget,Unknown,Europe
+KAZ,JPN,0,budget,Asia-Pacific,Asia-Pacific
+ATG,ITA,0,budget,Americas,Europe
+IRQ,TUR,0,budget,Middle East,Europe
+COM,HUN,0,budget,Africa,Europe
+MAR,TWN,0,budget,Africa,Asia-Pacific
+BRB,USA,0,budget,Americas,Americas
+POL,BEL,0,budget,Europe,Europe
+CYM,MAC,0,budget,Americas,Asia-Pacific
+DMA,USA,0,budget,Americas,Americas
+YEM,CHN,0,budget,Unknown,Asia-Pacific
+BES,DOM,0,budget,Unknown,Americas
+MHL,ITA,0,budget,Asia-Pacific,Europe
+ZAF,BGR,0,budget,Africa,Europe
+AND,ROU,0,budget,Europe,Europe
+BGR,COL,0,budget,Europe,Americas
+SLE,DNK,0,budget,Africa,Europe
+JPN,HUN,0,budget,Asia-Pacific,Europe
+SVN,PRT,0,budget,Europe,Europe
+FJI,DOM,0,budget,Asia-Pacific,Americas
+GAB,BEL,0,budget,Africa,Europe
+YEM,EGY,0,budget,Unknown,Middle East
+PRT,SAU,0,budget,Europe,Middle East
+KGZ,PRT,0,budget,Asia-Pacific,Europe
+YEM,JPN,0,budget,Unknown,Asia-Pacific
+MMR,TUR,0,budget,Asia-Pacific,Europe
+TON,FRA,0,budget,Asia-Pacific,Europe
+PRI,ITA,0,budget,Unknown,Europe
+MOZ,IDN,0,budget,Africa,Asia-Pacific
+MSR,MAR,0,budget,Americas,Africa
+GBR,TUR,0,budget,Europe,Europe
+DEU,ESP,0,budget,Europe,Europe
+PHL,DEU,0,budget,Asia-Pacific,Europe
+BRA,PRI,0,budget,Americas,Unknown
+ROU,UZB,0,budget,Europe,Asia-Pacific
+NZL,DNK,0,budget,Asia-Pacific,Europe
+MNP,HRV,0,budget,Asia-Pacific,Europe
+OMN,USA,0,budget,Middle East,Americas
+SYC,USA,0,budget,Africa,Americas
+SWZ,HKG,0,budget,Africa,Asia-Pacific
+IRQ,HRV,0,budget,Middle East,Europe
+PYF,TUR,0,budget,Oceania,Europe
+ZWE,TUR,0,budget,Unknown,Europe
+GBR,CAN,0,budget,Europe,Americas
+WSM,DEU,0,budget,Asia-Pacific,Europe
+ZAF,HKG,0,luxury,Africa,Asia-Pacific
+BLZ,ESP,0,luxury,Americas,Europe
+GEO,CAN,0,luxury,Europe,Americas
+BEN,POL,0,luxury,Africa,Europe
+GUF,ESP,0,luxury,Americas,Europe
+ROU,FRA,0,luxury,Europe,Europe
+GAB,GBR,0,luxury,Africa,Europe
+DNK,ZAF,0,luxury,Europe,Africa
+GBR,USA,0,luxury,Europe,Americas
+VUT,MAC,0,luxury,Asia-Pacific,Asia-Pacific
+VIR,DEU,0,luxury,Unknown,Europe
+BGR,HRV,0,luxury,Europe,Europe
+MSR,FRA,0,luxury,Americas,Europe
+LBY,JPN,0,luxury,Middle East,Asia-Pacific
+MCO,FRA,0,luxury,Europe,Europe
+MCO,HKG,0,luxury,Europe,Asia-Pacific
+KEN,ARG,0,luxury,Africa,Americas
+ZAF,HRV,0,luxury,Africa,Europe
+DNK,GBR,0,luxury,Europe,Europe
+COG,SAU,0,luxury,Africa,Middle East
+DEU,MAC,0,adventure,Europe,Asia-Pacific
+STP,SAU,0,adventure,Africa,Middle East
+AIA,DEU,0,adventure,Unknown,Europe
+SLV,HKG,0,adventure,Americas,Asia-Pacific
+SYC,ITA,0,adventure,Africa,Europe
+COD,GBR,0,adventure,Africa,Europe
+VUT,POL,0,family,Asia-Pacific,Europe
+SWZ,ROU,0,family,Africa,Europe
+MDA,ALB,0,family,Europe,Europe
+BIH,CAN,0,family,Europe,Americas
+SGP,CAN,0,family,Asia-Pacific,Americas
+TWN,CZE,0,family,Asia-Pacific,Europe
+MYS,MAR,0,family,Asia-Pacific,Africa
+GTM,BHR,0,family,Americas,Middle East
+COD,IDN,0,family,Africa,Asia-Pacific
+ASM,HKG,0,family,Oceania,Asia-Pacific
+RUS,AUS,0,family,Europe,Asia-Pacific
+KEN,IDN,0,family,Africa,Asia-Pacific
+ETH,MEX,0,family,Africa,Americas
+HKG,DNK,0,family,Asia-Pacific,Europe
+MUS,BEL,0,family,Africa,Europe
+STP,ITA,0,family,Africa,Europe
+ZAF,PRT,0,family,Africa,Europe
+JAM,SGP,0,family,Americas,Asia-Pacific
+COM,THA,0,family,Africa,Asia-Pacific
+MDG,GBR,0,family,Africa,Europe
+PNG,PRT,0,family,Asia-Pacific,Europe
+SVN,TUR,0,family,Europe,Europe
+ABW,MAC,0,budget,Americas,Asia-Pacific
+BLZ,CHN,0,budget,Americas,Asia-Pacific
+TJK,BGR,0,budget,Asia-Pacific,Europe
+KEN,BGR,0,budget,Africa,Europe
+BHS,JPN,0,budget,Americas,Asia-Pacific
+GUF,ESP,0,budget,Americas,Europe
+IDN,HRV,0,budget,Asia-Pacific,Europe
+DEU,TUR,0,budget,Europe,Europe
+GUF,DNK,0,budget,Americas,Europe
+COM,HKG,0,budget,Africa,Asia-Pacific
+HND,CHN,0,budget,Americas,Asia-Pacific
+TUN,CAN,0,budget,Middle East,Americas
+IND,POL,0,budget,Asia-Pacific,Europe
+GIN,HUN,0,budget,Africa,Europe
+GTM,MAR,0,budget,Americas,Africa
+JOR,GBR,0,budget,Middle East,Europe
+LTU,THA,0,budget,Europe,Asia-Pacific
+GUF,HRV,0,budget,Americas,Europe
+CUW,SAU,0,budget,Americas,Middle East
+GRD,THA,0,budget,Americas,Asia-Pacific
+ASM,HUN,0,budget,Oceania,Europe
+KNA,SGP,0,budget,Americas,Asia-Pacific
+HRV,TUR,0,budget,Europe,Europe
+BHS,AND,0,budget,Americas,Europe
+JOR,USA,0,budget,Middle East,Americas
+CYM,CAN,0,budget,Americas,Americas
+SLE,FRA,0,budget,Africa,Europe
+TKM,ALB,0,budget,Asia-Pacific,Europe
+TTO,BHS,0,budget,Americas,Americas
+SLE,MAR,0,budget,Africa,Africa
+PNG,ROU,0,budget,Asia-Pacific,Europe
+BRB,ESP,0,budget,Americas,Europe
+KAZ,ESP,0,budget,Asia-Pacific,Europe
+SYR,FRA,0,budget,Middle East,Europe
+GRD,KOR,0,budget,Americas,Asia-Pacific
+TON,SAU,0,budget,Asia-Pacific,Middle East
+ISL,TUR,0,budget,Europe,Europe
+ARG,POL,0,budget,Americas,Europe
+BRA,GBR,0,budget,Americas,Europe
+LSO,DNK,0,budget,Africa,Europe
+NZL,SAU,0,budget,Asia-Pacific,Middle East
+GUM,PRT,0,budget,Asia-Pacific,Europe
+HUN,MAC,0,budget,Europe,Asia-Pacific
+PRT,IND,0,budget,Europe,Asia-Pacific
+BFA,HUN,0,budget,Africa,Europe
+SWZ,IDN,0,budget,Africa,Asia-Pacific
+PRY,MYS,0,budget,Americas,Asia-Pacific
+ASM,HRV,0,budget,Oceania,Europe
+LSO,MAC,0,luxury,Africa,Asia-Pacific
+LAO,ARG,0,luxury,Asia-Pacific,Americas
+GRC,IDN,0,luxury,Europe,Asia-Pacific
+POL,MAR,0,luxury,Europe,Africa
+SGP,FRA,0,luxury,Asia-Pacific,Europe
+NIU,BLR,0,luxury,Oceania,Europe
+OMN,ITA,0,luxury,Middle East,Europe
+BES,ESP,0,luxury,Unknown,Europe
+BGR,ITA,0,luxury,Europe,Europe
+IRN,ROU,0,adventure,Middle East,Europe
+ARM,BHS,0,adventure,Europe,Americas
+PAN,DNK,0,adventure,Americas,Europe
+TUN,USA,0,adventure,Middle East,Americas
+ABW,MYS,0,adventure,Americas,Asia-Pacific
+PRY,EGY,0,adventure,Americas,Middle East
+SLV,JPN,0,adventure,Americas,Asia-Pacific
+REU,MEX,0,adventure,Unknown,Americas
+ARM,PRT,0,adventure,Europe,Europe
+QAT,CHN,0,adventure,Middle East,Asia-Pacific
+ZAF,MYS,0,adventure,Africa,Asia-Pacific
+GRD,UZB,0,family,Americas,Asia-Pacific
+WSM,PRT,0,family,Asia-Pacific,Europe
+ZAF,KOR,0,family,Africa,Asia-Pacific
+JOR,MYS,0,family,Middle East,Asia-Pacific
+BHR,HUN,0,family,Middle East,Europe
+ISR,BHR,0,family,Middle East,Middle East
+HND,BHR,0,family,Americas,Middle East
+JPN,MAC,0,family,Asia-Pacific,Asia-Pacific
+AND,BHR,0,family,Europe,Middle East
+IDN,HUN,0,family,Asia-Pacific,Europe
+SGP,BHS,0,family,Asia-Pacific,Americas
+ERI,CAN,0,family,Africa,Americas
+DMA,MAR,0,family,Americas,Africa
+BLR,GBR,0,family,Europe,Europe
+JOR,HUN,0,family,Middle East,Europe
+SAU,POL,0,family,Middle East,Europe
+KGZ,USA,0,family,Asia-Pacific,Americas
+MNP,JPN,0,family,Asia-Pacific,Asia-Pacific
+BWA,HRV,0,family,Africa,Europe
+AND,PRT,0,family,Europe,Europe
+GUM,DNK,0,family,Asia-Pacific,Europe
+MCO,MEX,0,family,Europe,Americas
+REU,AND,0,family,Unknown,Europe
+ROU,DEU,0,family,Europe,Europe
+BOL,SAU,0,budget,Americas,Middle East
+TON,HKG,0,budget,Asia-Pacific,Asia-Pacific
+SXM,DEU,0,budget,Americas,Europe
+HND,FRA,0,budget,Americas,Europe
+VUT,BHR,0,budget,Asia-Pacific,Middle East
+MTQ,POL,0,budget,Americas,Europe
+CRI,BHR,0,budget,Americas,Middle East
+VEN,MYS,0,budget,Unknown,Asia-Pacific
+PAN,HKG,0,budget,Americas,Asia-Pacific
+GTM,MAC,0,budget,Americas,Asia-Pacific
+IRN,MYS,0,budget,Middle East,Asia-Pacific
+RWA,SAU,0,budget,Africa,Middle East
+HKG,USA,0,budget,Asia-Pacific,Americas
+COD,TUR,0,budget,Africa,Europe
+NGA,IDN,0,budget,Africa,Asia-Pacific
+ROU,BHR,0,budget,Europe,Middle East
+TON,IDN,0,budget,Asia-Pacific,Asia-Pacific
+JAM,KOR,0,budget,Americas,Asia-Pacific
+BES,SAU,0,budget,Unknown,Middle East
+CRI,POL,0,budget,Americas,Europe
+JAM,FRA,0,budget,Americas,Europe
+CAN,ITA,0,budget,Americas,Europe
+BFA,POL,0,budget,Africa,Europe
+MHL,CHN,0,budget,Asia-Pacific,Asia-Pacific
+SLV,HUN,0,budget,Americas,Europe
+REU,GBR,0,budget,Unknown,Europe
+BFA,POL,0,budget,Africa,Europe
+WSM,TWN,0,budget,Asia-Pacific,Asia-Pacific
+ARM,HUN,0,budget,Europe,Europe
+BHR,ZAF,0,budget,Middle East,Africa
+AZE,CHE,0,budget,Europe,Europe
+KNA,UZB,0,budget,Americas,Asia-Pacific
+NGA,MAC,0,budget,Africa,Asia-Pacific
+MDA,FRA,0,budget,Europe,Europe
+NCL,ITA,0,budget,Oceania,Europe
+SLE,GBR,0,budget,Africa,Europe
+IRQ,FRA,0,budget,Middle East,Europe
+TKM,USA,0,budget,Asia-Pacific,Americas
+MCO,JPN,0,budget,Europe,Asia-Pacific
+ISL,MAC,0,budget,Europe,Asia-Pacific
+COG,HRV,0,budget,Africa,Europe
+SAU,CHE,0,budget,Middle East,Europe
+AUS,IDN,0,budget,Asia-Pacific,Asia-Pacific
+BRA,ITA,0,budget,Americas,Europe
+ITA,BHR,0,budget,Europe,Middle East
+BES,HUN,0,budget,Unknown,Europe
+GTM,MAC,0,budget,Americas,Asia-Pacific
+DMA,KOR,0,budget,Americas,Asia-Pacific
+GUM,BRA,0,budget,Asia-Pacific,Americas
+TKM,TUR,0,budget,Asia-Pacific,Europe
+UKR,MAC,0,budget,Europe,Asia-Pacific
+CAN,ZAF,0,budget,Americas,Africa
+THA,HKG,0,budget,Asia-Pacific,Asia-Pacific
+DNK,TUR,0,budget,Europe,Europe
+ZAF,DEU,0,budget,Africa,Europe
+BRA,USA,0,budget,Americas,Americas
+KOR,ESP,0,luxury,Asia-Pacific,Europe
+UKR,SAU,0,luxury,Europe,Middle East
+NIU,GRC,0,luxury,Oceania,Europe
+MKD,JPN,0,luxury,Europe,Asia-Pacific
+BLR,MAC,0,luxury,Europe,Asia-Pacific
+GEO,MAC,0,luxury,Europe,Asia-Pacific
+TCD,FRA,0,luxury,Africa,Europe
+HTI,MYS,0,luxury,Americas,Asia-Pacific
+NAM,ITA,0,luxury,Africa,Europe
+SEN,CZE,0,luxury,Africa,Europe
+GMB,DEU,0,luxury,Africa,Europe
+TCD,PRT,0,luxury,Africa,Europe
+MDG,GBR,0,luxury,Africa,Europe
+VGB,ESP,0,luxury,Americas,Europe
+BMU,POL,0,adventure,Americas,Europe
+ETH,ARE,0,adventure,Africa,Middle East
+TWN,BLR,0,adventure,Asia-Pacific,Europe
+ASM,ESP,0,adventure,Oceania,Europe
+TJK,CAN,0,adventure,Asia-Pacific,Americas
+BES,MEX,0,adventure,Unknown,Americas
+BEN,USA,0,adventure,Africa,Americas
+COG,BLR,0,adventure,Africa,Europe
+BMU,HUN,0,adventure,Americas,Europe
+BFA,MAC,0,adventure,Africa,Asia-Pacific
+ARM,EGY,0,family,Europe,Middle East
+CUW,JPN,0,family,Americas,Asia-Pacific
+JPN,THA,0,family,Asia-Pacific,Asia-Pacific
+MYS,CAN,0,family,Asia-Pacific,Americas
+MTQ,POL,0,family,Americas,Europe
+IRN,FRA,0,family,Middle East,Europe
+THA,GRC,0,family,Asia-Pacific,Europe
+SUR,CHN,0,family,Americas,Asia-Pacific
+ISL,HUN,0,family,Europe,Europe
+EGY,MYS,0,family,Middle East,Asia-Pacific
+IRN,PRT,0,family,Middle East,Europe
+TJK,USA,0,family,Asia-Pacific,Americas
+POL,GBR,0,family,Europe,Europe
+DOM,TUR,0,family,Americas,Europe
+USA,DNK,0,family,Americas,Europe
+RWA,ROU,0,family,Africa,Europe
+HKG,CAN,0,family,Asia-Pacific,Americas
+DZA,MYS,0,family,Africa,Asia-Pacific
+NCL,ITA,0,family,Oceania,Europe
+BRN,HKG,0,family,Asia-Pacific,Asia-Pacific
+KAZ,POL,0,family,Asia-Pacific,Europe
+VEN,TUR,0,family,Unknown,Europe
+LAO,HRV,0,family,Asia-Pacific,Europe
+SUR,JPN,0,family,Americas,Asia-Pacific
+SVN,FRA,0,family,Europe,Europe
+KAZ,TWN,0,family,Asia-Pacific,Asia-Pacific
+GUF,MYS,0,family,Americas,Asia-Pacific
+ECU,PRT,0,family,Americas,Europe
+VCT,IDN,0,family,Americas,Asia-Pacific
+TTO,HRV,0,family,Americas,Europe
+AUS,JPN,0,family,Asia-Pacific,Asia-Pacific
+COM,ESP,0,family,Africa,Europe
+CHE,DEU,0,family,Europe,Europe
+ZAF,COL,0,family,Africa,Americas
+MKD,TUR,0,budget,Europe,Europe
+VCT,MAR,0,budget,Americas,Africa
+GLP,JPN,0,budget,Americas,Asia-Pacific
+MNG,HRV,0,budget,Asia-Pacific,Europe
+TCA,CAN,0,budget,Unknown,Americas
+BHS,HUN,0,budget,Americas,Europe
+KGZ,DEU,0,budget,Asia-Pacific,Europe
+BRN,TUR,0,budget,Asia-Pacific,Europe
+ETH,DEU,0,budget,Africa,Europe
+JOR,MEX,0,budget,Middle East,Americas
+MAC,GRC,0,budget,Asia-Pacific,Europe
+LSO,SGP,0,budget,Africa,Asia-Pacific
+SXM,BGR,0,budget,Americas,Europe
+BIH,HUN,0,budget,Europe,Europe
+CAN,USA,0,budget,Americas,Americas
+BRB,SGP,0,budget,Americas,Asia-Pacific
+ARE,ITA,0,budget,Middle East,Europe
+MAR,SAU,0,budget,Africa,Middle East
+SRB,BHS,0,budget,Europe,Americas
+ISL,THA,0,budget,Europe,Asia-Pacific
+THA,PRT,0,budget,Asia-Pacific,Europe
+SGP,DEU,0,budget,Asia-Pacific,Europe
+VIR,POL,0,budget,Unknown,Europe
+PHL,SAU,0,budget,Asia-Pacific,Middle East
+IRN,ESP,0,budget,Middle East,Europe
+COG,BHS,0,budget,Africa,Americas
+CMR,SGP,0,budget,Africa,Asia-Pacific
+BRN,ITA,0,budget,Asia-Pacific,Europe
+LSO,PRT,0,budget,Africa,Europe
+PRT,CHN,0,budget,Europe,Asia-Pacific
+TTO,HKG,0,budget,Americas,Asia-Pacific
+AND,BHS,0,budget,Europe,Americas
+SWZ,UZB,0,budget,Africa,Asia-Pacific
+VCT,USA,0,budget,Americas,Americas
+NIU,ITA,0,budget,Oceania,Europe
+TZA,HUN,0,budget,Africa,Europe
+GRD,CAN,0,budget,Americas,Americas
+GIN,CHN,0,budget,Africa,Asia-Pacific
+NAM,BHS,0,budget,Africa,Americas
+MAC,FRA,0,budget,Asia-Pacific,Europe
+UKR,THA,0,budget,Europe,Asia-Pacific
+PER,ARG,0,budget,Americas,Americas
+HND,MYS,0,budget,Americas,Asia-Pacific
+HRV,TUR,0,luxury,Europe,Europe
+TJK,ESP,0,luxury,Asia-Pacific,Europe
+CRI,CHN,0,luxury,Americas,Asia-Pacific
+IRQ,ROU,0,luxury,Middle East,Europe
+ATG,HRV,0,luxury,Americas,Europe
+LKA,GBR,0,luxury,Asia-Pacific,Europe
+MSR,PRT,0,luxury,Americas,Europe
+ZWE,PRT,0,luxury,Unknown,Europe
+AUS,HUN,0,luxury,Asia-Pacific,Europe
+IND,CZE,0,luxury,Asia-Pacific,Europe
+HTI,JPN,0,luxury,Americas,Asia-Pacific
+NIC,MYS,0,adventure,Americas,Asia-Pacific
+LKA,IND,0,adventure,Asia-Pacific,Asia-Pacific
+GUF,DNK,0,adventure,Americas,Europe
+VIR,IDN,0,adventure,Unknown,Asia-Pacific
+AIA,BHS,0,adventure,Unknown,Americas
+GAB,UZB,0,adventure,Africa,Asia-Pacific
+CHL,POL,0,adventure,Americas,Europe
+PRI,AND,0,adventure,Unknown,Europe
+MNG,CHN,0,adventure,Asia-Pacific,Asia-Pacific
+MYS,MAC,0,adventure,Asia-Pacific,Asia-Pacific
+KGZ,ESP,0,adventure,Asia-Pacific,Europe
+HRV,ITA,0,adventure,Europe,Europe
+HND,DEU,0,adventure,Americas,Europe
+KGZ,MEX,0,family,Asia-Pacific,Americas
+CYP,JPN,0,family,Europe,Asia-Pacific
+MLT,HRV,0,family,Europe,Europe
+SGP,BHR,0,family,Asia-Pacific,Middle East
+SMR,POL,0,family,Europe,Europe
+GUF,JPN,0,family,Americas,Asia-Pacific
+NIU,GBR,0,family,Oceania,Europe
+BFA,ESP,0,family,Africa,Europe
+VEN,POL,0,family,Unknown,Europe
+VGB,KOR,0,family,Americas,Asia-Pacific
+LAO,USA,0,family,Asia-Pacific,Americas
+MYS,MEX,0,family,Asia-Pacific,Americas
+MCO,CHN,0,family,Europe,Asia-Pacific
+TWN,EGY,0,family,Asia-Pacific,Middle East
+GUF,ESP,0,family,Americas,Europe
+KIR,IDN,0,family,Asia-Pacific,Asia-Pacific
+MDG,SAU,0,family,Africa,Middle East
+SGP,CHN,0,family,Asia-Pacific,Asia-Pacific
+VCT,KAZ,0,family,Americas,Asia-Pacific
+TZA,USA,0,family,Africa,Americas
+BLZ,CHN,0,family,Americas,Asia-Pacific
+BLR,GRC,0,family,Europe,Europe
+COM,FRA,0,family,Africa,Europe
+BEN,MAC,0,family,Africa,Asia-Pacific
+KNA,GRC,0,family,Americas,Europe
+HUN,DNK,0,family,Europe,Europe
+ERI,BEL,0,family,Africa,Europe
+CUB,PRT,0,family,Americas,Europe
+DMA,HUN,0,family,Americas,Europe
+GMB,DOM,0,budget,Africa,Americas
+ETH,DEU,0,budget,Africa,Europe
+LVA,DOM,0,budget,Europe,Americas
+PER,GBR,0,budget,Americas,Europe
+GUF,KOR,0,budget,Americas,Asia-Pacific
+HKG,CZE,0,budget,Asia-Pacific,Europe
+KAZ,ARG,0,budget,Asia-Pacific,Americas
+AND,TUR,0,budget,Europe,Europe
+COM,POL,0,budget,Africa,Europe
+CYP,JPN,0,budget,Europe,Asia-Pacific
+VNM,JPN,0,budget,Unknown,Asia-Pacific
+NIU,FRA,0,budget,Oceania,Europe
+GUM,GBR,0,budget,Asia-Pacific,Europe
+SGP,HUN,0,budget,Asia-Pacific,Europe
+SEN,BHR,0,budget,Africa,Middle East
+JOR,IDN,0,budget,Middle East,Asia-Pacific
+OMN,GBR,0,budget,Middle East,Europe
+MDA,HUN,0,budget,Europe,Europe
+ERI,CAN,0,budget,Africa,Americas
+GUM,HKG,0,budget,Asia-Pacific,Asia-Pacific
+PRI,CAN,0,budget,Unknown,Americas
+MAC,MAC,0,budget,Asia-Pacific,Asia-Pacific
+MMR,TUR,0,budget,Asia-Pacific,Europe
+NZL,DEU,0,budget,Asia-Pacific,Europe
+BIH,HKG,0,budget,Europe,Asia-Pacific
+MCO,PRT,0,budget,Europe,Europe
+IDN,PRT,0,budget,Asia-Pacific,Europe
+NIC,HKG,0,budget,Americas,Asia-Pacific
+CHL,SAU,0,budget,Americas,Middle East
+KAZ,CAN,0,budget,Asia-Pacific,Americas
+MAC,AND,0,budget,Asia-Pacific,Europe
+KEN,MEX,0,budget,Africa,Americas
+USA,SAU,0,budget,Americas,Middle East
+BES,DEU,0,budget,Unknown,Europe
+PRI,DEU,0,budget,Unknown,Europe
+MOZ,GRC,0,budget,Africa,Europe
+CIV,JPN,0,budget,Africa,Asia-Pacific
+GMB,BHR,0,budget,Africa,Middle East
+COL,KOR,0,budget,Americas,Asia-Pacific
+SAU,MAC,0,budget,Middle East,Asia-Pacific
+REU,MEX,0,budget,Unknown,Americas
+DNK,SAU,0,luxury,Europe,Middle East
+ALB,POL,0,luxury,Europe,Europe
+LSO,SAU,0,luxury,Africa,Middle East
+LAO,HUN,0,luxury,Asia-Pacific,Europe
+ARE,PRT,0,luxury,Middle East,Europe
+OMN,COL,0,luxury,Middle East,Americas
+LSO,HUN,0,luxury,Africa,Europe
+CYP,GBR,0,luxury,Europe,Europe
+HKG,JPN,0,luxury,Asia-Pacific,Asia-Pacific
+BES,KOR,0,luxury,Unknown,Asia-Pacific
+SGP,ESP,0,luxury,Asia-Pacific,Europe
+BES,IDN,0,luxury,Unknown,Asia-Pacific
+AND,MEX,0,luxury,Europe,Americas
+SLV,BHS,0,luxury,Americas,Americas
+GLP,TWN,0,adventure,Americas,Asia-Pacific
+ZWE,SAU,0,adventure,Unknown,Middle East
+LKA,MEX,0,adventure,Asia-Pacific,Americas
+JOR,ESP,0,adventure,Middle East,Europe
+LSO,SAU,0,adventure,Africa,Middle East
+ESP,FRA,0,adventure,Europe,Europe
+ALB,SAU,0,adventure,Europe,Middle East
+TKM,CHN,0,adventure,Asia-Pacific,Asia-Pacific
+KIR,ESP,0,adventure,Asia-Pacific,Europe
+BHS,MYS,0,adventure,Americas,Asia-Pacific
+NIC,HUN,0,adventure,Americas,Europe
+PRY,HRV,0,adventure,Americas,Europe
+MLT,MAC,0,family,Europe,Asia-Pacific
+EGY,MYS,0,family,Middle East,Asia-Pacific
+CUW,BLR,0,family,Americas,Europe
+EST,CAN,0,family,Europe,Americas
+GMB,KOR,0,family,Africa,Asia-Pacific
+NIU,DNK,0,family,Oceania,Europe
+GUM,HUN,0,family,Asia-Pacific,Europe
+GTM,JPN,0,family,Americas,Asia-Pacific
+LVA,GBR,0,family,Europe,Europe
+SYC,HRV,0,family,Africa,Europe
+JPN,MAC,0,family,Asia-Pacific,Asia-Pacific
+IDN,POL,0,family,Asia-Pacific,Europe
+LVA,TUR,0,family,Europe,Europe
+PSE,POL,0,family,Asia-Pacific,Europe
+TUN,TUR,0,family,Middle East,Europe
+ARE,MYS,0,family,Middle East,Asia-Pacific
+ZAF,PRT,0,family,Africa,Europe
+HUN,USA,0,family,Europe,Americas
+JPN,HRV,0,family,Asia-Pacific,Europe
+BWA,HUN,0,family,Africa,Europe
+MYS,USA,0,family,Asia-Pacific,Americas
+ARG,GRC,0,family,Americas,Europe
+CUW,HKG,0,family,Americas,Asia-Pacific
+GUF,GBR,0,family,Americas,Europe
+AIA,CAN,0,family,Unknown,Americas
+ALB,CAN,0,family,Europe,Americas
+CZE,CZE,0,budget,Europe,Europe
+NGA,HRV,0,budget,Africa,Europe
+RUS,MAR,0,budget,Europe,Africa
+HTI,ITA,0,budget,Americas,Europe
+HND,CHN,0,budget,Americas,Asia-Pacific
+POL,DNK,0,budget,Europe,Europe
+GMB,ITA,0,budget,Africa,Europe
+FRA,USA,0,budget,Europe,Americas
+SAU,BHR,0,budget,Middle East,Middle East
+PRI,HRV,0,budget,Unknown,Europe
+NGA,ITA,0,budget,Africa,Europe
+VGB,HKG,0,budget,Americas,Asia-Pacific
+ALB,CHN,0,budget,Europe,Asia-Pacific
+MOZ,JPN,0,budget,Africa,Asia-Pacific
+ATG,DEU,0,budget,Americas,Europe
+SVN,CHN,0,budget,Europe,Asia-Pacific
+MAR,KOR,0,budget,Africa,Asia-Pacific
+VCT,SAU,0,budget,Americas,Middle East
+ABW,ESP,0,budget,Americas,Europe
+BES,TUR,0,budget,Unknown,Europe
+TTO,MYS,0,budget,Americas,Asia-Pacific
+MDA,GRC,0,budget,Europe,Europe
+SMR,CHN,0,budget,Europe,Asia-Pacific
+SXM,HRV,0,budget,Americas,Europe
+LTU,SAU,0,budget,Europe,Middle East
+KOR,ITA,0,budget,Asia-Pacific,Europe
+SVN,CAN,0,budget,Europe,Americas
+ERI,JPN,0,luxury,Africa,Asia-Pacific
+CRI,GRC,0,luxury,Americas,Europe
+DOM,ESP,0,luxury,Americas,Europe
+CIV,ROU,0,luxury,Africa,Europe
+BES,SAU,0,luxury,Unknown,Middle East
+ATG,HUN,0,luxury,Americas,Europe
+IND,GRC,0,luxury,Asia-Pacific,Europe
+GAB,POL,0,luxury,Africa,Europe
+ATG,BHS,0,luxury,Americas,Americas
+ZWE,BEL,0,luxury,Unknown,Europe
+VIR,PRT,0,luxury,Unknown,Europe
+CUW,FRA,0,luxury,Americas,Europe
+POL,ESP,0,luxury,Europe,Europe
+POL,MYS,0,luxury,Europe,Asia-Pacific
+KIR,DEU,0,luxury,Asia-Pacific,Europe
+MHL,HUN,0,adventure,Asia-Pacific,Europe
+ARM,GRC,0,adventure,Europe,Europe
+MSR,JPN,0,adventure,Americas,Asia-Pacific
+BES,PRT,0,adventure,Unknown,Europe
+EGY,ITA,0,adventure,Middle East,Europe
+PNG,MEX,0,adventure,Asia-Pacific,Americas
+HTI,USA,0,adventure,Americas,Americas
+BES,JPN,0,adventure,Unknown,Asia-Pacific
+GUF,CAN,0,adventure,Americas,Americas
+SVN,MYS,0,adventure,Europe,Asia-Pacific
+BEN,HKG,0,adventure,Africa,Asia-Pacific
+GBR,JPN,0,adventure,Europe,Asia-Pacific
+LKA,MAC,0,adventure,Asia-Pacific,Asia-Pacific
+BES,MYS,0,adventure,Unknown,Asia-Pacific
+COD,HRV,0,adventure,Africa,Europe
+SGP,MEX,0,family,Asia-Pacific,Americas
+CHE,ITA,0,family,Europe,Europe
+RWA,MYS,0,family,Africa,Asia-Pacific
+LAO,TUR,0,family,Asia-Pacific,Europe
+MHL,AND,0,family,Asia-Pacific,Europe
+NIU,GBR,0,family,Oceania,Europe
+RUS,AND,0,family,Europe,Europe
+MOZ,CAN,0,family,Africa,Americas
+AIA,CAN,0,family,Unknown,Americas
+RWA,FRA,0,family,Africa,Europe
+YEM,PRT,0,family,Unknown,Europe
+WSM,IDN,0,family,Asia-Pacific,Asia-Pacific
+KAZ,DEU,0,family,Asia-Pacific,Europe
+BLZ,BHS,0,family,Americas,Americas
+MMR,MYS,0,budget,Asia-Pacific,Asia-Pacific
+MLT,HRV,0,budget,Europe,Europe
+KOR,KOR,0,budget,Asia-Pacific,Asia-Pacific
+LTU,CAN,0,budget,Europe,Americas
+CIV,JPN,0,budget,Africa,Asia-Pacific
+ATG,FRA,0,budget,Americas,Europe
+BWA,ITA,0,budget,Africa,Europe
+BOL,SAU,0,budget,Americas,Middle East
+TCA,DEU,0,budget,Unknown,Europe
+SVN,GRC,0,budget,Europe,Europe
+MEX,PRT,0,budget,Americas,Europe
+MSR,TUR,0,budget,Americas,Europe
+CHE,MAC,0,budget,Europe,Asia-Pacific
+SUR,TUR,0,budget,Americas,Europe
+POL,TUR,0,budget,Europe,Europe
+PYF,DNK,0,budget,Oceania,Europe
+QAT,MAC,0,budget,Middle East,Asia-Pacific
+URY,IDN,0,budget,Americas,Asia-Pacific
+MMR,DEU,0,budget,Asia-Pacific,Europe
+AZE,JPN,0,budget,Europe,Asia-Pacific
+IRN,HUN,0,budget,Middle East,Europe
+BRN,HUN,0,budget,Asia-Pacific,Europe
+CHL,PRT,0,budget,Americas,Europe
+VIR,JPN,0,budget,Unknown,Asia-Pacific
+ZWE,POL,0,budget,Unknown,Europe
+ETH,MEX,0,budget,Africa,Americas
+KIR,HRV,0,budget,Asia-Pacific,Europe
+AZE,POL,0,budget,Europe,Europe
+MTQ,UZB,0,budget,Americas,Asia-Pacific
+ARG,TUR,0,budget,Americas,Europe
+POL,MAC,0,budget,Europe,Asia-Pacific
+NZL,DEU,0,luxury,Asia-Pacific,Europe
+PYF,TUR,0,luxury,Oceania,Europe
+GUF,CHE,0,luxury,Americas,Europe
+CHE,POL,0,luxury,Europe,Europe
+NCL,TUR,0,luxury,Oceania,Europe
+CZE,DEU,0,luxury,Europe,Europe
+YEM,HKG,0,luxury,Unknown,Asia-Pacific
+VEN,DNK,0,luxury,Unknown,Europe
+BES,GRC,0,luxury,Unknown,Europe
+TCD,MEX,0,adventure,Africa,Americas
+BLR,DNK,0,adventure,Europe,Europe
+BMU,GRC,0,adventure,Americas,Europe
+AIA,BHR,0,adventure,Unknown,Middle East
+BHS,CHN,0,adventure,Americas,Asia-Pacific
+BLZ,KGZ,0,adventure,Americas,Asia-Pacific
+NZL,PRT,0,adventure,Asia-Pacific,Europe
+LVA,HUN,0,adventure,Europe,Europe
+MTQ,HRV,0,adventure,Americas,Europe
+JPN,DEU,0,adventure,Asia-Pacific,Europe
+VGB,KAZ,0,adventure,Americas,Asia-Pacific
+TTO,CHE,0,adventure,Americas,Europe
+CUB,CHN,0,adventure,Americas,Asia-Pacific
+ARE,CHN,0,adventure,Middle East,Asia-Pacific
+BEL,PRT,0,family,Europe,Europe
+JPN,POL,0,family,Asia-Pacific,Europe
+JOR,GBR,0,family,Middle East,Europe
+PNG,MYS,0,family,Asia-Pacific,Asia-Pacific
+ZAF,TUR,0,family,Africa,Europe
+VUT,MAC,0,family,Asia-Pacific,Asia-Pacific
+GRD,ALB,0,family,Americas,Europe
+CAN,ITA,0,family,Americas,Europe
+SLE,CAN,0,family,Africa,Americas
+BGR,ITA,0,family,Europe,Europe
+EST,JPN,0,family,Europe,Asia-Pacific
+MTQ,GRC,0,family,Americas,Europe
+TCA,MAC,0,family,Unknown,Asia-Pacific
+VCT,HRV,0,family,Americas,Europe
+PAN,BHS,0,family,Americas,Americas
+LIE,HKG,0,family,Europe,Asia-Pacific
+MMR,ROU,0,family,Asia-Pacific,Europe
+GUF,USA,0,family,Americas,Americas
+DMA,ITA,0,family,Americas,Europe
+COM,ESP,0,family,Africa,Europe
+BES,MEX,0,budget,Unknown,Americas
+MAC,SAU,0,budget,Asia-Pacific,Middle East
+GRC,POL,0,budget,Europe,Europe
+GEO,USA,0,budget,Europe,Americas
+ITA,HRV,0,budget,Europe,Europe
+LSO,TUR,0,budget,Africa,Europe
+CUB,ARE,0,budget,Americas,Middle East
+OMN,CAN,0,budget,Middle East,Americas
+CAN,HRV,0,budget,Americas,Europe
+BMU,FRA,0,budget,Americas,Europe
+MDA,CAN,0,budget,Europe,Americas
+CHN,JPN,0,budget,Asia-Pacific,Asia-Pacific
+MLT,HUN,0,budget,Europe,Europe
+TUN,CAN,0,budget,Middle East,Americas
+GAB,ESP,0,budget,Africa,Europe
+EGY,MAC,0,budget,Middle East,Asia-Pacific
+STP,GBR,0,budget,Africa,Europe
+DNK,DNK,0,budget,Europe,Europe
+GLP,SAU,0,budget,Americas,Middle East
+PER,PRT,0,budget,Americas,Europe
+BRA,CHE,0,budget,Americas,Europe
+LKA,CHE,0,budget,Asia-Pacific,Europe
+MNG,DEU,0,budget,Asia-Pacific,Europe
+SWZ,GBR,0,budget,Africa,Europe
+ROU,ESP,0,budget,Europe,Europe
+CHE,HUN,0,budget,Europe,Europe
+MLT,GBR,0,budget,Europe,Europe
+PHL,SAU,0,budget,Asia-Pacific,Middle East
+ROU,FRA,0,budget,Europe,Europe
+AND,HKG,0,budget,Europe,Asia-Pacific
+NIU,CAN,0,budget,Oceania,Americas
+KNA,DNK,0,budget,Americas,Europe
+KEN,SAU,0,budget,Africa,Middle East
+CZE,DEU,0,budget,Europe,Europe
+MCO,GRC,0,budget,Europe,Europe
+LAO,HRV,0,luxury,Asia-Pacific,Europe
+ZAF,JPN,0,luxury,Africa,Asia-Pacific
+LIE,FRA,0,luxury,Europe,Europe
+BHR,ITA,0,luxury,Middle East,Europe
+CUW,DEU,0,luxury,Americas,Europe
+HRV,DEU,0,luxury,Europe,Europe
+BRA,ESP,0,luxury,Americas,Europe
+VGB,USA,0,luxury,Americas,Americas
+ABW,FRA,0,luxury,Americas,Europe
+POL,FRA,0,luxury,Europe,Europe
+JOR,FRA,0,adventure,Middle East,Europe
+BHS,ALB,0,adventure,Americas,Europe
+MCO,PRT,0,adventure,Europe,Europe
+PAN,DEU,0,adventure,Americas,Europe
+DZA,POL,0,adventure,Africa,Europe
+CAN,DEU,0,adventure,Americas,Europe
+ROU,GRC,0,adventure,Europe,Europe
+LSO,DEU,0,adventure,Africa,Europe
+ERI,MEX,0,adventure,Africa,Americas
+BES,TUR,0,adventure,Unknown,Europe
+TCD,MYS,0,adventure,Africa,Asia-Pacific
+CAN,GRC,0,adventure,Americas,Europe
+CUW,HUN,0,family,Americas,Europe
+BRB,BRA,0,family,Americas,Americas
+HTI,MYS,0,family,Americas,Asia-Pacific
+EGY,CHN,0,family,Middle East,Asia-Pacific
+SVN,BHR,0,family,Europe,Middle East
+RUS,IDN,0,family,Europe,Asia-Pacific
+SYC,HKG,0,family,Africa,Asia-Pacific
+SYR,BHS,0,family,Middle East,Americas
+ALB,MEX,0,family,Europe,Americas
+ATG,HUN,0,family,Americas,Europe
+MDA,DNK,0,family,Europe,Europe
+NCL,MEX,0,family,Oceania,Americas
+AND,DEU,0,family,Europe,Europe
+IDN,ITA,0,family,Asia-Pacific,Europe
+SYC,USA,0,family,Africa,Americas
+COM,SAU,0,family,Africa,Middle East
+JOR,DNK,0,family,Middle East,Europe
+MMR,POL,0,family,Asia-Pacific,Europe
+SYR,ITA,0,family,Middle East,Europe
+ARM,TUR,0,family,Europe,Europe
+HTI,POL,0,family,Americas,Europe
+LVA,HUN,0,family,Europe,Europe
+HKG,HUN,0,family,Asia-Pacific,Europe
+MLT,ESP,0,family,Europe,Europe
+PNG,CHN,0,family,Asia-Pacific,Asia-Pacific
+BGR,USA,0,budget,Europe,Americas
+MCO,JPN,0,budget,Europe,Asia-Pacific
+KAZ,CHN,0,budget,Asia-Pacific,Asia-Pacific
+LVA,USA,0,budget,Europe,Americas
+COD,HUN,0,budget,Africa,Europe
+PHL,GRC,0,budget,Asia-Pacific,Europe
+SUR,KOR,0,budget,Americas,Asia-Pacific
+SRB,FRA,0,budget,Europe,Europe
+TUR,MEX,0,budget,Europe,Americas
+VGB,MEX,0,budget,Americas,Americas
+BFA,EGY,0,budget,Africa,Middle East
+ARM,PRT,0,budget,Europe,Europe
+SLE,HRV,0,budget,Africa,Europe
+BLZ,GRC,0,budget,Americas,Europe
+NZL,IND,0,budget,Asia-Pacific,Asia-Pacific
+HRV,MEX,0,budget,Europe,Americas
+OMN,HRV,0,budget,Middle East,Europe
+ISL,HRV,0,budget,Europe,Europe
+KGZ,ESP,0,budget,Asia-Pacific,Europe
+FIN,CHN,0,budget,Europe,Asia-Pacific
+BWA,SAU,0,budget,Africa,Middle East
+LBY,GBR,0,budget,Middle East,Europe
+AND,MAC,0,budget,Europe,Asia-Pacific
+LBY,CHN,0,budget,Middle East,Asia-Pacific
+VNM,PRT,0,luxury,Unknown,Europe
+RUS,IDN,0,luxury,Europe,Asia-Pacific
+ECU,BGR,0,luxury,Americas,Europe
+JOR,TUR,0,luxury,Middle East,Europe
+HKG,SAU,0,luxury,Asia-Pacific,Middle East
+NIU,PRT,0,luxury,Oceania,Europe
+ECU,PRT,0,luxury,Americas,Europe
+JOR,TWN,0,luxury,Middle East,Asia-Pacific
+MYS,MAC,0,luxury,Asia-Pacific,Asia-Pacific
+LSO,POL,0,luxury,Africa,Europe
+MDA,CAN,0,luxury,Europe,Americas
+DEU,JPN,0,luxury,Europe,Asia-Pacific
+ERI,MAR,0,luxury,Africa,Africa
+ROU,FRA,0,luxury,Europe,Europe
+TTO,DEU,0,luxury,Americas,Europe
+CRI,UZB,0,adventure,Americas,Asia-Pacific
+URY,GBR,0,adventure,Americas,Europe
+GRD,SGP,0,adventure,Americas,Asia-Pacific
+DZA,HUN,0,adventure,Africa,Europe
+UKR,POL,0,adventure,Europe,Europe
+BOL,USA,0,adventure,Americas,Americas
+RWA,JPN,0,adventure,Africa,Asia-Pacific
+POL,POL,0,adventure,Europe,Europe
+CRI,USA,0,adventure,Americas,Americas
+ERI,MEX,0,adventure,Africa,Americas
+NAM,JPN,0,adventure,Africa,Asia-Pacific
+CRI,DNK,0,adventure,Americas,Europe
+DNK,CAN,0,adventure,Europe,Americas
+MAC,HUN,0,adventure,Asia-Pacific,Europe
+IRQ,MAC,0,adventure,Middle East,Asia-Pacific
+GTM,CHN,0,adventure,Americas,Asia-Pacific
+GTM,KOR,0,family,Americas,Asia-Pacific
+SEN,GRC,0,family,Africa,Europe
+MDA,DNK,0,family,Europe,Europe
+SAU,POL,0,family,Middle East,Europe
+CHN,GBR,0,family,Asia-Pacific,Europe
+VCT,GBR,0,family,Americas,Europe
+VCT,MYS,0,family,Americas,Asia-Pacific
+CYM,POL,0,family,Americas,Europe
+BIH,DEU,0,family,Europe,Europe
+BES,FRA,0,family,Unknown,Europe
+QAT,SAU,0,family,Middle East,Middle East
+VUT,CHN,0,family,Asia-Pacific,Asia-Pacific
+VIR,CHN,0,family,Unknown,Asia-Pacific
+JPN,USA,0,family,Asia-Pacific,Americas
+RUS,HRV,0,family,Europe,Europe
+DNK,SAU,0,family,Europe,Middle East
+GEO,CAN,0,family,Europe,Americas
+PRY,IND,0,family,Americas,Asia-Pacific
+MAC,HRV,0,family,Asia-Pacific,Europe
+BIH,CHN,0,family,Europe,Asia-Pacific
+MUS,ITA,0,family,Africa,Europe
+LBY,IDN,0,family,Middle East,Asia-Pacific
+HRV,SAU,0,family,Europe,Middle East
+WSM,FRA,0,family,Asia-Pacific,Europe
+ROU,USA,0,family,Europe,Americas
+COG,MYS,0,family,Africa,Asia-Pacific
+VCT,TUR,0,family,Americas,Europe
+TTO,MEX,0,family,Americas,Americas
+GAB,MEX,0,family,Africa,Americas
+LVA,GRC,0,family,Europe,Europe
+ITA,ESP,0,budget,Europe,Europe
+SAU,SAU,0,budget,Middle East,Middle East
+BRN,ESP,0,budget,Asia-Pacific,Europe
+EGY,ESP,0,budget,Middle East,Europe
+ZWE,FRA,0,budget,Unknown,Europe
+PER,MEX,0,budget,Americas,Americas
+HKG,HUN,0,budget,Asia-Pacific,Europe
+PRI,HKG,0,budget,Unknown,Asia-Pacific
+VIR,HUN,0,budget,Unknown,Europe
+HTI,ESP,0,budget,Americas,Europe
+BLZ,SAU,0,budget,Americas,Middle East
+COD,JPN,0,budget,Africa,Asia-Pacific
+IRQ,GBR,0,budget,Middle East,Europe
+IRN,ESP,0,budget,Middle East,Europe
+TWN,TUR,0,budget,Asia-Pacific,Europe
+WSM,THA,0,budget,Asia-Pacific,Asia-Pacific
+PAN,HKG,0,budget,Americas,Asia-Pacific
+ZAF,CHN,0,budget,Africa,Asia-Pacific
+HKG,SAU,0,budget,Asia-Pacific,Middle East
+SUR,GRC,0,budget,Americas,Europe
+ZWE,ESP,0,budget,Unknown,Europe
+SEN,HKG,0,budget,Africa,Asia-Pacific
+OMN,FRA,0,budget,Middle East,Europe
+GBR,PRT,0,budget,Europe,Europe
+CZE,DEU,0,budget,Europe,Europe
+MTQ,THA,0,budget,Americas,Asia-Pacific
+HKG,PRT,0,budget,Asia-Pacific,Europe
+CHL,FRA,0,luxury,Americas,Europe
+SUR,HKG,0,luxury,Americas,Asia-Pacific
+IRQ,JPN,0,luxury,Middle East,Asia-Pacific
+IRQ,KAZ,0,luxury,Middle East,Asia-Pacific
+NIU,GRC,0,luxury,Oceania,Europe
+BLZ,HKG,0,luxury,Americas,Asia-Pacific
+GBR,MAC,0,luxury,Europe,Asia-Pacific
+VGB,BEL,0,luxury,Americas,Europe
+CHL,FRA,0,luxury,Americas,Europe
+COL,MAC,0,luxury,Americas,Asia-Pacific
+MNG,CHN,0,luxury,Asia-Pacific,Asia-Pacific
+NAM,MEX,0,luxury,Africa,Americas
+SRB,MEX,0,luxury,Europe,Americas
+COD,TUR,0,luxury,Africa,Europe
+LIE,HKG,0,adventure,Europe,Asia-Pacific
+AZE,ESP,0,adventure,Europe,Europe
+BWA,POL,0,adventure,Africa,Europe
+DNK,FRA,0,adventure,Europe,Europe
+NGA,ITA,0,adventure,Africa,Europe
+STP,ESP,0,adventure,Africa,Europe
+BEN,GRC,0,family,Africa,Europe
+ISL,JPN,0,family,Europe,Asia-Pacific
+SLV,GRC,0,family,Americas,Europe
+BRN,JPN,0,family,Asia-Pacific,Asia-Pacific
+BMU,GBR,0,family,Americas,Europe
+ARM,UZB,0,family,Europe,Asia-Pacific
+GUM,CAN,0,family,Asia-Pacific,Americas
+GMB,MAC,0,family,Africa,Asia-Pacific
+MAR,TUR,0,family,Africa,Europe
+CHE,GBR,0,family,Europe,Europe
+LTU,ESP,0,family,Europe,Europe
+ESP,ITA,0,family,Europe,Europe
+NAM,DNK,0,family,Africa,Europe
+BMU,FRA,0,family,Americas,Europe
+OMN,GBR,0,family,Middle East,Europe
+NAM,IND,0,budget,Africa,Asia-Pacific
+ETH,GBR,0,budget,Africa,Europe
+BGR,FRA,0,budget,Europe,Europe
+CZE,EGY,0,budget,Europe,Middle East
+REU,BHR,0,budget,Unknown,Middle East
+CHL,MAR,0,budget,Americas,Africa
+HUN,PRT,0,budget,Europe,Europe
+GRC,ITA,0,budget,Europe,Europe
+ZWE,CAN,0,budget,Unknown,Americas
+TZA,HUN,0,budget,Africa,Europe
+KAZ,HRV,0,budget,Asia-Pacific,Europe
+LSO,FRA,0,budget,Africa,Europe
+HND,ARE,0,budget,Americas,Middle East
+MDA,TUR,0,budget,Europe,Europe
+PAN,MEX,0,budget,Americas,Americas
+BRB,ARG,0,budget,Americas,Americas
+ZAF,SAU,0,budget,Africa,Middle East
+ESP,ESP,0,budget,Europe,Europe
+BIH,ITA,0,budget,Europe,Europe
+HKG,POL,0,budget,Asia-Pacific,Europe
+SUR,DEU,0,budget,Americas,Europe
+THA,ROU,0,luxury,Asia-Pacific,Europe
+CMR,MAC,0,luxury,Africa,Asia-Pacific
+BLR,MEX,0,luxury,Europe,Americas
+HKG,HUN,0,luxury,Asia-Pacific,Europe
+GBR,UZB,0,luxury,Europe,Asia-Pacific
+IND,USA,0,luxury,Asia-Pacific,Americas
+HND,GRC,0,luxury,Americas,Europe
+CYP,SAU,0,luxury,Europe,Middle East
+TJK,SGP,0,adventure,Asia-Pacific,Asia-Pacific
+MKD,PRT,0,adventure,Europe,Europe
+TUR,DNK,0,adventure,Europe,Europe
+FIN,DOM,0,adventure,Europe,Americas
+ATG,USA,0,adventure,Americas,Americas
+GRD,MEX,0,adventure,Americas,Americas
+ATG,ITA,0,adventure,Americas,Europe
+ISL,GRC,0,adventure,Europe,Europe
+MUS,DNK,0,adventure,Africa,Europe
+LIE,HUN,0,adventure,Europe,Europe
+TCD,GRC,0,adventure,Africa,Europe
+GIN,POL,0,adventure,Africa,Europe
+LTU,PRT,0,adventure,Europe,Europe
+EGY,DEU,0,family,Middle East,Europe
+LCA,EGY,0,family,Americas,Middle East
+MHL,JPN,0,family,Asia-Pacific,Asia-Pacific
+BHR,GBR,0,family,Middle East,Europe
+CZE,MEX,0,family,Europe,Americas
+DEU,CAN,0,family,Europe,Americas
+MKD,JPN,0,family,Europe,Asia-Pacific
+BES,ITA,0,family,Unknown,Europe
+VNM,GRC,0,family,Unknown,Europe
+GBR,JPN,0,family,Europe,Asia-Pacific
+PRI,DEU,0,family,Unknown,Europe
+ALB,HUN,0,budget,Europe,Europe
+LBY,HRV,0,budget,Middle East,Europe
+QAT,DNK,0,budget,Middle East,Europe
+YEM,POL,0,budget,Unknown,Europe
+ECU,AUS,0,budget,Americas,Asia-Pacific
+MOZ,GRC,0,budget,Africa,Europe
+HND,COL,0,budget,Americas,Americas
+BLZ,DNK,0,budget,Americas,Europe
+NIU,POL,0,budget,Oceania,Europe
+BLZ,MAC,0,budget,Americas,Asia-Pacific
+MSR,POL,0,budget,Americas,Europe
+BMU,POL,0,budget,Americas,Europe
+SXM,DEU,0,budget,Americas,Europe
+BGR,USA,0,budget,Europe,Americas
+VUT,CHN,0,budget,Asia-Pacific,Asia-Pacific
+SGP,GRC,0,budget,Asia-Pacific,Europe
+GRC,DEU,0,budget,Europe,Europe
+UKR,CHN,0,budget,Europe,Asia-Pacific
+SYC,GRC,0,budget,Africa,Europe
+GTM,CAN,0,budget,Americas,Americas
+TCA,UZB,0,budget,Unknown,Asia-Pacific
+SEN,MAC,0,budget,Africa,Asia-Pacific
+IRQ,CHN,0,budget,Middle East,Asia-Pacific
+ITA,MAC,0,budget,Europe,Asia-Pacific
+LKA,POL,0,budget,Asia-Pacific,Europe
+SXM,FRA,0,budget,Americas,Europe
+UZB,JPN,0,budget,Asia-Pacific,Asia-Pacific
+NZL,GBR,0,budget,Asia-Pacific,Europe
+PAN,BGR,0,budget,Americas,Europe
+ASM,ESP,0,budget,Oceania,Europe
+MDA,BHS,0,budget,Europe,Americas
+CYM,TUR,0,budget,Americas,Europe
+MKD,HRV,0,budget,Europe,Europe
+DNK,PRT,0,budget,Europe,Europe
+COG,MEX,0,luxury,Africa,Americas
+SXM,AND,0,luxury,Americas,Europe
+ARE,HUN,0,luxury,Middle East,Europe
+MEX,MEX,0,luxury,Americas,Americas
+JAM,GRC,0,luxury,Americas,Europe
+HTI,IND,0,luxury,Americas,Asia-Pacific
+ECU,USA,0,luxury,Americas,Americas
+MEX,USA,0,luxury,Americas,Americas
+CYM,SGP,0,luxury,Americas,Asia-Pacific
+MKD,POL,0,luxury,Europe,Europe
+HTI,CHN,0,luxury,Americas,Asia-Pacific
+TCD,ARE,0,luxury,Africa,Middle East
+TCA,HUN,0,luxury,Unknown,Europe
+CUW,MEX,0,adventure,Americas,Americas
+PNG,MEX,0,adventure,Asia-Pacific,Americas
+BRN,ITA,0,adventure,Asia-Pacific,Europe
+BHS,HKG,0,adventure,Americas,Asia-Pacific
+TJK,KOR,0,adventure,Asia-Pacific,Asia-Pacific
+SMR,HRV,0,adventure,Europe,Europe
+DOM,DEU,0,adventure,Americas,Europe
+OMN,DNK,0,adventure,Middle East,Europe
+IRN,MAC,0,adventure,Middle East,Asia-Pacific
+ARM,SAU,0,adventure,Europe,Middle East
+CYP,MEX,0,family,Europe,Americas
+BRB,BGR,0,family,Americas,Europe
+TCA,HRV,0,family,Unknown,Europe
+MKD,HKG,0,family,Europe,Asia-Pacific
+GBR,HRV,0,family,Europe,Europe
+BLR,JPN,0,family,Europe,Asia-Pacific
+BRB,JPN,0,family,Americas,Asia-Pacific
+URY,DEU,0,family,Americas,Europe
+HUN,DEU,0,family,Europe,Europe
+ERI,GBR,0,family,Africa,Europe
+WSM,GRC,0,family,Asia-Pacific,Europe
+GAB,POL,0,family,Africa,Europe
+WSM,GBR,0,family,Asia-Pacific,Europe
+UZB,DOM,0,family,Asia-Pacific,Americas
+KOR,CHN,0,family,Asia-Pacific,Asia-Pacific
+CZE,HRV,0,family,Europe,Europe
+FIN,MAC,0,family,Europe,Asia-Pacific
+RWA,HUN,0,budget,Africa,Europe
+GIN,MAC,0,budget,Africa,Asia-Pacific
+BEN,DNK,0,budget,Africa,Europe
+BLZ,POL,0,budget,Americas,Europe
+BOL,JPN,0,budget,Americas,Asia-Pacific
+GMB,POL,0,budget,Africa,Europe
+HRV,MAC,0,budget,Europe,Asia-Pacific
+LSO,MAC,0,budget,Africa,Asia-Pacific
+SYC,POL,0,budget,Africa,Europe
+HRV,HRV,0,budget,Europe,Europe
+TUN,SAU,0,budget,Middle East,Middle East
+GIN,ITA,0,budget,Africa,Europe
+URY,HRV,0,budget,Americas,Europe
+ETH,HKG,0,budget,Africa,Asia-Pacific
+BWA,ITA,0,budget,Africa,Europe
+CRI,USA,0,budget,Americas,Americas
+GIN,HKG,0,budget,Africa,Asia-Pacific
+VIR,GBR,0,budget,Unknown,Europe
+MAR,GRC,0,budget,Africa,Europe
+BIH,HKG,0,budget,Europe,Asia-Pacific
+HND,USA,0,budget,Americas,Americas
+YEM,DNK,0,budget,Unknown,Europe
+SYC,GRC,0,budget,Africa,Europe
+CIV,GRC,0,budget,Africa,Europe
+ISL,FRA,0,budget,Europe,Europe
+KOR,DNK,0,budget,Asia-Pacific,Europe
+CIV,GRC,0,budget,Africa,Europe
+CUW,DNK,0,budget,Americas,Europe
+GUM,DNK,0,budget,Asia-Pacific,Europe
+PRT,DNK,0,budget,Europe,Europe
+GMB,GRC,0,budget,Africa,Europe
+BES,DNK,0,budget,Unknown,Europe
+CMR,HKG,0,budget,Africa,Asia-Pacific
+TCD,KOR,0,luxury,Africa,Asia-Pacific
+JOR,HRV,0,luxury,Middle East,Europe
+ZWE,MEX,0,luxury,Unknown,Americas
+ETH,POL,0,luxury,Africa,Europe
+GIN,JPN,0,luxury,Africa,Asia-Pacific
+EGY,DEU,0,luxury,Middle East,Europe
+VIR,GRC,0,luxury,Unknown,Europe
+HND,FRA,0,luxury,Americas,Europe
+PHL,PRT,0,luxury,Asia-Pacific,Europe
+RUS,FRA,0,adventure,Europe,Europe
+HND,HUN,0,adventure,Americas,Europe
+CIV,ZAF,0,adventure,Africa,Africa
+BGR,HUN,0,adventure,Europe,Europe
+POL,PRT,0,adventure,Europe,Europe
+BHS,SAU,0,adventure,Americas,Middle East
+NIU,HUN,0,adventure,Oceania,Europe
+STP,FRA,0,adventure,Africa,Europe
+PRY,DEU,0,adventure,Americas,Europe
+TUR,SAU,0,adventure,Europe,Middle East
+GTM,ITA,0,adventure,Americas,Europe
+GEO,HRV,0,adventure,Europe,Europe
+COG,HUN,0,adventure,Africa,Europe
+MDG,AUS,0,family,Africa,Asia-Pacific
+POL,TUR,0,family,Europe,Europe
+BRB,ITA,0,family,Americas,Europe
+VUT,DNK,0,family,Asia-Pacific,Europe
+FRA,FRA,0,family,Europe,Europe
+BGR,MEX,0,family,Europe,Americas
+CYP,HRV,0,family,Europe,Europe
+SMR,HRV,0,family,Europe,Europe
+SUR,HRV,0,family,Americas,Europe
+CHL,DEU,0,family,Americas,Europe
+MDG,GBR,0,family,Africa,Europe
+REU,CHN,0,family,Unknown,Asia-Pacific
+DEU,HUN,0,family,Europe,Europe
+PNG,JPN,0,family,Asia-Pacific,Asia-Pacific
+URY,TUR,0,budget,Americas,Europe
+ITA,MEX,0,budget,Europe,Americas
+VIR,SAU,0,budget,Unknown,Middle East
+LSO,ITA,0,budget,Africa,Europe
+UZB,DNK,0,budget,Asia-Pacific,Europe
+LAO,USA,0,budget,Asia-Pacific,Americas
+MTQ,MEX,0,budget,Americas,Americas
+BIH,GRC,0,budget,Europe,Europe
+LAO,HKG,0,budget,Asia-Pacific,Asia-Pacific
+KEN,IND,0,budget,Africa,Asia-Pacific
+HND,POL,0,budget,Americas,Europe
+IDN,ESP,0,budget,Asia-Pacific,Europe
+MDG,GRC,0,budget,Africa,Europe
+LAO,DNK,0,budget,Asia-Pacific,Europe
+TCA,HUN,0,budget,Unknown,Europe
+GBR,CZE,0,budget,Europe,Europe
+QAT,MEX,0,budget,Middle East,Americas
+DMA,ESP,0,budget,Americas,Europe
+SYR,MEX,0,budget,Middle East,Americas
+CRI,FRA,0,budget,Americas,Europe
+SXM,HRV,0,budget,Americas,Europe
+NGA,HUN,0,budget,Africa,Europe
+TCA,GBR,0,budget,Unknown,Europe
+DNK,FRA,0,budget,Europe,Europe
+COD,DNK,0,luxury,Africa,Europe
+THA,FRA,0,luxury,Asia-Pacific,Europe
+MDA,DEU,0,luxury,Europe,Europe
+PSE,BEL,0,luxury,Asia-Pacific,Europe
+CHL,COL,0,luxury,Americas,Americas
+FJI,HRV,0,luxury,Asia-Pacific,Europe
+CHL,HKG,0,luxury,Americas,Asia-Pacific
+TCD,GRC,0,luxury,Africa,Europe
+CHN,USA,0,luxury,Asia-Pacific,Americas
+ZWE,EGY,0,luxury,Unknown,Middle East
+LIE,USA,0,luxury,Europe,Americas
+SVN,GBR,0,luxury,Europe,Europe
+TTO,ITA,0,luxury,Americas,Europe
+MTQ,HUN,0,luxury,Americas,Europe
+LCA,ARE,0,luxury,Americas,Middle East
+YEM,GRC,0,luxury,Unknown,Europe
+BWA,TUR,0,adventure,Africa,Europe
+BLR,ITA,0,adventure,Europe,Europe
+NCL,ESP,0,adventure,Oceania,Europe
+FRA,DOM,0,adventure,Europe,Americas
+ISR,FRA,0,adventure,Middle East,Europe
+ASM,HUN,0,adventure,Oceania,Europe
+MDA,USA,0,adventure,Europe,Americas
+BOL,HKG,0,adventure,Americas,Asia-Pacific
+VGB,GRC,0,family,Americas,Europe
+SGP,MAC,0,family,Asia-Pacific,Asia-Pacific
+COL,DNK,0,family,Americas,Europe
+MNG,MEX,0,family,Asia-Pacific,Americas
+MNG,FRA,0,family,Asia-Pacific,Europe
+TJK,TUR,0,family,Asia-Pacific,Europe
+VCT,ESP,0,family,Americas,Europe
+IND,SAU,0,family,Asia-Pacific,Middle East
+VNM,DNK,0,family,Unknown,Europe
+SAU,GBR,0,family,Middle East,Europe
+CRI,DOM,0,family,Americas,Americas
+BEN,MEX,0,family,Africa,Americas
+BOL,CHN,0,family,Americas,Asia-Pacific
+ABW,ESP,0,family,Americas,Europe
+ARE,HUN,0,family,Middle East,Europe
+STP,HKG,0,family,Africa,Asia-Pacific
+BLZ,HRV,0,family,Americas,Europe
+CIV,DEU,0,family,Africa,Europe
+LKA,USA,0,family,Asia-Pacific,Americas
+GLP,DEU,0,budget,Americas,Europe
+GBR,ESP,0,budget,Europe,Europe
+BES,TUR,0,budget,Unknown,Europe
+BEL,MAC,0,budget,Europe,Asia-Pacific
+SYR,CAN,0,budget,Middle East,Americas
+LVA,DEU,0,budget,Europe,Europe
+ARE,USA,0,budget,Middle East,Americas
+GEO,DOM,0,budget,Europe,Americas
+AIA,GRC,0,budget,Unknown,Europe
+BES,ESP,0,budget,Unknown,Europe
+MAR,ESP,0,budget,Africa,Europe
+ERI,DNK,0,budget,Africa,Europe
+MYS,CAN,0,budget,Asia-Pacific,Americas
+GEO,GRC,0,budget,Europe,Europe
+MNG,GBR,0,budget,Asia-Pacific,Europe
+QAT,KGZ,0,budget,Middle East,Asia-Pacific
+SWZ,KOR,0,budget,Africa,Asia-Pacific
+TWN,GBR,0,budget,Asia-Pacific,Europe
+SGP,ITA,0,budget,Asia-Pacific,Europe
+MAC,HKG,0,budget,Asia-Pacific,Asia-Pacific
+VNM,ITA,0,budget,Unknown,Europe
+COL,HRV,0,budget,Americas,Europe
+COL,USA,0,luxury,Americas,Americas
+GLP,FRA,0,luxury,Americas,Europe
+BRA,JPN,0,luxury,Americas,Asia-Pacific
+PNG,MAC,0,luxury,Asia-Pacific,Asia-Pacific
+ABW,USA,0,luxury,Americas,Americas
+UZB,CAN,0,luxury,Asia-Pacific,Americas
+ISR,DEU,0,luxury,Middle East,Europe
+BES,GRC,0,luxury,Unknown,Europe
+CUB,POL,0,luxury,Americas,Europe
+HRV,GRC,0,adventure,Europe,Europe
+GLP,ESP,0,adventure,Americas,Europe
+VUT,CHN,0,adventure,Asia-Pacific,Asia-Pacific
+VIR,DNK,0,adventure,Unknown,Europe
+BES,POL,0,adventure,Unknown,Europe
+LVA,MEX,0,adventure,Europe,Americas
+SWZ,MEX,0,adventure,Africa,Americas
+HTI,JPN,0,adventure,Americas,Asia-Pacific
+ASM,ESP,0,adventure,Oceania,Europe
+COG,DEU,0,adventure,Africa,Europe
+BRN,DEU,0,adventure,Asia-Pacific,Europe
+PSE,ITA,0,family,Asia-Pacific,Europe
+VCT,DNK,0,family,Americas,Europe
+HUN,ITA,0,family,Europe,Europe
+BLR,CZE,0,family,Europe,Europe
+BRA,ALB,0,family,Americas,Europe
+BLR,DNK,0,family,Europe,Europe
+NGA,ESP,0,family,Africa,Europe
+MCO,HRV,0,family,Europe,Europe
+RWA,TUR,0,family,Africa,Europe
+COG,DEU,0,family,Africa,Europe
+FRA,ITA,0,family,Europe,Europe
+CRI,FRA,0,family,Americas,Europe
+IDN,KOR,0,budget,Asia-Pacific,Asia-Pacific
+ESP,TUR,0,budget,Europe,Europe
+PER,MAR,0,budget,Americas,Africa
+SEN,MEX,0,budget,Africa,Americas
+FIN,ESP,0,budget,Europe,Europe
+ISR,MEX,0,budget,Middle East,Americas
+KGZ,HUN,0,budget,Asia-Pacific,Europe
+BHR,ARG,0,budget,Middle East,Americas
+ATG,MEX,0,budget,Americas,Americas
+BLR,POL,0,budget,Europe,Europe
+VGB,JPN,0,budget,Americas,Asia-Pacific
+IRN,DEU,0,budget,Middle East,Europe
+COG,GBR,0,budget,Africa,Europe
+OMN,JPN,0,budget,Middle East,Asia-Pacific
+PRT,MAC,0,budget,Europe,Asia-Pacific
+TKM,DNK,0,budget,Asia-Pacific,Europe
+ROU,KAZ,0,budget,Europe,Asia-Pacific
+MNG,GBR,0,budget,Asia-Pacific,Europe
+CUB,MEX,0,budget,Americas,Americas
+CZE,DNK,0,budget,Europe,Europe
+SXM,SAU,0,budget,Americas,Middle East
+IRN,POL,0,budget,Middle East,Europe
+LSO,TUR,0,budget,Africa,Europe
+THA,FRA,0,budget,Asia-Pacific,Europe
+MTQ,TUR,0,budget,Americas,Europe
+SWZ,MAC,0,budget,Africa,Asia-Pacific
+UZB,HKG,0,budget,Asia-Pacific,Asia-Pacific
+AZE,HKG,0,budget,Europe,Asia-Pacific
+AUS,HUN,0,budget,Asia-Pacific,Europe
+LKA,BHR,0,budget,Asia-Pacific,Middle East
+HTI,BRA,0,budget,Americas,Americas
+BES,TUR,0,budget,Unknown,Europe
+TCA,TUR,0,budget,Unknown,Europe
+SEN,IDN,0,budget,Africa,Asia-Pacific
+ASM,TUR,0,budget,Oceania,Europe
+MOZ,JPN,0,budget,Africa,Asia-Pacific
+REU,HKG,0,budget,Unknown,Asia-Pacific
+KAZ,ITA,0,luxury,Asia-Pacific,Europe
+IRN,JPN,0,luxury,Middle East,Asia-Pacific
+HUN,MAC,0,luxury,Europe,Asia-Pacific
+BGR,POL,0,luxury,Europe,Europe
+BEL,FRA,0,adventure,Europe,Europe
+CUW,MAC,0,adventure,Americas,Asia-Pacific
+USA,MEX,0,adventure,Americas,Americas
+COM,BGR,0,adventure,Africa,Europe
+LIE,HRV,0,adventure,Europe,Europe
+VIR,HRV,0,adventure,Unknown,Europe
+LSO,KOR,0,adventure,Africa,Asia-Pacific
+DNK,SAU,0,adventure,Europe,Middle East
+PRY,DOM,0,adventure,Americas,Americas
+CIV,HRV,0,adventure,Africa,Europe
+TCD,ESP,0,family,Africa,Europe
+BHR,SGP,0,family,Middle East,Asia-Pacific
+GIN,MAC,0,family,Africa,Asia-Pacific
+ALB,MEX,0,family,Europe,Americas
+IRQ,GBR,0,family,Middle East,Europe
+AUS,MAC,0,family,Asia-Pacific,Asia-Pacific
+BIH,POL,0,family,Europe,Europe
+SMR,HRV,0,family,Europe,Europe
+KOR,MAC,0,family,Asia-Pacific,Asia-Pacific
+GRC,HUN,0,family,Europe,Europe
+KGZ,MEX,0,family,Asia-Pacific,Americas
+MKD,DOM,0,family,Europe,Americas
+AZE,FRA,0,family,Europe,Europe
+NCL,POL,0,family,Oceania,Europe
+COM,BEL,0,budget,Africa,Europe
+USA,BHR,0,budget,Americas,Middle East
+TWN,DNK,0,budget,Asia-Pacific,Europe
+IRN,USA,0,budget,Middle East,Americas
+FRA,DEU,0,budget,Europe,Europe
+SYR,HRV,0,budget,Middle East,Europe
+ESP,MEX,0,budget,Europe,Americas
+TUR,ESP,0,budget,Europe,Europe
+GUM,CHE,0,budget,Asia-Pacific,Europe
+AZE,GBR,0,budget,Europe,Europe
+BRA,MAC,0,budget,Americas,Asia-Pacific
+CIV,MEX,0,budget,Africa,Americas
+CAN,ARG,0,budget,Americas,Americas
+BLR,USA,0,budget,Europe,Americas
+AND,MEX,0,budget,Europe,Americas
+THA,MYS,0,budget,Asia-Pacific,Asia-Pacific
+SMR,HKG,0,budget,Europe,Asia-Pacific
+MDG,CHN,0,budget,Africa,Asia-Pacific
+IRQ,ITA,0,budget,Middle East,Europe
+EGY,SAU,0,budget,Middle East,Middle East
+CHL,ESP,0,budget,Americas,Europe
+CYM,MAC,0,budget,Americas,Asia-Pacific
+BMU,SAU,0,budget,Americas,Middle East
+MEX,TUR,0,budget,Americas,Europe
+TUN,IDN,0,budget,Middle East,Asia-Pacific
+MTQ,HKG,0,budget,Americas,Asia-Pacific
+BOL,TUR,0,luxury,Americas,Europe
+POL,IDN,0,luxury,Europe,Asia-Pacific
+BES,HRV,0,luxury,Unknown,Europe
+FJI,POL,0,luxury,Asia-Pacific,Europe
+BWA,HRV,0,luxury,Africa,Europe
+WSM,HUN,0,luxury,Asia-Pacific,Europe
+TJK,MAC,0,luxury,Asia-Pacific,Asia-Pacific
+BLZ,ESP,0,luxury,Americas,Europe
+QAT,GBR,0,luxury,Middle East,Europe
+LVA,EGY,0,luxury,Europe,Middle East
+AIA,MAC,0,adventure,Unknown,Asia-Pacific
+NAM,EGY,0,adventure,Africa,Middle East
+MDA,MAC,0,adventure,Europe,Asia-Pacific
+FJI,USA,0,adventure,Asia-Pacific,Americas
+HKG,ESP,0,adventure,Asia-Pacific,Europe
+MLT,BEL,0,family,Europe,Europe
+OMN,TUR,0,family,Middle East,Europe
+IRQ,ITA,0,family,Middle East,Europe
+PRY,ESP,0,family,Americas,Europe
+COG,MEX,0,family,Africa,Americas
+ETH,ROU,0,family,Africa,Europe
+NIU,FRA,0,family,Oceania,Europe
+GUF,HRV,0,family,Americas,Europe
+HRV,JPN,0,family,Europe,Asia-Pacific
+BES,ESP,0,family,Unknown,Europe
+SYC,JPN,0,family,Africa,Asia-Pacific
+TZA,FRA,0,family,Africa,Europe
+BGR,ITA,0,family,Europe,Europe
+COM,IND,0,family,Africa,Asia-Pacific
+VCT,JPN,0,family,Americas,Asia-Pacific
+BES,USA,0,family,Unknown,Americas
+COL,GRC,0,family,Americas,Europe
+SRB,ITA,0,family,Europe,Europe
+DEU,BEL,0,budget,Europe,Europe
+TKM,HRV,0,budget,Asia-Pacific,Europe
+NIU,BHR,0,budget,Oceania,Middle East
+ARE,SAU,0,budget,Middle East,Middle East
+NCL,DNK,0,budget,Oceania,Europe
+DMA,BEL,0,budget,Americas,Europe
+KOR,CHE,0,budget,Asia-Pacific,Europe
+PRY,HUN,0,budget,Americas,Europe
+VIR,ITA,0,budget,Unknown,Europe
+TCA,UZB,0,budget,Unknown,Asia-Pacific
+GLP,USA,0,budget,Americas,Americas
+KEN,MYS,0,budget,Africa,Asia-Pacific
+DZA,ESP,0,budget,Africa,Europe
+SEN,FRA,0,budget,Africa,Europe
+STP,FRA,0,budget,Africa,Europe
+BOL,ALB,0,budget,Americas,Europe
+KGZ,HKG,0,budget,Asia-Pacific,Asia-Pacific
+LCA,TUR,0,budget,Americas,Europe
+TTO,MYS,0,budget,Americas,Asia-Pacific
+KIR,ITA,0,budget,Asia-Pacific,Europe
+VUT,SAU,0,budget,Asia-Pacific,Middle East
+ARG,HRV,0,budget,Americas,Europe
+AZE,FRA,0,budget,Europe,Europe
+ISL,MEX,0,budget,Europe,Americas
+SXM,ESP,0,budget,Americas,Europe
+BES,POL,0,budget,Unknown,Europe
+NCL,USA,0,budget,Oceania,Americas
+BRB,TUR,0,budget,Americas,Europe
+DEU,DNK,0,budget,Europe,Europe
+BLZ,GBR,0,budget,Americas,Europe
+GAB,SAU,0,budget,Africa,Middle East
+KNA,USA,0,budget,Americas,Americas
+TJK,HKG,0,budget,Asia-Pacific,Asia-Pacific
+VEN,FRA,0,budget,Unknown,Europe
+GLP,BEL,0,budget,Americas,Europe
+USA,BEL,0,budget,Americas,Europe
+MSR,MAC,0,budget,Americas,Asia-Pacific
+VUT,SAU,0,budget,Asia-Pacific,Middle East
+ETH,GRC,0,budget,Africa,Europe
+OMN,MAC,0,luxury,Middle East,Asia-Pacific
+BES,TUR,0,luxury,Unknown,Europe
+GAB,TUR,0,luxury,Africa,Europe
+MDA,FRA,0,luxury,Europe,Europe
+LBY,MAC,0,luxury,Middle East,Asia-Pacific
+ISL,HKG,0,luxury,Europe,Asia-Pacific
+DMA,MAC,0,luxury,Americas,Asia-Pacific
+TKM,HRV,0,luxury,Asia-Pacific,Europe
+PRT,GBR,0,luxury,Europe,Europe
+IRQ,FRA,0,luxury,Middle East,Europe
+IRQ,DNK,0,adventure,Middle East,Europe
+CRI,TUR,0,adventure,Americas,Europe
+LVA,HKG,0,adventure,Europe,Asia-Pacific
+USA,BGR,0,adventure,Americas,Europe
+PRT,HKG,0,adventure,Europe,Asia-Pacific
+CHL,FRA,0,adventure,Americas,Europe
+BRB,HUN,0,adventure,Americas,Europe
+BWA,POL,0,adventure,Africa,Europe
+LKA,GBR,0,family,Asia-Pacific,Europe
+STP,USA,0,family,Africa,Americas
+MSR,ITA,0,family,Americas,Europe
+BGR,GBR,0,family,Europe,Europe
+NIU,MAC,0,family,Oceania,Asia-Pacific
+BRA,DNK,0,family,Americas,Europe
+ISR,TUR,0,family,Middle East,Europe
+KNA,GBR,0,family,Americas,Europe
+SRB,HRV,0,family,Europe,Europe
+AZE,SAU,0,family,Europe,Middle East
+PRI,FRA,0,family,Unknown,Europe
+TUN,DNK,0,family,Middle East,Europe
+IRQ,MAC,0,family,Middle East,Asia-Pacific
+CIV,MYS,0,family,Africa,Asia-Pacific
+SEN,CHE,0,budget,Africa,Europe
+FIN,HKG,0,budget,Europe,Asia-Pacific
+LKA,ITA,0,budget,Asia-Pacific,Europe
+SUR,ESP,0,budget,Americas,Europe
+GUF,ITA,0,budget,Americas,Europe
+ZAF,HRV,0,budget,Africa,Europe
+CYM,BGR,0,budget,Americas,Europe
+ALB,FRA,0,budget,Europe,Europe
+GIN,TUR,0,budget,Africa,Europe
+KEN,DNK,0,budget,Africa,Europe
+BES,FRA,0,budget,Unknown,Europe
+BES,USA,0,budget,Unknown,Americas
+GIN,DEU,0,budget,Africa,Europe
+COG,ITA,0,budget,Africa,Europe
+SLV,CHE,0,budget,Americas,Europe
+MDA,HRV,0,budget,Europe,Europe
+THA,PRI,0,budget,Asia-Pacific,Unknown
+LVA,TWN,0,budget,Europe,Asia-Pacific
+ZWE,SAU,0,budget,Unknown,Middle East
+MDA,ROU,0,budget,Europe,Europe
+FRA,FRA,0,budget,Europe,Europe
+PHL,BHS,0,budget,Asia-Pacific,Americas
+PRI,MEX,0,budget,Unknown,Americas
+PNG,GRC,0,budget,Asia-Pacific,Europe
+SLV,AND,0,budget,Americas,Europe
+IDN,TUR,0,budget,Asia-Pacific,Europe
+GRC,UZB,0,budget,Europe,Asia-Pacific
+ARM,KGZ,0,budget,Europe,Asia-Pacific
+BHS,TWN,0,budget,Americas,Asia-Pacific
+VNM,HUN,0,luxury,Unknown,Europe
+PAN,TUR,0,luxury,Americas,Europe
+ZWE,POL,0,luxury,Unknown,Europe
+CRI,IND,0,luxury,Americas,Asia-Pacific
+PRY,ESP,0,luxury,Americas,Europe
+TUN,POL,0,luxury,Middle East,Europe
+CIV,FRA,0,luxury,Africa,Europe
+GUM,IDN,0,adventure,Asia-Pacific,Asia-Pacific
+CHL,BGR,0,adventure,Americas,Europe
+MAC,GRC,0,adventure,Asia-Pacific,Europe
+EST,DNK,0,adventure,Europe,Europe
+GRC,KGZ,0,adventure,Europe,Asia-Pacific
+USA,KAZ,0,adventure,Americas,Asia-Pacific
+DMA,POL,0,adventure,Americas,Europe
+BES,BHR,0,family,Unknown,Middle East
+AZE,MAC,0,family,Europe,Asia-Pacific
+MEX,JPN,0,family,Americas,Asia-Pacific
+MDA,ESP,0,family,Europe,Europe
+NZL,HRV,0,family,Asia-Pacific,Europe
+BLR,HRV,0,family,Europe,Europe
+PRI,POL,0,family,Unknown,Europe
+THA,HKG,0,family,Asia-Pacific,Asia-Pacific
+TON,SAU,0,family,Asia-Pacific,Middle East
+HKG,SAU,0,family,Asia-Pacific,Middle East
+KOR,BHS,0,family,Asia-Pacific,Americas
+CHE,BEL,0,budget,Europe,Europe
+SMR,TWN,0,budget,Europe,Asia-Pacific
+REU,GBR,0,budget,Unknown,Europe
+AIA,MEX,0,budget,Unknown,Americas
+BFA,SAU,0,budget,Africa,Middle East
+DMA,SAU,0,budget,Americas,Middle East
+GMB,GBR,0,budget,Africa,Europe
+TZA,TUR,0,budget,Africa,Europe
+MEX,MEX,0,budget,Americas,Americas
+PER,TUR,0,budget,Americas,Europe
+LKA,IND,0,budget,Asia-Pacific,Asia-Pacific
+SAU,BRA,0,budget,Middle East,Americas
+TON,AND,0,budget,Asia-Pacific,Europe
+GTM,TUR,0,budget,Americas,Europe
+SLV,HKG,0,budget,Americas,Asia-Pacific
+ZAF,CAN,0,budget,Africa,Americas
+LAO,HRV,0,budget,Asia-Pacific,Europe
+CHE,USA,0,budget,Europe,Americas
+VIR,MYS,0,budget,Unknown,Asia-Pacific
+MAC,KAZ,0,budget,Asia-Pacific,Asia-Pacific
+GTM,COL,0,budget,Americas,Americas
+BES,HRV,0,budget,Unknown,Europe
+NGA,ITA,0,budget,Africa,Europe
+GIN,HRV,0,budget,Africa,Europe
+SGP,USA,0,budget,Asia-Pacific,Americas
+MYS,MAC,0,luxury,Asia-Pacific,Asia-Pacific
+BES,FRA,0,luxury,Unknown,Europe
+MLT,FRA,0,luxury,Europe,Europe
+QAT,SGP,0,luxury,Middle East,Asia-Pacific
+BHS,POL,0,luxury,Americas,Europe
+TZA,DEU,0,luxury,Africa,Europe
+FJI,HUN,0,adventure,Asia-Pacific,Europe
+SMR,KGZ,0,adventure,Europe,Asia-Pacific
+BHS,DEU,0,adventure,Americas,Europe
+TCA,FRA,0,adventure,Unknown,Europe
+FIN,DNK,0,adventure,Europe,Europe
+CHL,POL,0,adventure,Americas,Europe
+BOL,BRA,0,adventure,Americas,Americas
+SMR,HKG,0,adventure,Europe,Asia-Pacific
+TUR,PRT,0,adventure,Europe,Europe
+DMA,BLR,0,family,Americas,Europe
+LIE,SGP,0,family,Europe,Asia-Pacific
+TCA,BHR,0,family,Unknown,Middle East
+MYS,MEX,0,family,Asia-Pacific,Americas
+EST,SAU,0,family,Europe,Middle East
+CMR,MEX,0,family,Africa,Americas
+TCA,USA,0,family,Unknown,Americas
+NIU,HKG,0,family,Oceania,Asia-Pacific
+NGA,DEU,0,family,Africa,Europe
+KEN,THA,0,family,Africa,Asia-Pacific
+DEU,POL,0,family,Europe,Europe
+PYF,HRV,0,family,Oceania,Europe
+MAC,ESP,0,family,Asia-Pacific,Europe
+KGZ,FRA,0,family,Asia-Pacific,Europe
+NIU,HUN,0,family,Oceania,Europe
+CZE,HKG,0,family,Europe,Asia-Pacific
+FIN,MEX,0,family,Europe,Americas
+STP,COL,0,family,Africa,Americas
+MUS,FRA,0,family,Africa,Europe
+UZB,MEX,0,family,Asia-Pacific,Americas
+URY,SAU,0,family,Americas,Middle East
+MAR,HKG,0,family,Africa,Asia-Pacific
+JOR,DNK,0,family,Middle East,Europe
+SAU,FRA,0,family,Middle East,Europe
+KOR,FRA,0,family,Asia-Pacific,Europe
+SGP,MYS,0,family,Asia-Pacific,Asia-Pacific
+IRQ,CAN,0,budget,Middle East,Americas
+UZB,MYS,0,budget,Asia-Pacific,Asia-Pacific
+COM,COL,0,budget,Africa,Americas
+USA,CHE,0,budget,Americas,Europe
+HND,HRV,0,budget,Americas,Europe
+ESP,SAU,0,budget,Europe,Middle East
+CYM,DNK,0,budget,Americas,Europe
+TON,THA,0,budget,Asia-Pacific,Asia-Pacific
+BWA,KGZ,0,budget,Africa,Asia-Pacific
+NGA,ITA,0,budget,Africa,Europe
+COG,GBR,0,budget,Africa,Europe
+ATG,HKG,0,budget,Americas,Asia-Pacific
+ETH,ESP,0,budget,Africa,Europe
+THA,DNK,0,budget,Asia-Pacific,Europe
+CRI,GBR,0,budget,Americas,Europe
+GIN,ARG,0,budget,Africa,Americas
+UZB,HKG,0,budget,Asia-Pacific,Asia-Pacific
+FRA,MAC,0,budget,Europe,Asia-Pacific
+ROU,SAU,0,budget,Europe,Middle East
+BES,EGY,0,budget,Unknown,Middle East
+MDG,AND,0,budget,Africa,Europe
+ESP,ARG,0,luxury,Europe,Americas
+PER,ARG,0,luxury,Americas,Americas
+GAB,BHS,0,luxury,Africa,Americas
+BRB,USA,0,luxury,Americas,Americas
+VIR,HRV,0,luxury,Unknown,Europe
+BRA,BRA,0,luxury,Americas,Americas
+ZAF,MAC,0,luxury,Africa,Asia-Pacific
+BRN,TWN,0,luxury,Asia-Pacific,Asia-Pacific
+MTQ,GBR,0,luxury,Americas,Europe
+BRN,FRA,0,luxury,Asia-Pacific,Europe
+GUF,DNK,0,luxury,Americas,Europe
+HRV,HUN,0,adventure,Europe,Europe
+LVA,MAC,0,adventure,Europe,Asia-Pacific
+ASM,ITA,0,adventure,Oceania,Europe
+VNM,EGY,0,adventure,Unknown,Middle East
+LBY,TUR,0,adventure,Middle East,Europe
+RWA,TUR,0,adventure,Africa,Europe
+FJI,ARE,0,adventure,Asia-Pacific,Middle East
+NIU,MEX,0,adventure,Oceania,Americas
+SVN,PRI,0,adventure,Europe,Unknown
+UZB,DNK,0,family,Asia-Pacific,Europe
+CMR,SAU,0,family,Africa,Middle East
+JAM,DNK,0,family,Americas,Europe
+SWZ,TUR,0,family,Africa,Europe
+SLE,DEU,0,family,Africa,Europe
+CAN,USA,0,family,Americas,Americas
+BEL,KGZ,0,family,Europe,Asia-Pacific
+ATG,HUN,0,family,Americas,Europe
+MDA,HRV,0,family,Europe,Europe
+ZWE,USA,0,family,Unknown,Americas
+BES,ITA,0,family,Unknown,Europe
+AZE,TUR,0,family,Europe,Europe
+HTI,ROU,0,family,Americas,Europe
+MYS,SGP,0,family,Asia-Pacific,Asia-Pacific
+GEO,POL,0,family,Europe,Europe
+AIA,ARG,0,family,Unknown,Americas
+IDN,ZAF,0,family,Asia-Pacific,Africa
+TUN,KOR,0,family,Middle East,Asia-Pacific
+CHN,ESP,0,family,Asia-Pacific,Europe
+GRD,FRA,0,family,Americas,Europe
+BIH,PRT,0,family,Europe,Europe
+YEM,HKG,0,budget,Unknown,Asia-Pacific
+ATG,FRA,0,budget,Americas,Europe
+SUR,KAZ,0,budget,Americas,Asia-Pacific
+PER,BLR,0,budget,Americas,Europe
+BLZ,MEX,0,budget,Americas,Americas
+LKA,SAU,0,budget,Asia-Pacific,Middle East
+UZB,KGZ,0,budget,Asia-Pacific,Asia-Pacific
+PRY,ITA,0,budget,Americas,Europe
+GRD,MEX,0,budget,Americas,Americas
+UZB,FRA,0,budget,Asia-Pacific,Europe
+NZL,MEX,0,budget,Asia-Pacific,Americas
+ASM,GBR,0,budget,Oceania,Europe
+CHN,MAR,0,budget,Asia-Pacific,Africa
+DOM,HRV,0,budget,Americas,Europe
+MHL,BGR,0,budget,Asia-Pacific,Europe
+POL,JPN,0,budget,Europe,Asia-Pacific
+PAN,MEX,0,budget,Americas,Americas
+AND,DNK,0,budget,Europe,Europe
+SYR,BRA,0,budget,Middle East,Americas
+ETH,AND,0,budget,Africa,Europe
+COM,MEX,0,budget,Africa,Americas
+MHL,ESP,0,budget,Asia-Pacific,Europe
+HRV,USA,0,budget,Europe,Americas
+REU,HRV,0,budget,Unknown,Europe
+SRB,ROU,0,budget,Europe,Europe
+CRI,USA,0,budget,Americas,Americas
+ROU,MEX,0,budget,Europe,Americas
+PHL,ESP,0,budget,Asia-Pacific,Europe
+GMB,HUN,0,budget,Africa,Europe
+PER,BGR,0,budget,Americas,Europe
+SVN,BEL,0,luxury,Europe,Europe
+MNG,DNK,0,luxury,Asia-Pacific,Europe
+BES,ARE,0,luxury,Unknown,Middle East
+IDN,MAC,0,luxury,Asia-Pacific,Asia-Pacific
+NGA,MAC,0,luxury,Africa,Asia-Pacific
+OMN,ESP,0,luxury,Middle East,Europe
+NIC,PRI,0,luxury,Americas,Unknown
+IRQ,POL,0,luxury,Middle East,Europe
+IRN,ITA,0,adventure,Middle East,Europe
+VNM,AUS,0,adventure,Unknown,Asia-Pacific
+AND,GBR,0,adventure,Europe,Europe
+SYC,MAC,0,adventure,Africa,Asia-Pacific
+CRI,MAC,0,adventure,Americas,Asia-Pacific
+AZE,HKG,0,adventure,Europe,Asia-Pacific
+QAT,CHE,0,adventure,Middle East,Europe
+IDN,CZE,0,family,Asia-Pacific,Europe
+STP,DNK,0,family,Africa,Europe
+IND,PRT,0,family,Asia-Pacific,Europe
+COG,ESP,0,family,Africa,Europe
+HRV,CHE,0,family,Europe,Europe
+EGY,ESP,0,family,Middle East,Europe
+SEN,SGP,0,family,Africa,Asia-Pacific
+IRN,THA,0,family,Middle East,Asia-Pacific
+ARM,ESP,0,family,Europe,Europe
+KEN,ITA,0,family,Africa,Europe
+TTO,HUN,0,family,Americas,Europe
+HND,SGP,0,family,Americas,Asia-Pacific
+LBY,DEU,0,family,Middle East,Europe
+CYP,KGZ,0,family,Europe,Asia-Pacific
+HND,BLR,0,family,Americas,Europe
+ARM,GBR,0,budget,Europe,Europe
+VGB,ZAF,0,budget,Americas,Africa
+YEM,AUS,0,budget,Unknown,Asia-Pacific
+MDG,BHS,0,budget,Africa,Americas
+HTI,MYS,0,budget,Americas,Asia-Pacific
+CYM,SGP,0,budget,Americas,Asia-Pacific
+GMB,BHS,0,budget,Africa,Americas
+NCL,SAU,0,budget,Oceania,Middle East
+REU,KOR,0,budget,Unknown,Asia-Pacific
+ABW,ESP,0,budget,Americas,Europe
+TUN,GBR,0,budget,Middle East,Europe
+QAT,SGP,0,budget,Middle East,Asia-Pacific
+MOZ,BRA,0,budget,Africa,Americas
+MEX,HRV,0,budget,Americas,Europe
+SLV,FRA,0,budget,Americas,Europe
+TUR,HUN,0,budget,Europe,Europe
+ASM,POL,0,budget,Oceania,Europe
+IRN,HKG,0,budget,Middle East,Asia-Pacific
+HRV,KOR,0,budget,Europe,Asia-Pacific
+BRB,TUR,0,budget,Americas,Europe
+TUN,DNK,0,budget,Middle East,Europe
+LSO,TUR,0,budget,Africa,Europe
+BES,FRA,0,budget,Unknown,Europe
+ECU,THA,0,budget,Americas,Asia-Pacific
+URY,JPN,0,budget,Americas,Asia-Pacific
+TJK,KOR,0,budget,Asia-Pacific,Asia-Pacific
+DNK,KOR,0,budget,Europe,Asia-Pacific
+HKG,USA,0,budget,Asia-Pacific,Americas
+GUF,MEX,0,budget,Americas,Americas
+BRA,DEU,0,budget,Americas,Europe
+CHE,PRT,0,luxury,Europe,Europe
+SVN,PRT,0,luxury,Europe,Europe
+BRB,BLR,0,luxury,Americas,Europe
+TTO,MAC,0,luxury,Americas,Asia-Pacific
+MEX,ITA,0,luxury,Americas,Europe
+ESP,ESP,0,luxury,Europe,Europe
+STP,USA,0,luxury,Africa,Americas
+YEM,POL,0,luxury,Unknown,Europe
+MUS,PRT,0,luxury,Africa,Europe
+MTQ,TWN,0,adventure,Americas,Asia-Pacific
+MHL,GBR,0,adventure,Asia-Pacific,Europe
+TTO,MEX,0,adventure,Americas,Americas
+ISL,AUS,0,adventure,Europe,Asia-Pacific
+BRB,POL,0,adventure,Americas,Europe
+MNP,MAC,0,adventure,Asia-Pacific,Asia-Pacific
+TUN,MEX,0,adventure,Middle East,Americas
+DMA,KAZ,0,adventure,Americas,Asia-Pacific
+ITA,IND,0,adventure,Europe,Asia-Pacific
+MAC,ARG,0,family,Asia-Pacific,Americas
+URY,TUR,0,family,Americas,Europe
+DNK,JPN,0,family,Europe,Asia-Pacific
+SUR,HUN,0,family,Americas,Europe
+ISL,DEU,0,family,Europe,Europe
+CHE,KAZ,0,family,Europe,Asia-Pacific
+BRN,DNK,0,family,Asia-Pacific,Europe
+PYF,DNK,0,family,Oceania,Europe
+CIV,FRA,0,family,Africa,Europe
+NCL,TUR,0,family,Oceania,Europe
+JAM,HUN,0,family,Americas,Europe
+IRQ,BRA,0,budget,Middle East,Americas
+LAO,SGP,0,budget,Asia-Pacific,Asia-Pacific
+ATG,HUN,0,budget,Americas,Europe
+ISL,AUS,0,budget,Europe,Asia-Pacific
+GIN,FRA,0,budget,Africa,Europe
+ARG,MEX,0,budget,Americas,Americas
+POL,HUN,0,budget,Europe,Europe
+PHL,KGZ,0,budget,Asia-Pacific,Asia-Pacific
+MDG,USA,0,budget,Africa,Americas
+NIC,IDN,0,budget,Americas,Asia-Pacific
+LSO,AND,0,budget,Africa,Europe
+CHN,DNK,0,budget,Asia-Pacific,Europe
+LKA,COL,0,budget,Asia-Pacific,Americas
+COD,HKG,0,budget,Africa,Asia-Pacific
+SWZ,ITA,0,budget,Africa,Europe
+SVN,HKG,0,budget,Europe,Asia-Pacific
+MKD,ITA,0,budget,Europe,Europe
+GMB,TUR,0,budget,Africa,Europe
+PRY,AUS,0,budget,Americas,Asia-Pacific
+CHE,ALB,0,budget,Europe,Europe
+THA,IDN,0,budget,Asia-Pacific,Asia-Pacific
+DEU,ITA,0,budget,Europe,Europe
+TJK,MEX,0,budget,Asia-Pacific,Americas
+MAR,MEX,0,budget,Africa,Americas
+VCT,ARE,0,budget,Americas,Middle East
+TTO,DEU,0,budget,Americas,Europe
+GTM,DOM,0,budget,Americas,Americas
+MDG,KGZ,0,budget,Africa,Asia-Pacific
+NGA,ALB,0,budget,Africa,Europe
+CHE,BLR,0,budget,Europe,Europe
+DOM,USA,0,budget,Americas,Americas
+AZE,HUN,0,budget,Europe,Europe
+BHR,COL,0,budget,Middle East,Americas
+OMN,FRA,0,budget,Middle East,Europe
+MYS,HRV,0,luxury,Asia-Pacific,Europe
+ISL,FRA,0,luxury,Europe,Europe
+REU,HUN,0,luxury,Unknown,Europe
+SRB,ARE,0,luxury,Europe,Middle East
+TON,CAN,0,luxury,Asia-Pacific,Americas
+QAT,USA,0,luxury,Middle East,Americas
+GRC,DEU,0,luxury,Europe,Europe
+MNP,HKG,0,luxury,Asia-Pacific,Asia-Pacific
+LCA,BRA,0,luxury,Americas,Americas
+THA,DEU,0,luxury,Asia-Pacific,Europe
+HND,JPN,0,luxury,Americas,Asia-Pacific
+ISL,ALB,0,luxury,Europe,Europe
+AIA,GBR,0,adventure,Unknown,Europe
+YEM,ESP,0,adventure,Unknown,Europe
+AZE,FRA,0,adventure,Europe,Europe
+REU,HKG,0,adventure,Unknown,Asia-Pacific
+SAU,HRV,0,adventure,Middle East,Europe
+ESP,POL,0,adventure,Europe,Europe
+GUM,FRA,0,adventure,Asia-Pacific,Europe
+LBY,CHN,0,family,Middle East,Asia-Pacific
+CIV,HRV,0,family,Africa,Europe
+SYC,ESP,0,family,Africa,Europe
+SLV,MAC,0,family,Americas,Asia-Pacific
+SWZ,GBR,0,family,Africa,Europe
+SEN,ESP,0,family,Africa,Europe
+BES,FRA,0,family,Unknown,Europe
+TUN,HRV,0,family,Middle East,Europe
+TKM,HKG,0,family,Asia-Pacific,Asia-Pacific
+MKD,COL,0,family,Europe,Americas
+VUT,DEU,0,family,Asia-Pacific,Europe
+EGY,TUR,0,family,Middle East,Europe
+PHL,ALB,0,budget,Asia-Pacific,Europe
+MDA,HRV,0,budget,Europe,Europe
+GRC,GBR,0,budget,Europe,Europe
+SWZ,HRV,0,budget,Africa,Europe
+BES,HKG,0,budget,Unknown,Asia-Pacific
+JAM,ZAF,0,budget,Americas,Africa
+BRB,HKG,0,budget,Americas,Asia-Pacific
+COD,POL,0,budget,Africa,Europe
+ISL,CHN,0,budget,Europe,Asia-Pacific
+GRC,DEU,0,budget,Europe,Europe
+ARE,DOM,0,budget,Middle East,Americas
+MLT,IND,0,budget,Europe,Asia-Pacific
+HUN,TWN,0,budget,Europe,Asia-Pacific
+TCD,MEX,0,budget,Africa,Americas
+MAC,HKG,0,budget,Asia-Pacific,Asia-Pacific
+ECU,ESP,0,budget,Americas,Europe
+STP,MEX,0,budget,Africa,Americas
+ISR,MEX,0,budget,Middle East,Americas
+THA,ITA,0,budget,Asia-Pacific,Europe
+FRA,COL,0,budget,Europe,Americas
+CZE,BHR,0,budget,Europe,Middle East
+PRI,TUR,0,budget,Unknown,Europe
+SYC,SAU,0,budget,Africa,Middle East
+KGZ,POL,0,budget,Asia-Pacific,Europe
+THA,BLR,0,budget,Asia-Pacific,Europe
+REU,ALB,0,budget,Unknown,Europe
+JOR,BGR,0,budget,Middle East,Europe
+HKG,MAR,0,budget,Asia-Pacific,Africa
+IDN,HRV,0,budget,Asia-Pacific,Europe
+SLV,SGP,0,budget,Americas,Asia-Pacific
+MEX,HRV,0,budget,Americas,Europe
+PHL,MAC,0,budget,Asia-Pacific,Asia-Pacific
+SVN,EGY,0,budget,Europe,Middle East
+BHS,AUS,0,budget,Americas,Asia-Pacific
+HND,FRA,0,budget,Americas,Europe
+GIN,CZE,0,budget,Africa,Europe
+RUS,PRI,0,luxury,Europe,Unknown
+COG,HKG,0,luxury,Africa,Asia-Pacific
+AIA,ESP,0,luxury,Unknown,Europe
+SGP,COL,0,luxury,Asia-Pacific,Americas
+OMN,HKG,0,luxury,Middle East,Asia-Pacific
+MOZ,BRA,0,luxury,Africa,Americas
+RWA,MAC,0,luxury,Africa,Asia-Pacific
+BRB,AUS,0,luxury,Americas,Asia-Pacific
+BRA,TUR,0,luxury,Americas,Europe
+MDA,CHN,0,luxury,Europe,Asia-Pacific
+HRV,CZE,0,luxury,Europe,Europe
+EST,HKG,0,luxury,Europe,Asia-Pacific
+COL,SGP,0,luxury,Americas,Asia-Pacific
+CRI,BGR,0,luxury,Americas,Europe
+SXM,HKG,0,luxury,Americas,Asia-Pacific
+PYF,HRV,0,luxury,Oceania,Europe
+TCA,BRA,0,luxury,Unknown,Americas
+TON,BEL,0,adventure,Asia-Pacific,Europe
+HND,ALB,0,adventure,Americas,Europe
+PRI,CHE,0,adventure,Unknown,Europe
+TCA,POL,0,adventure,Unknown,Europe
+VEN,USA,0,adventure,Unknown,Americas
+CIV,DEU,0,adventure,Africa,Europe
+LKA,GBR,0,adventure,Asia-Pacific,Europe
+KNA,MEX,0,adventure,Americas,Americas
+PHL,CZE,0,adventure,Asia-Pacific,Europe
+ITA,HKG,0,adventure,Europe,Asia-Pacific
+BFA,HRV,0,family,Africa,Europe
+CHL,CHN,0,family,Americas,Asia-Pacific
+BHS,GBR,0,family,Americas,Europe
+GMB,TWN,0,family,Africa,Asia-Pacific
+SXM,POL,0,family,Americas,Europe
+ISL,KGZ,0,family,Europe,Asia-Pacific
+ZWE,HKG,0,family,Unknown,Asia-Pacific
+BES,HRV,0,family,Unknown,Europe
+COD,EGY,0,family,Africa,Middle East
+HUN,HRV,0,family,Europe,Europe
+YEM,HKG,0,family,Unknown,Asia-Pacific
+KIR,ARE,0,family,Asia-Pacific,Middle East
+LSO,POL,0,family,Africa,Europe
+BLZ,DOM,0,family,Americas,Americas
+ECU,HRV,0,family,Americas,Europe
+ARM,ITA,0,family,Europe,Europe
+JOR,HUN,0,family,Middle East,Europe
+HKG,CZE,0,family,Asia-Pacific,Europe
+NIU,SGP,0,family,Oceania,Asia-Pacific
+ITA,IND,0,family,Europe,Asia-Pacific
+KEN,DEU,0,family,Africa,Europe
+GBR,BRA,0,family,Europe,Americas
+TZA,IDN,0,family,Africa,Asia-Pacific
+BEN,PRI,0,family,Africa,Unknown
+TCD,HUN,0,family,Africa,Europe
+KIR,THA,0,family,Asia-Pacific,Asia-Pacific
+AUS,ESP,0,budget,Asia-Pacific,Europe
+PRI,KGZ,0,budget,Unknown,Asia-Pacific
+LKA,BEL,0,budget,Asia-Pacific,Europe
+ZWE,BHS,0,budget,Unknown,Americas
+WSM,ESP,0,budget,Asia-Pacific,Europe
+SMR,AUS,0,budget,Europe,Asia-Pacific
+QAT,ROU,0,budget,Middle East,Europe
+BMU,GRC,0,budget,Americas,Europe
+JPN,DNK,0,budget,Asia-Pacific,Europe
+BRB,CZE,0,budget,Americas,Europe
+MAC,ROU,0,budget,Asia-Pacific,Europe
+NGA,HKG,0,budget,Africa,Asia-Pacific
+MKD,ITA,0,budget,Europe,Europe
+EGY,SGP,0,budget,Middle East,Asia-Pacific
+BEN,PRT,0,budget,Africa,Europe
+IND,BLR,0,budget,Asia-Pacific,Europe
+GIN,USA,0,budget,Africa,Americas
+DOM,ITA,0,budget,Americas,Europe
+VNM,BEL,0,budget,Unknown,Europe
+VNM,USA,0,budget,Unknown,Americas
+IRQ,FRA,0,budget,Middle East,Europe
+ALB,CHE,0,budget,Europe,Europe
+GMB,HUN,0,budget,Africa,Europe
+TCD,BHS,0,budget,Africa,Americas
+BRA,USA,0,budget,Americas,Americas
+THA,DEU,0,budget,Asia-Pacific,Europe
+CHL,ROU,0,budget,Americas,Europe
+MTQ,ARG,0,budget,Americas,Americas
+STP,POL,0,budget,Africa,Europe
+IDN,BHR,0,budget,Asia-Pacific,Middle East
+VCT,IND,0,budget,Americas,Asia-Pacific
+THA,BEL,0,budget,Asia-Pacific,Europe
+PHL,ZAF,0,budget,Asia-Pacific,Africa
+GIN,GBR,0,budget,Africa,Europe
+DZA,DOM,0,budget,Africa,Americas
+MDA,ARE,0,budget,Europe,Middle East
+TJK,UZB,0,budget,Asia-Pacific,Asia-Pacific
+HRV,ARE,0,budget,Europe,Middle East
+LSO,GBR,0,budget,Africa,Europe
+UZB,PRI,0,budget,Asia-Pacific,Unknown
+ATG,CAN,0,budget,Americas,Americas
+CRI,HRV,0,budget,Americas,Europe
+EGY,ARE,0,budget,Middle East,Middle East
+COG,SAU,0,budget,Africa,Middle East
+HTI,HUN,0,budget,Americas,Europe
+SUR,MEX,0,budget,Americas,Americas
+BHR,TUR,0,budget,Middle East,Europe
+PNG,HRV,0,luxury,Asia-Pacific,Europe
+LIE,ESP,0,luxury,Europe,Europe
+ROU,SGP,0,luxury,Europe,Asia-Pacific
+THA,ALB,0,luxury,Asia-Pacific,Europe
+TCA,MEX,0,luxury,Unknown,Americas
+LIE,MAR,0,luxury,Europe,Africa
+SRB,ALB,0,luxury,Europe,Europe
+IRN,ROU,0,luxury,Middle East,Europe
+TUN,FRA,0,luxury,Middle East,Europe
+BEL,POL,0,adventure,Europe,Europe
+TON,PRT,0,adventure,Asia-Pacific,Europe
+BES,AND,0,adventure,Unknown,Europe
+PRI,IND,0,adventure,Unknown,Asia-Pacific
+ITA,ESP,0,adventure,Europe,Europe
+RWA,IND,0,adventure,Africa,Asia-Pacific
+AZE,FRA,0,adventure,Europe,Europe
+ABW,ESP,0,adventure,Americas,Europe
+RUS,HUN,0,adventure,Europe,Europe
+KAZ,GBR,0,adventure,Asia-Pacific,Europe
+MOZ,MEX,0,family,Africa,Americas
+ERI,ROU,0,family,Africa,Europe
+TON,DOM,0,family,Asia-Pacific,Americas
+KIR,TWN,0,family,Asia-Pacific,Asia-Pacific
+BGR,SGP,0,family,Europe,Asia-Pacific
+MDG,AUS,0,family,Africa,Asia-Pacific
+CUB,FRA,0,family,Americas,Europe
+AIA,AUS,0,family,Unknown,Asia-Pacific
+GTM,FRA,0,family,Americas,Europe
+ESP,ITA,0,family,Europe,Europe
+GRD,BHR,0,family,Americas,Middle East
+CHL,GBR,0,family,Americas,Europe
+LIE,CHE,0,family,Europe,Europe
+CHN,ARE,0,family,Asia-Pacific,Middle East
+HTI,USA,0,family,Americas,Americas
+KAZ,PRI,0,family,Asia-Pacific,Unknown
+MHL,GBR,0,family,Asia-Pacific,Europe
+MSR,ZAF,0,family,Americas,Africa
+NIU,POL,0,family,Oceania,Europe
+TCD,HKG,0,family,Africa,Asia-Pacific
+CUB,UZB,0,family,Americas,Asia-Pacific
+JOR,HUN,0,family,Middle East,Europe
+CYP,FRA,0,family,Europe,Europe
+CIV,THA,0,budget,Africa,Asia-Pacific
+COD,ESP,0,budget,Africa,Europe
+CRI,KOR,0,budget,Americas,Asia-Pacific
+TON,IDN,0,budget,Asia-Pacific,Asia-Pacific
+ATG,ARG,0,budget,Americas,Americas
+SXM,DEU,0,budget,Americas,Europe
+HND,THA,0,budget,Americas,Asia-Pacific
+JAM,BGR,0,budget,Americas,Europe
+PRT,HRV,0,budget,Europe,Europe
+NZL,IDN,0,budget,Asia-Pacific,Asia-Pacific
+CHN,SGP,0,budget,Asia-Pacific,Asia-Pacific
+ECU,FRA,0,budget,Americas,Europe
+BEN,ITA,0,budget,Africa,Europe
+ARE,CAN,0,budget,Middle East,Americas
+PRI,HUN,0,budget,Unknown,Europe
+BEL,ARE,0,budget,Europe,Middle East
+BEN,ARG,0,budget,Africa,Americas
+BIH,ALB,0,budget,Europe,Europe
+GBR,CZE,0,budget,Europe,Europe
+GEO,CAN,0,budget,Europe,Americas
+GTM,JPN,0,budget,Americas,Asia-Pacific
+IDN,HRV,0,budget,Asia-Pacific,Europe
+VNM,BLR,0,budget,Unknown,Europe
+ASM,HRV,0,budget,Oceania,Europe
+SLV,DEU,0,budget,Americas,Europe
+COM,ITA,0,budget,Africa,Europe
+MUS,HRV,0,budget,Africa,Europe
+IND,ZAF,0,budget,Asia-Pacific,Africa
+BOL,HRV,0,budget,Americas,Europe
+CHE,ZAF,0,budget,Europe,Africa
+SLV,COL,0,budget,Americas,Americas
+LAO,AND,0,budget,Asia-Pacific,Europe
+BHS,AUS,0,budget,Americas,Asia-Pacific
+TUR,GRC,0,budget,Europe,Europe
+VEN,ALB,0,budget,Unknown,Europe
+MLT,KOR,0,budget,Europe,Asia-Pacific
+BES,UZB,0,budget,Unknown,Asia-Pacific
+BIH,IND,0,budget,Europe,Asia-Pacific
+CHN,ARE,0,budget,Asia-Pacific,Middle East
+REU,DEU,0,budget,Unknown,Europe
+GMB,USA,0,budget,Africa,Americas
+JOR,FRA,0,budget,Middle East,Europe
+LTU,POL,0,budget,Europe,Europe
+OMN,CAN,0,luxury,Middle East,Americas
+VEN,ARE,0,luxury,Unknown,Middle East
+CIV,MEX,0,luxury,Africa,Americas
+HTI,HKG,0,luxury,Americas,Asia-Pacific
+AZE,ARG,0,luxury,Europe,Americas
+AND,KAZ,0,luxury,Europe,Asia-Pacific
+JOR,ITA,0,luxury,Middle East,Europe
+ROU,CAN,0,luxury,Europe,Americas
+TCD,SGP,0,luxury,Africa,Asia-Pacific
+HRV,TWN,0,luxury,Europe,Asia-Pacific
+MEX,TUR,0,luxury,Americas,Europe
+ITA,BLR,0,luxury,Europe,Europe
+DMA,ZAF,0,adventure,Americas,Africa
+PYF,HUN,0,adventure,Oceania,Europe
+ARG,POL,0,adventure,Americas,Europe
+MCO,MEX,0,adventure,Europe,Americas
+USA,CZE,0,adventure,Americas,Europe
+MNG,KOR,0,adventure,Asia-Pacific,Asia-Pacific
+ZWE,MAR,0,adventure,Unknown,Africa
+BGR,POL,0,adventure,Europe,Europe
+BRB,HRV,0,adventure,Americas,Europe
+TZA,ARG,0,adventure,Africa,Americas
+MDG,MEX,0,adventure,Africa,Americas
+BEN,ALB,0,adventure,Africa,Europe
+RUS,ESP,0,adventure,Europe,Europe
+MHL,SGP,0,family,Asia-Pacific,Asia-Pacific
+MSR,ESP,0,family,Americas,Europe
+BWA,POL,0,family,Africa,Europe
+NGA,BHS,0,family,Africa,Americas
+LBY,DOM,0,family,Middle East,Americas
+LCA,DEU,0,family,Americas,Europe
+LCA,CAN,0,family,Americas,Americas
+BEN,ALB,0,family,Africa,Europe
+SEN,HUN,0,family,Africa,Europe
+LBY,HUN,0,family,Middle East,Europe
+ATG,ALB,0,family,Americas,Europe
+RWA,FRA,0,family,Africa,Europe
+BEL,HRV,0,family,Europe,Europe
+MUS,ZAF,0,family,Africa,Africa
+PYF,DEU,0,family,Oceania,Europe
+ASM,ITA,0,family,Oceania,Europe
+DEU,FRA,0,family,Europe,Europe
+HTI,ARG,0,family,Americas,Americas
+SYC,HKG,0,family,Africa,Asia-Pacific
+QAT,SGP,0,budget,Middle East,Asia-Pacific
+BGR,CAN,0,budget,Europe,Americas
+CHE,ITA,0,budget,Europe,Europe
+NAM,KAZ,0,budget,Africa,Asia-Pacific
+PAN,DNK,0,budget,Americas,Europe
+VGB,TUR,0,budget,Americas,Europe
+AZE,DOM,0,budget,Europe,Americas
+CUB,AND,0,budget,Americas,Europe
+SYC,GRC,0,budget,Africa,Europe
+SLE,ARG,0,budget,Africa,Americas
+LBY,MEX,0,budget,Middle East,Americas
+MEX,ZAF,0,budget,Americas,Africa
+BWA,KOR,0,budget,Africa,Asia-Pacific
+RUS,MEX,0,budget,Europe,Americas
+MDA,CHE,0,budget,Europe,Europe
+FIN,AUS,0,budget,Europe,Asia-Pacific
+PYF,DEU,0,budget,Oceania,Europe
+GTM,HKG,0,budget,Americas,Asia-Pacific
+KAZ,ESP,0,budget,Asia-Pacific,Europe
+LSO,GBR,0,budget,Africa,Europe
+SGP,POL,0,budget,Asia-Pacific,Europe
+DOM,ARE,0,budget,Americas,Middle East
+PER,KAZ,0,budget,Americas,Asia-Pacific
+JPN,THA,0,budget,Asia-Pacific,Asia-Pacific
+HTI,EGY,0,budget,Americas,Middle East
+NCL,DEU,0,budget,Oceania,Europe
+CIV,BEL,0,budget,Africa,Europe
+COL,AND,0,budget,Americas,Europe
+PYF,MAR,0,budget,Oceania,Africa
+KAZ,PRI,0,budget,Asia-Pacific,Unknown
+MAR,PRI,0,budget,Africa,Unknown
+ISL,THA,0,budget,Europe,Asia-Pacific
+GRC,MAC,0,budget,Europe,Asia-Pacific
+FRA,HUN,0,budget,Europe,Europe
+OMN,PRI,0,budget,Middle East,Unknown
+MDG,ITA,0,budget,Africa,Europe
+AIA,CAN,0,budget,Unknown,Americas
+GRC,GBR,0,budget,Europe,Europe
+PHL,USA,0,budget,Asia-Pacific,Americas
+BRB,THA,0,budget,Americas,Asia-Pacific
+AUS,ESP,0,budget,Asia-Pacific,Europe
+YEM,IND,0,budget,Unknown,Asia-Pacific
+UKR,FRA,0,budget,Europe,Europe
+BMU,THA,0,budget,Americas,Asia-Pacific
+USA,GBR,0,budget,Americas,Europe
+MAC,POL,0,budget,Asia-Pacific,Europe
+AUS,JPN,0,luxury,Asia-Pacific,Asia-Pacific
+JAM,SAU,0,luxury,Americas,Middle East
+KGZ,THA,0,luxury,Asia-Pacific,Asia-Pacific
+MEX,CAN,0,luxury,Americas,Americas
+HRV,PRT,0,luxury,Europe,Europe
+VCT,MEX,0,luxury,Americas,Americas
+GMB,EGY,0,luxury,Africa,Middle East
+LAO,HRV,0,luxury,Asia-Pacific,Europe
+UZB,JPN,0,luxury,Asia-Pacific,Asia-Pacific
+BHR,BRA,0,luxury,Middle East,Americas
+QAT,ARG,0,luxury,Middle East,Americas
+GAB,ROU,0,luxury,Africa,Europe
+PRI,CHE,0,luxury,Unknown,Europe
+DEU,BHS,0,luxury,Europe,Americas
+UKR,BGR,0,luxury,Europe,Europe
+HKG,CHN,0,adventure,Asia-Pacific,Asia-Pacific
+SWZ,TUR,0,adventure,Africa,Europe
+SYR,BLR,0,adventure,Middle East,Europe
+ATG,CZE,0,adventure,Americas,Europe
+CHE,HKG,0,adventure,Europe,Asia-Pacific
+ABW,IDN,0,adventure,Americas,Asia-Pacific
+MLT,ARE,0,adventure,Europe,Middle East
+WSM,IDN,0,adventure,Asia-Pacific,Asia-Pacific
+BRN,SGP,0,adventure,Asia-Pacific,Asia-Pacific
+ARE,POL,0,adventure,Middle East,Europe
+AIA,SGP,0,adventure,Unknown,Asia-Pacific
+WSM,TUR,0,family,Asia-Pacific,Europe
+COD,ESP,0,family,Africa,Europe
+MNG,HRV,0,family,Asia-Pacific,Europe
+CUB,HUN,0,family,Americas,Europe
+DZA,ESP,0,family,Africa,Europe
+CMR,ZAF,0,family,Africa,Africa
+BRB,POL,0,family,Americas,Europe
+NIC,KAZ,0,family,Americas,Asia-Pacific
+ARM,HKG,0,family,Europe,Asia-Pacific
+KEN,FRA,0,family,Africa,Europe
+LAO,GBR,0,family,Asia-Pacific,Europe
+AZE,PRI,0,family,Europe,Unknown
+QAT,EGY,0,family,Middle East,Middle East
+NIU,DEU,0,family,Oceania,Europe
+AZE,POL,0,family,Europe,Europe
+SYR,TWN,0,family,Middle East,Asia-Pacific
+SLE,TUR,0,family,Africa,Europe
+AND,BHR,0,family,Europe,Middle East
+BEN,GBR,0,budget,Africa,Europe
+MOZ,MYS,0,budget,Africa,Asia-Pacific
+CUB,FRA,0,budget,Americas,Europe
+PYF,DOM,0,budget,Oceania,Americas
+FIN,EGY,0,budget,Europe,Middle East
+AND,CAN,0,budget,Europe,Americas
+VNM,JPN,0,budget,Unknown,Asia-Pacific
+REU,DOM,0,budget,Unknown,Americas
+FIN,DEU,0,budget,Europe,Europe
+QAT,GRC,0,budget,Middle East,Europe
+NIU,ARE,0,budget,Oceania,Middle East
+LSO,CHN,0,budget,Africa,Asia-Pacific
+BES,KGZ,0,budget,Unknown,Asia-Pacific
+CYM,FRA,0,budget,Americas,Europe
+HKG,ZAF,0,budget,Asia-Pacific,Africa
+TUR,GBR,0,budget,Europe,Europe
+MLT,MAR,0,budget,Europe,Africa
+BES,THA,0,budget,Unknown,Asia-Pacific
+GRC,ROU,0,budget,Europe,Europe
+ASM,CAN,0,budget,Oceania,Americas
+JOR,HRV,0,budget,Middle East,Europe
+COL,AND,0,budget,Americas,Europe
+MOZ,PRI,0,budget,Africa,Unknown
+GRD,BRA,0,budget,Americas,Americas
+TJK,ARE,0,budget,Asia-Pacific,Middle East
+KEN,SAU,0,budget,Africa,Middle East
+JOR,KOR,0,budget,Middle East,Asia-Pacific
+SYR,GBR,0,budget,Middle East,Europe
+TCA,AUS,0,budget,Unknown,Asia-Pacific
+TZA,ARE,0,budget,Africa,Middle East
+GLP,ESP,0,budget,Americas,Europe
+NCL,JPN,0,budget,Oceania,Asia-Pacific
+DNK,DEU,0,budget,Europe,Europe
+USA,ESP,0,budget,Americas,Europe
+BEL,BHS,0,budget,Europe,Americas
+NCL,GBR,0,budget,Oceania,Europe
+GUF,CHE,0,budget,Americas,Europe
+PER,ARE,0,budget,Americas,Middle East
+THA,MEX,0,budget,Asia-Pacific,Americas
+BMU,PRT,0,budget,Americas,Europe
+WSM,GBR,0,budget,Asia-Pacific,Europe
+ATG,ZAF,0,budget,Americas,Africa
+ARM,POL,0,budget,Europe,Europe
+ERI,TWN,0,budget,Africa,Asia-Pacific
+CYP,GRC,0,budget,Europe,Europe
+MDG,CZE,0,budget,Africa,Europe
+BFA,ZAF,0,budget,Africa,Africa
+CUB,BEL,0,budget,Americas,Europe
+AZE,CHN,0,luxury,Europe,Asia-Pacific
+GUF,SGP,0,luxury,Americas,Asia-Pacific
+HTI,POL,0,luxury,Americas,Europe
+MCO,AUS,0,luxury,Europe,Asia-Pacific
+MLT,IND,0,luxury,Europe,Asia-Pacific
+BWA,GBR,0,luxury,Africa,Europe
+EGY,CHE,0,luxury,Middle East,Europe
+BFA,ESP,0,luxury,Africa,Europe
+FIN,USA,0,luxury,Europe,Americas
+BES,ROU,0,luxury,Unknown,Europe
+BRB,ESP,0,luxury,Americas,Europe
+KGZ,FRA,0,luxury,Asia-Pacific,Europe
+PHL,SGP,0,luxury,Asia-Pacific,Asia-Pacific
+CYP,HUN,0,luxury,Europe,Europe
+MKD,MAC,0,luxury,Europe,Asia-Pacific
+LKA,BHS,0,adventure,Asia-Pacific,Americas
+ZWE,UZB,0,adventure,Unknown,Asia-Pacific
+LBY,MAC,0,adventure,Middle East,Asia-Pacific
+ERI,CAN,0,adventure,Africa,Americas
+POL,AUS,0,adventure,Europe,Asia-Pacific
+VUT,MAC,0,adventure,Asia-Pacific,Asia-Pacific
+IDN,ALB,0,adventure,Asia-Pacific,Europe
+MMR,CZE,0,adventure,Asia-Pacific,Europe
+VNM,ZAF,0,adventure,Unknown,Africa
+QAT,ZAF,0,adventure,Middle East,Africa
+PHL,CAN,0,adventure,Asia-Pacific,Americas
+MKD,ZAF,0,adventure,Europe,Africa
+BFA,HKG,0,adventure,Africa,Asia-Pacific
+GRC,MEX,0,adventure,Europe,Americas
+VIR,USA,0,adventure,Unknown,Americas
+QAT,HUN,0,adventure,Middle East,Europe
+SYR,POL,0,adventure,Middle East,Europe
+NAM,CAN,0,adventure,Africa,Americas
+COL,BHS,0,adventure,Americas,Americas
+UKR,COL,0,adventure,Europe,Americas
+SYR,HKG,0,family,Middle East,Asia-Pacific
+THA,ALB,0,family,Asia-Pacific,Europe
+CRI,FRA,0,family,Americas,Europe
+MLT,JPN,0,family,Europe,Asia-Pacific
+BWA,CZE,0,family,Africa,Europe
+UZB,KAZ,0,family,Asia-Pacific,Asia-Pacific
+BIH,UZB,0,family,Europe,Asia-Pacific
+PYF,PRI,0,family,Oceania,Unknown
+JAM,TWN,0,family,Americas,Asia-Pacific
+TKM,SAU,0,family,Asia-Pacific,Middle East
+MYS,KAZ,0,family,Asia-Pacific,Asia-Pacific
+SVN,ARG,0,family,Europe,Americas
+SYC,CHN,0,family,Africa,Asia-Pacific
+BEL,ALB,0,family,Europe,Europe
+ZAF,THA,0,family,Africa,Asia-Pacific
+HUN,HKG,0,family,Europe,Asia-Pacific
+BWA,ARE,0,family,Africa,Middle East
+KGZ,MAC,0,family,Asia-Pacific,Asia-Pacific
+CMR,MEX,0,family,Africa,Americas
+AZE,FRA,0,family,Europe,Europe
+VUT,POL,0,family,Asia-Pacific,Europe
+LCA,PRT,0,family,Americas,Europe
+JOR,DEU,0,family,Middle East,Europe
+SWZ,DNK,0,family,Africa,Europe
+ITA,DOM,0,family,Europe,Americas
+JPN,BHR,0,family,Asia-Pacific,Middle East
+SXM,ROU,0,family,Americas,Europe
+UZB,ITA,0,family,Asia-Pacific,Europe
+FIN,HUN,0,family,Europe,Europe
+SAU,PRT,0,family,Middle East,Europe
+ARM,BGR,0,budget,Europe,Europe
+GTM,HKG,0,budget,Americas,Asia-Pacific
+PSE,EGY,0,budget,Asia-Pacific,Middle East
+TTO,MAR,0,budget,Americas,Africa
+GEO,HUN,0,budget,Europe,Europe
+EGY,FRA,0,budget,Middle East,Europe
+REU,USA,0,budget,Unknown,Americas
+DMA,ALB,0,budget,Americas,Europe
+GRD,BGR,0,budget,Americas,Europe
+NGA,AND,0,budget,Africa,Europe
+DMA,BEL,0,budget,Americas,Europe
+PHL,ROU,0,budget,Asia-Pacific,Europe
+GEO,USA,0,budget,Europe,Americas
+AND,ITA,0,budget,Europe,Europe
+MMR,ITA,0,budget,Asia-Pacific,Europe
+DMA,HRV,0,budget,Americas,Europe
+WSM,CHN,0,budget,Asia-Pacific,Asia-Pacific
+UZB,SGP,0,budget,Asia-Pacific,Asia-Pacific
+CHN,AUS,0,budget,Asia-Pacific,Asia-Pacific
+ISR,ZAF,0,budget,Middle East,Africa
+KAZ,EGY,0,budget,Asia-Pacific,Middle East
+BWA,THA,0,budget,Africa,Asia-Pacific
+BEL,ARG,0,budget,Europe,Americas
+HUN,JPN,0,budget,Europe,Asia-Pacific
+CAN,GBR,0,budget,Americas,Europe
+TCA,BGR,0,budget,Unknown,Europe
+TJK,CHN,0,budget,Asia-Pacific,Asia-Pacific
+SYC,PRT,0,budget,Africa,Europe
+REU,HUN,0,budget,Unknown,Europe
+DZA,TWN,0,budget,Africa,Asia-Pacific
+FJI,KGZ,0,budget,Asia-Pacific,Asia-Pacific
+TCD,HKG,0,budget,Africa,Asia-Pacific
+GMB,MEX,0,budget,Africa,Americas
+SGP,EGY,0,budget,Asia-Pacific,Middle East
+TKM,SAU,0,budget,Asia-Pacific,Middle East
+HKG,ZAF,0,budget,Asia-Pacific,Africa
+HND,THA,0,budget,Americas,Asia-Pacific
+PNG,FRA,0,budget,Asia-Pacific,Europe
+TCD,GBR,0,budget,Africa,Europe
+LVA,ITA,0,budget,Europe,Europe
+CRI,HKG,0,budget,Americas,Asia-Pacific
+CYP,CHE,0,budget,Europe,Europe
+MNG,ZAF,0,budget,Asia-Pacific,Africa
+SUR,JPN,0,budget,Americas,Asia-Pacific
+URY,MEX,0,budget,Americas,Americas
+TON,ARG,0,luxury,Asia-Pacific,Americas
+COG,MYS,0,luxury,Africa,Asia-Pacific
+ARM,ARE,0,luxury,Europe,Middle East
+PHL,BGR,0,luxury,Asia-Pacific,Europe
+VNM,HUN,0,luxury,Unknown,Europe
+DZA,ITA,0,luxury,Africa,Europe
+COD,MYS,0,luxury,Africa,Asia-Pacific
+GUF,MAC,0,luxury,Americas,Asia-Pacific
+CZE,ITA,0,luxury,Europe,Europe
+GAB,MEX,0,luxury,Africa,Americas
+MSR,DEU,0,luxury,Americas,Europe
+JPN,DEU,0,luxury,Asia-Pacific,Europe
+TKM,GBR,0,luxury,Asia-Pacific,Europe
+FRA,BRA,0,luxury,Europe,Americas
+ECU,MAC,0,luxury,Americas,Asia-Pacific
+TZA,SGP,0,luxury,Africa,Asia-Pacific
+ITA,IDN,0,adventure,Europe,Asia-Pacific
+BFA,ZAF,0,adventure,Africa,Africa
+GTM,HUN,0,adventure,Americas,Europe
+AND,MAR,0,adventure,Europe,Africa
+CZE,JPN,0,adventure,Europe,Asia-Pacific
+HUN,AND,0,adventure,Europe,Europe
+ZAF,KOR,0,adventure,Africa,Asia-Pacific
+FRA,IDN,0,adventure,Europe,Asia-Pacific
+IDN,USA,0,adventure,Asia-Pacific,Americas
+SUR,HKG,0,adventure,Americas,Asia-Pacific
+CRI,POL,0,family,Americas,Europe
+CAN,GRC,0,family,Americas,Europe
+SMR,PRI,0,family,Europe,Unknown
+TJK,JPN,0,family,Asia-Pacific,Asia-Pacific
+COM,MEX,0,family,Africa,Americas
+MTQ,SAU,0,family,Americas,Middle East
+TJK,EGY,0,family,Asia-Pacific,Middle East
+STP,UZB,0,family,Africa,Asia-Pacific
+ISL,BHR,0,family,Europe,Middle East
+JAM,BEL,0,family,Americas,Europe
+SWZ,USA,0,family,Africa,Americas
+PRT,DOM,0,family,Europe,Americas
+GMB,HKG,0,family,Africa,Asia-Pacific
+MYS,TUR,0,family,Asia-Pacific,Europe
+ARG,ARE,0,family,Americas,Middle East
+CIV,DNK,0,family,Africa,Europe
+BRB,SAU,0,family,Americas,Middle East
+GBR,TUR,0,family,Europe,Europe
+SWZ,MAR,0,family,Africa,Africa
+RUS,HRV,0,family,Europe,Europe
+LKA,CAN,0,family,Asia-Pacific,Americas
+TON,MEX,0,family,Asia-Pacific,Americas
+KNA,KOR,0,family,Americas,Asia-Pacific
+GMB,DEU,0,family,Africa,Europe
+COD,HUN,0,family,Africa,Europe
+CUB,POL,0,family,Americas,Europe
+LSO,DNK,0,family,Africa,Europe
+SRB,PRT,0,family,Europe,Europe
+FRA,MEX,0,family,Europe,Americas
+MMR,CAN,0,family,Asia-Pacific,Americas
+YEM,USA,0,family,Unknown,Americas
+BRN,ROU,0,family,Asia-Pacific,Europe
+CRI,DEU,0,budget,Americas,Europe
+PRY,CZE,0,budget,Americas,Europe
+MTQ,HUN,0,budget,Americas,Europe
+REU,POL,0,budget,Unknown,Europe
+REU,BGR,0,budget,Unknown,Europe
+PHL,ROU,0,budget,Asia-Pacific,Europe
+TCA,MEX,0,budget,Unknown,Americas
+ECU,PRT,0,budget,Americas,Europe
+DNK,ROU,0,budget,Europe,Europe
+BMU,KAZ,0,budget,Americas,Asia-Pacific
+ABW,AND,0,budget,Americas,Europe
+AUS,FRA,0,budget,Asia-Pacific,Europe
+BFA,PRI,0,budget,Africa,Unknown
+SGP,AUS,0,budget,Asia-Pacific,Asia-Pacific
+FJI,MEX,0,budget,Asia-Pacific,Americas
+JPN,HRV,0,budget,Asia-Pacific,Europe
+POL,MAR,0,budget,Europe,Africa
+NCL,CAN,0,budget,Oceania,Americas
+BMU,USA,0,budget,Americas,Americas
+ABW,HUN,0,budget,Americas,Europe
+MDG,ROU,0,budget,Africa,Europe
+TCD,GRC,0,budget,Africa,Europe
+CHE,HUN,0,budget,Europe,Europe
+PHL,ALB,0,budget,Asia-Pacific,Europe
+EST,MEX,0,budget,Europe,Americas
+IDN,IDN,0,budget,Asia-Pacific,Asia-Pacific
+DMA,BHR,0,budget,Americas,Middle East
+SMR,CHN,0,budget,Europe,Asia-Pacific
+GRC,BHR,0,budget,Europe,Middle East
+ARM,CAN,0,budget,Europe,Americas
+MNG,AUS,0,luxury,Asia-Pacific,Asia-Pacific
+KNA,GRC,0,luxury,Americas,Europe
+BRB,POL,0,luxury,Americas,Europe
+MNG,MEX,0,luxury,Asia-Pacific,Americas
+LAO,HUN,0,luxury,Asia-Pacific,Europe
+TUN,HKG,0,luxury,Middle East,Asia-Pacific
+AUS,ITA,0,luxury,Asia-Pacific,Europe
+EST,HKG,0,luxury,Europe,Asia-Pacific
+QAT,TUR,0,luxury,Middle East,Europe
+BOL,ESP,0,luxury,Americas,Europe
+CHN,KAZ,0,luxury,Asia-Pacific,Asia-Pacific
+KAZ,ITA,0,luxury,Asia-Pacific,Europe
+KEN,HUN,0,luxury,Africa,Europe
+BES,USA,0,luxury,Unknown,Americas
+EST,MAR,0,luxury,Europe,Africa
+SYC,FRA,0,luxury,Africa,Europe
+HRV,DEU,0,luxury,Europe,Europe
+SLE,IND,0,luxury,Africa,Asia-Pacific
+SRB,HUN,0,luxury,Europe,Europe
+BRB,BHR,0,luxury,Americas,Middle East
+GUF,HUN,0,adventure,Americas,Europe
+IND,JPN,0,adventure,Asia-Pacific,Asia-Pacific
+JPN,EGY,0,adventure,Asia-Pacific,Middle East
+ARM,FRA,0,adventure,Europe,Europe
+STP,AND,0,adventure,Africa,Europe
+SGP,AUS,0,adventure,Asia-Pacific,Asia-Pacific
+TCA,SGP,0,adventure,Unknown,Asia-Pacific
+MNP,GBR,0,adventure,Asia-Pacific,Europe
+ABW,THA,0,adventure,Americas,Asia-Pacific
+LCA,MAC,0,adventure,Americas,Asia-Pacific
+GAB,MAC,0,adventure,Africa,Asia-Pacific
+TJK,DEU,0,adventure,Asia-Pacific,Europe
+IDN,BEL,0,family,Asia-Pacific,Europe
+DMA,PRT,0,family,Americas,Europe
+BLR,GBR,0,family,Europe,Europe
+VUT,MAC,0,family,Asia-Pacific,Asia-Pacific
+GBR,GBR,0,family,Europe,Europe
+PNG,PRT,0,family,Asia-Pacific,Europe
+MLT,GBR,0,family,Europe,Europe
+QAT,KAZ,0,family,Middle East,Asia-Pacific
+REU,TUR,0,family,Unknown,Europe
+FJI,MAR,0,family,Asia-Pacific,Africa
+OMN,CAN,0,family,Middle East,Americas
+IDN,IDN,0,family,Asia-Pacific,Asia-Pacific
+BOL,HUN,0,family,Americas,Europe
+YEM,TUR,0,family,Unknown,Europe
+GAB,CHN,0,family,Africa,Asia-Pacific
+ETH,ESP,0,family,Africa,Europe
+PRY,JPN,0,family,Americas,Asia-Pacific
+MLT,HKG,0,family,Europe,Asia-Pacific
+LTU,POL,0,family,Europe,Europe
+BHR,CAN,0,family,Middle East,Americas
+RWA,DEU,0,family,Africa,Europe
+ALB,HRV,0,family,Europe,Europe
+ABW,THA,0,family,Americas,Asia-Pacific
+CRI,DNK,0,family,Americas,Europe
+YEM,GRC,0,family,Unknown,Europe
+VGB,ROU,0,family,Americas,Europe
+CRI,SAU,0,budget,Americas,Middle East
+MNP,MAC,0,budget,Asia-Pacific,Asia-Pacific
+BLR,JPN,0,budget,Europe,Asia-Pacific
+ISL,ALB,0,budget,Europe,Europe
+KOR,EGY,0,budget,Asia-Pacific,Middle East
+STP,BHR,0,budget,Africa,Middle East
+BRB,CAN,0,budget,Americas,Americas
+CRI,DEU,0,budget,Americas,Europe
+MNG,CAN,0,budget,Asia-Pacific,Americas
+TUR,ROU,0,budget,Europe,Europe
+ROU,GRC,0,budget,Europe,Europe
+TWN,ROU,0,budget,Asia-Pacific,Europe
+CUB,TUR,0,budget,Americas,Europe
+MAR,MYS,0,budget,Africa,Asia-Pacific
+CUB,MYS,0,budget,Americas,Asia-Pacific
+ARM,JPN,0,budget,Europe,Asia-Pacific
+PER,DOM,0,budget,Americas,Americas
+SWZ,DOM,0,budget,Africa,Americas
+HTI,POL,0,budget,Americas,Europe
+TWN,MEX,0,budget,Asia-Pacific,Americas
+KEN,BHR,0,budget,Africa,Middle East
+COL,ROU,0,budget,Americas,Europe
+JPN,FRA,0,budget,Asia-Pacific,Europe
+ASM,TUR,0,budget,Oceania,Europe
+GAB,BLR,0,budget,Africa,Europe
+VIR,BHR,0,budget,Unknown,Middle East
+KAZ,JPN,0,budget,Asia-Pacific,Asia-Pacific
+BES,GRC,0,budget,Unknown,Europe
+CHE,CHN,0,budget,Europe,Asia-Pacific
+MTQ,ESP,0,budget,Americas,Europe
+BES,MAR,0,budget,Unknown,Africa
+GUF,USA,0,budget,Americas,Americas
+RWA,ARG,0,budget,Africa,Americas
+MNP,MEX,0,budget,Asia-Pacific,Americas
+NGA,GBR,0,budget,Africa,Europe
+CUW,EGY,0,budget,Americas,Middle East
+AUS,POL,0,budget,Asia-Pacific,Europe
+PRY,SGP,0,budget,Americas,Asia-Pacific
+CYM,CAN,0,budget,Americas,Americas
+SRB,JPN,0,budget,Europe,Asia-Pacific
+MDA,ZAF,0,budget,Europe,Africa
+BEN,MAR,0,budget,Africa,Africa
+ZWE,BHR,0,budget,Unknown,Middle East
+TUN,CAN,0,budget,Middle East,Americas
+ERI,DEU,0,budget,Africa,Europe
+NIC,USA,0,budget,Americas,Americas
+KOR,DNK,0,budget,Asia-Pacific,Europe
+SLV,BGR,0,luxury,Americas,Europe
+ETH,DEU,0,luxury,Africa,Europe
+CAN,GBR,0,luxury,Americas,Europe
+VCT,POL,0,luxury,Americas,Europe
+UZB,PRT,0,luxury,Asia-Pacific,Europe
+TKM,CAN,0,luxury,Asia-Pacific,Americas
+SYC,GRC,0,luxury,Africa,Europe
+TTO,ITA,0,luxury,Americas,Europe
+JPN,ARG,0,luxury,Asia-Pacific,Americas
+DEU,MEX,0,luxury,Europe,Americas
+BRB,UZB,0,luxury,Americas,Asia-Pacific
+PHL,ESP,0,luxury,Asia-Pacific,Europe
+CHE,AND,0,luxury,Europe,Europe
+BMU,PRT,0,luxury,Americas,Europe
+STP,ZAF,0,luxury,Africa,Africa
+UKR,ARG,0,luxury,Europe,Americas
+LBY,ROU,0,luxury,Middle East,Europe
+ZAF,CHN,0,adventure,Africa,Asia-Pacific
+IRQ,BGR,0,adventure,Middle East,Europe
+YEM,MAC,0,adventure,Unknown,Asia-Pacific
+SYC,POL,0,adventure,Africa,Europe
+ARE,KGZ,0,adventure,Middle East,Asia-Pacific
+ASM,GBR,0,adventure,Oceania,Europe
+IRN,ITA,0,adventure,Middle East,Europe
+AUS,MYS,0,adventure,Asia-Pacific,Asia-Pacific
+CIV,HRV,0,adventure,Africa,Europe
+KAZ,KOR,0,adventure,Asia-Pacific,Asia-Pacific
+CHL,ESP,0,adventure,Americas,Europe
+UKR,SGP,0,adventure,Europe,Asia-Pacific
+KOR,MAC,0,family,Asia-Pacific,Asia-Pacific
+TUR,PRT,0,family,Europe,Europe
+LIE,POL,0,family,Europe,Europe
+KOR,HRV,0,family,Asia-Pacific,Europe
+PYF,ITA,0,family,Oceania,Europe
+GUM,TUR,0,family,Asia-Pacific,Europe
+CHN,GRC,0,family,Asia-Pacific,Europe
+GRC,FRA,0,family,Europe,Europe
+CRI,GBR,0,family,Americas,Europe
+HKG,POL,0,family,Asia-Pacific,Europe
+TUR,GRC,0,family,Europe,Europe
+PYF,IND,0,family,Oceania,Asia-Pacific
+VGB,ITA,0,family,Americas,Europe
+NAM,SAU,0,family,Africa,Middle East
+PSE,PRT,0,family,Asia-Pacific,Europe
+JOR,AUS,0,family,Middle East,Asia-Pacific
+COG,TUR,0,family,Africa,Europe
+GLP,FRA,0,family,Americas,Europe
+EST,ESP,0,family,Europe,Europe
+GEO,EGY,0,family,Europe,Middle East
+FRA,SAU,0,family,Europe,Middle East
+GUM,BRA,0,family,Asia-Pacific,Americas
+SYR,JPN,0,family,Middle East,Asia-Pacific
+HND,KOR,0,family,Americas,Asia-Pacific
+POL,CHE,0,family,Europe,Europe
+MAR,BGR,0,family,Africa,Europe
+BRB,ESP,0,family,Americas,Europe
+GRC,IDN,0,budget,Europe,Asia-Pacific
+USA,FRA,0,budget,Americas,Europe
+MAR,BLR,0,budget,Africa,Europe
+NZL,HUN,0,budget,Asia-Pacific,Europe
+DZA,CHE,0,budget,Africa,Europe
+SGP,ARE,0,budget,Asia-Pacific,Middle East
+DMA,IDN,0,budget,Americas,Asia-Pacific
+GAB,MYS,0,budget,Africa,Asia-Pacific
+UKR,PRT,0,budget,Europe,Europe
+BES,AND,0,budget,Unknown,Europe
+MUS,FRA,0,budget,Africa,Europe
+ETH,SAU,0,budget,Africa,Middle East
+PRT,JPN,0,budget,Europe,Asia-Pacific
+MMR,TWN,0,budget,Asia-Pacific,Asia-Pacific
+COD,JPN,0,budget,Africa,Asia-Pacific
+FJI,SAU,0,budget,Asia-Pacific,Middle East
+ALB,MYS,0,budget,Europe,Asia-Pacific
+MTQ,HKG,0,budget,Americas,Asia-Pacific
+BES,MAR,0,budget,Unknown,Africa
+VIR,MEX,0,budget,Unknown,Americas
+GMB,DEU,0,budget,Africa,Europe
+BES,SAU,0,budget,Unknown,Middle East
+ASM,MAR,0,budget,Oceania,Africa
+KNA,ROU,0,budget,Americas,Europe
+CAN,MAR,0,budget,Americas,Africa
+ARE,ESP,0,budget,Middle East,Europe
+TCA,CZE,0,budget,Unknown,Europe
+GMB,DEU,0,budget,Africa,Europe
+JOR,GBR,0,budget,Middle East,Europe
+DNK,ESP,0,budget,Europe,Europe
+CHE,FRA,0,budget,Europe,Europe
+ETH,TUR,0,budget,Africa,Europe
+NIC,ALB,0,budget,Americas,Europe
+PRI,KOR,0,budget,Unknown,Asia-Pacific
+GLP,KOR,0,budget,Americas,Asia-Pacific
+STP,ARE,0,budget,Africa,Middle East
+ROU,HKG,0,budget,Europe,Asia-Pacific
+FIN,TUR,0,budget,Europe,Europe
+PSE,FRA,0,budget,Asia-Pacific,Europe
+NIU,HUN,0,budget,Oceania,Europe
+MDG,DOM,0,budget,Africa,Americas
+ALB,ESP,0,budget,Europe,Europe
+ABW,SGP,0,budget,Americas,Asia-Pacific
+SYC,ALB,0,budget,Africa,Europe
+FJI,GBR,0,budget,Asia-Pacific,Europe
+ERI,POL,0,luxury,Africa,Europe
+CHE,KAZ,0,luxury,Europe,Asia-Pacific
+PRI,HRV,0,luxury,Unknown,Europe
+KEN,IND,0,luxury,Africa,Asia-Pacific
+SMR,BHR,0,luxury,Europe,Middle East
+ZWE,DEU,0,luxury,Unknown,Europe
+NZL,DOM,0,luxury,Asia-Pacific,Americas
+TUR,ESP,0,luxury,Europe,Europe
+ZWE,ITA,0,luxury,Unknown,Europe
+MLT,CAN,0,luxury,Europe,Americas
+MAR,COL,0,luxury,Africa,Americas
+TWN,HUN,0,luxury,Asia-Pacific,Europe
+TWN,DNK,0,luxury,Asia-Pacific,Europe
+BFA,DNK,0,luxury,Africa,Europe
+REU,ITA,0,luxury,Unknown,Europe
+CHN,TUR,0,adventure,Asia-Pacific,Europe
+BFA,DEU,0,adventure,Africa,Europe
+SVN,BEL,0,adventure,Europe,Europe
+HND,PRT,0,adventure,Americas,Europe
+BMU,KOR,0,adventure,Americas,Asia-Pacific
+BES,HUN,0,adventure,Unknown,Europe
+BES,FRA,0,adventure,Unknown,Europe
+ARG,KAZ,0,adventure,Americas,Asia-Pacific
+TCD,GBR,0,adventure,Africa,Europe
+BHR,CHN,0,adventure,Middle East,Asia-Pacific
+REU,IND,0,adventure,Unknown,Asia-Pacific
+NIC,USA,0,adventure,Americas,Americas
+NIU,HKG,0,adventure,Oceania,Asia-Pacific
+SUR,SAU,0,family,Americas,Middle East
+PRI,BGR,0,family,Unknown,Europe
+CYM,EGY,0,family,Americas,Middle East
+NGA,SAU,0,family,Africa,Middle East
+CHE,HRV,0,family,Europe,Europe
+IRN,HUN,0,family,Middle East,Europe
+PRT,MEX,0,family,Europe,Americas
+NIU,CAN,0,family,Oceania,Americas
+KEN,HRV,0,family,Africa,Europe
+ATG,POL,0,family,Americas,Europe
+TZA,CZE,0,family,Africa,Europe
+IND,PRT,0,family,Asia-Pacific,Europe
+AND,JPN,0,family,Europe,Asia-Pacific
+MEX,HKG,0,family,Americas,Asia-Pacific
+SYC,MAC,0,family,Africa,Asia-Pacific
+ATG,MAC,0,family,Americas,Asia-Pacific
+TUR,ARG,0,family,Europe,Americas
+DNK,HKG,0,family,Europe,Asia-Pacific
+IND,ESP,0,family,Asia-Pacific,Europe
+MEX,FRA,0,family,Americas,Europe
+GAB,CHN,0,family,Africa,Asia-Pacific
+TJK,MYS,0,family,Asia-Pacific,Asia-Pacific
+KEN,FRA,0,family,Africa,Europe
+ARG,GBR,0,family,Americas,Europe
+ABW,TUR,0,family,Americas,Europe
+KOR,SGP,0,family,Asia-Pacific,Asia-Pacific
+USA,ITA,0,family,Americas,Europe
+TCD,IDN,0,family,Africa,Asia-Pacific
+LAO,AND,0,family,Asia-Pacific,Europe
+KAZ,CHE,0,budget,Asia-Pacific,Europe
+MDA,DNK,0,budget,Europe,Europe
+KEN,ARG,0,budget,Africa,Americas
+PRY,BHS,0,budget,Americas,Americas
+COL,SAU,0,budget,Americas,Middle East
+CHL,BHR,0,budget,Americas,Middle East
+WSM,DEU,0,budget,Asia-Pacific,Europe
+IND,JPN,0,budget,Asia-Pacific,Asia-Pacific
+SWZ,AUS,0,budget,Africa,Asia-Pacific
+TZA,GBR,0,budget,Africa,Europe
+MAR,POL,0,budget,Africa,Europe
+BMU,BHR,0,budget,Americas,Middle East
+HND,JPN,0,budget,Americas,Asia-Pacific
+BES,IDN,0,budget,Unknown,Asia-Pacific
+KNA,BLR,0,budget,Americas,Europe
+BIH,ESP,0,budget,Europe,Europe
+SGP,GBR,0,budget,Asia-Pacific,Europe
+ASM,GRC,0,budget,Oceania,Europe
+PRY,HRV,0,budget,Americas,Europe
+GLP,ESP,0,budget,Americas,Europe
+CHE,COL,0,budget,Europe,Americas
+GRD,IDN,0,budget,Americas,Asia-Pacific
+ARE,POL,0,budget,Middle East,Europe
+GUF,HRV,0,budget,Americas,Europe
+CMR,CAN,0,budget,Africa,Americas
+MOZ,POL,0,budget,Africa,Europe
+AUS,MYS,0,budget,Asia-Pacific,Asia-Pacific
+GRC,ITA,0,budget,Europe,Europe
+GMB,KAZ,0,budget,Africa,Asia-Pacific
+KNA,AND,0,budget,Americas,Europe
+GTM,FRA,0,budget,Americas,Europe
+MAC,SAU,0,budget,Asia-Pacific,Middle East
+GEO,THA,0,budget,Europe,Asia-Pacific
+MEX,TUR,0,luxury,Americas,Europe
+AUS,SAU,0,luxury,Asia-Pacific,Middle East
+GLP,HRV,0,luxury,Americas,Europe
+GLP,AUS,0,luxury,Americas,Asia-Pacific
+BIH,CAN,0,luxury,Europe,Americas
+TUR,BHR,0,luxury,Europe,Middle East
+REU,POL,0,luxury,Unknown,Europe
+COG,SAU,0,luxury,Africa,Middle East
+MSR,GBR,0,luxury,Americas,Europe
+KAZ,EGY,0,adventure,Asia-Pacific,Middle East
+BES,HUN,0,adventure,Unknown,Europe
+KNA,IDN,0,adventure,Americas,Asia-Pacific
+COL,POL,0,adventure,Americas,Europe
+JOR,KOR,0,adventure,Middle East,Asia-Pacific
+ETH,DNK,0,adventure,Africa,Europe
+UKR,ESP,0,adventure,Europe,Europe
+GMB,GBR,0,adventure,Africa,Europe
+GUF,ALB,0,adventure,Americas,Europe
+HRV,TUR,0,adventure,Europe,Europe
+LVA,HRV,0,adventure,Europe,Europe
+SMR,PRI,0,family,Europe,Unknown
+BES,JPN,0,family,Unknown,Asia-Pacific
+DOM,KOR,0,family,Americas,Asia-Pacific
+SGP,ITA,0,family,Asia-Pacific,Europe
+IDN,HRV,0,family,Asia-Pacific,Europe
+NIU,ITA,0,family,Oceania,Europe
+COM,ZAF,0,family,Africa,Africa
+ALB,ITA,0,family,Europe,Europe
+JOR,CAN,0,family,Middle East,Americas
+BGR,HUN,0,family,Europe,Europe
+VCT,PRT,0,family,Americas,Europe
+SVN,GRC,0,family,Europe,Europe
+LCA,DNK,0,family,Americas,Europe
+SMR,DNK,0,family,Europe,Europe
+COL,GBR,0,family,Americas,Europe
+BES,CHE,0,family,Unknown,Europe
+CHN,TWN,0,family,Asia-Pacific,Asia-Pacific
+BFA,MAC,0,family,Africa,Asia-Pacific
+PNG,CHN,0,family,Asia-Pacific,Asia-Pacific
+BES,DNK,0,family,Unknown,Europe
+VIR,TUR,0,family,Unknown,Europe
+MAR,FRA,0,family,Africa,Europe
+ESP,POL,0,budget,Europe,Europe
+LCA,UZB,0,budget,Americas,Asia-Pacific
+IRN,SAU,0,budget,Middle East,Middle East
+QAT,MYS,0,budget,Middle East,Asia-Pacific
+BRN,DEU,0,budget,Asia-Pacific,Europe
+TJK,COL,0,budget,Asia-Pacific,Americas
+CUB,COL,0,budget,Americas,Americas
+ZWE,FRA,0,budget,Unknown,Europe
+UKR,IDN,0,budget,Europe,Asia-Pacific
+SMR,ARG,0,budget,Europe,Americas
+SLE,ARE,0,budget,Africa,Middle East
+WSM,THA,0,budget,Asia-Pacific,Asia-Pacific
+MOZ,MAR,0,budget,Africa,Africa
+AUS,HUN,0,budget,Asia-Pacific,Europe
+DOM,BHS,0,budget,Americas,Americas
+JAM,JPN,0,budget,Americas,Asia-Pacific
+SLE,FRA,0,budget,Africa,Europe
+TON,BLR,0,budget,Asia-Pacific,Europe
+BEN,CHN,0,budget,Africa,Asia-Pacific
+MOZ,TUR,0,budget,Africa,Europe
+GBR,HRV,0,budget,Europe,Europe
+VNM,CAN,0,budget,Unknown,Americas
+TON,JPN,0,budget,Asia-Pacific,Asia-Pacific
+SUR,JPN,0,budget,Americas,Asia-Pacific
+GLP,DEU,0,budget,Americas,Europe
+BGR,GBR,0,budget,Europe,Europe
+JOR,ITA,0,budget,Middle East,Europe
+SWZ,DNK,0,budget,Africa,Europe
+BEN,HKG,0,budget,Africa,Asia-Pacific
+BRB,GBR,0,budget,Americas,Europe
+MDG,PRT,0,budget,Africa,Europe
+DZA,HRV,0,budget,Africa,Europe
+DEU,KOR,0,budget,Europe,Asia-Pacific
+MCO,MYS,0,budget,Europe,Asia-Pacific
+HTI,HRV,0,budget,Americas,Europe
+AND,KOR,0,budget,Europe,Asia-Pacific
+HUN,UZB,0,budget,Europe,Asia-Pacific
+SRB,ITA,0,budget,Europe,Europe
+EGY,HRV,0,budget,Middle East,Europe
+BRA,ARE,0,luxury,Americas,Middle East
+UZB,SAU,0,luxury,Asia-Pacific,Middle East
+BRA,SAU,0,luxury,Americas,Middle East
+EST,MAC,0,luxury,Europe,Asia-Pacific
+KEN,HUN,0,luxury,Africa,Europe
+PHL,MAC,0,luxury,Asia-Pacific,Asia-Pacific
+GRC,TUR,0,luxury,Europe,Europe
+AUS,BHS,0,luxury,Asia-Pacific,Americas
+SLE,BHR,0,luxury,Africa,Middle East
+SWZ,CHE,0,luxury,Africa,Europe
+BRN,BRA,0,luxury,Asia-Pacific,Americas
+ABW,DEU,0,luxury,Americas,Europe
+TTO,GRC,0,luxury,Americas,Europe
+GEO,ARE,0,luxury,Europe,Middle East
+BHR,BRA,0,luxury,Middle East,Americas
+TWN,SAU,0,adventure,Asia-Pacific,Middle East
+NIC,SGP,0,adventure,Americas,Asia-Pacific
+ETH,DNK,0,adventure,Africa,Europe
+KEN,BHS,0,adventure,Africa,Americas
+KOR,FRA,0,adventure,Asia-Pacific,Europe
+DZA,ITA,0,adventure,Africa,Europe
+COL,COL,0,adventure,Americas,Americas
+VUT,CZE,0,adventure,Asia-Pacific,Europe
+HTI,PRT,0,adventure,Americas,Europe
+GAB,MAC,0,adventure,Africa,Asia-Pacific
+MOZ,KOR,0,adventure,Africa,Asia-Pacific
+HTI,MAC,0,adventure,Americas,Asia-Pacific
+BES,BHS,0,adventure,Unknown,Americas
+FJI,CHN,0,family,Asia-Pacific,Asia-Pacific
+SXM,HRV,0,family,Americas,Europe
+SXM,SAU,0,family,Americas,Middle East
+CUW,ZAF,0,family,Americas,Africa
+TWN,KOR,0,family,Asia-Pacific,Asia-Pacific
+BES,CHN,0,family,Unknown,Asia-Pacific
+ROU,TUR,0,family,Europe,Europe
+JPN,MEX,0,family,Asia-Pacific,Americas
+AUS,FRA,0,family,Asia-Pacific,Europe
+DNK,TWN,0,family,Europe,Asia-Pacific
+PHL,TUR,0,family,Asia-Pacific,Europe
+BRB,CHN,0,family,Americas,Asia-Pacific
+MEX,HKG,0,family,Americas,Asia-Pacific
+NCL,EGY,0,family,Oceania,Middle East
+SXM,DOM,0,family,Americas,Americas
+KIR,USA,0,family,Asia-Pacific,Americas
+TKM,DOM,0,family,Asia-Pacific,Americas
+DZA,FRA,0,family,Africa,Europe
+KNA,TUR,0,family,Americas,Europe
+MLT,KGZ,0,family,Europe,Asia-Pacific
+NZL,TWN,0,family,Asia-Pacific,Asia-Pacific
+NIU,SAU,0,family,Oceania,Middle East
+IDN,JPN,0,family,Asia-Pacific,Asia-Pacific
+MHL,JPN,0,family,Asia-Pacific,Asia-Pacific
+CHE,FRA,0,family,Europe,Europe
+TUR,TWN,0,family,Europe,Asia-Pacific
+SLE,CHN,0,family,Africa,Asia-Pacific
+HRV,CAN,0,family,Europe,Americas
+JAM,GRC,0,family,Americas,Europe
+RUS,SGP,0,budget,Europe,Asia-Pacific
+HRV,HUN,0,budget,Europe,Europe
+MCO,TUR,0,budget,Europe,Europe
+BMU,HKG,0,budget,Americas,Asia-Pacific
+GLP,MEX,0,budget,Americas,Americas
+CHN,PRI,0,budget,Asia-Pacific,Unknown
+NIU,KOR,0,budget,Oceania,Asia-Pacific
+SGP,TUR,0,budget,Asia-Pacific,Europe
+CUW,ITA,0,budget,Americas,Europe
+UZB,FRA,0,budget,Asia-Pacific,Europe
+MSR,CHN,0,budget,Americas,Asia-Pacific
+HUN,ESP,0,budget,Europe,Europe
+KOR,TWN,0,budget,Asia-Pacific,Asia-Pacific
+FRA,PRT,0,budget,Europe,Europe
+ARM,CAN,0,budget,Europe,Americas
+BGR,ESP,0,budget,Europe,Europe
+TUR,HKG,0,budget,Europe,Asia-Pacific
+CHE,DEU,0,budget,Europe,Europe
+EST,DEU,0,budget,Europe,Europe
+CZE,BHS,0,budget,Europe,Americas
+SXM,KOR,0,budget,Americas,Asia-Pacific
+SGP,PRT,0,budget,Asia-Pacific,Europe
+SYR,HKG,0,budget,Middle East,Asia-Pacific
+QAT,CZE,0,budget,Middle East,Europe
+NCL,HRV,0,budget,Oceania,Europe
+ERI,FRA,0,budget,Africa,Europe
+SXM,USA,0,budget,Americas,Americas
+CIV,HUN,0,budget,Africa,Europe
+PER,MAC,0,budget,Americas,Asia-Pacific
+BES,SAU,0,budget,Unknown,Middle East
+GUM,TUR,0,budget,Asia-Pacific,Europe
+THA,MAC,0,budget,Asia-Pacific,Asia-Pacific
+PYF,MAC,0,budget,Oceania,Asia-Pacific
+POL,ARE,0,budget,Europe,Middle East
+IDN,CHN,0,budget,Asia-Pacific,Asia-Pacific
+BES,IND,0,budget,Unknown,Asia-Pacific
+ABW,DNK,0,budget,Americas,Europe
+GTM,CHN,0,budget,Americas,Asia-Pacific
+ASM,TUR,0,budget,Oceania,Europe
+OMN,IDN,0,budget,Middle East,Asia-Pacific
+NIU,FRA,0,budget,Oceania,Europe
+IRN,SAU,0,budget,Middle East,Middle East
+PHL,ESP,0,luxury,Asia-Pacific,Europe
+JOR,KGZ,0,luxury,Middle East,Asia-Pacific
+BES,MEX,0,luxury,Unknown,Americas
+CIV,ESP,0,luxury,Africa,Europe
+SAU,TUR,0,luxury,Middle East,Europe
+TJK,ROU,0,luxury,Asia-Pacific,Europe
+EST,DEU,0,luxury,Europe,Europe
+SAU,DEU,0,luxury,Middle East,Europe
+UZB,POL,0,adventure,Asia-Pacific,Europe
+WSM,JPN,0,adventure,Asia-Pacific,Asia-Pacific
+GUF,CHN,0,adventure,Americas,Asia-Pacific
+LVA,USA,0,adventure,Europe,Americas
+LIE,GRC,0,adventure,Europe,Europe
+GBR,ESP,0,adventure,Europe,Europe
+CHL,CAN,0,adventure,Americas,Americas
+SLE,CHN,0,adventure,Africa,Asia-Pacific
+SEN,AND,0,adventure,Africa,Europe
+LIE,DEU,0,adventure,Europe,Europe
+ZWE,BGR,0,adventure,Unknown,Europe
+BFA,MYS,0,adventure,Africa,Asia-Pacific
+GLP,FRA,0,adventure,Americas,Europe
+VIR,DNK,0,family,Unknown,Europe
+COG,DEU,0,family,Africa,Europe
+VGB,HUN,0,family,Americas,Europe
+GLP,ESP,0,family,Americas,Europe
+SXM,USA,0,family,Americas,Americas
+QAT,GBR,0,family,Middle East,Europe
+YEM,FRA,0,family,Unknown,Europe
+IRQ,DNK,0,family,Middle East,Europe
+ALB,MAR,0,family,Europe,Africa
+GTM,BHS,0,family,Americas,Americas
+MLT,USA,0,family,Europe,Americas
+HND,HKG,0,family,Americas,Asia-Pacific
+AIA,SGP,0,family,Unknown,Asia-Pacific
+AZE,JPN,0,family,Europe,Asia-Pacific
+CUB,HRV,0,family,Americas,Europe
+MUS,BHR,0,family,Africa,Middle East
+VNM,ESP,0,budget,Unknown,Europe
+NIU,ARE,0,budget,Oceania,Middle East
+ALB,AUS,0,budget,Europe,Asia-Pacific
+DZA,CHN,0,budget,Africa,Asia-Pacific
+BLR,HUN,0,budget,Europe,Europe
+ASM,PRT,0,budget,Oceania,Europe
+MDG,BHS,0,budget,Africa,Americas
+THA,FRA,0,budget,Asia-Pacific,Europe
+CUW,USA,0,budget,Americas,Americas
+CHE,ITA,0,budget,Europe,Europe
+BGR,MEX,0,budget,Europe,Americas
+BES,JPN,0,budget,Unknown,Asia-Pacific
+MNP,ESP,0,budget,Asia-Pacific,Europe
+NIC,ITA,0,budget,Americas,Europe
+HRV,PRI,0,budget,Europe,Unknown
+DNK,ARG,0,budget,Europe,Americas
+REU,CHE,0,budget,Unknown,Europe
+TKM,GBR,0,budget,Asia-Pacific,Europe
+SRB,HUN,0,budget,Europe,Europe
+ZWE,GBR,0,budget,Unknown,Europe
+BMU,DEU,0,budget,Americas,Europe
+TWN,ZAF,0,budget,Asia-Pacific,Africa
+ISR,BHR,0,budget,Middle East,Middle East
+ERI,IDN,0,budget,Africa,Asia-Pacific
+ECU,BRA,0,budget,Americas,Americas
+PAN,BGR,0,budget,Americas,Europe
+IDN,HUN,0,budget,Asia-Pacific,Europe
+ASM,FRA,0,budget,Oceania,Europe
+DNK,DOM,0,budget,Europe,Americas
+NCL,GBR,0,budget,Oceania,Europe
+AIA,DEU,0,budget,Unknown,Europe
+REU,KOR,0,budget,Unknown,Asia-Pacific
+DMA,BGR,0,budget,Americas,Europe
+USA,MEX,0,budget,Americas,Americas
+BLZ,AND,0,budget,Americas,Europe
+MTQ,BHR,0,budget,Americas,Middle East
+CHL,GRC,0,budget,Americas,Europe
+NAM,GBR,0,budget,Africa,Europe
+ABW,ITA,0,budget,Americas,Europe
+REU,KAZ,0,luxury,Unknown,Asia-Pacific
+NIU,FRA,0,luxury,Oceania,Europe
+CYM,TUR,0,luxury,Americas,Europe
+LBY,MAR,0,luxury,Middle East,Africa
+CRI,HKG,0,luxury,Americas,Asia-Pacific
+BRB,CAN,0,luxury,Americas,Americas
+JPN,SAU,0,luxury,Asia-Pacific,Middle East
+TCA,JPN,0,luxury,Unknown,Asia-Pacific
+TUN,PRT,0,luxury,Middle East,Europe
+GBR,SAU,0,adventure,Europe,Middle East
+GRC,TUR,0,adventure,Europe,Europe
+ARM,KGZ,0,adventure,Europe,Asia-Pacific
+BHR,CAN,0,adventure,Middle East,Americas
+MUS,MEX,0,adventure,Africa,Americas
+SEN,IDN,0,adventure,Africa,Asia-Pacific
+COD,PRT,0,adventure,Africa,Europe
+SXM,ITA,0,adventure,Americas,Europe
+ROU,THA,0,adventure,Europe,Asia-Pacific
+WSM,ESP,0,adventure,Asia-Pacific,Europe
+COM,HUN,0,family,Africa,Europe
+ROU,BHR,0,family,Europe,Middle East
+KEN,ZAF,0,family,Africa,Africa
+TCA,MEX,0,family,Unknown,Americas
+SGP,ITA,0,family,Asia-Pacific,Europe
+LCA,PRT,0,family,Americas,Europe
+PHL,ITA,0,family,Asia-Pacific,Europe
+NAM,GRC,0,family,Africa,Europe
+MKD,MAC,0,family,Europe,Asia-Pacific
+GMB,HRV,0,family,Africa,Europe
+MTQ,SAU,0,family,Americas,Middle East
+SVN,CAN,0,family,Europe,Americas
+ZWE,CHN,0,family,Unknown,Asia-Pacific
+COG,ROU,0,family,Africa,Europe
+CHL,SGP,0,family,Americas,Asia-Pacific
+KOR,HRV,0,family,Asia-Pacific,Europe
+REU,SAU,0,family,Unknown,Middle East
+ALB,CZE,0,family,Europe,Europe
+JAM,FRA,0,family,Americas,Europe
+BES,IDN,0,budget,Unknown,Asia-Pacific
+TTO,HRV,0,budget,Americas,Europe
+LAO,DNK,0,budget,Asia-Pacific,Europe
+MSR,ALB,0,budget,Americas,Europe
+MEX,SAU,0,budget,Americas,Middle East
+GMB,DOM,0,budget,Africa,Americas
+URY,HRV,0,budget,Americas,Europe
+HTI,CHE,0,budget,Americas,Europe
+BRN,USA,0,budget,Asia-Pacific,Americas
+BLZ,POL,0,budget,Americas,Europe
+BEN,MYS,0,budget,Africa,Asia-Pacific
+KEN,CAN,0,budget,Africa,Americas
+DMA,CHN,0,budget,Americas,Asia-Pacific
+ZWE,MYS,0,budget,Unknown,Asia-Pacific
+IND,BHS,0,budget,Asia-Pacific,Americas
+FIN,MEX,0,budget,Europe,Americas
+DMA,JPN,0,budget,Americas,Asia-Pacific
+CZE,ESP,0,budget,Europe,Europe
+UKR,MEX,0,budget,Europe,Americas
+GLP,JPN,0,budget,Americas,Asia-Pacific
+DEU,BRA,0,budget,Europe,Americas
+KEN,POL,0,budget,Africa,Europe
+RWA,CHN,0,budget,Africa,Asia-Pacific
+MEX,CHN,0,budget,Americas,Asia-Pacific
+BLZ,ESP,0,budget,Americas,Europe
+VEN,ESP,0,budget,Unknown,Europe
+CUB,GBR,0,budget,Americas,Europe
+STP,CAN,0,budget,Africa,Americas
+VUT,POL,0,budget,Asia-Pacific,Europe
+LSO,POL,0,luxury,Africa,Europe
+PRY,DNK,0,luxury,Americas,Europe
+TJK,DNK,0,luxury,Asia-Pacific,Europe
+GUF,JPN,0,luxury,Americas,Asia-Pacific
+UKR,PRT,0,luxury,Europe,Europe
+BHR,PRI,0,luxury,Middle East,Unknown
+TJK,ESP,0,luxury,Asia-Pacific,Europe
+CHN,GBR,0,luxury,Asia-Pacific,Europe
+STP,BHR,0,luxury,Africa,Middle East
+BEN,BHR,0,luxury,Africa,Middle East
+BLR,DNK,0,luxury,Europe,Europe
+ERI,CHN,0,luxury,Africa,Asia-Pacific
+PER,MEX,0,luxury,Americas,Americas
+VCT,SAU,0,luxury,Americas,Middle East
+MAC,BEL,0,luxury,Asia-Pacific,Europe
+GIN,CAN,0,adventure,Africa,Americas
+LBY,CHN,0,adventure,Middle East,Asia-Pacific
+LAO,MYS,0,adventure,Asia-Pacific,Asia-Pacific
+BES,GRC,0,adventure,Unknown,Europe
+MTQ,TWN,0,adventure,Americas,Asia-Pacific
+BIH,POL,0,adventure,Europe,Europe
+LKA,DEU,0,adventure,Asia-Pacific,Europe
+HND,HUN,0,adventure,Americas,Europe
+BIH,DNK,0,family,Europe,Europe
+LKA,ITA,0,family,Asia-Pacific,Europe
+REU,AND,0,family,Unknown,Europe
+IND,ITA,0,family,Asia-Pacific,Europe
+DMA,ESP,0,family,Americas,Europe
+RUS,SAU,0,family,Europe,Middle East
+KNA,DNK,0,family,Americas,Europe
+TON,ESP,0,family,Asia-Pacific,Europe
+PRT,TUR,0,family,Europe,Europe
+KEN,POL,0,family,Africa,Europe
+BEL,SAU,0,family,Europe,Middle East
+REU,GBR,0,family,Unknown,Europe
+KGZ,MEX,0,family,Asia-Pacific,Americas
+DZA,UZB,0,family,Africa,Asia-Pacific
+CMR,USA,0,family,Africa,Americas
+MKD,TUR,0,family,Europe,Europe
+JOR,THA,0,family,Middle East,Asia-Pacific
+VCT,HKG,0,family,Americas,Asia-Pacific
+ISL,HUN,0,family,Europe,Europe
+TWN,PRT,0,budget,Asia-Pacific,Europe
+JPN,TUR,0,budget,Asia-Pacific,Europe
+TCD,SAU,0,budget,Africa,Middle East
+LSO,CAN,0,budget,Africa,Americas
+TZA,USA,0,budget,Africa,Americas
+POL,USA,0,budget,Europe,Americas
+SXM,FRA,0,budget,Americas,Europe
+GRC,CHN,0,budget,Europe,Asia-Pacific
+PYF,CAN,0,budget,Oceania,Americas
+YEM,ESP,0,budget,Unknown,Europe
+IRQ,CAN,0,budget,Middle East,Americas
+MKD,MYS,0,budget,Europe,Asia-Pacific
+BGR,GRC,0,budget,Europe,Europe
+NIU,IDN,0,budget,Oceania,Asia-Pacific
+AND,MEX,0,budget,Europe,Americas
+MAR,ESP,0,budget,Africa,Europe
+JPN,ITA,0,budget,Asia-Pacific,Europe
+MHL,DEU,0,budget,Asia-Pacific,Europe
+MLT,FRA,0,budget,Europe,Europe
+SLE,ZAF,0,budget,Africa,Africa
+MDA,CAN,0,budget,Europe,Americas
+TJK,HUN,0,budget,Asia-Pacific,Europe
+CYP,IDN,0,budget,Europe,Asia-Pacific
+VIR,UZB,0,budget,Unknown,Asia-Pacific
+QAT,IDN,0,budget,Middle East,Asia-Pacific
+MEX,MEX,0,budget,Americas,Americas
+VUT,GBR,0,budget,Asia-Pacific,Europe
+PAN,HKG,0,budget,Americas,Asia-Pacific
+PRI,POL,0,budget,Unknown,Europe
+QAT,PRT,0,budget,Middle East,Europe
+VUT,IND,0,budget,Asia-Pacific,Asia-Pacific
+GUF,USA,0,budget,Americas,Americas
+CHL,KAZ,0,budget,Americas,Asia-Pacific
+SGP,PRT,0,budget,Asia-Pacific,Europe
+SLE,HRV,0,budget,Africa,Europe
+SXM,BHR,0,budget,Americas,Middle East
+BES,PRT,0,budget,Unknown,Europe
+HRV,ITA,0,budget,Europe,Europe
+LKA,CZE,0,budget,Asia-Pacific,Europe
+CRI,DNK,0,budget,Americas,Europe
+MAR,GBR,0,budget,Africa,Europe
+PRY,HRV,0,budget,Americas,Europe
+BES,BHR,0,luxury,Unknown,Middle East
+HTI,BEL,0,luxury,Americas,Europe
+LIE,EGY,0,luxury,Europe,Middle East
+TJK,CAN,0,luxury,Asia-Pacific,Americas
+BHR,ITA,0,luxury,Middle East,Europe
+VIR,CAN,0,luxury,Unknown,Americas
+BRN,SAU,0,luxury,Asia-Pacific,Middle East
+SVN,ARE,0,luxury,Europe,Middle East
+HND,UZB,0,luxury,Americas,Asia-Pacific
+NAM,ZAF,0,luxury,Africa,Africa
+BHS,HKG,0,luxury,Americas,Asia-Pacific
+GIN,JPN,0,luxury,Africa,Asia-Pacific
+BES,USA,0,adventure,Unknown,Americas
+SRB,HUN,0,adventure,Europe,Europe
+LBY,CAN,0,adventure,Middle East,Americas
+BHS,CAN,0,adventure,Americas,Americas
+FRA,ARG,0,adventure,Europe,Americas
+PHL,POL,0,adventure,Asia-Pacific,Europe
+NCL,ITA,0,adventure,Oceania,Europe
+SXM,THA,0,adventure,Americas,Asia-Pacific
+BOL,POL,0,adventure,Americas,Europe
+BES,HRV,0,adventure,Unknown,Europe
+PYF,KOR,0,adventure,Oceania,Asia-Pacific
+BHS,JPN,0,adventure,Americas,Asia-Pacific
+BOL,IND,0,adventure,Americas,Asia-Pacific
+ALB,ITA,0,adventure,Europe,Europe
+DOM,IND,0,adventure,Americas,Asia-Pacific
+MNG,HUN,0,adventure,Asia-Pacific,Europe
+HUN,ITA,0,adventure,Europe,Europe
+MCO,HRV,0,adventure,Europe,Europe
+CHN,IDN,0,adventure,Asia-Pacific,Asia-Pacific
+MSR,FRA,0,adventure,Americas,Europe
+SVN,IDN,0,family,Europe,Asia-Pacific
+JAM,POL,0,family,Americas,Europe
+BES,ZAF,0,family,Unknown,Africa
+CHE,DNK,0,family,Europe,Europe
+BIH,USA,0,family,Europe,Americas
+ABW,PRT,0,family,Americas,Europe
+BOL,HUN,0,family,Americas,Europe
+MMR,DEU,0,family,Asia-Pacific,Europe
+KIR,MEX,0,family,Asia-Pacific,Americas
+HND,ITA,0,family,Americas,Europe
+MYS,PRT,0,family,Asia-Pacific,Europe
+KEN,IDN,0,family,Africa,Asia-Pacific
+PRT,CAN,0,family,Europe,Americas
+SEN,GRC,0,family,Africa,Europe
+EGY,GRC,0,family,Middle East,Europe
+MYS,FRA,0,family,Asia-Pacific,Europe
+ETH,ESP,0,family,Africa,Europe
+COM,PRT,0,family,Africa,Europe
+MHL,POL,0,family,Asia-Pacific,Europe
+CYP,GRC,0,family,Europe,Europe
+ARG,GBR,0,family,Americas,Europe
+SWZ,USA,0,family,Africa,Americas
+BHS,ESP,0,family,Americas,Europe
+BHS,POL,0,family,Americas,Europe
+CRI,HKG,0,budget,Americas,Asia-Pacific
+ISL,HUN,0,budget,Europe,Europe
+TON,AUS,0,budget,Asia-Pacific,Asia-Pacific
+MUS,HRV,0,budget,Africa,Europe
+MNP,THA,0,budget,Asia-Pacific,Asia-Pacific
+HKG,GRC,0,budget,Asia-Pacific,Europe
+JOR,SGP,0,budget,Middle East,Asia-Pacific
+MOZ,KOR,0,budget,Africa,Asia-Pacific
+AZE,DNK,0,budget,Europe,Europe
+HTI,ESP,0,budget,Americas,Europe
+BFA,BRA,0,budget,Africa,Americas
+IDN,HUN,0,budget,Asia-Pacific,Europe
+PER,ARG,0,budget,Americas,Americas
+ETH,PRT,0,budget,Africa,Europe
+LIE,KAZ,0,budget,Europe,Asia-Pacific
+NGA,POL,0,budget,Africa,Europe
+BLZ,HRV,0,budget,Americas,Europe
+LIE,MAR,0,budget,Europe,Africa
+LIE,POL,0,budget,Europe,Europe
+BES,TUR,0,budget,Unknown,Europe
+BGR,MAC,0,budget,Europe,Asia-Pacific
+GUF,ESP,0,budget,Americas,Europe
+ROU,MAR,0,budget,Europe,Africa
+SLV,CAN,0,budget,Americas,Americas
+SUR,COL,0,budget,Americas,Americas
+BOL,PRT,0,budget,Americas,Europe
+MEX,ITA,0,budget,Americas,Europe
+FIN,CAN,0,budget,Europe,Americas
+CYP,HUN,0,budget,Europe,Europe
+WSM,DNK,0,budget,Asia-Pacific,Europe
+VCT,MAC,0,budget,Americas,Asia-Pacific
+FJI,JPN,0,budget,Asia-Pacific,Asia-Pacific
+SEN,DEU,0,budget,Africa,Europe
+TUN,DNK,0,budget,Middle East,Europe
+DMA,CHE,0,budget,Americas,Europe
+RUS,SAU,0,budget,Europe,Middle East
+REU,JPN,0,budget,Unknown,Asia-Pacific
+GRC,CAN,0,budget,Europe,Americas
+PHL,HKG,0,budget,Asia-Pacific,Asia-Pacific
+TKM,DEU,0,budget,Asia-Pacific,Europe
+DNK,CHN,0,budget,Europe,Asia-Pacific
+TUR,UZB,0,budget,Europe,Asia-Pacific
+SRB,MAC,0,luxury,Europe,Asia-Pacific
+CYP,CAN,0,luxury,Europe,Americas
+AIA,HUN,0,luxury,Unknown,Europe
+SEN,ITA,0,luxury,Africa,Europe
+MUS,CHN,0,luxury,Africa,Asia-Pacific
+PRT,SGP,0,luxury,Europe,Asia-Pacific
+BGR,SGP,0,luxury,Europe,Asia-Pacific
+GUM,DEU,0,luxury,Asia-Pacific,Europe
+TUN,FRA,0,luxury,Middle East,Europe
+JOR,KGZ,0,luxury,Middle East,Asia-Pacific
+FRA,BHS,0,luxury,Europe,Americas
+ARE,HUN,0,luxury,Middle East,Europe
+BRB,BEL,0,luxury,Americas,Europe
+ITA,SAU,0,luxury,Europe,Middle East
+MSR,CHN,0,adventure,Americas,Asia-Pacific
+SAU,MYS,0,adventure,Middle East,Asia-Pacific
+GAB,ARG,0,adventure,Africa,Americas
+COM,USA,0,adventure,Africa,Americas
+LKA,CAN,0,adventure,Asia-Pacific,Americas
+PER,TUR,0,adventure,Americas,Europe
+NCL,ESP,0,adventure,Oceania,Europe
+ITA,HUN,0,adventure,Europe,Europe
+MOZ,GRC,0,adventure,Africa,Europe
+TON,HKG,0,adventure,Asia-Pacific,Asia-Pacific
+BOL,CHN,0,adventure,Americas,Asia-Pacific
+BHS,GRC,0,adventure,Americas,Europe
+ARG,UZB,0,adventure,Americas,Asia-Pacific
+SAU,ARG,0,adventure,Middle East,Americas
+TZA,AND,0,adventure,Africa,Europe
+SXM,POL,0,family,Americas,Europe
+IND,COL,0,family,Asia-Pacific,Americas
+MMR,UZB,0,family,Asia-Pacific,Asia-Pacific
+BHR,CAN,0,family,Middle East,Americas
+MEX,CHN,0,family,Americas,Asia-Pacific
+NIU,SAU,0,family,Oceania,Middle East
+JAM,ARE,0,family,Americas,Middle East
+HTI,HRV,0,family,Americas,Europe
+MDG,EGY,0,family,Africa,Middle East
+ESP,TUR,0,family,Europe,Europe
+POL,ZAF,0,family,Europe,Africa
+COG,HRV,0,family,Africa,Europe
+NCL,HKG,0,family,Oceania,Asia-Pacific
+GEO,FRA,0,family,Europe,Europe
+BIH,DEU,0,family,Europe,Europe
+MLT,TUR,0,family,Europe,Europe
+DNK,JPN,0,family,Europe,Asia-Pacific
+LAO,HRV,0,family,Asia-Pacific,Europe
+LVA,DOM,0,family,Europe,Americas
+MMR,USA,0,family,Asia-Pacific,Americas
+HRV,MYS,0,family,Europe,Asia-Pacific
+LTU,HRV,0,family,Europe,Europe
+LBY,IDN,0,family,Middle East,Asia-Pacific
+SAU,JPN,0,family,Middle East,Asia-Pacific
+COL,MAC,0,family,Americas,Asia-Pacific
+PNG,PRI,0,family,Asia-Pacific,Unknown
+STP,DNK,0,family,Africa,Europe
+LCA,MYS,0,family,Americas,Asia-Pacific
+SXM,MAC,0,budget,Americas,Asia-Pacific
+BHR,DNK,0,budget,Middle East,Europe
+JOR,CAN,0,budget,Middle East,Americas
+JPN,JPN,0,budget,Asia-Pacific,Asia-Pacific
+UZB,DNK,0,budget,Asia-Pacific,Europe
+REU,ITA,0,budget,Unknown,Europe
+CYM,POL,0,budget,Americas,Europe
+MDA,SAU,0,budget,Europe,Middle East
+CUW,FRA,0,budget,Americas,Europe
+PAN,GRC,0,budget,Americas,Europe
+EGY,MEX,0,budget,Middle East,Americas
+GTM,HRV,0,budget,Americas,Europe
+NGA,IDN,0,budget,Africa,Asia-Pacific
+GMB,DEU,0,budget,Africa,Europe
+SRB,POL,0,budget,Europe,Europe
+ZAF,USA,0,budget,Africa,Americas
+LIE,MYS,0,budget,Europe,Asia-Pacific
+MEX,UZB,0,budget,Americas,Asia-Pacific
+TWN,JPN,0,budget,Asia-Pacific,Asia-Pacific
+IDN,CHN,0,budget,Asia-Pacific,Asia-Pacific
+MKD,HKG,0,budget,Europe,Asia-Pacific
+MSR,ALB,0,budget,Americas,Europe
+PRT,POL,0,budget,Europe,Europe
+SRB,POL,0,budget,Europe,Europe
+PHL,GRC,0,budget,Asia-Pacific,Europe
+BHS,IDN,0,budget,Americas,Asia-Pacific
+BES,JPN,0,budget,Unknown,Asia-Pacific
+BEN,MYS,0,budget,Africa,Asia-Pacific
+TWN,TUR,0,budget,Asia-Pacific,Europe
+PYF,BHS,0,budget,Oceania,Americas
+GRC,POL,0,budget,Europe,Europe
+PRT,GRC,0,budget,Europe,Europe
+AND,DEU,0,luxury,Europe,Europe
+SVN,ROU,0,luxury,Europe,Europe
+ISL,ESP,0,luxury,Europe,Europe
+BGR,IND,0,luxury,Europe,Asia-Pacific
+VUT,GRC,0,luxury,Asia-Pacific,Europe
+CIV,ARE,0,luxury,Africa,Middle East
+PHL,DOM,0,luxury,Asia-Pacific,Americas
+RUS,BHR,0,luxury,Europe,Middle East
+GRC,BEL,0,luxury,Europe,Europe
+COM,TUR,0,luxury,Africa,Europe
+URY,DEU,0,luxury,Americas,Europe
+MNP,CAN,0,luxury,Asia-Pacific,Americas
+GLP,MAR,0,adventure,Americas,Africa
+TCD,DEU,0,adventure,Africa,Europe
+ATG,EGY,0,adventure,Americas,Middle East
+CYP,ARG,0,adventure,Europe,Americas
+MLT,MEX,0,adventure,Europe,Americas
+DZA,HKG,0,adventure,Africa,Asia-Pacific
+ERI,SGP,0,adventure,Africa,Asia-Pacific
+CHE,BRA,0,adventure,Europe,Americas
+PSE,KOR,0,adventure,Asia-Pacific,Asia-Pacific
+REU,MAR,0,adventure,Unknown,Africa
+ECU,USA,0,family,Americas,Americas
+ECU,SAU,0,family,Americas,Middle East
+JOR,THA,0,family,Middle East,Asia-Pacific
+CIV,MEX,0,family,Africa,Americas
+KAZ,HRV,0,family,Asia-Pacific,Europe
+TWN,ALB,0,family,Asia-Pacific,Europe
+ASM,PRT,0,family,Oceania,Europe
+EST,CAN,0,family,Europe,Americas
+MSR,MAC,0,family,Americas,Asia-Pacific
+HUN,MYS,0,family,Europe,Asia-Pacific
+LKA,BGR,0,family,Asia-Pacific,Europe
+COL,DEU,0,family,Americas,Europe
+TTO,HRV,0,family,Americas,Europe
+SXM,SAU,0,family,Americas,Middle East
+LBY,HKG,0,family,Middle East,Asia-Pacific
+TCA,JPN,0,family,Unknown,Asia-Pacific
+BES,ITA,0,family,Unknown,Europe
+CAN,MAC,0,family,Americas,Asia-Pacific
+NCL,HUN,0,family,Oceania,Europe

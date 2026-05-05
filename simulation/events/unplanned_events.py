@@ -6,6 +6,7 @@ Examples: Natural disasters, terrorism, epidemics, conflicts.
 from datetime import datetime, timedelta
 from typing import Dict, Optional
 import random
+import math
 
 
 class UnplannedEvent:

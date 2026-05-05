@@ -2698,29 +2698,44 @@ def render_tfi_feedback_chart(sim):
 
 
 def render_gini_chart(sim, gini_coefficient):
-    """Render Gini coefficient chart for utilization inequality."""
+    """Render Gini coefficient chart for utilization inequality with interpretation guide."""
     st.subheader("📊 Tourism Inequality (Gini Coefficient)")
+    
+    st.write("""
+    **What this shows:** Inequality in tourism distribution across destinations.
+    
+    **How to interpret:**
+    - **Gini < 0.3**: Low inequality - tourism evenly spread (many viable destinations)
+    - **Gini = 0.3-0.5**: Moderate inequality - some popular destinations (healthy balance)
+    - **Gini > 0.5**: High inequality - winner-take-all (few destinations dominate)
+    
+    **Path dependence:** Rising Gini over time = "rich-get-richer" dynamics (early advantages compound).
+    """)
     
     # Display current Gini
     gini_color = "green" if gini_coefficient < 0.3 else "orange" if gini_coefficient < 0.5 else "red"
     
-    col1, col2 = st.columns([1, 2])
-    
+    col1, col2, col3 = st.columns(3)
     with col1:
         st.metric(
             "Current Gini",
             f"{gini_coefficient:.3f}",
             help="0 = perfect equality (all destinations equally popular), 1 = perfect inequality (one destination has all tourists)"
         )
-    
     with col2:
         # Interpretation
         if gini_coefficient < 0.3:
-            st.success("**Low Inequality**: Tourism is well-distributed across destinations")
+            interpretation = "Low Inequality"
+            description = "Tourism well-distributed"
         elif gini_coefficient < 0.5:
-            st.warning("**Moderate Inequality**: Some destinations are significantly more popular")
+            interpretation = "Moderate Inequality"
+            description = "Some popular destinations"
         else:
-            st.error("**High Inequality**: Tourism is concentrated in a few popular destinations")
+            interpretation = "High Inequality"
+            description = "Few destinations dominate"
+        st.metric("Pattern", interpretation, help=description)
+    with col3:
+        st.metric("Target Range", "0.3-0.5", help="Balanced distribution")
     
     # Create Lorenz curve data
     utilizations = []
@@ -3060,8 +3075,18 @@ def render_power_law_chart(sim, power_law_params):
 
 
 def render_heterogeneity_chart(sim):
-    """Render segment heterogeneity chart."""
+    """Render segment heterogeneity chart with interpretation guide."""
     st.subheader("🎭 Segment Heterogeneity")
+    
+    st.write("""
+    **What this shows:** Whether different traveler segments (Budget/Luxury/Adventure/Family) behave differently.
+    
+    **How to interpret:**
+    - **Diverging lines** = segments respond differently to events/crowding (healthy diversity)
+    - **Parallel lines** = segments behave similarly (lack of diversity)
+    - **CV > 0.5** = High heterogeneity (ideal for resilience)
+    - **CV < 0.2** = Low heterogeneity (all travelers respond the same way)
+    """)
     
     # Get arrivals by segment over time
     if not sim.data_collector.segment_arrivals.get('budget'):
@@ -3120,24 +3145,72 @@ def render_heterogeneity_chart(sim):
     
     if len(recent_arrivals) == 4:
         cv = np.std(recent_arrivals) / np.mean(recent_arrivals)
-        col1, col2 = st.columns(2)
+        col1, col2, col3 = st.columns(3)
         with col1:
             st.metric("Segment CV (Heterogeneity)", f"{cv:.3f}",
-                      help="Higher = more divergent segment behaviors")
+                      help="Coefficient of Variation = std/mean. Higher = more divergent behaviors")
         with col2:
             interpretation = "High" if cv > 0.5 else "Moderate" if cv > 0.2 else "Low"
             st.metric("Behavioral Divergence", interpretation)
+        with col3:
+            target = "Target: >0.5"
+            st.metric("Target Range", target)
+        
+        # Tips for improving heterogeneity
+        st.divider()
+        st.write("**💡 How to Improve Heterogeneity Score:**")
+        
+        col_tip1, col_tip2 = st.columns(2)
+        with col_tip1:
+            st.markdown("""
+            **Simulation Settings:**
+            1. ✅ Run longer (90+ days) - segments diverge over time
+            2. ✅ Increase agents to 60K-80K - more statistical power
+            3. ✅ Trigger negative events - segments respond differently
+            4. ✅ Create crowding - budget travelers flee first
+            
+            **Why it matters:** High heterogeneity = system resilience through diversity.
+            """)
+        with col_tip2:
+            st.markdown("""
+            **Segment Characteristics:**
+            - **Budget**: Cost-sensitive, short-haul, flexible
+            - **Luxury**: Quality-focused, less price-sensitive
+            - **Adventure**: Risk-tolerant, off-beaten-path
+            - **Family**: Safety-conscious, strong distance penalty
+            
+            Different responses = healthy system diversity.
+            """)
     
     st.caption("""
-    **Heterogeneity**: Different traveler segments exhibit distinct behaviors due to varying
-    preferences (budget sensitivity, luxury preference, risk tolerance). This diversity
-    creates system resilience through distributed response patterns.
+    **Complexity Concept: Heterogeneity**
+    
+    Different traveler segments exhibit distinct behaviors due to varying preferences 
+    (budget sensitivity, luxury preference, risk tolerance). This diversity creates 
+    system resilience through distributed response patterns - when one segment reduces 
+    travel, others may maintain or increase, preventing system-wide collapse.
+    
+    **Real-world analogy**: Diverse ecosystems are more resilient to shocks than monocultures.
     """)
 
 
 def render_feedback_loop_chart(sim):
-    """Render TFI feedback loop (arrivals vs friction)."""
+    """Render TFI feedback loop (arrivals vs friction) with interpretation guide."""
     st.subheader("🔄 Negative Feedback Loop: TFI → Arrivals")
+    
+    st.write("""
+    **What this shows:** Whether overcrowding (high TFI) reduces arrivals - the system's self-regulating mechanism.
+    
+    **How to interpret:**
+    - **Downward slope (r < 0)**: ✅ Healthy! Crowding → fewer tourists (self-regulation)
+    - **Flat/weak (r ≈ 0)**: ⚠️ No clear feedback - system not self-regulating yet
+    - **Upward (r > 0)**: 🚨 Unusual! More crowding → MORE tourists (overtourism trap)
+    
+    **Feedback strength:**
+    - **r < -0.5**: Strong negative feedback (ideal)
+    - **r = -0.5 to -0.2**: Moderate negative feedback
+    - **r = -0.2 to 0**: Weak feedback (needs more data/crowding)
+    """)
     
     # Check if we have enough data
     if not sim.data_collector.dest_tfi or not sim.data_collector.dest_visitors:
@@ -3231,19 +3304,50 @@ def render_feedback_loop_chart(sim):
         correlation = df_feedback['TFI'].corr(df_feedback['Arrivals'])
         feedback_strength = "Strong Negative" if correlation < -0.5 else "Moderate Negative" if correlation < -0.2 else "Weak" if correlation < 0 else "Positive (unusual)"
         
-        col_fb1, col_fb2 = st.columns(2)
+        col_fb1, col_fb2, col_fb3 = st.columns(3)
         with col_fb1:
             st.metric("TFI-Arrivals Correlation", f"{correlation:.3f}",
                       help=f"{feedback_strength} feedback - negative correlation shows self-regulation")
         with col_fb2:
             st.metric("Feedback Type", feedback_strength)
+        with col_fb3:
+            st.metric("Target", "r < -0.5")
+        
+        # Tips for improving feedback signal
+        st.divider()
+        st.write("**💡 How to See Stronger Feedback:**")
+        
+        col_tip1, col_tip2 = st.columns(2)
+        with col_tip1:
+            st.markdown("""
+            **Simulation Settings:**
+            1. ✅ Run longer (90+ days) - destinations get crowded
+            2. ✅ Increase agents to 60K-80K - more capacity pressure
+            3. ✅ Trigger negative events - creates TFI spikes
+            4. ✅ Focus on popular destinations (France, Spain, USA)
+            
+            **Why it matters:** Strong negative feedback = system self-regulation.
+            """)
+        with col_tip2:
+            st.markdown("""
+            **TFI Dynamics:**
+            - **TFI > 1.0**: High friction (crowded, risky, strict policies)
+            - **TFI = 1.0**: Neutral (normal conditions)
+            - **TFI < 1.0**: Low friction (favorable conditions)
+            
+            Rising TFI → lower utility → fewer arrivals → reduced crowding.
+            """)
     
     st.caption("""
-    **Negative Feedback Loop**: As destinations become crowded (high TFI), they become less
-    attractive, causing tourists to choose alternatives. This self-regulating mechanism
-    prevents runaway overcrowding and demonstrates emergent homeostasis.
+    **Complexity Concept: Negative Feedback Loops**
+    
+    As destinations become crowded (high TFI), they become less attractive, causing tourists 
+    to choose alternatives. This self-regulating mechanism prevents runaway overcrowding and 
+    demonstrates emergent homeostasis - the system stabilizes itself without central control.
     
     **Causal Chain**: Crowding → Higher TFI → Lower Utility → Fewer Arrivals → Reduced Crowding
+    
+    **Real-world analogy**: Thermostat - when room gets too hot, AC turns on to cool it down.
     """)
 
 

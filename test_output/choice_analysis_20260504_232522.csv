@@ -1,0 +1,3527 @@
+origin,destination,distance_km,segment,origin_continent,dest_continent
+PRY,FRA,9856.221805523994,budget,Americas,Europe
+LSO,COM,2535.485442541576,budget,Africa,Africa
+GEO,VGB,10033.213905691247,budget,Europe,Americas
+NIU,TUR,16740.255884376194,budget,Oceania,Europe
+CUW,ESP,7046.044959911323,budget,Americas,Europe
+KIR,BRB,12169.73815570584,budget,Asia-Pacific,Americas
+LCA,CMR,8020.050338746438,budget,Americas,Africa
+NGA,ESP,3699.1327703861266,budget,Africa,Europe
+WSM,CHN,10345.06272549752,budget,Asia-Pacific,Asia-Pacific
+VNM,ARG,7741.862211390374,budget,Unknown,Americas
+KNA,MMR,15072.45649358986,adventure,Americas,Asia-Pacific
+CRI,JPN,13276.754015211147,adventure,Americas,Asia-Pacific
+CAN,HKG,10496.10547749138,adventure,Americas,Asia-Pacific
+VUT,MMR,8775.319152214175,budget,Asia-Pacific,Asia-Pacific
+PSE,TWN,8261.905841248425,budget,Asia-Pacific,Asia-Pacific
+BIH,AUS,13970.385804262265,budget,Europe,Asia-Pacific
+AIA,MMR,10621.80340009046,budget,Unknown,Asia-Pacific
+MCO,BOL,9805.558808555843,budget,Europe,Americas
+MAC,USA,12744.454125828646,budget,Asia-Pacific,Americas
+IRN,FRA,4595.684833231698,budget,Middle East,Europe
+SGP,BOL,17856.051758335554,budget,Asia-Pacific,Americas
+IRN,ARG,14403.834457795045,budget,Middle East,Americas
+QAT,TWN,6975.500487802216,budget,Middle East,Asia-Pacific
+GUF,ASM,13023.840164409618,budget,Americas,Oceania
+GLP,HKG,15699.476458250942,budget,Americas,Asia-Pacific
+GRC,BLR,1692.3642384418897,budget,Europe,Europe
+SYR,ESP,3779.0592922989567,budget,Middle East,Europe
+CMR,COG,882.5605624736787,budget,Africa,Africa
+NIU,CHN,10883.01673016414,budget,Oceania,Asia-Pacific
+HRV,SAU,3577.470088144246,budget,Europe,Middle East
+BWA,BIH,7400.630380738106,budget,Africa,Europe
+COG,FRA,5284.900960661433,budget,Africa,Europe
+ZAF,MEX,14615.361679449557,budget,Africa,Americas
+BFA,BEL,4290.213981836312,budget,Africa,Europe
+FRA,HRV,1015.7650801051359,budget,Europe,Europe
+SYC,USA,15371.402375764124,budget,Africa,Americas
+ISR,BEL,3309.8752130922235,budget,Middle East,Europe
+BES,CHN,11282.217268788312,budget,Unknown,Asia-Pacific
+BLZ,TCD,11251.352260470863,budget,Americas,Africa
+GRD,BRB,260.85375795883,budget,Americas,Americas
+MDA,BLR,700.9422083642561,budget,Europe,Europe
+FJI,BIH,16571.194412847264,adventure,Asia-Pacific,Europe
+CHE,BLZ,9119.453880778872,adventure,Europe,Americas
+LIE,BRA,9149.205347572872,adventure,Europe,Americas
+TON,BRA,12678.232213894787,adventure,Asia-Pacific,Americas
+CZE,BRN,10281.777932570649,budget,Europe,Asia-Pacific
+BRA,DEU,9431.646894589177,budget,Americas,Europe
+SYR,ALB,1790.26102756268,budget,Middle East,Europe
+GIN,DEU,4937.8334914487095,budget,Africa,Europe
+SLV,ITA,9909.306206486668,budget,Americas,Europe
+GMB,CHN,11630.620444044393,budget,Africa,Asia-Pacific
+BWA,ARG,8347.995900286822,budget,Africa,Americas
+JPN,POL,8575.761550346348,budget,Asia-Pacific,Europe
+CHN,USA,11647.263538539983,budget,Asia-Pacific,Americas
+GAB,SAU,4536.9219889905235,budget,Africa,Middle East
+ZAF,HKG,11356.871226463161,budget,Africa,Asia-Pacific
+CUB,JPN,12562.288742936971,budget,Americas,Asia-Pacific
+UKR,GBR,2469.712749762244,budget,Europe,Europe
+UKR,CHL,13753.437597796075,budget,Europe,Americas
+MAC,DZA,10819.119792412615,budget,Asia-Pacific,Africa
+ZAF,BLR,9382.814626722922,budget,Africa,Europe
+HKG,SAU,6993.358922985112,budget,Asia-Pacific,Middle East
+BRN,BHS,16475.68299072478,budget,Asia-Pacific,Americas
+DMA,AZE,10440.614136770162,budget,Americas,Europe
+FJI,FRA,16821.48291004622,budget,Asia-Pacific,Europe
+KIR,BRN,8548.502744503337,budget,Asia-Pacific,Asia-Pacific
+CUW,CAN,5843.322152773768,budget,Americas,Americas
+BLR,BIH,1320.7342872313568,budget,Europe,Europe
+HND,COL,1761.6494585205035,budget,Americas,Americas
+HKG,AUS,5699.052959350637,budget,Asia-Pacific,Asia-Pacific
+URY,TUR,12283.085801199575,budget,Americas,Europe
+CHL,BIH,12605.394798652747,budget,Americas,Europe
+BRN,SAU,7736.156107374992,budget,Asia-Pacific,Middle East
+CHN,AUS,7474.3568124730755,budget,Asia-Pacific,Asia-Pacific
+ZWE,CHN,11282.217268788312,budget,Unknown,Asia-Pacific
+SYC,BLR,6981.54171012685,budget,Africa,Europe
+BES,CMR,1596.3570978016735,adventure,Unknown,Africa
+BOL,SAU,12591.12653995362,adventure,Americas,Middle East
+KIR,BHS,10300.670070873868,adventure,Asia-Pacific,Americas
+YEM,CAN,11011.002227916915,adventure,Unknown,Americas
+ARG,BHR,13804.113055839785,adventure,Americas,Middle East
+AZE,LKA,4868.394716868446,adventure,Europe,Asia-Pacific
+ESP,BMU,5427.173222955402,adventure,Europe,Americas
+CHL,BLZ,6143.769533232033,adventure,Americas,Americas
+MEX,COL,3696.563711003503,family,Americas,Americas
+ECU,CYM,2374.973549066684,family,Americas,Americas
+CRI,AZE,12548.733353070387,family,Americas,Europe
+LAO,SAU,5902.477516300776,family,Asia-Pacific,Middle East
+CYM,ITA,8893.889461187578,family,Americas,Europe
+TON,BWA,14718.461800541063,family,Asia-Pacific,Africa
+TJK,AUS,9642.55713578364,family,Asia-Pacific,Asia-Pacific
+IRN,SAU,1269.5293175797128,budget,Middle East,Middle East
+YEM,MEX,11284.602439717288,budget,Unknown,Americas
+NGA,BOL,8434.149024967543,budget,Africa,Americas
+QAT,SAU,638.2738394376252,budget,Middle East,Middle East
+SAU,CAN,10718.120771150885,budget,Middle East,Americas
+THA,BGR,7645.0262219963215,budget,Asia-Pacific,Europe
+POL,CAN,7005.159576893397,budget,Europe,Americas
+GAB,ARG,8669.387837213862,budget,Africa,Americas
+TUR,CYM,10770.162058724354,budget,Europe,Americas
+LVA,BGR,1574.1709072938277,budget,Europe,Europe
+PER,BRA,2574.255815634024,budget,Americas,Americas
+ITA,SAU,3601.5301425048556,budget,Europe,Middle East
+ERI,BEL,5041.093184032379,budget,Africa,Europe
+KOR,TWN,1507.068615975634,budget,Asia-Pacific,Asia-Pacific
+COL,LKA,16922.70496678253,budget,Americas,Asia-Pacific
+PRI,SAU,5535.892093762673,budget,Unknown,Middle East
+MNG,AUS,8566.309490389021,budget,Asia-Pacific,Asia-Pacific
+VUT,BGR,15258.41086193633,budget,Asia-Pacific,Europe
+PSE,TWN,8261.905841248425,budget,Asia-Pacific,Asia-Pacific
+ARE,BRB,11709.226235023385,budget,Middle East,Americas
+BLR,HKG,7782.163381939728,budget,Europe,Asia-Pacific
+JAM,COL,1540.3780795604546,budget,Americas,Americas
+MKD,COL,10162.47676131411,budget,Europe,Americas
+FRA,SAU,4546.313452931867,budget,Europe,Middle East
+TWN,AZE,6967.400130655176,budget,Asia-Pacific,Europe
+LAO,CHN,1787.4540332435238,budget,Asia-Pacific,Asia-Pacific
+LIE,VGB,7334.189701695724,budget,Europe,Americas
+MCO,DZA,1820.63781945658,budget,Europe,Africa
+KEN,AND,5961.694265036915,budget,Africa,Europe
+ECU,AUS,15441.25205269355,budget,Americas,Asia-Pacific
+BIH,HKG,8802.092456672626,budget,Europe,Asia-Pacific
+JPN,JPN,0,budget,Asia-Pacific,Asia-Pacific
+VGB,DZA,6780.570534042917,budget,Americas,Africa
+MNG,DZA,8623.384109904458,budget,Asia-Pacific,Africa
+SMR,HKG,9187.713391434563,budget,Europe,Asia-Pacific
+ARG,BLR,13443.513421137059,adventure,Americas,Europe
+PRY,JPN,17874.464581605505,adventure,Americas,Asia-Pacific
+LAO,USA,13401.31868583312,adventure,Asia-Pacific,Americas
+CHN,ITA,7566.26072596193,adventure,Asia-Pacific,Europe
+AIA,HKG,12482.408681679102,family,Unknown,Asia-Pacific
+SLV,CHN,14324.486562390233,family,Americas,Asia-Pacific
+LKA,BLR,6928.2234506756095,family,Asia-Pacific,Europe
+ATG,COD,9456.526941679107,family,Americas,Africa
+DOM,BLR,8855.991448070132,family,Americas,Europe
+IND,HKG,3640.4054589645166,family,Asia-Pacific,Asia-Pacific
+ALB,BIH,368.68728515989886,family,Europe,Europe
+TUR,POL,1902.605220249886,family,Europe,Europe
+SLE,VGB,5802.937750256373,budget,Africa,Americas
+RUS,AUS,9983.599224864318,budget,Europe,Asia-Pacific
+IRN,COL,13161.700234646854,budget,Middle East,Americas
+SLE,AUS,15919.894260780356,budget,Africa,Asia-Pacific
+CYP,BHR,1919.7995220009616,budget,Europe,Middle East
+KOR,FRA,9384.179909734728,budget,Asia-Pacific,Europe
+TJK,BRA,13852.851732580712,budget,Asia-Pacific,Americas
+MTQ,GBR,6652.158160378921,budget,Americas,Europe
+GMB,MAC,13176.090887253304,budget,Africa,Asia-Pacific
+BRA,BGR,10082.030644716338,budget,Americas,Europe
+COG,HRV,4989.921246076382,budget,Africa,Europe
+ETH,ARG,11864.034859304535,budget,Africa,Americas
+KAZ,ARG,15942.500086112379,budget,Asia-Pacific,Americas
+HND,BRA,4994.854383028756,budget,Americas,Americas
+MUS,DEU,9181.141654533852,budget,Africa,Europe
+HTI,JPN,13090.302485405398,budget,Americas,Asia-Pacific
+NAM,USA,13614.261925764506,budget,Africa,Americas
+GAB,BHS,9945.198395020212,budget,Africa,Americas
+SVN,COG,5107.074841057968,budget,Europe,Africa
+PHL,ESP,11857.311787284452,budget,Asia-Pacific,Europe
+RWA,COL,11595.005808075755,budget,Africa,Americas
+ALB,HUN,670.2877320267651,budget,Europe,Europe
+EGY,GBR,4199.898096388922,budget,Middle East,Europe
+AND,POL,1685.8105982535221,budget,Europe,Europe
+CZE,SAU,3856.807735565951,budget,Europe,Middle East
+TCD,CHN,8608.126502197058,budget,Africa,Asia-Pacific
+ECU,COL,832.5841340348945,budget,Americas,Americas
+SRB,BRA,9792.586795609337,budget,Europe,Americas
+STP,CHN,10677.92843238364,budget,Africa,Asia-Pacific
+MMR,JPN,4366.5316221287585,budget,Asia-Pacific,Asia-Pacific
+IDN,HRV,10753.235175269776,budget,Asia-Pacific,Europe
+PRY,AND,9562.949550770476,budget,Americas,Europe
+SAU,BRA,11340.165669849897,budget,Middle East,Americas
+COM,USA,15053.526453225233,budget,Africa,Americas
+ARM,BMU,9208.643084582362,budget,Europe,Americas
+ITA,HRV,417.0195651804742,budget,Europe,Europe
+SGP,COL,19324.054549293127,budget,Asia-Pacific,Americas
+NIC,TWN,15107.398139112662,budget,Americas,Asia-Pacific
+POL,ATG,7906.952425162412,budget,Europe,Americas
+LSO,CHN,10764.553261662131,budget,Africa,Asia-Pacific
+CRI,ARM,12377.761655526407,budget,Americas,Europe
+GUF,GBR,7223.953099432594,budget,Americas,Europe
+CMR,GBR,5518.297814793286,budget,Africa,Europe
+LIE,BEL,525.4132761406543,budget,Europe,Europe
+TTO,CHN,14617.067622808345,budget,Americas,Asia-Pacific
+SUR,ARG,4771.894772433747,budget,Americas,Americas
+KGZ,BRB,12362.795225831278,budget,Asia-Pacific,Americas
+BRN,POL,9992.06063216864,budget,Asia-Pacific,Europe
+GUF,DZA,6373.07614408839,budget,Americas,Africa
+BGR,HRV,864.1509297110457,budget,Europe,Europe
+USA,ESP,7588.9195280843915,budget,Americas,Europe
+MKD,USA,9203.38757157549,budget,Europe,Americas
+KOR,ARM,6991.069065477592,budget,Asia-Pacific,Europe
+HTI,AND,7287.5923298776515,budget,Americas,Europe
+AND,BHS,7285.986971824301,luxury,Europe,Americas
+SMR,BEL,945.5662528747331,luxury,Europe,Europe
+STP,DZA,3141.1675471776803,adventure,Africa,Africa
+MCO,AUS,14792.705731825266,adventure,Europe,Asia-Pacific
+MLT,ITA,678.1192634942939,adventure,Europe,Europe
+BMU,HKG,13939.745034302017,adventure,Americas,Asia-Pacific
+BFA,BLR,5293.5790333581745,family,Africa,Europe
+BHS,TWN,14246.7161702497,family,Americas,Asia-Pacific
+SYC,BHR,3459.957801033648,family,Africa,Middle East
+CUW,SAU,11810.09289091378,family,Americas,Middle East
+GIN,TUR,5493.491479479199,family,Africa,Europe
+YEM,BEL,5631.732733890157,family,Unknown,Europe
+PRT,POL,2518.614555758928,family,Europe,Europe
+GUM,USA,11563.103574624107,family,Asia-Pacific,Americas
+YEM,DEU,5774.0073239565145,budget,Unknown,Europe
+POL,AUS,13860.054911269923,budget,Europe,Asia-Pacific
+LIE,BHR,4275.582513288821,budget,Europe,Middle East
+PRT,BLR,3142.6383353458345,budget,Europe,Europe
+KEN,MAC,8532.177453489472,budget,Africa,Asia-Pacific
+MOZ,GBR,9015.07917910294,budget,Africa,Europe
+UKR,JPN,8172.350445110581,budget,Europe,Asia-Pacific
+BEN,BHS,8541.239578428236,budget,Africa,Americas
+COL,FRA,8604.81365629709,budget,Americas,Europe
+KIR,AUS,6596.050225003316,budget,Asia-Pacific,Asia-Pacific
+ABW,BLR,9400.651309134379,budget,Americas,Europe
+GUM,BHR,9767.738201848893,budget,Asia-Pacific,Middle East
+VIR,FRA,5144.8281547943225,budget,Unknown,Europe
+JOR,DZA,3351.7390576397456,budget,Middle East,Africa
+DMA,COL,1857.6604337249169,budget,Americas,Americas
+TUN,ATG,7263.072990845112,budget,Middle East,Americas
+MOZ,AUS,9919.749580709838,budget,Africa,Asia-Pacific
+GLP,MAC,15704.88677631915,budget,Americas,Asia-Pacific
+CHN,BEL,7627.185579469352,budget,Asia-Pacific,Europe
+TKM,BLR,2890.300860648341,budget,Asia-Pacific,Europe
+MNP,HKG,3406.6339589077807,budget,Asia-Pacific,Asia-Pacific
+PHL,JPN,3072.294027434351,budget,Asia-Pacific,Asia-Pacific
+LVA,BHR,3999.5019499577675,budget,Europe,Middle East
+OMN,BEL,5492.0334880086875,budget,Middle East,Europe
+FIN,CAN,6245.501068218103,budget,Europe,Americas
+ATG,LKA,15053.648112367273,budget,Americas,Asia-Pacific
+WSM,BGR,16378.56329436681,budget,Asia-Pacific,Europe
+DNK,GBR,812.9390611597067,budget,Europe,Europe
+POL,ASM,15747.88857785412,budget,Europe,Oceania
+SRB,FRA,1491.1238644784783,budget,Europe,Europe
+BHR,FRA,4790.874456519019,budget,Middle East,Europe
+GLP,JPN,13820.302687037423,budget,Americas,Asia-Pacific
+QAT,MEX,13877.320313803717,budget,Middle East,Americas
+MDG,MEX,16805.550265770682,budget,Africa,Americas
+KIR,ESP,15623.872094152073,budget,Asia-Pacific,Europe
+GTM,DEU,9369.20290793426,budget,Americas,Europe
+GLP,ARM,10195.225725320512,budget,Americas,Europe
+ATG,BHS,1843.5549679011983,budget,Americas,Americas
+JOR,AZE,1476.2460991717114,budget,Middle East,Europe
+ISL,HRV,3033.212170141711,luxury,Europe,Europe
+AND,ARM,3605.9961998449717,luxury,Europe,Europe
+AZE,SAU,1822.7691370799869,luxury,Europe,Middle East
+GIN,DEU,4937.8334914487095,luxury,Africa,Europe
+COD,HRV,5502.6477026560415,luxury,Africa,Europe
+PNG,DEU,13452.376237074592,luxury,Asia-Pacific,Europe
+AND,DEU,1176.501394076685,adventure,Europe,Europe
+ALB,CHN,7040.777075701015,adventure,Europe,Asia-Pacific
+MAC,TWN,777.3881491714574,adventure,Asia-Pacific,Asia-Pacific
+DMA,TWN,15658.567238871723,adventure,Americas,Asia-Pacific
+BFA,BGR,4275.348545999511,adventure,Africa,Europe
+ZAF,POL,9178.708291837389,adventure,Africa,Europe
+LCA,FRA,6843.782452088815,adventure,Americas,Europe
+CUB,MEX,2551.017753882995,adventure,Americas,Americas
+ETH,MEX,14591.695672339838,family,Africa,Americas
+MTQ,ARG,5905.91855778972,family,Americas,Americas
+BGR,TWN,8668.932068482816,family,Europe,Asia-Pacific
+FIN,BHS,8223.418116212486,family,Europe,Americas
+BWA,AUS,10718.534778917974,family,Africa,Asia-Pacific
+YEM,CHN,11282.217268788312,family,Unknown,Asia-Pacific
+SEN,BRA,5215.50468705722,family,Africa,Americas
+GLP,ARM,10195.225725320512,family,Americas,Europe
+REU,ARG,7741.862211390374,family,Unknown,Americas
+SXM,AND,6596.4568872506,family,Americas,Europe
+VEN,HUN,5575.353951336609,family,Unknown,Europe
+YEM,CHN,11282.217268788312,budget,Unknown,Asia-Pacific
+GLP,COL,1904.2739173822079,budget,Americas,Americas
+SRB,POL,889.5346501305905,budget,Europe,Europe
+CYM,BLZ,800.3872249027655,budget,Americas,Americas
+JPN,BHR,8141.666311021784,budget,Asia-Pacific,Middle East
+PER,BEL,10062.735849135946,budget,Americas,Europe
+COM,TWN,9298.667099054112,budget,Africa,Asia-Pacific
+ETH,MAC,7888.686285770399,budget,Africa,Asia-Pacific
+EST,ESP,2852.5136372037673,budget,Europe,Europe
+NZL,TUR,16597.849573417854,budget,Asia-Pacific,Europe
+SRB,POL,889.5346501305905,budget,Europe,Europe
+GAB,FRA,5309.970911597286,budget,Africa,Europe
+AND,MAC,10011.70966655598,budget,Europe,Asia-Pacific
+BFA,CHN,10587.43563921975,budget,Africa,Asia-Pacific
+SXM,AUS,18101.2328657542,budget,Americas,Asia-Pacific
+NAM,BGR,7339.714308102313,budget,Africa,Europe
+TJK,ESP,6218.70182915024,budget,Asia-Pacific,Europe
+TWN,AND,10391.413834734201,budget,Asia-Pacific,Europe
+ZAF,TUR,7834.9314042673,budget,Africa,Europe
+MDG,CHN,8556.571825867859,budget,Africa,Asia-Pacific
+TON,TUR,16507.853872421743,budget,Asia-Pacific,Europe
+MTQ,BHS,2062.6354866191723,budget,Americas,Americas
+TTO,ESP,6505.760022206283,budget,Americas,Europe
+KAZ,ARM,1950.5495428953745,budget,Asia-Pacific,Europe
+ISR,BHR,1628.9479390642184,budget,Middle East,Middle East
+SUR,TUR,9843.323769387753,budget,Americas,Europe
+COD,ALB,5027.674318409615,budget,Africa,Europe
+RUS,POL,4963.732802966818,budget,Europe,Europe
+HUN,BRA,9819.048007694899,budget,Europe,Americas
+GTM,BEL,8985.470591480254,budget,Americas,Europe
+GRD,GBR,6925.579509973576,budget,Americas,Europe
+SWZ,POL,8804.887911118305,budget,Africa,Europe
+BMU,AUS,18051.33627429944,budget,Americas,Asia-Pacific
+FIN,JPN,7553.0035924716385,budget,Europe,Asia-Pacific
+MHL,CYM,11561.354455706567,budget,Asia-Pacific,Americas
+MSR,TCD,8578.504794231096,budget,Americas,Africa
+BEN,BHS,8541.239578428236,budget,Africa,Americas
+PRT,AND,887.6982748701693,budget,Europe,Europe
+SRB,COL,10076.862974988375,budget,Europe,Americas
+TKM,FRA,4658.544514954409,budget,Asia-Pacific,Europe
+UKR,TUR,1096.7204010914218,budget,Europe,Europe
+GUF,DEU,7852.640674392999,budget,Americas,Europe
+LTU,ARG,13273.80031535156,budget,Europe,Americas
+MKD,USA,9203.38757157549,budget,Europe,Americas
+YEM,SAU,5535.892093762673,budget,Unknown,Middle East
+HUN,JPN,8924.052282239487,budget,Europe,Asia-Pacific
+BOL,GBR,9748.913533106965,budget,Americas,Europe
+STP,BRN,12013.535463294795,budget,Africa,Asia-Pacific
+BGR,HKG,8243.788535773496,luxury,Europe,Asia-Pacific
+MDA,BGR,567.199172919578,luxury,Europe,Europe
+NGA,SAU,4198.437172997111,luxury,Africa,Middle East
+JPN,POL,8575.761550346348,luxury,Asia-Pacific,Europe
+QAT,POL,3997.3561936035403,luxury,Middle East,Europe
+BES,BGR,5389.387752164148,adventure,Unknown,Europe
+MSR,ITA,7525.660935728493,adventure,Americas,Europe
+DEU,CHN,7223.88602933107,adventure,Europe,Asia-Pacific
+HRV,HUN,403.09222492375784,adventure,Europe,Europe
+GAB,BGR,5036.293142076414,adventure,Africa,Europe
+ARM,CAN,8983.248123583127,family,Europe,Americas
+NAM,BHS,11621.448317253109,family,Africa,Americas
+BLZ,DEU,9131.798828672308,family,Americas,Europe
+TON,BRA,12678.232213894787,family,Asia-Pacific,Americas
+BRA,BEL,9038.900374491059,family,Americas,Europe
+PHL,BGR,9543.0997824217,family,Asia-Pacific,Europe
+MKD,JPN,9231.51780076958,family,Europe,Asia-Pacific
+RUS,HRV,5731.1757121397495,family,Europe,Europe
+TJK,CHL,16728.666342973916,family,Asia-Pacific,Americas
+BRA,BHS,5166.494540384499,family,Americas,Americas
+CYM,TWN,14660.144259870374,family,Americas,Asia-Pacific
+SVN,TUR,1833.9037963108183,family,Europe,Europe
+BOL,BGR,11153.870643445165,family,Americas,Europe
+DNK,SAU,4607.023057880003,family,Europe,Middle East
+GRC,HRV,864.1002945724251,family,Europe,Europe
+SRB,GBR,2146.339555226759,family,Europe,Europe
+VGB,POL,7985.505164842513,family,Americas,Europe
+CMR,ESP,4012.207646685594,family,Africa,Europe
+TUR,DEU,2354.713381137845,family,Europe,Europe
+MMR,BEL,8247.736907169596,budget,Asia-Pacific,Europe
+GMB,CHN,11630.620444044393,budget,Africa,Asia-Pacific
+MCO,HRV,635.5288168126197,budget,Europe,Europe
+BEN,BHR,5402.999801057621,budget,Africa,Middle East
+ECU,HRV,10417.304526484953,budget,Americas,Europe
+ARM,CAN,8983.248123583127,budget,Europe,Americas
+THA,JPN,4315.16936680081,budget,Asia-Pacific,Asia-Pacific
+AZE,BEL,3504.852334857605,budget,Europe,Europe
+LAO,ITA,8544.733256761627,budget,Asia-Pacific,Europe
+ZWE,AND,4728.936131641992,budget,Unknown,Europe
+UZB,DEU,4198.62699543698,budget,Asia-Pacific,Europe
+FRA,BHS,7255.858253684396,budget,Europe,Americas
+UKR,JPN,8172.350445110581,budget,Europe,Asia-Pacific
+LVA,COL,10119.201443598322,budget,Europe,Americas
+PHL,POL,9727.108576968762,budget,Asia-Pacific,Europe
+SYC,AUS,8608.358271320416,budget,Africa,Asia-Pacific
+NCL,BRA,14351.532237690662,budget,Oceania,Americas
+COL,COM,13116.621485786982,budget,Americas,Africa
+MEX,AND,9326.859519555304,budget,Americas,Europe
+NGA,AZE,5163.042583952591,budget,Africa,Europe
+CRI,TWN,15427.333135631712,budget,Americas,Asia-Pacific
+SVN,CHL,12536.463758367121,budget,Europe,Americas
+MNG,BGR,5935.606335094161,budget,Asia-Pacific,Europe
+LSO,SAU,6214.8002064926495,budget,Africa,Middle East
+JOR,FRA,3399.2933693939085,budget,Middle East,Europe
+ROU,MAC,8149.607826437857,budget,Europe,Asia-Pacific
+CYM,TUR,10770.162058724354,budget,Americas,Europe
+KEN,MAC,8532.177453489472,budget,Africa,Asia-Pacific
+MDA,BHR,3066.381476270543,budget,Europe,Middle East
+UZB,CAN,9139.106054337337,budget,Asia-Pacific,Americas
+BRB,BLR,8665.177373094804,budget,Americas,Europe
+VUT,DEU,15518.122841675913,budget,Asia-Pacific,Europe
+RWA,TUR,4581.395361206436,budget,Africa,Europe
+LTU,BHR,3891.9812636975116,budget,Europe,Middle East
+ZAF,COL,10957.90275336602,budget,Africa,Americas
+GLP,FRA,6702.414032687294,budget,Americas,Europe
+BES,ESP,4515.319738842054,budget,Unknown,Europe
+SUR,MEX,5446.902132934678,budget,Americas,Americas
+ECU,SAU,13448.24786408439,budget,Americas,Middle East
+ESP,ALB,2008.0999748610175,budget,Europe,Europe
+AUS,MEX,14353.633640469232,budget,Asia-Pacific,Americas
+ATG,FRA,6659.437601114137,budget,Americas,Europe
+LTU,GBR,1719.3750053323752,budget,Europe,Europe
+POL,POL,0,luxury,Europe,Europe
+IRQ,BGR,1906.9772783860906,luxury,Middle East,Europe
+MLT,BEL,1803.9480781910906,luxury,Europe,Europe
+STP,BEL,5598.732972130455,luxury,Africa,Europe
+PAN,AUS,15913.83601665751,luxury,Americas,Asia-Pacific
+SWZ,TUR,7292.312407834232,luxury,Africa,Europe
+HRV,BRA,9421.99500536535,luxury,Europe,Americas
+BIH,HKG,8802.092456672626,luxury,Europe,Asia-Pacific
+BHS,ESP,6899.628752225802,luxury,Americas,Europe
+RWA,CAN,12841.253402487677,luxury,Africa,Americas
+KGZ,CHN,2614.420571785923,adventure,Asia-Pacific,Asia-Pacific
+LTU,BHS,8423.061365458203,adventure,Europe,Americas
+MDG,LKA,4753.010236129469,adventure,Africa,Asia-Pacific
+UKR,ARG,13401.6330715684,adventure,Europe,Americas
+ALB,TUR,1304.137855674202,adventure,Europe,Europe
+BES,POL,6044.822411831666,adventure,Unknown,Europe
+MMR,HUN,7235.819747468959,adventure,Asia-Pacific,Europe
+MCO,BRA,8809.034043040958,adventure,Europe,Americas
+PRY,GBR,10188.85506464294,adventure,Americas,Europe
+MNP,COL,15099.290717345048,adventure,Asia-Pacific,Americas
+LVA,MEX,9794.54151418583,family,Europe,Americas
+MNP,TUR,10634.57221082463,family,Asia-Pacific,Europe
+BES,CHN,11282.217268788312,family,Unknown,Asia-Pacific
+SVN,HKG,8908.166582105985,family,Europe,Asia-Pacific
+BFA,HRV,3985.02266437235,family,Africa,Europe
+CUB,AUS,16775.237476529055,family,Americas,Asia-Pacific
+RUS,SAU,6125.445810207705,family,Europe,Middle East
+ESP,TUR,3312.2369522167037,family,Europe,Europe
+MUS,AUS,7726.917595993107,family,Africa,Asia-Pacific
+BES,TUR,5624.013219298066,family,Unknown,Europe
+BRN,BHS,16475.68299072478,family,Asia-Pacific,Americas
+VCT,POL,8221.032074831346,family,Americas,Europe
+ECU,DEU,10071.003190761723,family,Americas,Europe
+VCT,CAN,6142.289402123735,family,Americas,Americas
+NGA,FRA,4175.972926325855,family,Africa,Europe
+ISR,MAC,7726.799928787023,budget,Middle East,Asia-Pacific
+KIR,FRA,15169.556973288954,budget,Asia-Pacific,Europe
+CHN,USA,11647.263538539983,budget,Asia-Pacific,Americas
+FRA,COL,8604.81365629709,budget,Europe,Americas
+GRD,AND,6913.360374082347,budget,Americas,Europe
+TKM,CYM,12358.445160241507,budget,Asia-Pacific,Americas
+BLZ,TUR,11464.800777871118,budget,Americas,Europe
+GLP,BHS,1912.9429258304092,budget,Americas,Americas
+BMU,AND,5812.941495790961,budget,Americas,Europe
+CAN,BEL,6562.609864881317,budget,Americas,Europe
+MDA,MEX,10715.829658167984,budget,Europe,Americas
+HKG,DEU,8995.004544384414,budget,Asia-Pacific,Europe
+LCA,HRV,7838.2228575118015,budget,Americas,Europe
+EGY,BGR,1833.8674620234501,budget,Middle East,Europe
+NCL,BRA,14351.532237690662,budget,Oceania,Americas
+THA,MAC,1494.2343127891565,budget,Asia-Pacific,Asia-Pacific
+GRD,HRV,8030.586457264603,budget,Americas,Europe
+TJK,BEL,5250.302500654913,budget,Asia-Pacific,Europe
+KOR,AUS,6832.3688445266525,budget,Asia-Pacific,Asia-Pacific
+GTM,TWN,14469.221573941884,budget,Americas,Asia-Pacific
+CYP,MAC,7747.105176274171,budget,Europe,Asia-Pacific
+JAM,MEX,2690.8359711023354,budget,Americas,Americas
+ETH,AUS,10767.635357206931,budget,Africa,Asia-Pacific
+BIH,BRA,9543.44894347221,budget,Europe,Americas
+GRD,JPN,14249.402612051083,budget,Americas,Asia-Pacific
+EGY,AUS,12448.28513250593,budget,Middle East,Asia-Pacific
+URY,FRA,10510.99806388428,budget,Americas,Europe
+BHR,HRV,3788.137343733597,budget,Middle East,Europe
+TTO,COL,1592.9214936929725,budget,Americas,Americas
+VCT,ITA,7717.6123460160625,budget,Americas,Europe
+MDA,ARG,13167.136970472327,budget,Europe,Americas
+BES,MAC,12421.139513704387,budget,Unknown,Asia-Pacific
+LTU,ESP,2603.063273605756,budget,Europe,Europe
+TUR,BLR,1730.3535907017526,budget,Europe,Europe
+NGA,SAU,4198.437172997111,budget,Africa,Middle East
+EGY,ARG,12178.75986137066,budget,Middle East,Americas
+BRN,HRV,10392.984276550851,budget,Asia-Pacific,Europe
+ERI,HUN,4019.1013100531045,budget,Africa,Europe
+SVN,CAN,7399.833950045585,budget,Europe,Americas
+SUR,AND,7099.116137985526,budget,Americas,Europe
+SGP,HKG,2586.133781513593,budget,Asia-Pacific,Asia-Pacific
+ERI,CHN,6736.295405068645,budget,Africa,Asia-Pacific
+FJI,BGR,16217.488821229615,budget,Asia-Pacific,Europe
+USA,AUS,15184.485887086737,budget,Americas,Asia-Pacific
+SVN,COL,9586.781757131019,budget,Europe,Americas
+PRT,CHN,9157.698605430336,budget,Europe,Asia-Pacific
+COL,CHN,15516.44153390127,budget,Americas,Asia-Pacific
+BES,COL,8267.178833252816,budget,Unknown,Americas
+BMU,BHS,1473.4041630154259,luxury,Americas,Americas
+REU,BGR,5389.387752164148,luxury,Unknown,Europe
+NCL,BLR,14914.873531145116,luxury,Oceania,Europe
+UZB,ITA,4255.705127695062,luxury,Asia-Pacific,Europe
+NIC,DEU,9336.979196107026,luxury,Americas,Europe
+DOM,TWN,15144.849098089611,luxury,Americas,Asia-Pacific
+BHS,ARG,7200.070178951625,luxury,Americas,Americas
+GMB,ITA,4148.74187854689,luxury,Africa,Europe
+ISR,MEX,12429.344149590517,luxury,Middle East,Americas
+PYF,FRA,15906.89471495021,luxury,Oceania,Europe
+MKD,BWA,7111.79146642651,adventure,Europe,Africa
+HKG,DEU,8995.004544384414,adventure,Asia-Pacific,Europe
+NIU,AND,17284.343292563168,adventure,Oceania,Europe
+ETH,CAN,12140.911527690707,adventure,Africa,Americas
+PRT,AND,887.6982748701693,adventure,Europe,Europe
+SAU,CHL,13863.67824253184,adventure,Middle East,Americas
+DMA,HRV,7754.486749895861,adventure,Americas,Europe
+UZB,BGR,3202.6451920002646,adventure,Asia-Pacific,Europe
+TCD,BEL,4102.29928662178,adventure,Africa,Europe
+CYP,MAC,7747.105176274171,adventure,Europe,Asia-Pacific
+SWZ,ARG,8624.630597350208,adventure,Africa,Americas
+SMR,GBR,1702.4631650889373,adventure,Europe,Europe
+LAO,BHR,5328.743374596453,adventure,Asia-Pacific,Middle East
+IRQ,MAC,6864.007252891165,family,Middle East,Asia-Pacific
+SYC,TWN,7755.78076555121,family,Africa,Asia-Pacific
+MKD,USA,9203.38757157549,family,Europe,Americas
+GBR,HUN,1826.4404848266713,family,Europe,Europe
+VNM,CHN,11282.217268788312,family,Unknown,Asia-Pacific
+TCD,JPN,11458.789269495932,family,Africa,Asia-Pacific
+AND,ALB,1549.10004263365,family,Europe,Europe
+QAT,BLR,3692.9061456333425,family,Middle East,Europe
+BHR,ARG,13804.113055839785,family,Middle East,Americas
+HTI,COL,1616.0627108363092,family,Americas,Americas
+GLP,FRA,6702.414032687294,family,Americas,Europe
+COL,GBR,8389.40996869425,family,Americas,Europe
+GUM,DEU,11585.58524795337,family,Asia-Pacific,Europe
+TJK,BHS,12198.482984600392,family,Asia-Pacific,Americas
+LAO,TUR,6698.3552129798245,family,Asia-Pacific,Europe
+SUR,BEL,7625.566524846432,family,Americas,Europe
+ATG,BRA,3644.6965845400114,family,Americas,Americas
+SYC,BHS,14508.040746466131,family,Africa,Americas
+MNP,HKG,3406.6339589077807,family,Asia-Pacific,Asia-Pacific
+URY,BRA,2070.450017727148,family,Americas,Americas
+CUW,BHR,12220.459698116169,family,Americas,Middle East
+PSE,ESP,3591.755533066476,family,Asia-Pacific,Europe
+ESP,FRA,801.532862166119,family,Europe,Europe
+BRN,CHL,16493.263194476465,family,Asia-Pacific,Americas
+VUT,BLR,14469.36002339613,family,Asia-Pacific,Europe
+ESP,CAN,7059.688098020236,family,Europe,Americas
+PSE,BRA,10577.629381162225,budget,Asia-Pacific,Americas
+HRV,HKG,8937.291023200818,budget,Europe,Asia-Pacific
+MDA,SAU,3005.8023823858166,budget,Europe,Middle East
+ECU,ITA,10205.594749446627,budget,Americas,Europe
+FRA,POL,1381.699302680826,budget,Europe,Europe
+NIC,ITA,9731.213009551513,budget,Americas,Europe
+GMB,MAC,13176.090887253304,budget,Africa,Asia-Pacific
+NIU,ARG,10035.506932056434,budget,Oceania,Americas
+GAB,BLR,6246.855617336046,budget,Africa,Europe
+ARM,POL,2375.231487905001,budget,Europe,Europe
+KAZ,HUN,3500.477544496172,budget,Asia-Pacific,Europe
+TUN,USA,8970.45841750148,budget,Middle East,Americas
+AIA,POL,6044.822411831666,budget,Unknown,Europe
+GMB,BHR,6966.892734307448,budget,Africa,Middle East
+SEN,CHN,11482.937122005684,budget,Africa,Asia-Pacific
+CHE,BLR,1590.3118074810513,budget,Europe,Europe
+HTI,BGR,9198.263106737208,budget,Americas,Europe
+RWA,JPN,11777.622871234627,budget,Africa,Asia-Pacific
+LAO,CAN,11141.986167498186,budget,Asia-Pacific,Americas
+LBY,HUN,2324.492032425473,budget,Middle East,Europe
+CHE,ALB,1142.3815526734313,budget,Europe,Europe
+ASM,POL,15747.88857785412,budget,Oceania,Europe
+OMN,AUS,9870.302585456593,budget,Middle East,Asia-Pacific
+PNG,DEU,13452.376237074592,budget,Asia-Pacific,Europe
+ARE,ARM,2026.97220130958,budget,Middle East,Europe
+MDG,BIH,7577.100131163487,budget,Africa,Europe
+OMN,HKG,5965.431795327021,budget,Middle East,Asia-Pacific
+PRT,FRA,1139.005691192484,budget,Europe,Europe
+TON,MAC,9106.869735193413,budget,Asia-Pacific,Asia-Pacific
+YEM,POL,6044.822411831666,budget,Unknown,Europe
+RUS,CHN,2854.6100136702817,budget,Europe,Asia-Pacific
+FRA,ESP,801.532862166119,budget,Europe,Europe
+GLP,POL,7957.948616973366,budget,Americas,Europe
+NIU,JPN,8212.834056943317,budget,Oceania,Asia-Pacific
+ISL,COL,7982.685186730501,budget,Europe,Americas
+COD,ASM,17593.512713512537,budget,Africa,Oceania
+PRY,BEL,10270.692824894804,luxury,Americas,Europe
+TON,BHS,11733.244278386874,luxury,Asia-Pacific,Americas
+MOZ,COM,1144.4211395237487,luxury,Africa,Africa
+BGR,DEU,1472.0500124536209,luxury,Europe,Europe
+GRD,BEL,7292.123754118018,luxury,Americas,Europe
+MNP,CHL,15671.733112798951,luxury,Asia-Pacific,Americas
+EST,POL,829.5354522838743,luxury,Europe,Europe
+MNG,ARG,18627.640556732647,luxury,Asia-Pacific,Americas
+WSM,TUR,16136.951552702276,luxury,Asia-Pacific,Europe
+ARG,TWN,18322.05904356222,luxury,Americas,Asia-Pacific
+CIV,BRA,5659.923006600326,adventure,Africa,Americas
+IRN,HKG,5999.951141083331,adventure,Middle East,Asia-Pacific
+MOZ,GBR,9015.07917910294,adventure,Africa,Europe
+BIH,MAC,8764.298995920575,adventure,Europe,Asia-Pacific
+MEX,CAN,3626.626850684984,adventure,Americas,Americas
+COL,BLR,10396.133168003027,adventure,Americas,Europe
+NIU,ARG,10035.506932056434,adventure,Oceania,Americas
+URY,ITA,10819.119729402864,adventure,Americas,Europe
+CIV,ITA,4213.116022219722,adventure,Africa,Europe
+GRC,HRV,864.1002945724251,adventure,Europe,Europe
+KNA,MEX,4187.216199592478,adventure,Americas,Americas
+LIE,MAC,9209.708993340733,adventure,Europe,Asia-Pacific
+MOZ,JPN,12336.110477819455,family,Africa,Asia-Pacific
+GIN,SAU,5991.898891011842,family,Africa,Middle East
+SYC,JPN,9668.75999700962,family,Africa,Asia-Pacific
+BRA,CAN,9304.53414702658,family,Americas,Americas
+LBY,USA,10078.409580850983,family,Middle East,Americas
+NIC,BRA,4704.029213950285,family,Americas,Americas
+TJK,MEX,13036.248514179497,family,Asia-Pacific,Americas
+MDA,CHL,13521.405830321974,family,Europe,Americas
+TON,BGR,16942.187444140123,family,Asia-Pacific,Europe
+COM,ALB,6334.157719038416,family,Africa,Europe
+TWN,BHR,7015.996755809462,family,Asia-Pacific,Middle East
+CYP,CHN,6255.714208404222,family,Europe,Asia-Pacific
+AZE,GBR,4059.3716535951908,family,Europe,Europe
+VEN,ITA,4823.788882367057,family,Unknown,Europe
+PYF,POL,16077.378617373044,family,Oceania,Europe
+TUR,POL,1902.605220249886,family,Europe,Europe
+PYF,ITA,16826.54065730063,family,Oceania,Europe
+VNM,AND,4728.936131641992,family,Unknown,Europe
+CUW,SAU,11810.09289091378,family,Americas,Middle East
+MOZ,DEU,8141.146283798548,family,Africa,Europe
+BIH,COD,5347.866950407423,budget,Europe,Africa
+ESP,GBR,1658.5654727588749,budget,Europe,Europe
+VIR,ESP,4515.319738842054,budget,Unknown,Europe
+TKM,AND,4809.175099211192,budget,Asia-Pacific,Europe
+BHR,CHL,14465.735263902108,budget,Middle East,Americas
+ATG,COL,1945.3782122930606,budget,Americas,Americas
+BES,BEL,5631.732733890157,budget,Unknown,Europe
+UKR,HUN,881.1162660000897,budget,Europe,Europe
+SLE,ALB,4805.479811590281,budget,Africa,Europe
+SLE,USA,8905.475112311955,budget,Africa,Americas
+YEM,ITA,4823.788882367057,budget,Unknown,Europe
+AUS,ALB,13745.512412943583,budget,Asia-Pacific,Europe
+LAO,MAC,1175.5886611807755,budget,Asia-Pacific,Asia-Pacific
+BFA,AUS,15119.87965193293,budget,Africa,Asia-Pacific
+ERI,FRA,4902.31486162213,budget,Africa,Europe
+NIC,FRA,8829.753426891468,budget,Americas,Europe
+BES,CHL,8350.427055402972,budget,Unknown,Americas
+COL,USA,4222.305262761184,budget,Americas,Americas
+TWN,BGR,8668.932068482816,budget,Asia-Pacific,Europe
+SLV,POL,9993.693014788816,budget,Americas,Europe
+VUT,GBR,15491.555131533716,budget,Asia-Pacific,Europe
+BHR,HKG,6401.937112126519,budget,Middle East,Asia-Pacific
+BIH,ITA,474.2778009042667,budget,Europe,Europe
+MCO,DZA,1820.63781945658,budget,Europe,Africa
+TWN,BGR,8668.932068482816,budget,Asia-Pacific,Europe
+ZWE,FRA,5144.8281547943225,budget,Unknown,Europe
+BES,CHN,11282.217268788312,budget,Unknown,Asia-Pacific
+NIU,AND,17284.343292563168,budget,Oceania,Europe
+MKD,AND,1661.151611180874,budget,Europe,Europe
+SXM,BGR,8542.308505682702,budget,Americas,Europe
+PNG,ASM,5091.430262554973,budget,Asia-Pacific,Oceania
+ROU,ALB,657.9282962868465,budget,Europe,Europe
+BRA,BGR,10082.030644716338,luxury,Americas,Europe
+QAT,MAC,6297.722756357618,luxury,Middle East,Asia-Pacific
+BEN,AND,3692.328604757764,luxury,Africa,Europe
+BRN,MAC,1968.2125907287802,luxury,Asia-Pacific,Asia-Pacific
+CZE,ARG,12484.292351091082,luxury,Europe,Americas
+WSM,ITA,16856.735892877114,luxury,Asia-Pacific,Europe
+KOR,BHR,7254.556773552679,luxury,Asia-Pacific,Middle East
+EGY,JPN,9685.25430037404,luxury,Middle East,Asia-Pacific
+EGY,JPN,9685.25430037404,luxury,Middle East,Asia-Pacific
+NCL,JPN,6971.64827619967,luxury,Oceania,Asia-Pacific
+NIC,DEU,9336.979196107026,luxury,Americas,Europe
+WSM,MAC,9030.770547304017,luxury,Asia-Pacific,Asia-Pacific
+BGR,FRA,1879.5084665111656,luxury,Europe,Europe
+GIN,BHR,6561.677029730388,luxury,Africa,Middle East
+GAB,MAC,11269.245690136639,adventure,Africa,Asia-Pacific
+MUS,BEL,9434.218105462058,adventure,Africa,Europe
+ROU,FRA,1749.046643498113,adventure,Europe,Europe
+WSM,JPN,7613.160352179506,adventure,Asia-Pacific,Asia-Pacific
+AIA,CHN,11282.217268788312,adventure,Unknown,Asia-Pacific
+BOL,BHR,13167.952105851247,adventure,Americas,Middle East
+SLE,DEU,5167.114468042952,adventure,Africa,Europe
+TKM,MAC,5407.924060068039,adventure,Asia-Pacific,Asia-Pacific
+TJK,BGR,3831.103572957898,adventure,Asia-Pacific,Europe
+GMB,USA,8268.734646430781,adventure,Africa,Americas
+KIR,BHR,15127.109821671795,adventure,Asia-Pacific,Middle East
+BLZ,AND,8728.281449644439,adventure,Americas,Europe
+VCT,MAC,16062.529874346417,adventure,Americas,Asia-Pacific
+WSM,CHN,10345.06272549752,family,Asia-Pacific,Asia-Pacific
+LSO,MAC,10779.45985621006,family,Africa,Asia-Pacific
+NCL,AND,17191.744124799767,family,Oceania,Europe
+TKM,JPN,6712.490701998574,family,Asia-Pacific,Asia-Pacific
+LKA,TWN,4624.0788895674505,family,Asia-Pacific,Asia-Pacific
+KNA,BEL,6926.690974404456,family,Americas,Europe
+UKR,SAU,2985.619016438778,family,Europe,Middle East
+BLZ,ESP,8342.907689743051,family,Americas,Europe
+CAN,BHR,10617.813915585328,family,Americas,Middle East
+MAC,ARM,6650.899034560095,family,Asia-Pacific,Europe
+ETH,BHS,12293.339071953911,family,Africa,Americas
+PHL,HRV,10252.211865711517,family,Asia-Pacific,Europe
+ATG,USA,3994.907324345166,family,Americas,Americas
+TTO,BHS,2334.8481825871045,family,Americas,Americas
+COG,COD,811.9732683730928,family,Africa,Africa
+URY,BHS,6798.533142998841,family,Americas,Americas
+MEX,CHL,7357.678130221531,family,Americas,Americas
+JOR,MMR,5966.129022182001,family,Middle East,Asia-Pacific
+COM,SAU,3955.466682008449,family,Africa,Middle East
+PNG,BHR,10653.713896679334,family,Asia-Pacific,Middle East
+COD,MAC,10360.545006306811,family,Africa,Asia-Pacific
+SEN,GBR,4643.533869566389,family,Africa,Europe
+SXM,MEX,4138.571405357351,family,Americas,Americas
+MDA,CHN,6177.480775962756,budget,Europe,Asia-Pacific
+MSR,DEU,7360.8772343421115,budget,Americas,Europe
+COM,BLZ,14803.633379674162,budget,Africa,Americas
+POL,BHS,8269.552514393727,budget,Europe,Americas
+BRB,ALB,8191.958390935009,budget,Americas,Europe
+DZA,DEU,2675.646790939872,budget,Africa,Europe
+LAO,SAU,5902.477516300776,budget,Asia-Pacific,Middle East
+BMU,BEL,5882.719534998245,budget,Americas,Europe
+ESP,CAN,7059.688098020236,budget,Europe,Americas
+EST,ESP,2852.5136372037673,budget,Europe,Europe
+IDN,VGB,18048.283911028633,budget,Asia-Pacific,Americas
+PYF,AND,16122.604929501555,budget,Oceania,Europe
+CHL,ESP,10933.877442836027,budget,Americas,Europe
+SVN,ESP,1638.2264894704856,budget,Europe,Europe
+UZB,MAC,5014.429912690135,budget,Asia-Pacific,Asia-Pacific
+CYP,HUN,1769.6604939583735,budget,Europe,Europe
+QAT,TWN,6975.500487802216,budget,Middle East,Asia-Pacific
+ETH,TUR,3356.6626370941394,budget,Africa,Europe
+MCO,TUR,2369.9780039205934,budget,Europe,Europe
+EGY,BHR,1966.6582831990672,budget,Middle East,Middle East
+SEN,BHR,6836.695179008119,budget,Africa,Middle East
+URY,DEU,11326.677790843669,budget,Americas,Europe
+ZWE,BHR,6138.220327104693,budget,Unknown,Middle East
+QAT,MEX,13877.320313803717,budget,Middle East,Americas
+CRI,BHS,1827.6570633743193,budget,Americas,Americas
+ATG,TWN,15473.059253845471,budget,Americas,Asia-Pacific
+GRC,ARG,12240.22916167008,budget,Europe,Americas
+ASM,TUR,16312.881925266463,budget,Oceania,Europe
+USA,HUN,8652.058920094925,budget,Americas,Europe
+JAM,BHR,12541.673100391747,budget,Americas,Middle East
+ZAF,BLR,9382.814626722922,budget,Africa,Europe
+ISL,HKG,9522.02264609438,budget,Europe,Asia-Pacific
+LVA,HKG,7919.595711368406,budget,Europe,Asia-Pacific
+COM,POL,7440.244130214825,budget,Africa,Europe
+TCA,TUR,5624.013219298066,budget,Unknown,Europe
+IDN,BEL,11436.47462557285,budget,Asia-Pacific,Europe
+NIU,ITA,17467.47942056769,budget,Oceania,Europe
+SVN,HKG,8908.166582105985,budget,Europe,Asia-Pacific
+MNP,USA,11366.82843065843,budget,Asia-Pacific,Americas
+FJI,MAC,8302.406048256351,luxury,Asia-Pacific,Asia-Pacific
+ITA,ESP,1372.6341591156809,luxury,Europe,Europe
+VIR,ITA,4823.788882367057,luxury,Unknown,Europe
+PRY,SAU,12334.996296197962,luxury,Americas,Middle East
+CRI,BEL,9047.617347972306,luxury,Americas,Europe
+CYP,ESP,3295.299481004478,luxury,Europe,Europe
+SMR,TUR,1970.7756319620264,luxury,Europe,Europe
+PRT,MEX,8717.955771713001,adventure,Europe,Americas
+BGR,TUR,920.789420276294,adventure,Europe,Europe
+MSR,USA,3986.6753343364735,adventure,Americas,Americas
+VGB,JPN,13481.223805303274,adventure,Americas,Asia-Pacific
+SUR,COL,2027.1390337888988,adventure,Americas,Americas
+BHS,DZA,7724.588420512205,adventure,Americas,Africa
+HND,ITA,9593.43279094708,family,Americas,Europe
+DMA,BGR,8599.575289301314,family,Americas,Europe
+BES,ALB,5006.68377326962,family,Unknown,Europe
+MSR,HKG,15653.544678646287,family,Americas,Asia-Pacific
+GUF,JPN,15397.687043398495,family,Americas,Asia-Pacific
+MSR,ALB,8163.050497631136,family,Americas,Europe
+KEN,USA,13721.917659342782,family,Africa,Americas
+KIR,BRA,12782.73458282974,family,Asia-Pacific,Americas
+BWA,CAN,14548.107552731393,family,Africa,Americas
+ESP,CAN,7059.688098020236,family,Europe,Americas
+SLV,CAN,4938.65526868675,family,Americas,Americas
+MLT,ARG,11503.800526568391,family,Europe,Americas
+TWN,ARG,18322.05904356222,family,Asia-Pacific,Americas
+ASM,BHR,15590.922872943658,family,Oceania,Middle East
+FIN,ARG,13673.345346081966,family,Europe,Americas
+FRA,BHR,4790.874456519019,family,Europe,Middle East
+FJI,CHL,10595.745749740168,family,Asia-Pacific,Americas
+CYP,MAC,7747.105176274171,family,Europe,Asia-Pacific
+GUM,FRA,12398.107600913221,family,Asia-Pacific,Europe
+RUS,ITA,6146.033724639403,family,Europe,Europe
+STP,ARG,8312.01891637411,budget,Africa,Americas
+SEN,BEL,4351.488357612144,budget,Africa,Europe
+BES,POL,6044.822411831666,budget,Unknown,Europe
+JOR,BGR,1653.673050223047,budget,Middle East,Europe
+AND,ARG,11141.163934641312,budget,Europe,Americas
+CAN,ALB,8088.271511627479,budget,Americas,Europe
+BEL,SAU,4566.307721231887,budget,Europe,Middle East
+SXM,CHN,13872.654216998251,budget,Americas,Asia-Pacific
+DMA,FRA,6755.0339126441095,budget,Americas,Europe
+GIN,GBR,5081.641111154059,budget,Africa,Europe
+LTU,HRV,1277.044618044447,budget,Europe,Europe
+TUN,HUN,1696.3794495356065,budget,Middle East,Europe
+NCL,TWN,6925.856853475519,budget,Oceania,Asia-Pacific
+COD,CAN,12640.013691371241,budget,Africa,Americas
+BLR,FRA,2005.6062611449463,budget,Europe,Europe
+AZE,BHR,1589.378520449117,budget,Europe,Middle East
+HRV,BHS,8260.656952726189,budget,Europe,Americas
+TZA,ITA,5823.380783029957,budget,Africa,Europe
+DZA,GBR,3067.912660695078,budget,Africa,Europe
+PAN,JPN,13582.451742538733,budget,Americas,Asia-Pacific
+MCO,POL,1259.1738502354908,budget,Europe,Europe
+BFA,ARG,8547.86502192653,budget,Africa,Americas
+PHL,DEU,10317.565207889165,budget,Asia-Pacific,Europe
+NCL,USA,12133.270674237985,budget,Oceania,Americas
+JPN,CHL,17342.613353644363,budget,Asia-Pacific,Americas
+VEN,ARG,7741.862211390374,budget,Unknown,Americas
+BRA,POL,10005.110033444676,budget,Americas,Europe
+GUF,CHL,4804.220237490579,budget,Americas,Americas
+VCT,TUR,9656.215706510831,budget,Americas,Europe
+CUW,CHL,5326.858209797797,budget,Americas,Americas
+ISR,POL,2651.4814071284427,budget,Middle East,Europe
+BFA,BHR,5647.500666370769,budget,Africa,Middle East
+BLZ,FRA,8690.850449414616,budget,Americas,Europe
+CRI,CHL,5210.946286256693,budget,Americas,Americas
+TCA,VGB,7341.499381351605,budget,Unknown,Americas
+KOR,CHL,18276.062892846705,budget,Asia-Pacific,Americas
+ZWE,MEX,11284.602439717288,budget,Unknown,Americas
+VGB,BRA,3889.3213258898054,budget,Americas,Americas
+HRV,TCD,3313.071358174047,budget,Europe,Africa
+BES,CHN,11282.217268788312,budget,Unknown,Asia-Pacific
+SYC,BRA,11743.43926120503,budget,Africa,Americas
+MAR,ALB,2636.3398001213845,budget,Africa,Europe
+PSE,GBR,3971.797293152717,budget,Asia-Pacific,Europe
+FRA,TUR,2798.871446184784,budget,Europe,Europe
+REU,HKG,12482.408681679102,budget,Unknown,Asia-Pacific
+ERI,SAU,1115.589323203284,luxury,Africa,Middle East
+CUB,SAU,12035.660746096755,luxury,Americas,Middle East
+PNG,BOL,16077.824198177152,luxury,Asia-Pacific,Americas
+ROU,ARG,12861.146512122317,luxury,Europe,Americas
+JPN,GBR,9200.42112784435,luxury,Asia-Pacific,Europe
+GRC,TWN,9109.684342728116,luxury,Europe,Asia-Pacific
+ZWE,ESP,4515.319738842054,luxury,Unknown,Europe
+TCD,FRA,3750.437780089559,luxury,Africa,Europe
+PRT,POL,2518.614555758928,luxury,Europe,Europe
+SXM,CMR,8217.590684917779,luxury,Americas,Africa
+TON,POL,16379.643566769711,adventure,Asia-Pacific,Europe
+CYM,USA,2425.329318786542,adventure,Americas,Americas
+MOZ,BHR,5232.284625245106,adventure,Africa,Middle East
+LKA,USA,15002.00605223058,adventure,Asia-Pacific,Americas
+BES,AND,4728.936131641992,adventure,Unknown,Europe
+TON,COL,11320.114091715188,adventure,Asia-Pacific,Americas
+PYF,HKG,11381.20643752701,adventure,Oceania,Asia-Pacific
+VIR,TUR,5624.013219298066,adventure,Unknown,Europe
+MKD,BHR,3155.2245845307016,family,Europe,Middle East
+BGR,AND,1954.3771618357957,family,Europe,Europe
+MNP,GBR,11659.466584799105,family,Asia-Pacific,Europe
+ALB,FRA,1545.671754827353,family,Europe,Europe
+ZAF,BGR,8154.014332470468,family,Africa,Europe
+MNG,HKG,2882.098190478597,family,Asia-Pacific,Asia-Pacific
+VNM,ITA,4823.788882367057,family,Unknown,Europe
+NIC,BHS,1639.9378731653042,family,Americas,Americas
+BOL,ARG,2460.289346496817,family,Americas,Americas
+TON,DEU,16644.677215489795,family,Asia-Pacific,Europe
+ABW,TUR,10408.123086276946,family,Americas,Europe
+MTQ,HRV,7785.99602633547,family,Americas,Europe
+JOR,POL,2753.9432291425837,family,Middle East,Europe
+MNG,JPN,3068.6668205689975,family,Asia-Pacific,Asia-Pacific
+BRN,TUR,8781.968214323448,family,Asia-Pacific,Europe
+LVA,DEU,1118.3352555105107,family,Europe,Europe
+COM,FRA,7629.390371910565,family,Africa,Europe
+DZA,USA,8769.586033744083,family,Africa,Americas
+NAM,FRA,7866.188267461266,family,Africa,Europe
+BLZ,POL,9663.017996921453,budget,Americas,Europe
+MNP,BHS,13557.537683832292,budget,Asia-Pacific,Americas
+KNA,BHR,11346.337061383207,budget,Americas,Middle East
+CAN,ARG,11259.040336145843,budget,Americas,Americas
+CUB,ATG,1748.295826965088,budget,Americas,Americas
+GRD,MAC,16164.016214996598,budget,Americas,Asia-Pacific
+ARE,BHR,443.50486193005787,budget,Middle East,Middle East
+BOL,FRA,9563.612880218263,budget,Americas,Europe
+HUN,JPN,8924.052282239487,budget,Europe,Asia-Pacific
+THA,COL,17683.8067974498,budget,Asia-Pacific,Americas
+SLV,ITA,9909.306206486668,budget,Americas,Europe
+IRN,BRN,7035.047628282797,budget,Middle East,Asia-Pacific
+FJI,SAU,15101.672512373376,budget,Asia-Pacific,Middle East
+TCA,CHN,11282.217268788312,budget,Unknown,Asia-Pacific
+PER,CHN,17048.251551072637,budget,Americas,Asia-Pacific
+CMR,FRA,4428.518313225146,budget,Africa,Europe
+EGY,CAN,9943.762435939052,budget,Middle East,Americas
+LSO,ESP,8460.765633297908,budget,Africa,Europe
+PHL,MEX,13714.054165720989,budget,Asia-Pacific,Americas
+MAR,HKG,11342.284415476566,budget,Africa,Asia-Pacific
+NAM,ATG,9790.369349129987,budget,Africa,Americas
+BRA,BGR,10082.030644716338,budget,Americas,Europe
+BES,USA,10513.964439946625,budget,Unknown,Americas
+TCD,JPN,11458.789269495932,budget,Africa,Asia-Pacific
+THA,BEL,9102.873948457596,luxury,Asia-Pacific,Europe
+GBR,SAU,5266.622380870696,luxury,Europe,Middle East
+CHE,ITA,649.0693011095186,luxury,Europe,Europe
+MMR,BGR,6809.985155812194,luxury,Asia-Pacific,Europe
+USA,ITA,8619.062718679941,luxury,Americas,Europe
+BES,BGR,5389.387752164148,luxury,Unknown,Europe
+ATG,JPN,13728.150239811699,luxury,Americas,Asia-Pacific
+GEO,GBR,3634.6480548638265,luxury,Europe,Europe
+BEL,TUR,2721.3383808825492,luxury,Europe,Europe
+RUS,HKG,4412.032219502709,luxury,Europe,Asia-Pacific
+ARG,HKG,18212.81420980003,adventure,Americas,Asia-Pacific
+NIU,TWN,8876.95864807558,adventure,Oceania,Asia-Pacific
+MAC,CAN,10531.841537291244,adventure,Asia-Pacific,Americas
+LCA,ARG,5824.814157007813,adventure,Americas,Americas
+HRV,GBR,1740.2472413689077,adventure,Europe,Europe
+BFA,AUS,15119.87965193293,adventure,Africa,Asia-Pacific
+COD,JPN,12633.990447160695,adventure,Africa,Asia-Pacific
+TJK,BHR,2399.027117737941,adventure,Asia-Pacific,Middle East
+ARM,JPN,7759.392774162103,family,Europe,Asia-Pacific
+SGP,FRA,10787.384384180958,family,Asia-Pacific,Europe
+HUN,SAU,3440.5567379311783,family,Europe,Middle East
+EGY,ALB,1867.753199608673,family,Middle East,Europe
+ZAF,USA,14398.769059330554,family,Africa,Americas
+KOR,POL,8052.136816725531,family,Asia-Pacific,Europe
+PER,ITA,10489.621954084798,family,Americas,Europe
+WSM,BHS,11114.532282031594,family,Asia-Pacific,Americas
+ZAF,MEX,14615.361679449557,family,Africa,Americas
+GTM,BRA,5372.179387086018,family,Americas,Americas
+MAR,POL,3086.654917842769,family,Africa,Europe
+TTO,TUR,9812.40346259494,family,Americas,Europe
+GTM,TUR,11704.247227016105,family,Americas,Europe
+ARG,GBR,11881.871208148528,family,Americas,Europe
+SAU,CAN,10718.120771150885,family,Middle East,Americas
+SEN,ALB,4461.720077714778,family,Africa,Europe
+BLR,COD,6447.232915876575,family,Europe,Africa
+IRQ,BEL,3711.4299729654863,family,Middle East,Europe
+BRA,FRA,8625.290078289463,family,Americas,Europe
+SYC,HKG,7045.736242029495,family,Africa,Asia-Pacific
+SYR,BHR,1471.758159278481,family,Middle East,Middle East
+ZAF,JPN,14086.835208832805,family,Africa,Asia-Pacific
+AND,JPN,10224.461971340477,family,Europe,Asia-Pacific
+CHE,CAN,7056.257627023048,budget,Europe,Americas
+OMN,HUN,4335.664148158128,budget,Middle East,Europe
+BLZ,TUR,11464.800777871118,budget,Americas,Europe
+KEN,USA,13721.917659342782,budget,Africa,Americas
+BRB,SAU,10852.98407843628,budget,Americas,Middle East
+BWA,CHN,10556.67469897996,budget,Africa,Asia-Pacific
+PNG,ESP,15042.899045626586,budget,Asia-Pacific,Europe
+TJK,HKG,4448.121551482908,budget,Asia-Pacific,Asia-Pacific
+JOR,POL,2753.9432291425837,budget,Middle East,Europe
+KAZ,POL,3382.141070189257,budget,Asia-Pacific,Europe
+NGA,MEX,11711.454842474657,budget,Africa,Americas
+MUS,AND,9040.156706875827,budget,Africa,Europe
+UZB,TUR,2495.5020067019077,budget,Asia-Pacific,Europe
+MDA,BHR,3066.381476270543,budget,Europe,Middle East
+SAU,COL,12732.828570150796,budget,Middle East,Americas
+BES,CHN,11282.217268788312,budget,Unknown,Asia-Pacific
+BHS,JPN,12245.866697566278,budget,Americas,Asia-Pacific
+BIH,ARM,2290.1689258005727,budget,Europe,Europe
+KNA,POL,7949.158370644708,budget,Americas,Europe
+USA,HRV,8553.876926537898,budget,Americas,Europe
+MCO,ITA,467.96132950519757,budget,Europe,Europe
+COG,HUN,5231.063787010424,budget,Africa,Europe
+LSO,FRA,8830.448520937423,budget,Africa,Europe
+CRI,BHR,13672.357405431663,budget,Americas,Middle East
+CYM,HRV,8987.745515744751,budget,Americas,Europe
+PRY,FRA,9856.221805523994,budget,Americas,Europe
+GRC,GBR,2604.287256377945,budget,Europe,Europe
+SYR,MEX,12355.916852691458,budget,Middle East,Americas
+DNK,COM,8173.114261632375,budget,Europe,Africa
+KOR,DEU,8569.682758046878,budget,Asia-Pacific,Europe
+TUN,POL,2148.013880683064,budget,Middle East,Europe
+MSR,GBR,6528.786512192734,budget,Americas,Europe
+SGP,AUS,4376.561912211766,budget,Asia-Pacific,Asia-Pacific
+FIN,HUN,1688.2418441354519,budget,Europe,Europe
+WSM,USA,9759.885273838965,budget,Asia-Pacific,Americas
+MCO,TUR,2369.9780039205934,luxury,Europe,Europe
+SVN,MEX,10035.611112950171,luxury,Europe,Americas
+MHL,SAU,13228.955898437931,luxury,Asia-Pacific,Middle East
+VGB,SAU,11062.003779632332,luxury,Americas,Middle East
+PHL,MAC,1353.8436355453334,luxury,Asia-Pacific,Asia-Pacific
+YEM,FRA,5144.8281547943225,luxury,Unknown,Europe
+BEN,HRV,4167.180692176634,luxury,Africa,Europe
+CUB,CAN,4507.958454845779,luxury,Americas,Americas
+HKG,CHN,1788.2417862538284,luxury,Asia-Pacific,Asia-Pacific
+ROU,BRA,10159.556334155386,luxury,Europe,Americas
+HKG,MEX,13544.242631591034,adventure,Asia-Pacific,Americas
+MAR,DEU,2588.666782790165,adventure,Africa,Europe
+BHS,DEU,7722.90574842405,adventure,Americas,Europe
+BIH,AND,1316.6345831415194,adventure,Europe,Europe
+CZE,CAN,7071.124575106869,adventure,Europe,Americas
+PRY,SAU,12334.996296197962,adventure,Americas,Middle East
+LIE,SAU,4069.076153624657,adventure,Europe,Middle East
+MDG,TWN,9315.926534738117,adventure,Africa,Asia-Pacific
+ARE,ESP,5648.232988982662,adventure,Middle East,Europe
+VGB,MEX,3965.9937013524586,family,Americas,Americas
+AIA,AND,4728.936131641992,family,Unknown,Europe
+PSE,ITA,2287.096916677659,family,Asia-Pacific,Europe
+SWZ,FRA,8610.003674159434,family,Africa,Europe
+AUS,HUN,13839.209715842775,family,Asia-Pacific,Europe
+KGZ,SAU,3356.871859597103,family,Asia-Pacific,Middle East
+NCL,BEL,16333.45053885341,family,Oceania,Europe
+MLT,DEU,1721.93025273145,family,Europe,Europe
+VUT,MAC,7162.2962196086355,family,Asia-Pacific,Asia-Pacific
+DZA,HRV,2243.255036765116,family,Africa,Europe
+ISL,FRA,2447.1336306842754,family,Europe,Europe
+PRI,BRA,5925.6727116739885,family,Unknown,Americas
+LKA,BLZ,16988.89258468087,family,Asia-Pacific,Americas
+USA,CAN,2261.543767877305,family,Americas,Americas
+ALB,JPN,9352.203016998972,family,Europe,Asia-Pacific
+ERI,GBR,5786.8797091627775,family,Africa,Europe
+IRQ,CAN,9682.019174593028,budget,Middle East,Americas
+VGB,DEU,7391.261329125884,budget,Americas,Europe
+MAR,BHS,6799.765279517143,budget,Africa,Americas
+GTM,HRV,9931.486962540652,budget,Americas,Europe
+JOR,FRA,3399.2933693939085,budget,Middle East,Europe
+TWN,BEL,9686.53023171762,budget,Asia-Pacific,Europe
+DMA,HUN,8073.890193704313,budget,Americas,Europe
+CUW,BHR,12220.459698116169,budget,Americas,Middle East
+URY,POL,11867.53796348871,budget,Americas,Europe
+IND,HUN,6055.090589970159,budget,Asia-Pacific,Europe
+QAT,HUN,3690.330692697128,budget,Middle East,Europe
+JAM,MAC,15380.457616390599,budget,Americas,Asia-Pacific
+KNA,POL,7949.158370644708,budget,Americas,Europe
+JAM,HRV,8783.535520775284,budget,Americas,Europe
+ZWE,JPN,14123.462595647892,budget,Unknown,Asia-Pacific
+REU,DEU,5774.0073239565145,budget,Unknown,Europe
+CHE,AND,714.4713991227728,budget,Europe,Europe
+COL,ITA,9409.127729306172,budget,Americas,Europe
+SAU,ALB,3004.068364050073,budget,Middle East,Europe
+PRT,SAU,5250.239577347303,budget,Europe,Middle East
+CUW,CHN,14626.452778269846,budget,Americas,Asia-Pacific
+MMR,ITA,7873.925835206157,budget,Asia-Pacific,Europe
+AZE,FRA,3687.8000439125244,budget,Europe,Europe
+DZA,GBR,3067.912660695078,budget,Africa,Europe
+TON,ITA,17601.931366992463,budget,Asia-Pacific,Europe
+LIE,SAU,4069.076153624657,budget,Europe,Middle East
+FJI,SAU,15101.672512373376,budget,Asia-Pacific,Middle East
+SWZ,CHN,10302.750863632096,budget,Africa,Asia-Pacific
+AND,JPN,10224.461971340477,budget,Europe,Asia-Pacific
+AIA,SAU,5535.892093762673,budget,Unknown,Middle East
+NZL,FRA,19179.4518843431,budget,Asia-Pacific,Europe
+LCA,HKG,15952.08355340543,budget,Americas,Asia-Pacific
+LSO,POL,9108.99672397938,budget,Africa,Europe
+BIH,ALB,368.68728515989886,budget,Europe,Europe
+AND,BLZ,8728.281449644439,budget,Europe,Americas
+ABW,HRV,8649.116845657194,budget,Americas,Europe
+BFA,FRA,3796.125121411857,budget,Africa,Europe
+THA,VGB,15890.424962579787,budget,Asia-Pacific,Americas
+LVA,AND,2283.467515403662,budget,Europe,Europe
+TJK,SAU,2975.5076015903196,luxury,Asia-Pacific,Middle East
+CUW,ARG,5652.578325353848,luxury,Americas,Americas
+GAB,ESP,4845.333032133399,luxury,Africa,Europe
+MKD,CAN,8104.681064244216,luxury,Europe,Americas
+MDG,ALB,7209.626104387671,luxury,Africa,Europe
+PRY,HUN,11040.746997821087,luxury,Americas,Europe
+TCD,TUR,3070.528950024896,luxury,Africa,Europe
+GBR,FRA,1091.3245498194483,luxury,Europe,Europe
+CUW,BLZ,2169.91474284467,adventure,Americas,Americas
+MTQ,USA,4235.420109862532,adventure,Americas,Americas
+DEU,DEU,0,adventure,Europe,Europe
+CHE,ASM,16392.78633855363,adventure,Europe,Oceania
+PRT,HKG,10914.765796202108,adventure,Europe,Asia-Pacific
+SGP,HKG,2586.133781513593,adventure,Asia-Pacific,Asia-Pacific
+KEN,BHS,12542.124214810321,adventure,Africa,Americas
+TCD,FRA,3750.437780089559,adventure,Africa,Europe
+ESP,HRV,1625.5966015928136,adventure,Europe,Europe
+SRB,TUR,1309.8587426763168,adventure,Europe,Europe
+BHS,FRA,7255.858253684396,family,Americas,Europe
+GRC,ESP,2183.513510566539,family,Europe,Europe
+GBR,FRA,1091.3245498194483,family,Europe,Europe
+MHL,ESP,14697.340553260588,family,Asia-Pacific,Europe
+BHS,BEL,7329.5367053440095,family,Americas,Europe
+TCD,CAN,10565.432439099468,family,Africa,Americas
+NIU,ARG,10035.506932056434,family,Oceania,Americas
+IDN,BHS,17057.679697665466,family,Asia-Pacific,Americas
+UKR,CHN,5947.0876437739125,family,Europe,Asia-Pacific
+UKR,JPN,8172.350445110581,family,Europe,Asia-Pacific
+EGY,MAC,8233.510104673016,family,Middle East,Asia-Pacific
+PAN,HKG,16216.698156303488,family,Americas,Asia-Pacific
+IDN,ARG,15648.361413401903,family,Asia-Pacific,Americas
+SVN,USA,8466.645821126382,family,Europe,Americas
+MAC,JPN,2846.0788058518365,family,Asia-Pacific,Asia-Pacific
+TJK,GBR,5640.912925287824,budget,Asia-Pacific,Europe
+ABW,CAN,5762.9356527878535,budget,Americas,Americas
+KAZ,GBR,4705.0779494847,budget,Asia-Pacific,Europe
+CHE,MEX,9561.780334652007,budget,Europe,Americas
+PER,MEX,4720.121615181313,budget,Americas,Americas
+BOL,ITA,10110.784437302078,budget,Americas,Europe
+UZB,CAN,9139.106054337337,budget,Asia-Pacific,Americas
+CHE,HUN,855.3643308996096,budget,Europe,Europe
+BIH,HKG,8802.092456672626,budget,Europe,Asia-Pacific
+GAB,ARG,8669.387837213862,budget,Africa,Americas
+GBR,ITA,1898.0590814188376,budget,Europe,Europe
+GTM,TUR,11704.247227016105,budget,Americas,Europe
+GUF,GBR,7223.953099432594,budget,Americas,Europe
+PHL,FRA,11107.18254846516,budget,Asia-Pacific,Europe
+GRD,ESP,6439.823179645932,budget,Americas,Europe
+KAZ,MEX,11978.45649066837,budget,Asia-Pacific,Americas
+COL,DEU,9245.757736626356,budget,Americas,Europe
+LBY,BRN,10527.519022710096,budget,Middle East,Asia-Pacific
+KAZ,TUR,2723.09080581159,budget,Asia-Pacific,Europe
+BEN,MAC,11747.497068812623,budget,Africa,Asia-Pacific
+BRA,ITA,9069.62750009916,budget,Americas,Europe
+MCO,COG,4909.491487520699,budget,Europe,Africa
+TTO,FRA,7119.367275463713,budget,Americas,Europe
+FIN,BWA,9368.941696944294,budget,Europe,Africa
+GTM,JPN,12312.968057466562,budget,Americas,Asia-Pacific
+JOR,GBR,4150.66094222698,budget,Middle East,Europe
+UZB,ESP,5585.009305326796,budget,Asia-Pacific,Europe
+CYP,TWN,8308.585287520551,budget,Europe,Asia-Pacific
+RUS,TUR,5251.476945770337,budget,Europe,Europe
+PRY,HRV,10642.034611331357,budget,Americas,Europe
+GMB,ATG,4992.104174961127,budget,Africa,Americas
+HUN,FRA,1319.9941058430372,budget,Europe,Europe
+BRA,ESP,7850.183157675505,budget,Americas,Europe
+ECU,SAU,13448.24786408439,luxury,Americas,Middle East
+HND,POL,9698.72351922455,luxury,Americas,Europe
+TCD,ALB,2860.9567372195397,luxury,Africa,Europe
+JAM,JPN,12912.879752809962,luxury,Americas,Asia-Pacific
+REU,HKG,12482.408681679102,luxury,Unknown,Asia-Pacific
+QAT,HKG,6355.584059415914,luxury,Middle East,Asia-Pacific
+IND,TUR,4631.1719387782105,luxury,Asia-Pacific,Europe
+MMR,ALB,7266.207671469786,luxury,Asia-Pacific,Europe
+PAN,HKG,16216.698156303488,luxury,Americas,Asia-Pacific
+OMN,MAC,5904.747141493585,luxury,Middle East,Asia-Pacific
+BES,TWN,13132.524918164185,luxury,Unknown,Asia-Pacific
+BHS,COL,2299.3746912621436,adventure,Americas,Americas
+ASM,CHN,10550.659174138278,adventure,Oceania,Asia-Pacific
+ALB,GBR,2335.695427049918,adventure,Europe,Europe
+RWA,MEX,14360.206196676174,adventure,Africa,Americas
+ZWE,ESP,4515.319738842054,adventure,Unknown,Europe
+CHL,TUR,13711.23598891874,adventure,Americas,Europe
+FIN,BHS,8223.418116212486,adventure,Europe,Americas
+REU,HKG,12482.408681679102,adventure,Unknown,Asia-Pacific
+BEN,SAU,4813.215351004108,adventure,Africa,Middle East
+UZB,DEU,4198.62699543698,family,Asia-Pacific,Europe
+MNG,TUR,5475.831149767641,family,Asia-Pacific,Europe
+VNM,HKG,12482.408681679102,family,Unknown,Asia-Pacific
+KAZ,ITA,4241.786577384638,family,Asia-Pacific,Europe
+SUR,ESP,6607.104086650366,family,Americas,Europe
+SLE,DEU,5167.114468042952,family,Africa,Europe
+ERI,HKG,7799.1908260882265,family,Africa,Asia-Pacific
+KIR,CAN,8665.813831362171,family,Asia-Pacific,Americas
+QAT,JPN,8131.525805327001,family,Middle East,Asia-Pacific
+DOM,HRV,8189.101818424137,family,Americas,Europe
+CUW,JPN,13924.192740407481,family,Americas,Asia-Pacific
+BGR,HUN,680.8931289846415,family,Europe,Europe
+CUB,BHS,392.54495689393514,family,Americas,Americas
+CHN,AND,8300.470745938268,family,Asia-Pacific,Europe
+BHS,ITA,8180.413125476946,budget,Americas,Europe
+VCT,POL,8221.032074831346,budget,Americas,Europe
+MTQ,FRA,6789.409159851096,budget,Americas,Europe
+ARG,ITA,11785.195219358857,budget,Americas,Europe
+NIU,CAN,10238.170850632414,budget,Oceania,Americas
+GUF,HKG,16785.602645233943,budget,Americas,Asia-Pacific
+BES,ITA,4823.788882367057,budget,Unknown,Europe
+DEU,CHL,12513.9558087134,budget,Europe,Americas
+LAO,POL,7834.306403099199,budget,Asia-Pacific,Europe
+BHR,GBR,5401.315953606501,budget,Middle East,Europe
+PER,ESP,9128.275165780993,budget,Americas,Europe
+BGR,DEU,1472.0500124536209,budget,Europe,Europe
+TON,ESP,17723.439038485616,budget,Asia-Pacific,Europe
+KGZ,MAC,4184.553375256262,budget,Asia-Pacific,Asia-Pacific
+LTU,GBR,1719.3750053323752,budget,Europe,Europe
+WSM,ALB,16745.09105742711,budget,Asia-Pacific,Europe
+IRN,POL,3523.6661981248167,budget,Middle East,Europe
+TUR,USA,10181.659327063411,budget,Europe,Americas
+UZB,CHL,16187.810587419102,budget,Asia-Pacific,Americas
+JOR,DEU,3120.58035162749,budget,Middle East,Europe
+MUS,AND,9040.156706875827,budget,Africa,Europe
+VCT,MAC,16062.529874346417,budget,Americas,Asia-Pacific
+PRI,USA,10513.964439946625,budget,Unknown,Americas
+TON,DEU,16644.677215489795,budget,Asia-Pacific,Europe
+OMN,HKG,5965.431795327021,budget,Middle East,Asia-Pacific
+MAC,HUN,8511.353066882006,budget,Asia-Pacific,Europe
+GRD,MAC,16164.016214996598,budget,Americas,Asia-Pacific
+NAM,JPN,14101.086071201262,budget,Africa,Asia-Pacific
+SLV,TUR,11774.810446813735,budget,Americas,Europe
+KAZ,ITA,4241.786577384638,budget,Asia-Pacific,Europe
+IND,GBR,7662.65035730521,budget,Asia-Pacific,Europe
+PER,AND,9615.352402953238,budget,Americas,Europe
+SGP,POL,9524.155675320562,luxury,Asia-Pacific,Europe
+OMN,HKG,5965.431795327021,luxury,Middle East,Asia-Pacific
+DNK,ITA,1615.416943724731,luxury,Europe,Europe
+BGR,CAN,8130.192542690399,luxury,Europe,Americas
+MLT,ESP,1658.2739296530797,luxury,Europe,Europe
+GEO,MAC,6771.20702990062,luxury,Europe,Asia-Pacific
+NGA,CHN,9908.85346582871,luxury,Africa,Asia-Pacific
+DNK,GBR,812.9390611597067,luxury,Europe,Europe
+IRN,HUN,3311.0863769662287,adventure,Middle East,Europe
+PAN,CAN,5743.376926427804,adventure,Americas,Americas
+EGY,BWA,5504.620392727001,adventure,Middle East,Africa
+IRQ,MAC,6864.007252891165,adventure,Middle East,Asia-Pacific
+SEN,BWA,5911.562623708934,adventure,Africa,Africa
+BES,HKG,12482.408681679102,adventure,Unknown,Asia-Pacific
+TUN,GBR,2591.0333181146943,adventure,Middle East,Europe
+MMR,BHS,14745.335102901929,family,Asia-Pacific,Americas
+VUT,GBR,15491.555131533716,family,Asia-Pacific,Europe
+CUB,ESP,7156.013208042455,family,Americas,Europe
+SUR,HUN,8596.942290309229,family,Americas,Europe
+BIH,USA,8788.639044680474,family,Europe,Americas
+HND,ESP,8291.69823859927,family,Americas,Europe
+ISR,AUS,12220.230110212424,family,Middle East,Asia-Pacific
+MHL,JPN,4649.176167792959,family,Asia-Pacific,Asia-Pacific
+IDN,ALB,10379.472791843731,family,Asia-Pacific,Europe
+NIU,CHN,10883.01673016414,family,Oceania,Asia-Pacific
+TUN,MEX,10405.851851649035,family,Middle East,Americas
+NIU,GBR,15817.527279819575,family,Oceania,Europe
+COG,HUN,5231.063787010424,family,Africa,Europe
+YEM,ITA,4823.788882367057,family,Unknown,Europe
+BLZ,USA,2323.125939907397,family,Americas,Americas
+MUS,DEU,9181.141654533852,family,Africa,Europe
+MMR,ITA,7873.925835206157,family,Asia-Pacific,Europe
+LBY,JPN,10714.192302063122,family,Middle East,Asia-Pacific
+JAM,DEU,8295.254997744558,family,Americas,Europe
+ARM,FRA,3496.9171167141867,family,Europe,Europe
+KNA,USA,3893.991221403893,family,Americas,Americas
+DMA,SAU,10915.18653839331,family,Americas,Middle East
+SWZ,SAU,5792.9189720931345,budget,Africa,Middle East
+TON,SAU,15880.994184147336,budget,Asia-Pacific,Middle East
+COM,ESP,7548.841710963518,budget,Africa,Europe
+FRA,SAU,4546.313452931867,budget,Europe,Middle East
+HND,ESP,8291.69823859927,budget,Americas,Europe
+CRI,ESP,8463.152328069971,budget,Americas,Europe
+PER,USA,5580.333211082556,budget,Americas,Americas
+BHS,USA,2193.272701791623,budget,Americas,Americas
+IDN,ITA,11004.05544726418,budget,Asia-Pacific,Europe
+HRV,DEU,760.5989582752444,budget,Europe,Europe
+BRB,COG,8418.762079020473,budget,Americas,Africa
+TCA,GBR,6165.667546488069,budget,Unknown,Europe
+JOR,HUN,2333.946330851801,budget,Middle East,Europe
+DNK,SAU,4607.023057880003,budget,Europe,Middle East
+RWA,FRA,6003.351293701307,budget,Africa,Europe
+NGA,ALB,3741.2277542765733,budget,Africa,Europe
+SLV,ESP,8612.377184931584,budget,Americas,Europe
+ZAF,CAN,15184.003192410573,budget,Africa,Americas
+YEM,JPN,14123.462595647892,budget,Unknown,Asia-Pacific
+THA,MEX,14931.648210413505,budget,Asia-Pacific,Americas
+MCO,BHS,7718.217936172865,budget,Europe,Americas
+MAR,JPN,11637.056097512776,budget,Africa,Asia-Pacific
+BFA,DEU,4462.865296646715,budget,Africa,Europe
+PRT,BEL,1583.6316978753036,budget,Europe,Europe
+WSM,ITA,16856.735892877114,budget,Asia-Pacific,Europe
+AZE,USA,10645.987486909979,budget,Europe,Americas
+GUF,HUN,8379.129792725176,budget,Americas,Europe
+SLE,ESP,3646.33551798639,budget,Africa,Europe
+CZE,POL,347.8149674090955,budget,Europe,Europe
+TWN,HUN,8912.411683996685,budget,Asia-Pacific,Europe
+BHS,ESP,6899.628752225802,budget,Americas,Europe
+SXM,DEU,7312.320986533396,budget,Americas,Europe
+AUS,FRA,15159.115549608572,budget,Asia-Pacific,Europe
+MOZ,HKG,9681.895948312233,budget,Africa,Asia-Pacific
+DEU,BIH,970.6644071340096,budget,Europe,Europe
+FJI,FRA,16821.48291004622,budget,Asia-Pacific,Europe
+UKR,ESP,2880.5837914685117,budget,Europe,Europe
+PRY,ALB,10808.58961890913,budget,Americas,Europe
+BRB,FRA,6792.1249913803,budget,Americas,Europe
+GRD,DEU,7718.338429300602,budget,Americas,Europe
+PRY,MEX,7076.4658121163875,budget,Americas,Americas
+GUM,SAU,10363.969182310671,budget,Asia-Pacific,Middle East
+MDG,ALB,7209.626104387671,budget,Africa,Europe
+GUM,TUR,10689.661099985073,budget,Asia-Pacific,Europe
+ZAF,VGB,10813.25403053553,luxury,Africa,Americas
+BLZ,AUS,15561.007124285385,luxury,Americas,Asia-Pacific
+RUS,GBR,5613.818821441638,luxury,Europe,Europe
+HUN,POL,529.5723681387685,luxury,Europe,Europe
+CYP,JPN,8912.574742627547,luxury,Europe,Asia-Pacific
+SGP,BHR,6316.110073926634,luxury,Asia-Pacific,Middle East
+NCL,ESP,17618.733322948956,luxury,Oceania,Europe
+SGP,ITA,10010.862900613707,luxury,Asia-Pacific,Europe
+BHR,GBR,5401.315953606501,luxury,Middle East,Europe
+CAN,USA,2261.543767877305,adventure,Americas,Americas
+BWA,GBR,9042.612837765744,adventure,Africa,Europe
+AZE,BHR,1589.378520449117,adventure,Europe,Middle East
+PAN,JPN,13582.451742538733,adventure,Americas,Asia-Pacific
+MYS,CAN,12827.442342375824,adventure,Asia-Pacific,Americas
+IRN,TUR,1812.9045432989203,adventure,Middle East,Europe
+MNG,CAN,8222.522642911243,adventure,Asia-Pacific,Americas
+KGZ,DEU,4908.282280048855,adventure,Asia-Pacific,Europe
+MYS,CAN,12827.442342375824,adventure,Asia-Pacific,Americas
+ZWE,FRA,5144.8281547943225,adventure,Unknown,Europe
+LKA,ALB,6989.143719521561,adventure,Asia-Pacific,Europe
+TJK,TUR,3096.9135372016144,family,Asia-Pacific,Europe
+GRD,CAN,6206.826636999548,family,Americas,Americas
+CYM,JPN,12575.018393847815,family,Americas,Asia-Pacific
+MMR,JPN,4366.5316221287585,family,Asia-Pacific,Asia-Pacific
+THA,CHN,2245.5573848483664,family,Asia-Pacific,Asia-Pacific
+SYC,HKG,7045.736242029495,family,Africa,Asia-Pacific
+BLZ,CHN,13966.483389165183,family,Americas,Asia-Pacific
+GBR,CHN,7779.554951337013,family,Europe,Asia-Pacific
+GEO,POL,2105.8848882367947,family,Europe,Europe
+TON,USA,10531.462871097216,family,Asia-Pacific,Americas
+VCT,MAC,16062.529874346417,family,Americas,Asia-Pacific
+MNP,HKG,3406.6339589077807,family,Asia-Pacific,Asia-Pacific
+GMB,CAN,8833.590294683883,budget,Africa,Americas
+KAZ,JPN,5812.710218312861,budget,Asia-Pacific,Asia-Pacific
+SXM,MAC,15525.19739707691,budget,Americas,Asia-Pacific
+CAN,HKG,10496.10547749138,budget,Americas,Asia-Pacific
+FJI,GBR,15825.027312079763,budget,Asia-Pacific,Europe
+SAU,BLR,3611.808938689051,budget,Middle East,Europe
+CYM,ARG,6677.884589633671,budget,Americas,Americas
+ARE,FRA,5234.379228984077,budget,Middle East,Europe
+MAR,COL,7591.1673483143195,budget,Africa,Americas
+BES,POL,6044.822411831666,budget,Unknown,Europe
+SGP,MEX,16034.562592633685,budget,Asia-Pacific,Americas
+SGP,MAC,2545.507552225927,budget,Asia-Pacific,Asia-Pacific
+QAT,DEU,4478.186072720295,budget,Middle East,Europe
+GIN,SAU,5991.898891011842,budget,Africa,Middle East
+SWZ,MEX,15397.37957491247,budget,Africa,Americas
+KNA,HUN,8027.092175595869,budget,Americas,Europe
+LVA,HKG,7919.595711368406,budget,Europe,Asia-Pacific
+HRV,USA,8553.876926537898,budget,Europe,Americas
+POL,GBR,1529.6806277853993,budget,Europe,Europe
+MLT,JPN,10119.08216242875,budget,Europe,Asia-Pacific
+TKM,BHS,11608.59371353501,budget,Asia-Pacific,Americas
+PRT,CHN,9157.698605430336,budget,Europe,Asia-Pacific
+SYR,HRV,2316.643264045791,budget,Middle East,Europe
+KIR,ITA,15731.953407762829,budget,Asia-Pacific,Europe
+ARG,CHN,18898.971842546467,budget,Americas,Asia-Pacific
+COL,ITA,9409.127729306172,budget,Americas,Europe
+SAU,TUR,1915.891340156652,budget,Middle East,Europe
+ERI,MAC,7737.590634438402,budget,Africa,Asia-Pacific
+HND,ALB,10216.14171777286,budget,Americas,Europe
+DMA,FRA,6755.0339126441095,luxury,Americas,Europe
+HRV,GBR,1740.2472413689077,luxury,Europe,Europe
+VGB,BHS,1507.7167359924103,luxury,Americas,Americas
+JOR,ALB,1859.4801137880652,luxury,Middle East,Europe
+LAO,CAN,11141.986167498186,luxury,Asia-Pacific,Americas
+ATG,CHN,13948.321596745489,luxury,Americas,Asia-Pacific
+LSO,HRV,8411.56583066336,luxury,Africa,Europe
+SUR,GBR,7381.662962678167,luxury,Americas,Europe
+SEN,ESP,3068.5229125478204,luxury,Africa,Europe
+CAN,GBR,5807.422505518145,luxury,Americas,Europe
+CRI,POL,10022.849077396444,adventure,Americas,Europe
+MNP,MAC,3468.5882706979005,adventure,Asia-Pacific,Asia-Pacific
+ETH,HRV,4674.543386987367,adventure,Africa,Europe
+TWN,TUR,8026.876417713091,adventure,Asia-Pacific,Europe
+ARM,ESP,4085.3731912131702,adventure,Europe,Europe
+SLV,CHN,14324.486562390233,adventure,Americas,Asia-Pacific
+HKG,HKG,0,adventure,Asia-Pacific,Asia-Pacific
+AIA,CHN,11282.217268788312,adventure,Unknown,Asia-Pacific
+ROU,MEX,10644.898926590864,adventure,Europe,Americas
+KAZ,ITA,4241.786577384638,adventure,Asia-Pacific,Europe
+YEM,ITA,4823.788882367057,adventure,Unknown,Europe
+COD,SAU,4002.6046417853854,adventure,Africa,Middle East
+WSM,GBR,15284.986356898884,family,Asia-Pacific,Europe
+GTM,ITA,9862.134065890054,family,Americas,Europe
+ROU,TUR,1144.1958380766175,family,Europe,Europe
+IRN,MAC,5947.094410834194,family,Middle East,Asia-Pacific
+CZE,JPN,8923.133020708867,family,Europe,Asia-Pacific
+JOR,SAU,1147.6163861416408,family,Middle East,Middle East
+GMB,HKG,13224.587641911958,family,Africa,Asia-Pacific
+CYM,CHL,6199.493765338595,family,Americas,Americas
+CAN,GBR,5807.422505518145,family,Americas,Europe
+SVN,MEX,10035.611112950171,family,Europe,Americas
+LVA,SAU,4023.048531650409,family,Europe,Middle East
+BLZ,CHL,6143.769533232033,family,Americas,Americas
+GAB,HKG,11332.540300166642,family,Africa,Asia-Pacific
+BLR,CAN,7112.893801789241,family,Europe,Americas
+DEU,ITA,1045.9081182755863,family,Europe,Europe
+VCT,POL,8221.032074831346,family,Americas,Europe
+CRI,MEX,2522.938809113354,family,Americas,Americas
+HKG,CAN,10496.10547749138,family,Asia-Pacific,Americas
+BES,SAU,5535.892093762673,family,Unknown,Middle East
+REU,BGR,5389.387752164148,family,Unknown,Europe
+BLZ,CHN,13966.483389165183,family,Americas,Asia-Pacific
+MKD,HKG,8584.736969515923,budget,Europe,Asia-Pacific
+ETH,CHN,7051.2314452924375,budget,Africa,Asia-Pacific
+CIV,MAC,12606.336888368332,budget,Africa,Asia-Pacific
+SGP,GBR,10960.83838875903,budget,Asia-Pacific,Europe
+GEO,HKG,6814.35027012877,budget,Europe,Asia-Pacific
+LTU,USA,8265.572890746455,budget,Europe,Americas
+TJK,HUN,4228.708103943696,budget,Asia-Pacific,Europe
+TCA,ALB,5006.68377326962,budget,Unknown,Europe
+COL,HRV,9608.31190464499,budget,Americas,Europe
+JOR,SAU,1147.6163861416408,budget,Middle East,Middle East
+MAC,HUN,8511.353066882006,budget,Asia-Pacific,Europe
+MHL,DEU,13274.917131604258,budget,Asia-Pacific,Europe
+IND,CHN,2983.7948633201277,budget,Asia-Pacific,Asia-Pacific
+PER,CAN,7815.507973714339,budget,Americas,Americas
+BIH,COG,4861.340272861823,budget,Europe,Africa
+JAM,ESP,7340.39643735543,budget,Americas,Europe
+SVN,JPN,9244.877350012492,budget,Europe,Asia-Pacific
+COL,MAC,16918.60593263212,budget,Americas,Asia-Pacific
+MDA,HRV,1043.263010829394,budget,Europe,Europe
+PRI,ITA,4823.788882367057,budget,Unknown,Europe
+VGB,BHS,1507.7167359924103,budget,Americas,Americas
+ROU,TUR,1144.1958380766175,budget,Europe,Europe
+ARG,HKG,18212.81420980003,budget,Americas,Asia-Pacific
+SWZ,BLR,8927.855578395562,budget,Africa,Europe
+ABW,SAU,11882.841010202575,budget,Americas,Middle East
+TTO,HRV,8104.717154837392,budget,Americas,Europe
+BRA,HKG,18295.240040224107,budget,Americas,Asia-Pacific
+LSO,POL,9108.99672397938,budget,Africa,Europe
+GLP,ESP,6136.215671463986,budget,Americas,Europe
+BES,MEX,11284.602439717288,budget,Unknown,Americas
+PNG,FRA,14262.806984387218,budget,Asia-Pacific,Europe
+PRI,CMR,1596.3570978016735,budget,Unknown,Africa
+UKR,FRA,2182.9570460119594,budget,Europe,Europe
+CHL,ALB,12643.561297253624,budget,Americas,Europe
+PAN,GBR,8428.905917595386,budget,Americas,Europe
+MMR,MAC,1811.802254624538,budget,Asia-Pacific,Asia-Pacific
+TZA,POL,6652.1933276002865,budget,Africa,Europe
+CIV,DEU,5069.403304001966,budget,Africa,Europe
+SVN,SAU,3652.522785224619,budget,Europe,Middle East
+PAN,JPN,13582.451742538733,budget,Americas,Asia-Pacific
+NZL,POL,17804.385183210044,luxury,Asia-Pacific,Europe
+CHL,JPN,17342.613353644363,luxury,Americas,Asia-Pacific
+FJI,HKG,8251.200382407604,luxury,Asia-Pacific,Asia-Pacific
+MMR,CAN,11085.800579846466,luxury,Asia-Pacific,Americas
+LBY,ALB,1669.690719777027,luxury,Middle East,Europe
+AUS,JPN,6852.313321902408,luxury,Asia-Pacific,Asia-Pacific
+CUW,HRV,8599.770642672545,luxury,Americas,Europe
+MCO,POL,1259.1738502354908,luxury,Europe,Europe
+ISR,GBR,4030.5000776919846,luxury,Middle East,Europe
+ABW,HUN,8950.873903679862,adventure,Americas,Europe
+NGA,MAC,11128.025421863465,adventure,Africa,Asia-Pacific
+CHE,CAN,7056.257627023048,adventure,Europe,Americas
+MNP,ESP,13077.11165077207,adventure,Asia-Pacific,Europe
+TJK,DEU,4823.98668279902,adventure,Asia-Pacific,Europe
+BIH,TUR,1560.4474592867657,adventure,Europe,Europe
+PNG,VGB,16637.550704247467,adventure,Asia-Pacific,Americas
+SYC,ITA,6752.3969446820265,adventure,Africa,Europe
+KGZ,TUR,3342.6838262944357,adventure,Asia-Pacific,Europe
+ARM,MAC,6650.899034560095,adventure,Europe,Asia-Pacific
+MSR,ITA,7525.660935728493,adventure,Americas,Europe
+CUB,ITA,8459.16921403278,adventure,Americas,Europe
+HND,HUN,9917.004452195908,adventure,Americas,Europe
+COG,POL,5756.208418650247,family,Africa,Europe
+SRB,CHN,6845.529086425052,family,Europe,Asia-Pacific
+JPN,TUR,8527.71252730307,family,Asia-Pacific,Europe
+EGY,ITA,2357.378456938893,family,Middle East,Europe
+CUW,BGR,9452.436730346766,family,Americas,Europe
+ZAF,CHN,11237.048924480525,family,Africa,Asia-Pacific
+ALB,JPN,9352.203016998972,family,Europe,Asia-Pacific
+ARM,FRA,3496.9171167141867,family,Europe,Europe
+LAO,CAN,11141.986167498186,family,Asia-Pacific,Americas
+BHR,TUR,2023.7591535743259,family,Middle East,Europe
+GMB,GBR,4774.590101664572,family,Africa,Europe
+SGP,ITA,10010.862900613707,family,Asia-Pacific,Europe
+VCT,FRA,6940.557337011146,family,Americas,Europe
+EST,POL,829.5354522838743,family,Europe,Europe
+BLR,HUN,941.1172501435518,family,Europe,Europe
+COD,FRA,5912.075966863886,family,Africa,Europe
+VCT,JPN,14173.495255312928,family,Americas,Asia-Pacific
+GUF,ALB,8324.698694877414,family,Americas,Europe
+COD,FRA,5912.075966863886,family,Africa,Europe
+RUS,JPN,3628.9753382173553,budget,Europe,Asia-Pacific
+POL,USA,8279.737932917335,budget,Europe,Americas
+RWA,ESP,5818.167534801965,budget,Africa,Europe
+GIN,TUR,5493.491479479199,budget,Africa,Europe
+MYS,HUN,9095.485949534901,budget,Asia-Pacific,Europe
+TUN,TUR,2359.569571596125,budget,Middle East,Europe
+VGB,MEX,3965.9937013524586,budget,Americas,Americas
+DOM,USA,3216.3292850466946,budget,Americas,Americas
+VIR,TUR,5624.013219298066,budget,Unknown,Europe
+RWA,MAC,9438.290775842112,budget,Africa,Asia-Pacific
+CHL,MEX,7357.678130221531,budget,Americas,Americas
+POL,HUN,529.5723681387685,budget,Europe,Europe
+QAT,HUN,3690.330692697128,budget,Middle East,Europe
+BRN,USA,14414.712957384805,budget,Asia-Pacific,Americas
+IRQ,CAN,9682.019174593028,budget,Middle East,Americas
+YEM,HRV,5233.306711275091,budget,Unknown,Europe
+PRT,ESP,399.4471110348351,budget,Europe,Europe
+HTI,POL,8454.661220771131,budget,Americas,Europe
+SVN,DEU,649.5500419761408,budget,Europe,Europe
+CHL,JPN,17342.613353644363,luxury,Americas,Asia-Pacific
+IRQ,JPN,8267.042665902456,luxury,Middle East,Asia-Pacific
+SXM,ESP,6141.415036679122,luxury,Americas,Europe
+BES,MAC,12421.139513704387,luxury,Unknown,Asia-Pacific
+COD,HUN,5697.563122443416,luxury,Africa,Europe
+AND,HKG,10045.79432565644,luxury,Europe,Asia-Pacific
+ALB,TUR,1304.137855674202,adventure,Europe,Europe
+LIE,FRA,569.3212109451838,adventure,Europe,Europe
+ZWE,MAC,12421.139513704387,adventure,Unknown,Asia-Pacific
+GLP,CAN,5810.069913873247,adventure,Americas,Americas
+BHS,CAN,4171.383009383446,adventure,Americas,Americas
+PAN,HUN,10078.824751794591,adventure,Americas,Europe
+CZE,MEX,9825.665216063187,adventure,Europe,Americas
+BES,HRV,5233.306711275091,adventure,Unknown,Europe
+DNK,ATG,7286.581580443332,adventure,Europe,Americas
+BHR,MEX,13777.459446834519,adventure,Middle East,Americas
+QAT,ESP,5304.877961052627,adventure,Middle East,Europe
+MHL,FRA,13981.736844628986,family,Asia-Pacific,Europe
+COM,ESP,7548.841710963518,family,Africa,Europe
+BRN,MAC,1968.2125907287802,family,Asia-Pacific,Asia-Pacific
+BGR,GBR,2504.8679747710626,family,Europe,Europe
+BMU,CHL,7592.436649953492,family,Americas,Americas
+BOL,HUN,10820.094678300242,family,Americas,Europe
+VUT,HKG,7114.086192429824,family,Asia-Pacific,Asia-Pacific
+JPN,MAC,2846.0788058518365,family,Asia-Pacific,Asia-Pacific
+LBY,TUR,2187.236032707857,family,Middle East,Europe
+COM,DZA,6290.724792689173,family,Africa,Africa
+MAC,CHN,1768.123737607494,family,Asia-Pacific,Asia-Pacific
+BEN,HKG,11804.933604408627,family,Africa,Asia-Pacific
+HTI,SAU,11721.666791341317,family,Americas,Middle East
+DZA,ITA,1828.3978000870234,family,Africa,Europe
+BMU,HKG,13939.745034302017,family,Americas,Asia-Pacific
+CHL,MEX,7357.678130221531,budget,Americas,Americas
+KOR,POL,8052.136816725531,budget,Asia-Pacific,Europe
+AIA,BRA,5925.6727116739885,budget,Unknown,Americas
+CZE,ESP,1823.1125802933366,budget,Europe,Europe
+TJK,USA,11465.180928603548,budget,Asia-Pacific,Americas
+ATG,DEU,7306.88916442355,budget,Americas,Europe
+HKG,USA,12704.531283870774,budget,Asia-Pacific,Americas
+MLT,SAU,3230.4048751949163,budget,Europe,Middle East
+LIE,USA,8070.140432752729,budget,Europe,Americas
+RUS,HKG,4412.032219502709,budget,Europe,Asia-Pacific
+SXM,JPN,13580.233913359962,budget,Americas,Asia-Pacific
+KGZ,CHN,2614.420571785923,budget,Asia-Pacific,Asia-Pacific
+USA,FRA,7665.58674089517,budget,Americas,Europe
+KAZ,CAN,8417.255527813963,budget,Asia-Pacific,Americas
+CUB,HUN,8797.378639030807,budget,Americas,Europe
+BLZ,TUR,11464.800777871118,budget,Americas,Europe
+MAC,MAC,0,budget,Asia-Pacific,Asia-Pacific
+ARM,ITA,2717.2536070650044,budget,Europe,Europe
+MUS,CHN,7946.011125000561,budget,Africa,Asia-Pacific
+BIH,CAN,7720.88911582303,budget,Europe,Americas
+SEN,JPN,13690.134767816266,luxury,Africa,Asia-Pacific
+SLV,CHN,14324.486562390233,luxury,Americas,Asia-Pacific
+JAM,ESP,7340.39643735543,adventure,Americas,Europe
+BHS,SAU,11772.398685698885,adventure,Americas,Middle East
+HKG,GBR,9567.79150651927,adventure,Asia-Pacific,Europe
+IDN,SAU,7902.594474211165,adventure,Asia-Pacific,Middle East
+ISR,JPN,9084.352594077622,adventure,Middle East,Asia-Pacific
+VGB,JPN,13481.223805303274,adventure,Americas,Asia-Pacific
+GBR,ESP,1658.5654727588749,adventure,Europe,Europe
+BHS,TWN,14246.7161702497,adventure,Americas,Asia-Pacific
+GRD,CHN,14477.550314294103,adventure,Americas,Asia-Pacific
+BEN,GBR,5147.719071716596,family,Africa,Europe
+VNM,SAU,5535.892093762673,family,Unknown,Middle East
+PRI,HKG,12482.408681679102,family,Unknown,Asia-Pacific
+TZA,POL,6652.1933276002865,family,Africa,Europe
+BES,ITA,4823.788882367057,family,Unknown,Europe
+SAU,ESP,4879.731112163598,family,Middle East,Europe
+ALB,AND,1549.10004263365,family,Europe,Europe
+MLT,USA,9163.375918565594,family,Europe,Americas
+VNM,HKG,12482.408681679102,family,Unknown,Asia-Pacific
+FIN,LKA,7468.211259039262,family,Europe,Asia-Pacific
+GUF,HKG,16785.602645233943,family,Americas,Asia-Pacific
+SEN,SAU,6295.488222478396,family,Africa,Middle East
+STP,TUR,5204.1881879551165,family,Africa,Europe
+LTU,ESP,2603.063273605756,family,Europe,Europe
+HUN,CHN,6813.836468560777,family,Europe,Asia-Pacific
+WSM,JPN,7613.160352179506,family,Asia-Pacific,Asia-Pacific
+ROU,ESP,2391.629005935731,family,Europe,Europe
+ROU,HUN,439.11509946844313,family,Europe,Europe
+TKM,CHN,3918.1343228104306,budget,Asia-Pacific,Asia-Pacific
+BRN,JPN,4264.337901655565,budget,Asia-Pacific,Asia-Pacific
+BLR,HUN,941.1172501435518,budget,Europe,Europe
+LVA,SAU,4023.048531650409,budget,Europe,Middle East
+VNM,SAU,5535.892093762673,budget,Unknown,Middle East
+MMR,DEU,7822.0720362409875,budget,Asia-Pacific,Europe
+MLT,CAN,8353.003616990425,budget,Europe,Americas
+MDA,BHS,9080.83832190402,budget,Europe,Americas
+GUM,CHN,4750.065360964013,budget,Asia-Pacific,Asia-Pacific
+CHN,ITA,7566.26072596193,budget,Asia-Pacific,Europe
+TUR,CAN,8837.82822842115,budget,Europe,Americas
+CHL,TUR,13711.23598891874,budget,Americas,Europe
+LIE,MMR,7977.240039501217,budget,Europe,Asia-Pacific
+KEN,DEU,6250.455532543784,budget,Africa,Europe
+GUM,JPN,2613.691791812939,budget,Asia-Pacific,Asia-Pacific
+CAN,AND,7140.680957037915,budget,Americas,Europe
+SAU,BHR,603.0252622667829,budget,Middle East,Middle East
+HRV,DEU,760.5989582752444,budget,Europe,Europe
+WSM,MAC,9030.770547304017,budget,Asia-Pacific,Asia-Pacific
+AZE,DEU,3093.7671076500797,budget,Europe,Europe
+KNA,DEU,7350.702774769598,budget,Americas,Europe
+SXM,ARM,10177.056337997206,budget,Americas,Europe
+NIU,HRV,17081.340530456437,budget,Oceania,Europe
+KGZ,CHN,2614.420571785923,budget,Asia-Pacific,Asia-Pacific
+VEN,ITA,4823.788882367057,budget,Unknown,Europe
+JPN,ITA,9728.699591145374,budget,Asia-Pacific,Europe
+BIH,ESP,1801.192912338663,budget,Europe,Europe
+TWN,POL,8719.991519253634,budget,Asia-Pacific,Europe
+TZA,GBR,7717.984900479946,budget,Africa,Europe
+DNK,CHN,7031.285108928965,budget,Europe,Asia-Pacific
+KEN,FRA,6208.7767508305515,luxury,Africa,Europe
+LSO,GBR,9919.578169380959,luxury,Africa,Europe
+MSR,ESP,6156.7246613143925,luxury,Americas,Europe
+MKD,CAN,8104.681064244216,luxury,Europe,Americas
+LKA,ESP,8978.272062941402,luxury,Asia-Pacific,Europe
+AZE,ITA,2923.5595487964415,luxury,Europe,Europe
+MTQ,GBR,6652.158160378921,luxury,Americas,Europe
+GUF,CAN,7456.139117717302,adventure,Americas,Americas
+BRN,CAN,12307.111739870059,adventure,Asia-Pacific,Americas
+BLZ,HRV,9691.03429654356,adventure,Americas,Europe
+ERI,MAC,7737.590634438402,adventure,Africa,Asia-Pacific
+JPN,HUN,8924.052282239487,adventure,Asia-Pacific,Europe
+ISL,CMR,6857.371036947214,family,Europe,Africa
+PSE,ESP,3591.755533066476,family,Asia-Pacific,Europe
+ASM,CHN,10550.659174138278,family,Oceania,Asia-Pacific
+THA,POL,8070.491535864766,family,Asia-Pacific,Europe
+CHN,COG,9845.598332742109,family,Asia-Pacific,Africa
+VCT,TUR,9656.215706510831,family,Americas,Europe
+LVA,ESP,2733.370666595067,family,Europe,Europe
+TZA,HUN,6142.218878861088,family,Africa,Europe
+TCD,AND,3427.062688230315,family,Africa,Europe
+NAM,ESP,7418.32293753251,family,Africa,Europe
+GEO,MAC,6771.20702990062,family,Europe,Asia-Pacific
+ZAF,FRA,8789.479607992007,family,Africa,Europe
+RWA,MAC,9438.290775842112,family,Africa,Asia-Pacific
+MMR,GBR,8586.926663870714,family,Asia-Pacific,Europe
+SMR,USA,8467.517364164147,family,Europe,Americas
+MDG,ESP,8409.048516861722,family,Africa,Europe
+CIV,USA,9517.476389841966,budget,Africa,Americas
+LBY,TWN,10112.741711587663,budget,Middle East,Asia-Pacific
+KAZ,GBR,4705.0779494847,budget,Asia-Pacific,Europe
+ETH,BEL,5661.005982674259,budget,Africa,Europe
+AUS,CAN,14151.619922548973,budget,Asia-Pacific,Americas
+LTU,HUN,940.7363661633996,budget,Europe,Europe
+IRN,HRV,3580.4370682150975,budget,Middle East,Europe
+TON,MEX,9305.505559211346,budget,Asia-Pacific,Americas
+EST,DEU,1240.3676092260253,budget,Europe,Europe
+HTI,HKG,15370.506339366313,budget,Americas,Asia-Pacific
+FRA,HRV,1015.7650801051359,budget,Europe,Europe
+FRA,BRB,6792.1249913803,budget,Europe,Americas
+CUB,CHN,13630.940240172218,budget,Americas,Asia-Pacific
+TZA,POL,6652.1933276002865,budget,Africa,Europe
+MDA,SAU,3005.8023823858166,budget,Europe,Middle East
+KIR,SAU,15729.781388557923,budget,Asia-Pacific,Middle East
+SUR,FRA,7297.746696327233,budget,Americas,Europe
+IRN,HUN,3311.0863769662287,budget,Middle East,Europe
+JPN,CHN,3046.75521225686,budget,Asia-Pacific,Asia-Pacific
+BES,FRA,5144.8281547943225,budget,Unknown,Europe
+TJK,TUR,3096.9135372016144,budget,Asia-Pacific,Europe
+SVN,HUN,361.8857134515729,budget,Europe,Europe
+MKD,CYM,9613.362970167482,budget,Europe,Americas
+SXM,SAU,10935.754363224736,budget,Americas,Middle East
+HKG,TUR,7545.030154887925,luxury,Asia-Pacific,Europe
+ZWE,BLR,6502.495793062647,luxury,Unknown,Europe
+HRV,CAN,7508.142602540588,luxury,Europe,Americas
+CUW,CAN,5843.322152773768,adventure,Americas,Americas
+DZA,MEX,10071.970080810024,adventure,Africa,Americas
+UKR,HRV,1267.4012177394586,adventure,Europe,Europe
+GRD,DEU,7718.338429300602,adventure,Americas,Europe
+LTU,CHN,6230.288031861461,adventure,Europe,Asia-Pacific
+SLV,ITA,9909.306206486668,family,Americas,Europe
+JPN,ITA,9728.699591145374,family,Asia-Pacific,Europe
+SEN,POL,5117.007654923374,family,Africa,Europe
+JOR,MAC,7610.704252130836,family,Middle East,Asia-Pacific
+RUS,FRA,6221.135696289656,family,Europe,Europe
+HRV,CAN,7508.142602540588,family,Europe,Americas
+BLR,HKG,7782.163381939728,family,Europe,Asia-Pacific
+MAR,ITA,2070.2291059090367,family,Africa,Europe
+JPN,CAN,8082.711742931965,family,Asia-Pacific,Americas
+TCA,MAC,12421.139513704387,family,Unknown,Asia-Pacific
+WSM,SAU,15956.58587636053,family,Asia-Pacific,Middle East
+SGP,BGR,8954.766553124593,family,Asia-Pacific,Europe
+VGB,HKG,15483.15601441019,family,Americas,Asia-Pacific
+HRV,USA,8553.876926537898,family,Europe,Americas
+CZE,SAU,3856.807735565951,family,Europe,Middle East
+PHL,ESP,11857.311787284452,family,Asia-Pacific,Europe
+LSO,FRA,8830.448520937423,budget,Africa,Europe
+COD,GBR,6998.930753412317,budget,Africa,Europe
+JPN,MAC,2846.0788058518365,budget,Asia-Pacific,Asia-Pacific
+DEU,DEU,0,budget,Europe,Europe
+SUR,ALB,8566.827338539742,budget,Americas,Europe
+IRQ,JPN,8267.042665902456,budget,Middle East,Asia-Pacific
+STP,CMR,1021.4145079922693,budget,Africa,Africa
+HND,HRV,9685.090554828957,budget,Americas,Europe
+ETH,ESP,5572.175712021937,budget,Africa,Europe
+PAN,ITA,9650.125912436728,budget,Americas,Europe
+GRC,ESP,2183.513510566539,budget,Europe,Europe
+HND,MAC,15330.979437355809,budget,Americas,Asia-Pacific
+RUS,HKG,4412.032219502709,budget,Europe,Asia-Pacific
+FIN,ESP,3095.6456897908606,budget,Europe,Europe
+LSO,JPN,13581.493471772752,budget,Africa,Asia-Pacific
+SLE,JPN,14143.388946550329,budget,Africa,Asia-Pacific
+NZL,ESP,19890.170550245788,budget,Asia-Pacific,Europe
+ETH,DEU,5417.302323972181,budget,Africa,Europe
+NIU,LKA,12320.48788096621,budget,Oceania,Asia-Pacific
+HRV,ESP,1625.5966015928136,budget,Europe,Europe
+KGZ,MAC,4184.553375256262,budget,Asia-Pacific,Asia-Pacific
+LIE,FRA,569.3212109451838,budget,Europe,Europe
+BRN,ESP,12017.710771796616,budget,Asia-Pacific,Europe
+ITA,MAC,9235.352158432808,budget,Europe,Asia-Pacific
+PAN,CHN,15050.604244873226,budget,Americas,Asia-Pacific
+ATG,ALB,8108.453022323889,budget,Americas,Europe
+GMB,HKG,13224.587641911958,budget,Africa,Asia-Pacific
+LVA,VGB,8255.842168000501,budget,Europe,Americas
+BES,CAN,11011.002227916915,budget,Unknown,Americas
+NAM,BLR,8573.54063362083,luxury,Africa,Europe
+BLZ,FRA,8690.850449414616,luxury,Americas,Europe
+MEX,SAU,13681.07195428547,luxury,Americas,Middle East
+CUW,HUN,8905.886438762664,luxury,Americas,Europe
+LIE,FRA,569.3212109451838,luxury,Europe,Europe
+GIN,SAU,5991.898891011842,luxury,Africa,Middle East
+CHN,HKG,1788.2417862538284,luxury,Asia-Pacific,Asia-Pacific
+TCD,FRA,3750.437780089559,luxury,Africa,Europe
+MKD,TUR,1188.2659958437002,luxury,Europe,Europe
+CUB,GBR,7072.849707595249,luxury,Americas,Europe
+CRI,ITA,9802.199947668563,luxury,Americas,Europe
+BHS,FRA,7255.858253684396,adventure,Americas,Europe
+CUW,HUN,8905.886438762664,family,Americas,Europe
+BWA,ITA,7246.922304720932,family,Africa,Europe
+GUF,ITA,7718.708741515526,family,Americas,Europe
+NGA,POL,4857.566605271158,family,Africa,Europe
+VCT,USA,4341.546994321062,family,Americas,Americas
+CZE,USA,8234.390400491298,family,Europe,Americas
+TJK,GBR,5640.912925287824,family,Asia-Pacific,Europe
+KAZ,GBR,4705.0779494847,family,Asia-Pacific,Europe
+VNM,ALB,5006.68377326962,family,Unknown,Europe
+ROU,MAC,8149.607826437857,family,Europe,Asia-Pacific
+KOR,ESP,10185.002462644732,family,Asia-Pacific,Europe
+BOL,POL,10940.524448361955,family,Americas,Europe
+IRN,ITA,3753.555179645332,family,Middle East,Europe
+GUF,AZE,10629.072707943169,family,Americas,Europe
+WSM,HKG,8974.265611314268,family,Asia-Pacific,Asia-Pacific
+COM,CAN,14422.052205285852,family,Africa,Americas
+CRI,MAC,15993.107524614554,family,Americas,Asia-Pacific
+BES,MAC,12421.139513704387,budget,Unknown,Asia-Pacific
+BGR,SAU,2761.991351053878,budget,Europe,Middle East
+ASM,ITA,16935.01173145844,budget,Oceania,Europe
+CZE,ESP,1823.1125802933366,budget,Europe,Europe
+DNK,MEX,9097.558909724354,budget,Europe,Americas
+BLZ,CYM,800.3872249027655,budget,Americas,Americas
+VIR,FRA,5144.8281547943225,budget,Unknown,Europe
+STP,BOL,7904.082818259208,budget,Africa,Americas
+AZE,CAN,9031.258868390505,budget,Europe,Americas
+EST,DEU,1240.3676092260253,budget,Europe,Europe
+ATG,TUR,9411.690963428931,budget,Americas,Europe
+MCO,JPN,9834.153210934339,budget,Europe,Asia-Pacific
+BHS,FRA,7255.858253684396,budget,Americas,Europe
+URY,FRA,10510.99806388428,budget,Americas,Europe
+LSO,FRA,8830.448520937423,budget,Africa,Europe
+CHN,TWN,2103.137892353146,budget,Asia-Pacific,Asia-Pacific
+HKG,ESP,10537.476072227168,budget,Asia-Pacific,Europe
+DMA,HKG,15791.196175695837,budget,Americas,Asia-Pacific
+LKA,SAU,4193.6911649987715,budget,Asia-Pacific,Middle East
+OMN,ITA,4626.124444119444,budget,Middle East,Europe
+REU,BIH,5188.254315331339,budget,Unknown,Europe
+HRV,ESP,1625.5966015928136,budget,Europe,Europe
+SWZ,FRA,8610.003674159434,budget,Africa,Europe
+GUF,DEU,7852.640674392999,budget,Americas,Europe
+BEN,ESP,3515.7967860971967,budget,Africa,Europe
+PHL,POL,9727.108576968762,budget,Asia-Pacific,Europe
+AND,BLZ,8728.281449644439,budget,Europe,Americas
+JOR,ITA,2454.0497328685337,budget,Middle East,Europe
+SUR,DEU,8046.90690520062,budget,Americas,Europe
+EST,HRV,1641.099322170267,luxury,Europe,Europe
+ARE,TCD,3776.813672624651,luxury,Middle East,Africa
+LKA,FRA,8497.189029758329,luxury,Asia-Pacific,Europe
+ETH,SAU,1710.0874965858964,luxury,Africa,Middle East
+DEU,SAU,4233.643453792658,luxury,Europe,Middle East
+PNG,CHL,14053.212161612837,luxury,Asia-Pacific,Americas
+LSO,GBR,9919.578169380959,luxury,Africa,Europe
+TJK,FRA,5536.624629573033,luxury,Asia-Pacific,Europe
+AND,JPN,10224.461971340477,luxury,Europe,Asia-Pacific
+TJK,BHR,2399.027117737941,adventure,Asia-Pacific,Middle East
+ISL,SAU,6404.336429785502,adventure,Europe,Middle East
+LVA,ESP,2733.370666595067,adventure,Europe,Europe
+GAB,HRV,5116.537869452159,adventure,Africa,Europe
+MUS,USA,16830.608070642556,adventure,Africa,Americas
+ARE,DEU,4814.9078579317365,adventure,Middle East,Europe
+COG,HRV,4989.921246076382,adventure,Africa,Europe
+CIV,JPN,13856.157204666373,adventure,Africa,Asia-Pacific
+MYS,TUR,7712.519473048324,family,Asia-Pacific,Europe
+DOM,HRV,8189.101818424137,family,Americas,Europe
+SAU,GBR,5266.622380870696,family,Middle East,Europe
+JPN,CHN,3046.75521225686,family,Asia-Pacific,Asia-Pacific
+KEN,USA,13721.917659342782,family,Africa,Americas
+BES,MAC,12421.139513704387,family,Unknown,Asia-Pacific
+DMA,USA,4149.955350628412,family,Americas,Americas
+FIN,SAU,4474.546870369311,family,Europe,Middle East
+ETH,MEX,14591.695672339838,family,Africa,Americas
+GBR,MEX,8414.578475152506,family,Europe,Americas
+GAB,TCD,1969.9888785199296,family,Africa,Africa
+VNM,MAC,12421.139513704387,budget,Unknown,Asia-Pacific
+GAB,HRV,5116.537869452159,budget,Africa,Europe
+SUR,ALB,8566.827338539742,budget,Americas,Europe
+MUS,GBR,10184.658080094468,budget,Africa,Europe
+ISR,JPN,9084.352594077622,budget,Middle East,Asia-Pacific
+NCL,DZA,18210.684739723136,budget,Oceania,Africa
+KGZ,JPN,5414.255611451275,budget,Asia-Pacific,Asia-Pacific
+LAO,BRN,2158.1102742811145,budget,Asia-Pacific,Asia-Pacific
+BIH,GBR,1969.9291592759257,budget,Europe,Europe
+CYP,AND,2864.5754797007694,budget,Europe,Europe
+THA,BMU,14446.984381895998,budget,Asia-Pacific,Americas
+MDG,ESP,8409.048516861722,budget,Africa,Europe
+BRA,POL,10005.110033444676,budget,Americas,Europe
+CRI,MEX,2522.938809113354,budget,Americas,Americas
+GIN,HRV,4575.647996130262,budget,Africa,Europe
+TZA,TUR,5040.8987472512945,budget,Africa,Europe
+HND,HRV,9685.090554828957,budget,Americas,Europe
+HKG,CAN,10496.10547749138,budget,Asia-Pacific,Americas
+FRA,TUR,2798.871446184784,budget,Europe,Europe
+GAB,USA,11590.697180976978,budget,Africa,Americas
+LAO,HUN,7884.576429670155,budget,Asia-Pacific,Europe
+SAU,ITA,3601.5301425048556,budget,Middle East,Europe
+ETH,SAU,1710.0874965858964,budget,Africa,Middle East
+USA,MEX,1632.5233521875557,budget,Americas,Americas
+SLE,ATG,5493.058746379076,budget,Africa,Americas
+BEL,MEX,9120.492014000247,budget,Europe,Americas
+HKG,POL,8404.539457456865,budget,Asia-Pacific,Europe
+IRQ,USA,11135.861765785985,budget,Middle East,Americas
+NIU,HKG,9445.553860917804,luxury,Oceania,Asia-Pacific
+LKA,ESP,8978.272062941402,luxury,Asia-Pacific,Europe
+GUF,LKA,14735.313812290455,luxury,Americas,Asia-Pacific
+PER,GBR,9715.634646860617,luxury,Americas,Europe
+JOR,ESP,3746.37921015168,luxury,Middle East,Europe
+BHR,USA,12156.422578862363,luxury,Middle East,Americas
+EGY,TUR,1411.9565605506739,luxury,Middle East,Europe
+HND,BWA,12758.117493129035,luxury,Americas,Africa
+HUN,HKG,8546.57422360784,luxury,Europe,Asia-Pacific
+ETH,HRV,4674.543386987367,luxury,Africa,Europe
+HND,MEX,1948.3464228248022,luxury,Americas,Americas
+BGR,HRV,864.1509297110457,luxury,Europe,Europe
+ISR,ESP,3605.373945567877,luxury,Middle East,Europe
+BWA,HUN,7744.5205546913085,adventure,Africa,Europe
+BMU,FRA,5789.652244432743,adventure,Americas,Europe
+PRI,ITA,4823.788882367057,adventure,Unknown,Europe
+BGR,ITA,1065.6643793899402,adventure,Europe,Europe
+USA,GBR,6830.4035407829715,adventure,Americas,Europe
+MDA,MEX,10715.829658167984,adventure,Europe,Americas
+CUW,HKG,16164.65882153455,adventure,Americas,Asia-Pacific
+SXM,ESP,6141.415036679122,adventure,Americas,Europe
+KIR,HUN,15081.497536252526,adventure,Asia-Pacific,Europe
+TTO,FRA,7119.367275463713,adventure,Americas,Europe
+KIR,HUN,15081.497536252526,family,Asia-Pacific,Europe
+COM,HRV,6914.218769329348,family,Africa,Europe
+ECU,USA,4690.719587975518,family,Americas,Americas
+SYR,BIH,2085.419275120855,family,Middle East,Europe
+FJI,JPN,7311.019199609845,family,Asia-Pacific,Asia-Pacific
+SUR,FRA,7297.746696327233,family,Americas,Europe
+NCL,HUN,15799.197656357464,family,Oceania,Europe
+ERI,CAN,11480.700629234134,family,Africa,Americas
+RUS,HUN,5345.117480398963,family,Europe,Europe
+GEO,POL,2105.8848882367947,family,Europe,Europe
+UKR,FRA,2182.9570460119594,family,Europe,Europe
+BEN,SAU,4813.215351004108,family,Africa,Middle East
+MYS,CAN,12827.442342375824,family,Asia-Pacific,Americas
+TUR,USA,10181.659327063411,family,Europe,Americas
+TJK,SAU,2975.5076015903196,family,Asia-Pacific,Middle East
+GRC,MAC,8616.689234035723,family,Europe,Asia-Pacific
+PNG,CAN,11802.547209411201,family,Asia-Pacific,Americas
+BEL,USA,7553.898167375194,family,Europe,Americas
+STP,TUR,5204.1881879551165,family,Africa,Europe
+BES,MEX,11284.602439717288,family,Unknown,Americas
+ARM,FRA,3496.9171167141867,family,Europe,Europe
+CAN,GBR,5807.422505518145,budget,Americas,Europe
+BGR,FRA,1879.5084665111656,budget,Europe,Europe
+FRA,USA,7665.58674089517,budget,Europe,Americas
+CMR,COL,9574.261814828264,budget,Africa,Americas
+BEL,CAN,6562.609864881317,budget,Europe,Americas
+NIU,AUS,5804.349871050891,budget,Oceania,Asia-Pacific
+HND,JPN,12633.327754760352,budget,Americas,Asia-Pacific
+HUN,POL,529.5723681387685,budget,Europe,Europe
+ESP,DEU,1615.3757128190218,budget,Europe,Europe
+SAU,USA,12089.23975005249,budget,Middle East,Americas
+AZE,MEX,12277.626026182781,budget,Europe,Americas
+ARM,JPN,7759.392774162103,budget,Europe,Asia-Pacific
+GBR,ALB,2335.695427049918,budget,Europe,Europe
+KOR,ESP,10185.002462644732,budget,Asia-Pacific,Europe
+SYC,COG,4439.3048470457525,budget,Africa,Africa
+CRI,MAC,15993.107524614554,budget,Americas,Asia-Pacific
+ZWE,HUN,5575.353951336609,budget,Unknown,Europe
+RUS,CHN,2854.6100136702817,budget,Europe,Asia-Pacific
+DZA,CYM,8343.71891040146,budget,Africa,Americas
+NAM,HUN,7797.662127734039,budget,Africa,Europe
+EST,ASM,14928.491569651189,budget,Europe,Oceania
+CZE,CAN,7071.124575106869,budget,Europe,Americas
+PYF,ITA,16826.54065730063,budget,Oceania,Europe
+NZL,BGR,17484.990414216853,budget,Asia-Pacific,Europe
+HKG,JPN,2787.528491020968,budget,Asia-Pacific,Asia-Pacific
+NGA,HRV,4053.6767725921372,budget,Africa,Europe
+GRC,JPN,9410.95585706132,budget,Europe,Asia-Pacific
+SUR,HUN,8596.942290309229,budget,Americas,Europe
+TCD,SAU,2907.7245463697864,luxury,Africa,Middle East
+COG,DEU,5686.615127582193,luxury,Africa,Europe
+COL,JPN,14357.319121786944,luxury,Americas,Asia-Pacific
+FJI,HRV,16579.313991581057,luxury,Asia-Pacific,Europe
+ISR,ITA,2317.6978204866314,luxury,Middle East,Europe
+TUN,GBR,2591.0333181146943,luxury,Middle East,Europe
+HKG,MAC,65.75141775056211,luxury,Asia-Pacific,Asia-Pacific
+IND,JPN,5959.299327492517,luxury,Asia-Pacific,Asia-Pacific
+GBR,BEL,757.0127038022158,luxury,Europe,Europe
+RUS,ESP,7019.896258184935,luxury,Europe,Europe
+MTQ,COM,11855.472833073536,luxury,Americas,Africa
+DMA,DEU,7416.049074127398,adventure,Americas,Europe
+BLR,GBR,2015.8038677983368,adventure,Europe,Europe
+KEN,TUR,4343.685264270081,adventure,Africa,Europe
+POL,MAC,8374.019863614003,adventure,Europe,Asia-Pacific
+DOM,TWN,15144.849098089611,adventure,Americas,Asia-Pacific
+GRD,FRA,7039.396086310113,adventure,Americas,Europe
+SMR,BEL,945.5662528747331,family,Europe,Europe
+AUS,TWN,5617.6286180701945,family,Asia-Pacific,Asia-Pacific
+TCD,DEU,4039.206675092614,family,Africa,Europe
+GMB,ATG,4992.104174961127,family,Africa,Americas
+GUM,USA,11563.103574624107,family,Asia-Pacific,Americas
+VCT,MAC,16062.529874346417,family,Americas,Asia-Pacific
+VNM,CHN,11282.217268788312,family,Unknown,Asia-Pacific
+COL,VGB,1863.5568854159858,family,Americas,Americas
+IRQ,MEX,12750.992154495061,family,Middle East,Americas
+MDA,GBR,2352.2155186341993,family,Europe,Europe
+LIE,CAN,7080.990335889282,family,Europe,Americas
+ZWE,CAN,11011.002227916915,family,Unknown,Americas
+DOM,JPN,13214.372977901252,family,Americas,Asia-Pacific
+MMR,CAN,11085.800579846466,family,Asia-Pacific,Americas
+BHR,HRV,3788.137343733597,family,Middle East,Europe
+CMR,ALB,3835.274151036898,family,Africa,Europe
+ETH,DEU,5417.302323972181,family,Africa,Europe
+MAC,MEX,13595.82070478859,family,Asia-Pacific,Americas
+CYP,CAN,9178.777400962319,family,Europe,Americas
+RWA,HKG,9503.452236358427,family,Africa,Asia-Pacific
+VGB,HKG,15483.15601441019,family,Americas,Asia-Pacific
+FIN,HRV,1990.6074501240678,budget,Europe,Europe
+SYR,HRV,2316.643264045791,budget,Middle East,Europe
+BES,HRV,5233.306711275091,budget,Unknown,Europe
+SYC,MAC,6980.356877827911,budget,Africa,Asia-Pacific
+ITA,JPN,9728.699591145374,budget,Europe,Asia-Pacific
+FIN,CHL,13818.109052475991,budget,Europe,Americas
+BWA,JPN,13512.799605593482,budget,Africa,Asia-Pacific
+ASM,SAU,16175.377233978823,budget,Oceania,Middle East
+BRA,BGR,10082.030644716338,budget,Americas,Europe
+EST,JPN,7809.250766271197,budget,Europe,Asia-Pacific
+IRQ,GBR,4365.08201331252,budget,Middle East,Europe
+UZB,HRV,3959.4169373635937,budget,Asia-Pacific,Europe
+CAN,MAC,10531.841537291244,budget,Americas,Asia-Pacific
+MNG,TUR,5475.831149767641,budget,Asia-Pacific,Europe
+AUS,CHN,7474.3568124730755,budget,Asia-Pacific,Asia-Pacific
+PRT,HKG,10914.765796202108,budget,Europe,Asia-Pacific
+ESP,BRA,7850.183157675505,budget,Europe,Americas
+SWZ,JPN,13141.327585178324,budget,Africa,Asia-Pacific
+BES,ITA,4823.788882367057,budget,Unknown,Europe
+EGY,SAU,1470.3195556377802,budget,Middle East,Middle East
+BIH,HUN,387.92660072161806,luxury,Europe,Europe
+CRI,FRA,8917.743216518315,luxury,Americas,Europe
+POL,TUR,1902.605220249886,luxury,Europe,Europe
+COD,CAN,12640.013691371241,luxury,Africa,Americas
+ARE,DEU,4814.9078579317365,luxury,Middle East,Europe
+DNK,ITA,1615.416943724731,luxury,Europe,Europe
+CHE,DEU,509.8637819883354,luxury,Europe,Europe
+CUB,FRA,7546.770517486638,luxury,Americas,Europe
+VCT,SAU,11031.817546139711,luxury,Americas,Middle East
+RUS,MAC,4418.227451965266,adventure,Europe,Asia-Pacific
+GLP,DEU,7356.774681294172,adventure,Americas,Europe
+ATG,HRV,7663.647183827675,adventure,Americas,Europe
+BHS,DEU,7722.90574842405,adventure,Americas,Europe
+MDA,TUR,1091.19628693995,adventure,Europe,Europe
+OMN,ESP,5951.375369609525,adventure,Middle East,Europe
+ZWE,CAN,11011.002227916915,adventure,Unknown,Americas
+GEO,BLR,1700.995488705516,adventure,Europe,Europe
+TUR,DEU,2354.713381137845,adventure,Europe,Europe
+VNM,ITA,4823.788882367057,family,Unknown,Europe
+MLT,FRA,1528.8472210040752,family,Europe,Europe
+EGY,CYM,11076.80606111018,family,Middle East,Americas
+AZE,DEU,3093.7671076500797,family,Europe,Europe
+TON,CHN,10570.890198053423,family,Asia-Pacific,Asia-Pacific
+MAC,MAC,0,family,Asia-Pacific,Asia-Pacific
+BRA,ASM,12514.300682919029,family,Americas,Oceania
+SWZ,BHR,6195.176742732199,family,Africa,Middle East
+AND,CAN,7140.680957037915,family,Europe,Americas
+BES,TUR,5624.013219298066,family,Unknown,Europe
+BRA,HRV,9421.99500536535,family,Americas,Europe
+URY,DEU,11326.677790843669,budget,Americas,Europe
+NIU,ESP,17291.285075348023,budget,Oceania,Europe
+NIU,HKG,9445.553860917804,budget,Oceania,Asia-Pacific
+IRN,TUR,1812.9045432989203,budget,Middle East,Europe
+FIN,TUR,2633.757211752095,budget,Europe,Europe
+PRT,TCD,3735.150460503105,budget,Europe,Africa
+NIC,MEX,2224.404435588247,budget,Americas,Americas
+GIN,AND,3781.653696467419,budget,Africa,Europe
+SLV,MEX,1804.9626135070275,budget,Americas,Americas
+CMR,TUR,4193.690967852693,budget,Africa,Europe
+PNG,DEU,13452.376237074592,budget,Asia-Pacific,Europe
+IRN,HKG,5999.951141083331,budget,Middle East,Asia-Pacific
+CIV,JPN,13856.157204666373,budget,Africa,Asia-Pacific
+SVN,ITA,513.8640413087771,budget,Europe,Europe
+ASM,POL,15747.88857785412,budget,Oceania,Europe
+MYS,USA,15070.49397789234,budget,Asia-Pacific,Americas
+SEN,MAC,13033.137114585279,budget,Africa,Asia-Pacific
+THA,CAN,11611.668088184442,budget,Asia-Pacific,Americas
+AUS,MAC,5712.136926537908,budget,Asia-Pacific,Asia-Pacific
+TCA,ESP,4515.319738842054,budget,Unknown,Europe
+EGY,HUN,2468.469194743407,budget,Middle East,Europe
+ABW,JPN,13840.818859594718,budget,Americas,Asia-Pacific
+ISL,HUN,3023.3692589076595,luxury,Europe,Europe
+PRT,CAN,6917.8420999290365,luxury,Europe,Americas
+ECU,POL,10669.962522886519,luxury,Americas,Europe
+TUN,HRV,1337.284134155174,luxury,Middle East,Europe
+MNG,MAC,2877.486769069022,luxury,Asia-Pacific,Asia-Pacific
+ERI,GBR,5786.8797091627775,luxury,Africa,Europe
+EST,HRV,1641.099322170267,luxury,Europe,Europe
+ARM,ESP,4085.3731912131702,luxury,Europe,Europe
+NIU,HUN,16775.54841795019,adventure,Oceania,Europe
+GRD,POL,8322.69374292886,adventure,Americas,Europe
+FJI,FRA,16821.48291004622,adventure,Asia-Pacific,Europe
+GMB,DEU,4790.595760933937,adventure,Africa,Europe
+BRN,JPN,4264.337901655565,adventure,Asia-Pacific,Asia-Pacific
+BWA,HKG,10880.429479020077,family,Africa,Asia-Pacific
+TWN,POL,8719.991519253634,family,Asia-Pacific,Europe
+VCT,MAC,16062.529874346417,family,Americas,Asia-Pacific
+LSO,ESP,8460.765633297908,family,Africa,Europe
+BIH,MAC,8764.298995920575,family,Europe,Asia-Pacific
+FRA,JPN,9850.110810919428,family,Europe,Asia-Pacific
+HRV,BHR,3788.137343733597,family,Europe,Middle East
+KGZ,POL,4301.992859527667,family,Asia-Pacific,Europe
+KEN,GBR,7202.316001918993,family,Africa,Europe
+DEU,MAC,8965.767129722337,family,Europe,Asia-Pacific
+KOR,ESP,10185.002462644732,family,Asia-Pacific,Europe
+JOR,HUN,2333.946330851801,family,Middle East,Europe
+COL,HRV,9608.31190464499,family,Americas,Europe
+LKA,ITA,7625.041015667522,family,Asia-Pacific,Europe
+JOR,TUR,936.0502834161032,family,Middle East,Europe
+TKM,USA,11186.694412814106,budget,Asia-Pacific,Americas
+BHS,MAC,14631.94124631265,budget,Americas,Asia-Pacific
+LAO,MAC,1175.5886611807755,budget,Asia-Pacific,Asia-Pacific
+MHL,HRV,13731.845942591639,budget,Asia-Pacific,Europe
+VNM,MEX,11284.602439717288,budget,Unknown,Americas
+ZWE,HUN,5575.353951336609,budget,Unknown,Europe
+COG,MEX,12866.648911765658,budget,Africa,Americas
+DZA,HUN,2631.300102150012,budget,Africa,Europe
+GUM,MEX,11617.185105867082,budget,Asia-Pacific,Americas
+LAO,BHS,15023.466104736137,budget,Asia-Pacific,Americas
+MCO,HUN,1014.8768378284843,budget,Europe,Europe
+MSR,MAC,15660.151658871513,budget,Americas,Asia-Pacific
+MNG,ITA,6849.1046416082145,budget,Asia-Pacific,Europe
+STP,BRA,6634.122026958259,budget,Africa,Americas
+CUB,ESP,7156.013208042455,budget,Americas,Europe
+PAN,HKG,16216.698156303488,budget,Americas,Asia-Pacific
+PSE,HUN,2154.4606460629584,budget,Asia-Pacific,Europe
+CUW,HKG,16164.65882153455,budget,Americas,Asia-Pacific
+SUR,HUN,8596.942290309229,budget,Americas,Europe
+SMR,MAC,9151.299948653905,budget,Europe,Asia-Pacific
+AZE,ITA,2923.5595487964415,budget,Europe,Europe
+GTM,HUN,10144.322804489113,budget,Americas,Europe
+IRQ,ITA,2887.671012986116,budget,Middle East,Europe
+VEN,HKG,12482.408681679102,budget,Unknown,Asia-Pacific
+TUN,FRA,1505.5243891817802,budget,Middle East,Europe
+JPN,GBR,9200.42112784435,luxury,Asia-Pacific,Europe
+MDA,DEU,1360.9346057809332,luxury,Europe,Europe
+URY,MAC,18457.428279167998,luxury,Americas,Asia-Pacific
+SRB,ESP,2067.5997620706976,luxury,Europe,Europe
+NAM,BGR,7339.714308102313,luxury,Africa,Europe
+SRB,ASM,16542.683951605635,luxury,Europe,Oceania
+DMA,ITA,7551.492534369467,luxury,Americas,Europe
+TTO,DEU,7809.117156753904,luxury,Americas,Europe
+LVA,FRA,1934.0954840363809,luxury,Europe,Europe
+HND,JPN,12633.327754760352,adventure,Americas,Asia-Pacific
+MAC,HKG,65.75141775056211,adventure,Asia-Pacific,Asia-Pacific
+ROU,BGR,359.2345952438956,adventure,Europe,Europe
+BES,DEU,5774.0073239565145,adventure,Unknown,Europe
+SGP,GBR,10960.83838875903,adventure,Asia-Pacific,Europe
+ABW,USA,3744.851731730858,adventure,Americas,Americas
+VGB,HRV,7784.026933677524,family,Americas,Europe
+ASM,ESP,16816.40706891523,family,Oceania,Europe
+OMN,JPN,7951.605188954542,family,Middle East,Asia-Pacific
+ALB,POL,1199.658614770707,family,Europe,Europe
+NIU,COG,17831.45550038826,family,Oceania,Africa
+BHS,POL,8269.552514393727,family,Americas,Europe
+KGZ,AZE,2286.6654831712012,family,Asia-Pacific,Europe
+ARE,FRA,5234.379228984077,family,Middle East,Europe
+USA,ESP,7588.9195280843915,family,Americas,Europe
+NZL,HUN,17938.003622959925,family,Asia-Pacific,Europe
+BRB,HRV,7780.251845384197,family,Americas,Europe
+ALB,POL,1199.658614770707,family,Europe,Europe
+PNG,ESP,15042.899045626586,family,Asia-Pacific,Europe
+IRN,HUN,3311.0863769662287,budget,Middle East,Europe
+USA,HUN,8652.058920094925,budget,Americas,Europe
+TWN,MEX,12961.597367555882,budget,Asia-Pacific,Americas
+HND,GBR,8170.12162709596,budget,Americas,Europe
+GBR,MAC,9546.774940584302,budget,Europe,Asia-Pacific
+MSR,FRA,6713.942363187567,budget,Americas,Europe
+PHL,MAC,1353.8436355453334,budget,Asia-Pacific,Asia-Pacific
+BLR,BHR,3594.567349218666,budget,Europe,Middle East
+ARG,GBR,11881.871208148528,budget,Americas,Europe
+MYS,CHN,3526.8084073085706,budget,Asia-Pacific,Asia-Pacific
+CHE,DEU,509.8637819883354,budget,Europe,Europe
+TON,ITA,17601.931366992463,budget,Asia-Pacific,Europe
+SYC,SAU,3370.8813436832424,budget,Africa,Middle East
+KIR,FRA,15169.556973288954,budget,Asia-Pacific,Europe
+TZA,MMR,7353.440296495101,budget,Africa,Asia-Pacific
+LSO,GBR,9919.578169380959,budget,Africa,Europe
+BES,BGR,5389.387752164148,budget,Unknown,Europe
+DEU,HRV,760.5989582752444,budget,Europe,Europe
+SWZ,MEX,15397.37957491247,budget,Africa,Americas
+KNA,ITA,7531.870362235935,budget,Americas,Europe
+BIH,GBR,1969.9291592759257,budget,Europe,Europe
+BOL,COM,11401.215257805647,budget,Americas,Africa
+BLR,MEX,10192.690373408863,luxury,Europe,Americas
+MOZ,HUN,7493.5474548256825,luxury,Africa,Europe
+CHL,TUR,13711.23598891874,luxury,Americas,Europe
+BWA,ITA,7246.922304720932,luxury,Africa,Europe
+VIR,GBR,6165.667546488069,luxury,Unknown,Europe
+GEO,POL,2105.8848882367947,luxury,Europe,Europe
+PRT,HKG,10914.765796202108,luxury,Europe,Asia-Pacific
+CIV,HKG,12662.538595619677,luxury,Africa,Asia-Pacific
+SMR,ITA,230.40201087435003,adventure,Europe,Europe
+RWA,HUN,5552.961673269178,adventure,Africa,Europe
+CHL,USA,8466.838734529367,adventure,Americas,Americas
+EST,FRA,2051.0145389980194,adventure,Europe,Europe
+SLE,FRA,4406.441718867311,adventure,Africa,Europe
+LKA,CAN,12868.094305434033,family,Asia-Pacific,Americas
+TCA,GBR,6165.667546488069,family,Unknown,Europe
+AZE,POL,2531.6119253988754,family,Europe,Europe
+MKD,BHS,8891.670212991825,family,Europe,Americas
+LKA,GBR,8922.280321617996,family,Asia-Pacific,Europe
+SAU,FRA,4546.313452931867,family,Middle East,Europe
+TTO,USA,4527.513779448581,family,Americas,Americas
+FIN,MEX,9455.81157818991,family,Europe,Americas
+STP,FRA,5137.563702079141,family,Africa,Europe
+ECU,HKG,17374.64471407441,family,Americas,Asia-Pacific
+TZA,ITA,5823.380783029957,family,Africa,Europe
+PRI,ESP,4515.319738842054,family,Unknown,Europe
+OMN,HUN,4335.664148158128,family,Middle East,Europe
+TUN,ESP,1383.531191823004,family,Middle East,Europe
+KOR,SAU,7853.2249798660605,family,Asia-Pacific,Middle East
+HKG,HKG,0,family,Asia-Pacific,Asia-Pacific
+STP,MAC,11738.750715203492,budget,Africa,Asia-Pacific
+CRI,POL,10022.849077396444,budget,Americas,Europe
+MSR,POL,7960.80932983456,budget,Americas,Europe
+DMA,DEU,7416.049074127398,budget,Americas,Europe
+PRY,GBR,10188.85506464294,budget,Americas,Europe
+UZB,JPN,6215.230597739255,budget,Asia-Pacific,Asia-Pacific
+REU,BLR,6502.495793062647,budget,Unknown,Europe
+ATG,BGR,8513.352571109004,budget,Americas,Europe
+GLP,MAC,15704.88677631915,budget,Americas,Asia-Pacific
+BGR,SAU,2761.991351053878,budget,Europe,Middle East
+CRI,BOL,3647.8518019084686,budget,Americas,Americas
+TUN,MAC,9850.617769634815,budget,Middle East,Asia-Pacific
+ERI,HKG,7799.1908260882265,budget,Africa,Asia-Pacific
+QAT,HRV,3888.1123458150946,budget,Middle East,Europe
+TTO,TUR,9812.40346259494,budget,Americas,Europe
+PSE,FRA,3228.648535245101,budget,Asia-Pacific,Europe
+BRA,ARG,2924.24689006907,budget,Americas,Americas
+THA,DEU,8677.08039092159,budget,Asia-Pacific,Europe
+TWN,BGR,8668.932068482816,budget,Asia-Pacific,Europe
+IND,ESP,7941.647472261898,budget,Asia-Pacific,Europe
+HRV,CAN,7508.142602540588,budget,Europe,Americas
+BRN,BHR,7211.587197291294,budget,Asia-Pacific,Middle East
+AND,MEX,9326.859519555304,budget,Europe,Americas
+RUS,POL,4963.732802966818,budget,Europe,Europe
+GAB,HKG,11332.540300166642,budget,Africa,Asia-Pacific
+TWN,ITA,9668.979832488665,budget,Asia-Pacific,Europe
+VEN,AUS,14313.72895520397,budget,Unknown,Asia-Pacific
+CRI,TUR,11716.264540442548,budget,Americas,Europe
+SEN,HKG,13081.295355895889,budget,Africa,Asia-Pacific
+BIH,TUR,1560.4474592867657,budget,Europe,Europe
+USA,ITA,8619.062718679941,budget,Americas,Europe
+OMN,TWN,6616.75171920453,budget,Middle East,Asia-Pacific
+BHS,MAC,14631.94124631265,budget,Americas,Asia-Pacific
+HUN,DEU,793.670585373752,luxury,Europe,Europe
+UZB,ARG,15650.072155636266,luxury,Asia-Pacific,Americas
+KAZ,HKG,5046.380921877134,luxury,Asia-Pacific,Asia-Pacific
+ASM,HRV,16550.432774506593,luxury,Oceania,Europe
+YEM,SAU,5535.892093762673,luxury,Unknown,Middle East
+CUW,MEX,3761.147342792136,adventure,Americas,Americas
+DNK,HKG,8817.368907393324,adventure,Europe,Asia-Pacific
+BRB,BHS,2287.26919586555,adventure,Americas,Americas
+PRY,BWA,8380.103388185249,adventure,Americas,Africa
+GTM,BRA,5372.179387086018,adventure,Americas,Americas
+ISR,VGB,9823.245499552475,adventure,Middle East,Americas
+MYS,TUR,7712.519473048324,adventure,Asia-Pacific,Europe
+NCL,HKG,7364.387395202578,family,Oceania,Asia-Pacific
+STP,ITA,4673.572239569086,family,Africa,Europe
+BRB,DEU,7478.221538347464,family,Americas,Europe
+ITA,ESP,1372.6341591156809,family,Europe,Europe
+BES,HRV,5233.306711275091,family,Unknown,Europe
+CRI,TUR,11716.264540442548,family,Americas,Europe
+VUT,AUS,3619.386666501721,family,Asia-Pacific,Asia-Pacific
+IDN,FRA,11721.538806600727,family,Asia-Pacific,Europe
+NZL,DEU,18364.103977535462,family,Asia-Pacific,Europe
+ISR,HKG,7778.574587631043,family,Middle East,Asia-Pacific
+NGA,USA,10649.161848290529,family,Africa,Americas
+URY,DEU,11326.677790843669,family,Americas,Europe
+COM,FRA,7629.390371910565,family,Africa,Europe
+COG,HUN,5231.063787010424,family,Africa,Europe
+YEM,MAC,12421.139513704387,budget,Unknown,Asia-Pacific
+BGR,TUR,920.789420276294,budget,Europe,Europe
+PER,GBR,9715.634646860617,budget,Americas,Europe
+COM,GBR,8626.794951998561,budget,Africa,Europe
+ITA,HRV,417.0195651804742,budget,Europe,Europe
+BWA,BRB,9982.968174011252,budget,Africa,Americas
+TCA,HUN,5575.353951336609,budget,Unknown,Europe
+CYM,COL,1804.5704722473552,budget,Americas,Americas
+ZAF,USA,14398.769059330554,budget,Africa,Americas
+EGY,ARG,12178.75986137066,budget,Middle East,Americas
+BIH,MAC,8764.298995920575,budget,Europe,Asia-Pacific
+SLV,USA,2677.2370472846706,budget,Americas,Americas
+ASM,ITA,16935.01173145844,budget,Oceania,Europe
+IRN,POL,3523.6661981248167,budget,Middle East,Europe
+PAN,FRA,8785.561315255933,luxury,Americas,Europe
+BRA,GBR,8966.771801914781,luxury,Americas,Europe
+AIA,ESP,4515.319738842054,luxury,Unknown,Europe
+BES,JPN,14123.462595647892,luxury,Unknown,Asia-Pacific
+MDG,TUR,6532.522955573096,luxury,Africa,Europe
+AZE,POL,2531.6119253988754,luxury,Europe,Europe
+SRB,DEU,1119.6919420464808,luxury,Europe,Europe
+GBR,ITA,1898.0590814188376,luxury,Europe,Europe
+VNM,HRV,5233.306711275091,luxury,Unknown,Europe
+AUS,ITA,14381.552136206865,adventure,Asia-Pacific,Europe
+SRB,HUN,368.8222298283498,adventure,Europe,Europe
+SMR,FRA,842.7330347705531,adventure,Europe,Europe
+PER,HUN,11095.831110962501,family,Americas,Europe
+JAM,HKG,15349.817466347104,family,Americas,Asia-Pacific
+GTM,ASM,9391.952844196754,family,Americas,Oceania
+EST,ITA,2051.827857108034,family,Europe,Europe
+BGR,TUR,920.789420276294,family,Europe,Europe
+MDG,ITA,7608.69390447896,family,Africa,Europe
+AUS,BRA,15578.61408260731,family,Asia-Pacific,Americas
+CRI,HRV,9933.164002668791,family,Americas,Europe
+KEN,ARG,11007.168810224175,family,Africa,Americas
+UKR,HKG,7669.915730798251,family,Europe,Asia-Pacific
+MDG,JPN,11345.592044752284,family,Africa,Asia-Pacific
+MKD,ARG,12380.010287362624,family,Europe,Americas
+TCD,ARG,10422.132114214375,family,Africa,Americas
+KOR,GBR,8857.779789775426,family,Asia-Pacific,Europe
+FRA,ESP,801.532862166119,family,Europe,Europe
+HTI,TUR,10116.067876941466,budget,Americas,Europe
+TKM,USA,11186.694412814106,budget,Asia-Pacific,Americas
+TTO,BMU,2430.665125188887,budget,Americas,Americas
+NCL,HRV,16202.2156802005,budget,Oceania,Europe
+RUS,TWN,4371.306708542444,budget,Europe,Asia-Pacific
+BFA,HUN,4353.175648444519,budget,Africa,Europe
+TUR,HKG,7545.030154887925,budget,Europe,Asia-Pacific
+ISL,HKG,9522.02264609438,budget,Europe,Asia-Pacific
+FRA,DEU,815.8338486148726,budget,Europe,Europe
+TWN,TUR,8026.876417713091,budget,Asia-Pacific,Europe
+CIV,BRA,5659.923006600326,budget,Africa,Americas
+HKG,TUR,7545.030154887925,budget,Asia-Pacific,Europe
+CZE,USA,8234.390400491298,budget,Europe,Americas
+ISL,ESP,2893.9463218080678,budget,Europe,Europe
+ISL,MAC,9514.745965486778,budget,Europe,Asia-Pacific
+NCL,JPN,6971.64827619967,budget,Oceania,Asia-Pacific
+BRB,MEX,4664.657266905143,budget,Americas,Americas
+GAB,POL,5905.079085039594,budget,Africa,Europe
+EST,MAC,7832.214927056261,budget,Europe,Asia-Pacific
+COG,TUR,4739.475863825659,budget,Africa,Europe
+ZAF,GBR,9880.616805013762,budget,Africa,Europe
+TKM,TUR,2095.6891780696083,budget,Asia-Pacific,Europe
+KGZ,CHN,2614.420571785923,budget,Asia-Pacific,Asia-Pacific
+TTO,HUN,8439.025885548259,budget,Americas,Europe
+CHN,MEX,12826.341652048923,budget,Asia-Pacific,Americas
+WSM,POL,15654.524860416577,budget,Asia-Pacific,Europe
+BLZ,ESP,8342.907689743051,budget,Americas,Europe
+TJK,CAN,9450.136853332113,budget,Asia-Pacific,Americas
+SGP,VGB,17479.90892725112,budget,Asia-Pacific,Americas
+CUB,CAN,4507.958454845779,budget,Americas,Americas
+SGP,JPN,5249.783595791139,budget,Asia-Pacific,Asia-Pacific
+ROU,USA,9045.859421841944,luxury,Europe,Americas
+REU,USA,10513.964439946625,luxury,Unknown,Americas
+PER,COL,1532.2097013532707,luxury,Americas,Americas
+GRC,USA,9408.879291851592,luxury,Europe,Americas
+EST,POL,829.5354522838743,luxury,Europe,Europe
+ARM,ITA,2717.2536070650044,luxury,Europe,Europe
+KGZ,DEU,4908.282280048855,luxury,Asia-Pacific,Europe
+TCA,DEU,5774.0073239565145,adventure,Unknown,Europe
+LBY,ESP,2490.5724211948595,adventure,Middle East,Europe
+NIU,TWN,8876.95864807558,adventure,Oceania,Asia-Pacific
+KIR,FRA,15169.556973288954,adventure,Asia-Pacific,Europe
+CHL,FRA,11709.160688831711,adventure,Americas,Europe
+CHL,BRA,3084.190620136486,adventure,Americas,Americas
+IND,ESP,7941.647472261898,family,Asia-Pacific,Europe
+PAN,ESP,8297.640637908711,family,Americas,Europe
+LBY,ITA,1779.3495761662828,family,Middle East,Europe
+FRA,MAC,9753.67205778672,family,Europe,Asia-Pacific
+TKM,GBR,4903.606033231981,family,Asia-Pacific,Europe
+KNA,MAC,15598.475218813615,family,Americas,Asia-Pacific
+MMR,ITA,7873.925835206157,family,Asia-Pacific,Europe
+CAN,ESP,7059.688098020236,family,Americas,Europe
+BEN,LKA,8608.867225706023,family,Africa,Asia-Pacific
+EGY,HRV,2460.842496342203,family,Middle East,Europe
+BOL,ITA,10110.784437302078,family,Americas,Europe
+CHE,JPN,9525.514247469284,budget,Europe,Asia-Pacific
+AIA,TWN,13132.524918164185,budget,Unknown,Asia-Pacific
+PER,TUR,12396.194120213568,budget,Americas,Europe
+KEN,ITA,5306.4786592706405,budget,Africa,Europe
+ARM,POL,2375.231487905001,budget,Europe,Europe
+LKA,MEX,16493.02693761826,budget,Asia-Pacific,Americas
+BFA,HUN,4353.175648444519,budget,Africa,Europe
+HTI,GBR,6952.2239758404285,budget,Americas,Europe
+BES,BLR,6502.495793062647,budget,Unknown,Europe
+ALB,HUN,670.2877320267651,budget,Europe,Europe
+VGB,BHS,1507.7167359924103,budget,Americas,Americas
+SAU,MEX,13681.07195428547,budget,Middle East,Americas
+COD,FRA,5912.075966863886,budget,Africa,Europe
+TUN,ESP,1383.531191823004,budget,Middle East,Europe
+MAC,POL,8374.019863614003,budget,Asia-Pacific,Europe
+BRA,HKG,18295.240040224107,budget,Americas,Asia-Pacific
+MHL,BGR,13475.366612350814,budget,Asia-Pacific,Europe
+DEU,FRA,815.8338486148726,budget,Europe,Europe
+CIV,HKG,12662.538595619677,budget,Africa,Asia-Pacific
+AZE,ITA,2923.5595487964415,budget,Europe,Europe
+BES,ITA,4823.788882367057,budget,Unknown,Europe
+JOR,BLR,2656.2796117815983,budget,Middle East,Europe
+BRB,GBR,6698.925282602053,budget,Americas,Europe
+ROU,FRA,1749.046643498113,budget,Europe,Europe
+NGA,SAU,4198.437172997111,budget,Africa,Middle East
+BES,HKG,12482.408681679102,budget,Unknown,Asia-Pacific
+CHE,ITA,649.0693011095186,budget,Europe,Europe
+CHE,ITA,649.0693011095186,budget,Europe,Europe
+PER,DZA,9204.18495420725,budget,Americas,Africa
+HTI,HRV,8334.694040904937,budget,Americas,Europe
+ARM,BHS,10642.433253271482,budget,Europe,Americas
+BES,ITA,4823.788882367057,luxury,Unknown,Europe
+NGA,ESP,3699.1327703861266,luxury,Africa,Europe
+OMN,MEX,14487.157094303455,luxury,Middle East,Americas
+HRV,FRA,1015.7650801051359,luxury,Europe,Europe
+LTU,FRA,1809.686937343776,luxury,Europe,Europe
+KOR,HUN,8348.501077731671,luxury,Asia-Pacific,Europe
+QAT,ESP,5304.877961052627,luxury,Middle East,Europe
+MNP,FRA,12275.768641690745,luxury,Asia-Pacific,Europe
+KOR,ITA,9146.991552886218,luxury,Asia-Pacific,Europe
+ISR,HRV,2312.532834906326,adventure,Middle East,Europe
+AIA,ESP,4515.319738842054,adventure,Unknown,Europe
+YEM,HRV,5233.306711275091,adventure,Unknown,Europe
+MEX,ITA,10147.779543876999,adventure,Americas,Europe
+KEN,COL,12468.41702755152,adventure,Africa,Americas
+SLV,USA,2677.2370472846706,family,Americas,Americas
+MKD,USA,9203.38757157549,family,Europe,Americas
+SUR,CHL,4690.166000463023,family,Americas,Americas
+NIU,DEU,16444.36325341102,family,Oceania,Europe
+PNG,JPN,4765.282982351726,family,Asia-Pacific,Asia-Pacific
+SRB,FRA,1491.1238644784783,family,Europe,Europe
+VIR,ESP,4515.319738842054,family,Unknown,Europe
+TZA,ARG,10302.25306151392,family,Africa,Americas
+COL,POL,9843.067867576747,family,Americas,Europe
+KIR,BEL,14735.41041659136,family,Asia-Pacific,Europe
+PHL,USA,13216.156491237685,budget,Asia-Pacific,Americas
+ECU,HUN,10737.53200526024,budget,Americas,Europe
+ZWE,MAC,12421.139513704387,budget,Unknown,Asia-Pacific
+DMA,GBR,6601.489593568881,budget,Americas,Europe
+NZL,FRA,19179.4518843431,budget,Asia-Pacific,Europe
+AUS,MEX,14353.633640469232,budget,Asia-Pacific,Americas
+ALB,FRA,1545.671754827353,budget,Europe,Europe
+FJI,USA,10860.111062495991,budget,Asia-Pacific,Americas
+VGB,USA,3668.0774444806766,budget,Americas,Americas
+MAR,HKG,11342.284415476566,budget,Africa,Asia-Pacific
+BRB,POL,8083.389315491711,budget,Americas,Europe
+VNM,AUS,14313.72895520397,budget,Unknown,Asia-Pacific
+DZA,COL,8391.43174238929,budget,Africa,Americas
+MNP,USA,11366.82843065843,budget,Asia-Pacific,Americas
+REU,FRA,5144.8281547943225,budget,Unknown,Europe
+URY,FRA,10510.99806388428,budget,Americas,Europe
+ASM,GBR,15302.78248133561,budget,Oceania,Europe
+EST,HRV,1641.099322170267,budget,Europe,Europe
+CYP,AUS,12480.443937531365,budget,Europe,Asia-Pacific
+NAM,HRV,7575.017767087571,budget,Africa,Europe
+GRC,BHS,9022.362613606065,budget,Europe,Americas
+SEN,USA,8276.911235499396,luxury,Africa,Americas
+KAZ,ESP,5492.41133136356,luxury,Asia-Pacific,Europe
+HTI,HUN,8605.34698655834,luxury,Americas,Europe
+VGB,BLR,8533.625180303294,luxury,Americas,Europe
+POL,COL,9843.067867576747,luxury,Europe,Americas
+BRB,FRA,6792.1249913803,luxury,Americas,Europe
+MEX,MEX,0,luxury,Americas,Americas
+TUR,ITA,1940.8321969850506,luxury,Europe,Europe
+EST,HUN,1322.8589969925872,luxury,Europe,Europe
+MDG,ITA,7608.69390447896,luxury,Africa,Europe
+MNP,FRA,12275.768641690745,luxury,Asia-Pacific,Europe
+MNP,USA,11366.82843065843,luxury,Asia-Pacific,Americas
+AIA,HRV,5233.306711275091,adventure,Unknown,Europe
+BIH,ITA,474.2778009042667,adventure,Europe,Europe
+CYP,FRA,2882.6927552151888,adventure,Europe,Europe
+ISL,ATG,6199.257508396781,adventure,Europe,Americas
+CUB,TUR,10340.416860627287,adventure,Americas,Europe
+CRI,ESP,8463.152328069971,adventure,Americas,Europe
+URY,BLR,12482.345575584575,adventure,Americas,Europe
+MNG,AUS,8566.309490389021,adventure,Asia-Pacific,Asia-Pacific
+FIN,ITA,2395.3732950766966,adventure,Europe,Europe
+HTI,POL,8454.661220771131,adventure,Americas,Europe
+BRN,BRB,17944.66668108079,adventure,Asia-Pacific,Americas
+RUS,COM,9740.509754121407,adventure,Europe,Africa
+IDN,DEU,11010.539112855397,family,Asia-Pacific,Europe
+DNK,POL,791.8228831243508,family,Europe,Europe
+UZB,ESP,5585.009305326796,family,Asia-Pacific,Europe
+SYC,GBR,8560.900270575265,family,Africa,Europe
+KOR,TUR,7790.107185695076,family,Asia-Pacific,Europe
+ROU,FRA,1749.046643498113,family,Europe,Europe
+CHN,MEX,12826.341652048923,family,Asia-Pacific,Americas
+HND,COG,11295.205289395395,family,Americas,Africa
+HTI,ITA,8198.377773066648,family,Americas,Europe
+TZA,HRV,6050.55583822193,family,Africa,Europe
+UZB,TUR,2495.5020067019077,family,Asia-Pacific,Europe
+AUS,ATG,18162.35232150945,family,Asia-Pacific,Americas
+USA,FRA,7665.58674089517,budget,Americas,Europe
+ZAF,FRA,8789.479607992007,budget,Africa,Europe
+SMR,GBR,1702.4631650889373,budget,Europe,Europe
+MMR,POL,7215.442060165416,budget,Asia-Pacific,Europe
+ECU,COL,832.5841340348945,budget,Americas,Americas
+ISL,HKG,9522.02264609438,budget,Europe,Asia-Pacific
+BRN,BIH,10219.570724699879,budget,Asia-Pacific,Europe
+COG,CHN,9845.598332742109,budget,Africa,Asia-Pacific
+GTM,TUR,11704.247227016105,budget,Americas,Europe
+THA,ESP,10063.331379158684,budget,Asia-Pacific,Europe
+BRB,TUR,9495.016076056994,budget,Americas,Europe
+TJK,HKG,4448.121551482908,budget,Asia-Pacific,Asia-Pacific
+AIA,BRA,5925.6727116739885,budget,Unknown,Americas
+PNG,HKG,4544.289541278506,budget,Asia-Pacific,Asia-Pacific
+ESP,DEU,1615.3757128190218,budget,Europe,Europe
+SVN,HUN,361.8857134515729,budget,Europe,Europe
+BES,SAU,5535.892093762673,budget,Unknown,Middle East
+SUR,ITA,7954.188000598547,budget,Americas,Europe
+PAN,USA,3513.494348768671,budget,Americas,Americas
+GIN,USA,8991.895343228012,budget,Africa,Americas
+SVN,HRV,117.96479963670953,luxury,Europe,Europe
+GBR,DEU,1032.9862607392447,luxury,Europe,Europe
+SVN,SAU,3652.522785224619,luxury,Europe,Middle East
+ASM,FRA,16390.407944449085,luxury,Oceania,Europe
+ASM,BHR,15590.922872943658,luxury,Oceania,Middle East
+VIR,HRV,5233.306711275091,luxury,Unknown,Europe
+CHE,HRV,571.589979654646,adventure,Europe,Europe
+PER,COG,10104.115174916513,adventure,Americas,Africa
+SLE,AUS,15919.894260780356,adventure,Africa,Asia-Pacific
+BRB,HRV,7780.251845384197,adventure,Americas,Europe
+BRB,USA,4462.074358488554,adventure,Americas,Americas
+PHL,HRV,10252.211865711517,adventure,Asia-Pacific,Europe
+CMR,FRA,4428.518313225146,adventure,Africa,Europe
+ESP,HRV,1625.5966015928136,adventure,Europe,Europe
+CRI,TUR,11716.264540442548,adventure,Americas,Europe
+GEO,HRV,2272.609895892986,adventure,Europe,Europe
+ITA,TUR,1940.8321969850506,adventure,Europe,Europe
+PHL,BLR,9104.80124365615,family,Asia-Pacific,Europe
+GTM,POL,9897.966314099584,family,Americas,Europe
+ZWE,AND,4728.936131641992,family,Unknown,Europe
+CAN,ESP,7059.688098020236,family,Americas,Europe
+MAC,AUS,5712.136926537908,family,Asia-Pacific,Asia-Pacific
+ZWE,ITA,4823.788882367057,family,Unknown,Europe
+TCA,CMR,1596.3570978016735,family,Unknown,Africa
+LCA,USA,4294.453105753513,family,Americas,Americas
+YEM,HKG,12482.408681679102,family,Unknown,Asia-Pacific
+HND,SAU,13171.408030001081,family,Americas,Middle East
+CYP,AUS,12480.443937531365,family,Europe,Asia-Pacific
+NCL,ESP,17618.733322948956,family,Oceania,Europe
+LAO,TUR,6698.3552129798245,budget,Asia-Pacific,Europe
+WSM,BLR,15237.189635879375,budget,Asia-Pacific,Europe
+CZE,BEL,786.7865430438202,budget,Europe,Europe
+TKM,ESP,5296.599727899959,budget,Asia-Pacific,Europe
+ROU,JPN,8707.317610749782,budget,Europe,Asia-Pacific
+MNG,ITA,6849.1046416082145,budget,Asia-Pacific,Europe
+THA,AUS,5791.355074400232,budget,Asia-Pacific,Asia-Pacific
+USA,JPN,10150.442573500723,budget,Americas,Asia-Pacific
+DMA,ITA,7551.492534369467,budget,Americas,Europe
+RWA,ITA,5174.378464044619,budget,Africa,Europe
+MNG,BEL,6728.610849593281,budget,Asia-Pacific,Europe
+ARE,HUN,4028.875170578453,budget,Middle East,Europe
+AND,FRA,417.4239034987527,budget,Europe,Europe
+SWZ,TUR,7292.312407834232,budget,Africa,Europe
+ETH,USA,13143.576071821815,budget,Africa,Americas
+MOZ,ITA,7133.60936001982,budget,Africa,Europe
+SGP,SAU,6789.56613145621,budget,Asia-Pacific,Middle East
+URY,ARG,966.188982270026,budget,Americas,Americas
+MAR,GBR,2638.2976668706615,budget,Africa,Europe
+CMR,POL,4992.546942458464,budget,Africa,Europe
+PRI,ITA,4823.788882367057,budget,Unknown,Europe
+LAO,ESP,9878.512262058735,budget,Asia-Pacific,Europe
+GTM,CYM,1029.1577176580079,budget,Americas,Americas
+PHL,MMR,2912.502023470701,budget,Asia-Pacific,Asia-Pacific
+TJK,HKG,4448.121551482908,budget,Asia-Pacific,Asia-Pacific
+DOM,ARM,10657.351616726215,budget,Americas,Europe
+SXM,CHN,13872.654216998251,budget,Americas,Asia-Pacific
+STP,HKG,11801.048763018593,budget,Africa,Asia-Pacific
+GUF,CHN,14999.71619370888,budget,Americas,Asia-Pacific
+NAM,HUN,7797.662127734039,budget,Africa,Europe
+MLT,VGB,7852.612625551761,luxury,Europe,Americas
+ARG,DEU,12279.904769433986,luxury,Americas,Europe
+MNG,USA,10478.632205492413,luxury,Asia-Pacific,Americas
+BRB,DEU,7478.221538347464,luxury,Americas,Europe
+TUN,FRA,1505.5243891817802,luxury,Middle East,Europe
+MDA,USA,9103.049956362001,luxury,Europe,Americas
+THA,HRV,8440.355420781367,luxury,Asia-Pacific,Europe
+ETH,POL,5136.123385582023,luxury,Africa,Europe
+QAT,AUS,10501.530279992241,luxury,Middle East,Asia-Pacific
+SVN,ALB,693.9617630462872,luxury,Europe,Europe
+COL,SAU,12732.828570150796,luxury,Americas,Middle East
+MSR,BMU,1749.903836579461,luxury,Americas,Americas
+NIU,GBR,15817.527279819575,adventure,Oceania,Europe
+ERI,HKG,7799.1908260882265,adventure,Africa,Asia-Pacific
+NGA,HUN,4356.3544065399265,adventure,Africa,Europe
+BRB,FRA,6792.1249913803,adventure,Americas,Europe
+BWA,ASM,15636.80492086583,adventure,Africa,Oceania
+LVA,FRA,1934.0954840363809,adventure,Europe,Europe
+AIA,COM,4955.888519050986,family,Unknown,Africa
+ATG,FRA,6659.437601114137,family,Americas,Europe
+UZB,MAC,5014.429912690135,family,Asia-Pacific,Asia-Pacific
+NZL,HRV,18303.559383673175,family,Asia-Pacific,Europe
+KEN,TUR,4343.685264270081,family,Africa,Europe
+JPN,AND,10224.461971340477,family,Asia-Pacific,Europe
+BRB,CHN,14298.693605337967,family,Americas,Asia-Pacific
+CHE,ARM,3035.05966369116,family,Europe,Europe
+UZB,ESP,5585.009305326796,family,Asia-Pacific,Europe
+SRB,ESP,2067.5997620706976,family,Europe,Europe
+BRN,SAU,7736.156107374992,family,Asia-Pacific,Middle East
+JOR,HKG,7663.03310648276,family,Middle East,Asia-Pacific
+GMB,COM,7042.626747326756,family,Africa,Africa
+CUB,HUN,8797.378639030807,family,Americas,Europe
+MDA,TUR,1091.19628693995,budget,Europe,Europe
+NAM,CHL,8548.370529324313,budget,Africa,Americas
+AZE,HKG,6480.426281395376,budget,Europe,Asia-Pacific
+GBR,POL,1529.6806277853993,budget,Europe,Europe
+NCL,HUN,15799.197656357464,budget,Oceania,Europe
+BRB,POL,8083.389315491711,budget,Americas,Europe
+GTM,MAC,15060.932815573704,budget,Americas,Asia-Pacific
+TUR,CHN,5949.875289087921,budget,Europe,Asia-Pacific
+COD,SAU,4002.6046417853854,budget,Africa,Middle East
+ECU,HKG,17374.64471407441,budget,Americas,Asia-Pacific
+ARM,GBR,3904.912108977689,budget,Europe,Europe
+BRN,HUN,10031.334511475092,budget,Asia-Pacific,Europe
+KAZ,CHL,16364.345626567156,budget,Asia-Pacific,Americas
+UZB,COL,13423.324534348001,budget,Asia-Pacific,Americas
+NZL,BEL,18715.800432531705,budget,Asia-Pacific,Europe
+AND,FRA,417.4239034987527,budget,Europe,Europe
+ISR,HRV,2312.532834906326,budget,Middle East,Europe
+TWN,AUS,5617.6286180701945,budget,Asia-Pacific,Asia-Pacific
+MDA,MEX,10715.829658167984,budget,Europe,Americas
+LVA,HUN,1134.6627473273238,budget,Europe,Europe
+TON,BGR,16942.187444140123,budget,Asia-Pacific,Europe
+GRC,HUN,918.7782855350167,budget,Europe,Europe
+HRV,TUR,1784.491412796882,budget,Europe,Europe
+LSO,BLZ,13488.708897716386,budget,Africa,Americas
+BES,TUR,5624.013219298066,budget,Unknown,Europe
+UZB,POL,3594.1825716282824,budget,Asia-Pacific,Europe
+BIH,DEU,970.6644071340096,budget,Europe,Europe
+SUR,DEU,8046.90690520062,budget,Americas,Europe
+BRA,MAC,18244.947049804716,budget,Americas,Asia-Pacific
+EGY,FRA,3311.7602079502,luxury,Middle East,Europe
+SXM,ALB,8144.319633088467,luxury,Americas,Europe
+CHN,SAU,5766.622139326701,luxury,Asia-Pacific,Middle East
+CHL,HUN,12894.059474406435,luxury,Americas,Europe
+GUM,HRV,11768.277822609018,luxury,Asia-Pacific,Europe
+CRI,DEU,9455.204698694364,luxury,Americas,Europe
+TUN,BGR,1699.4483048982381,luxury,Middle East,Europe
+BRN,ITA,10668.677997150127,luxury,Asia-Pacific,Europe
+HRV,AND,1133.4038443282052,luxury,Europe,Europe
+OMN,FRA,5542.139137758983,adventure,Middle East,Europe
+URY,MAC,18457.428279167998,adventure,Americas,Asia-Pacific
+IDN,TWN,2827.0518431012893,adventure,Asia-Pacific,Asia-Pacific
+AZE,TUR,1064.6396551257144,adventure,Europe,Europe
+MHL,ESP,14697.340553260588,adventure,Asia-Pacific,Europe
+VCT,HUN,8260.508196314879,adventure,Americas,Europe
+SEN,ARG,7794.133114475519,adventure,Africa,Americas
+QAT,MAC,6297.722756357618,adventure,Middle East,Asia-Pacific
+CAN,POL,7005.159576893397,family,Americas,Europe
+PYF,USA,8286.576449041559,family,Oceania,Americas
+THA,BEL,9102.873948457596,family,Asia-Pacific,Europe
+CHL,FRA,11709.160688831711,family,Americas,Europe
+NIU,JPN,8212.834056943317,family,Oceania,Asia-Pacific
+BES,DZA,3122.242719856599,family,Unknown,Africa
+TUN,MEX,10405.851851649035,family,Middle East,Americas
+MOZ,ESP,7727.731436961798,family,Africa,Europe
+CIV,HKG,12662.538595619677,family,Africa,Asia-Pacific
+CHE,DEU,509.8637819883354,family,Europe,Europe
+BES,DEU,5774.0073239565145,family,Unknown,Europe
+FJI,AND,17238.893396453663,family,Asia-Pacific,Europe
+ARM,MEX,12175.91578967497,family,Europe,Americas
+GEO,HKG,6814.35027012877,family,Europe,Asia-Pacific
+BLR,COD,6447.232915876575,family,Europe,Africa
+DEU,HUN,793.670585373752,family,Europe,Europe
+HND,FRA,8677.071954330457,family,Americas,Europe
+JOR,GBR,4150.66094222698,family,Middle East,Europe
+JOR,MAC,7610.704252130836,family,Middle East,Asia-Pacific
+CUB,ITA,8459.16921403278,budget,Americas,Europe
+CUB,USA,2444.9239750896545,budget,Americas,Americas
+COM,AUS,9501.447156400907,budget,Africa,Asia-Pacific
+JPN,ESP,10648.629339830084,budget,Asia-Pacific,Europe
+GEO,SAU,2055.413516892085,budget,Europe,Middle East
+HND,BOL,4294.678906682104,budget,Americas,Americas
+PRT,ESP,399.4471110348351,budget,Europe,Europe
+DZA,JPN,11550.49052956256,budget,Africa,Asia-Pacific
+EST,MEX,9681.668163081249,budget,Europe,Americas
+ARG,COL,4905.057374338905,budget,Americas,Americas
+NCL,FRA,16821.695943795097,budget,Oceania,Europe
+MOZ,SAU,4843.547957892255,budget,Africa,Middle East
+MKD,ESP,2126.3106981693213,budget,Europe,Europe
+SVN,BEL,915.1195762765657,budget,Europe,Europe
+MMR,BEL,8247.736907169596,budget,Asia-Pacific,Europe
+GBR,ESP,1658.5654727588749,budget,Europe,Europe
+CHL,MAC,18437.63351373301,budget,Americas,Asia-Pacific
+AND,ITA,912.1031096587362,budget,Europe,Europe
+BEN,LKA,8608.867225706023,budget,Africa,Asia-Pacific
+ECU,CAN,6929.622911828694,budget,Americas,Americas
+HUN,BMU,7037.680996329518,budget,Europe,Americas
+NGA,FRA,4175.972926325855,budget,Africa,Europe
+MSR,BGR,8567.967009520726,budget,Americas,Europe
+NAM,BRB,9389.55470214096,budget,Africa,Americas
+PER,AUS,15074.947914393448,budget,Americas,Asia-Pacific
+BLR,ATG,8470.327741359404,budget,Europe,Americas
+REU,POL,6044.822411831666,budget,Unknown,Europe
+ALB,BLR,1511.8836842347762,luxury,Europe,Europe
+COG,ESP,4891.903534839661,luxury,Africa,Europe
+ISL,BHR,6442.892629755737,luxury,Europe,Middle East
+LIE,MAC,9209.708993340733,luxury,Europe,Asia-Pacific
+LCA,SAU,10955.010031124732,luxury,Americas,Middle East
+ALB,HRV,595.720533452937,luxury,Europe,Europe
+JPN,BHS,12245.866697566278,luxury,Asia-Pacific,Americas
+ASM,TUR,16312.881925266463,adventure,Oceania,Europe
+ITA,BRA,9069.62750009916,adventure,Europe,Americas
+PYF,BHR,17757.522624964055,adventure,Oceania,Middle East
+ECU,FRA,9418.847976875211,adventure,Americas,Europe
+MNG,FRA,7164.7906688562325,adventure,Asia-Pacific,Europe
+REU,BMU,7657.7260434582095,adventure,Unknown,Americas
+LKA,BHR,3779.616081928152,adventure,Asia-Pacific,Middle East
+MSR,HKG,15653.544678646287,adventure,Americas,Asia-Pacific
+SVN,GBR,1644.5086625997428,adventure,Europe,Europe
+RWA,ITA,5174.378464044619,adventure,Africa,Europe
+ARG,BRB,5754.419217290209,adventure,Americas,Americas
+AZE,BGR,1858.4002502973003,adventure,Europe,Europe
+BRN,DZA,11999.596239191616,adventure,Asia-Pacific,Africa
+DMA,GBR,6601.489593568881,adventure,Americas,Europe
+ERI,ESP,5047.189720452122,family,Africa,Europe
+MHL,MEX,9311.57286324861,family,Asia-Pacific,Americas
+CMR,BHR,4542.29718069097,family,Africa,Middle East
+SLV,ARM,12368.638529505575,family,Americas,Europe
+MDG,DEU,8547.456047876914,family,Africa,Europe
+CHE,BGR,1432.449145488521,family,Europe,Europe
+VGB,MEX,3965.9937013524586,family,Americas,Americas
+ECU,BEL,9646.558456097871,family,Americas,Europe
+MYS,HRV,9423.138510512768,family,Asia-Pacific,Europe
+REU,ESP,4515.319738842054,family,Unknown,Europe
+AZE,MEX,12277.626026182781,family,Europe,Americas
+MUS,HKG,7762.156071012837,family,Africa,Asia-Pacific
+LCA,MEX,4491.414480179664,family,Americas,Americas
+CUW,FRA,7592.106185795835,family,Americas,Europe
+HUN,SAU,3440.5567379311783,family,Europe,Middle East
+SAU,HUN,3440.5567379311783,family,Middle East,Europe
+BEN,SAU,4813.215351004108,budget,Africa,Middle East
+TCA,FRA,5144.8281547943225,budget,Unknown,Europe
+CRI,TWN,15427.333135631712,budget,Americas,Asia-Pacific
+IRN,ARM,1149.2821003698652,budget,Middle East,Europe
+MKD,BGR,342.23954238387967,budget,Europe,Europe
+SXM,HUN,7993.762900600486,budget,Americas,Europe
+PRT,FRA,1139.005691192484,budget,Europe,Europe
+BEN,BIH,4124.610531903015,budget,Africa,Europe
+ARE,POL,4326.069628947061,budget,Middle East,Europe
+KAZ,DEU,3984.408987031749,budget,Asia-Pacific,Europe
+SYC,CHL,12910.611189798929,budget,Africa,Americas
+MAC,AZE,6434.935445673912,budget,Asia-Pacific,Europe
+GTM,BGR,10787.538461455802,budget,Americas,Europe
+TZA,BRA,9492.110077679654,budget,Africa,Americas
+BHS,AND,7285.986971824301,budget,Americas,Europe
+DNK,ITA,1615.416943724731,budget,Europe,Europe
+ATG,ARM,10154.218729195241,budget,Americas,Europe
+LBY,BHR,3316.0099011923344,budget,Middle East,Middle East
+BES,BHR,6138.220327104693,budget,Unknown,Middle East
+LTU,USA,8265.572890746455,budget,Europe,Americas
+MCO,USA,8159.969074531777,luxury,Europe,Americas
+GUF,CAN,7456.139117717302,luxury,Americas,Americas
+COD,AUS,12002.760333100507,luxury,Africa,Asia-Pacific
+CHL,HKG,18430.343131097794,luxury,Americas,Asia-Pacific
+THA,MEX,14931.648210413505,luxury,Asia-Pacific,Americas
+AUS,POL,13860.054911269923,luxury,Asia-Pacific,Europe
+MLT,BHS,8557.285323518066,luxury,Europe,Americas
+NCL,ARG,11658.355372899134,luxury,Oceania,Americas
+HKG,USA,12704.531283870774,luxury,Asia-Pacific,Americas
+ROU,HRV,766.1691245424632,luxury,Europe,Europe
+SYC,BGR,6076.683965535981,luxury,Africa,Europe
+ROU,COL,10353.769964386329,luxury,Europe,Americas
+GLP,HUN,8020.386260733137,luxury,Americas,Europe
+MUS,USA,16830.608070642556,luxury,Africa,Americas
+HND,DEU,9153.15983367943,adventure,Americas,Europe
+HND,ALB,10216.14171777286,adventure,Americas,Europe
+PRI,CAN,11011.002227916915,adventure,Unknown,Americas
+CAN,ESP,7059.688098020236,adventure,Americas,Europe
+USA,MEX,1632.5233521875557,adventure,Americas,Americas
+VNM,USA,10513.964439946625,adventure,Unknown,Americas
+MYS,BHS,16762.505875714283,adventure,Asia-Pacific,Americas
+QAT,BEL,4844.846205764512,adventure,Middle East,Europe
+KNA,BMU,1674.0688538041989,adventure,Americas,Americas
+ESP,LKA,8978.272062941402,adventure,Europe,Asia-Pacific
+AZE,TUR,1064.6396551257144,adventure,Europe,Europe
+BEL,POL,1032.4583118980988,adventure,Europe,Europe
+GRD,HRV,8030.586457264603,family,Americas,Europe
+SWZ,BHS,12988.841823030387,family,Africa,Americas
+EGY,MEX,12493.63381840845,family,Middle East,Americas
+ARE,ALB,3694.2711798039145,family,Middle East,Europe
+STP,AUS,13699.732423423602,family,Africa,Asia-Pacific
+ABW,ITA,8469.070592997059,family,Americas,Europe
+GUM,ARG,16074.48338127007,family,Asia-Pacific,Americas
+LAO,COL,17276.370580523915,family,Asia-Pacific,Americas
+SYC,HKG,7045.736242029495,family,Africa,Asia-Pacific
+EST,ITA,2051.827857108034,family,Europe,Europe
+LBY,HKG,9572.191380560127,family,Middle East,Asia-Pacific
+PYF,BGR,17187.673274859997,family,Oceania,Europe
+NIU,AUS,5804.349871050891,family,Oceania,Asia-Pacific
+MLT,HRV,1021.1888923595537,family,Europe,Europe
+CAN,MEX,3626.626850684984,family,Americas,Americas
+CHL,MEX,7357.678130221531,budget,Americas,Americas
+PAN,USA,3513.494348768671,budget,Americas,Americas
+YEM,ITA,4823.788882367057,budget,Unknown,Europe
+VNM,CHN,11282.217268788312,budget,Unknown,Asia-Pacific
+ATG,DZA,6560.90772739849,budget,Americas,Africa
+PRY,POL,11235.373086570167,budget,Americas,Europe
+BLR,BEL,1634.868940157124,budget,Europe,Europe
+BEN,MAC,11747.497068812623,budget,Africa,Asia-Pacific
+GIN,ITA,4162.52457359691,budget,Africa,Europe
+VNM,BLR,6502.495793062647,budget,Unknown,Europe
+BIH,TWN,9194.751223022704,budget,Europe,Asia-Pacific
+TZA,BHS,12548.978107843763,budget,Africa,Americas
+THA,BEL,9102.873948457596,budget,Asia-Pacific,Europe
+ABW,USA,3744.851731730858,budget,Americas,Americas
+HKG,HUN,8546.57422360784,budget,Asia-Pacific,Europe
+BEL,FRA,503.80569122703054,budget,Europe,Europe
+HRV,ALB,595.720533452937,budget,Europe,Europe
+TCD,MEX,12297.259996635215,budget,Africa,Americas
+CHE,BHS,7689.460635492021,budget,Europe,Americas
+JAM,SAU,12214.395285567525,budget,Americas,Middle East
+TUR,BGR,920.789420276294,budget,Europe,Europe
+ERI,DEU,4779.309037597403,budget,Africa,Europe
+EGY,USA,10976.404926333335,budget,Middle East,Americas
+MEX,MEX,0,budget,Americas,Americas
+KOR,BRA,17604.985961968177,budget,Asia-Pacific,Americas
+CUW,TUR,10353.77733464477,budget,Americas,Europe
+MEX,CMR,12158.352011532003,budget,Americas,Africa
+GMB,ARG,7644.79104949865,luxury,Africa,Americas
+IRN,DEU,4064.429248843638,luxury,Middle East,Europe
+GUM,CHN,4750.065360964013,luxury,Asia-Pacific,Asia-Pacific
+NIU,BHR,15808.346040182374,luxury,Oceania,Middle East
+AUS,ITA,14381.552136206865,luxury,Asia-Pacific,Europe
+ZAF,DZA,6895.358952779694,luxury,Africa,Africa
+HND,DEU,9153.15983367943,luxury,Americas,Europe
+CMR,DEU,4873.05018046827,luxury,Africa,Europe
+CUW,FRA,7592.106185795835,luxury,Americas,Europe
+LBY,MEX,11485.806445414191,adventure,Middle East,Americas
+TUR,CAN,8837.82822842115,adventure,Europe,Americas
+GRD,CHN,14477.550314294103,adventure,Americas,Asia-Pacific
+JOR,BGR,1653.673050223047,adventure,Middle East,Europe
+DOM,GBR,6840.234007428608,adventure,Americas,Europe
+IND,BHR,2957.08120304804,adventure,Asia-Pacific,Middle East
+MKD,HRV,652.2803049084025,adventure,Europe,Europe
+GRC,DEU,1609.5748339485347,adventure,Europe,Europe
+IRQ,ALB,2252.5127852273763,adventure,Middle East,Europe
+FRA,TUR,2798.871446184784,adventure,Europe,Europe
+SUR,HUN,8596.942290309229,adventure,Americas,Europe
+MNG,ESP,7957.185908818528,family,Asia-Pacific,Europe
+MOZ,HRV,7383.082231273719,family,Africa,Europe
+SWZ,ITA,7849.428988836988,family,Africa,Europe
+BWA,ESP,7576.9610262727565,family,Africa,Europe
+IND,CHL,16691.81438111727,family,Asia-Pacific,Americas
+ROU,POL,788.387081324465,family,Europe,Europe
+ZAF,HUN,8649.146413737357,family,Africa,Europe
+LIE,CAN,7080.990335889282,family,Europe,Americas
+TON,BHR,15345.119127888409,family,Asia-Pacific,Middle East
+UZB,DZA,5810.635083522271,family,Asia-Pacific,Africa
+MOZ,CAN,14781.082234176189,budget,Africa,Americas
+CAN,HRV,7508.142602540588,budget,Americas,Europe
+FIN,BEL,1812.7093896533086,budget,Europe,Europe
+PER,HKG,18256.66074991888,budget,Americas,Asia-Pacific
+QAT,SAU,638.2738394376252,budget,Middle East,Middle East
+QAT,BHR,101.00512984632927,budget,Middle East,Middle East
+MAC,BEL,9375.069586108457,budget,Asia-Pacific,Europe
+NGA,ITA,3665.9727900186867,budget,Africa,Europe
+REU,TWN,13132.524918164185,budget,Unknown,Asia-Pacific
+BRB,POL,8083.389315491711,budget,Americas,Europe
+SGP,FRA,10787.384384180958,budget,Asia-Pacific,Europe
+DOM,DEU,7749.510526434467,budget,Americas,Europe
+MLT,SAU,3230.4048751949163,budget,Europe,Middle East
+FRA,COL,8604.81365629709,budget,Europe,Americas
+GBR,POL,1529.6806277853993,budget,Europe,Europe
+ECU,BRA,3197.371026550982,budget,Americas,Americas
+JPN,ARG,18070.00913214218,budget,Asia-Pacific,Americas
+ASM,JPN,7797.4819537056455,budget,Oceania,Asia-Pacific
+KAZ,MAC,5011.801576171677,budget,Asia-Pacific,Asia-Pacific
+GLP,CHN,14027.75983619681,budget,Americas,Asia-Pacific
+GEO,FRA,3267.3382291273165,budget,Europe,Europe
+MDA,SAU,3005.8023823858166,budget,Europe,Middle East
+MUS,BHR,5216.028690381239,budget,Africa,Middle East
+SEN,MEX,9178.499883488706,budget,Africa,Americas
+VNM,ITA,4823.788882367057,budget,Unknown,Europe
+PHL,HRV,10252.211865711517,budget,Asia-Pacific,Europe
+CHE,SAU,4142.62325352011,budget,Europe,Middle East
+WSM,ALB,16745.09105742711,budget,Asia-Pacific,Europe
+ARM,BRA,11605.649189432655,budget,Europe,Americas
+BWA,MAC,10815.545942950854,budget,Africa,Asia-Pacific
+ARM,ARG,14042.033616613055,budget,Europe,Americas
+BHR,JPN,8141.666311021784,budget,Middle East,Asia-Pacific
+GUF,ITA,7718.708741515526,luxury,Americas,Europe
+BRA,ITA,9069.62750009916,luxury,Americas,Europe
+MCO,HKG,9561.248845050312,luxury,Europe,Asia-Pacific
+GMB,TUR,5692.600309740923,luxury,Africa,Europe
+CHN,ARG,18898.971842546467,luxury,Asia-Pacific,Americas
+IRN,BLR,3122.845930393869,luxury,Middle East,Europe
+PRI,BEL,5631.732733890157,luxury,Unknown,Europe
+ARG,BEL,11905.425526988158,luxury,Americas,Europe
+TZA,FRA,6681.850894718268,luxury,Africa,Europe
+JAM,ARG,6445.434982934698,luxury,Americas,Americas
+DZA,TUR,3319.5759303617565,luxury,Africa,Europe
+REU,COL,8267.178833252816,luxury,Unknown,Americas
+HKG,SAU,6993.358922985112,adventure,Asia-Pacific,Middle East
+GTM,USA,2430.013667904683,adventure,Americas,Americas
+SWZ,USA,14953.098324943656,adventure,Africa,Americas
+TCA,SAU,5535.892093762673,adventure,Unknown,Middle East
+BHS,HUN,8487.754743281737,adventure,Americas,Europe
+GRC,HRV,864.1002945724251,adventure,Europe,Europe
+REU,AND,4728.936131641992,adventure,Unknown,Europe
+AIA,MEX,11284.602439717288,adventure,Unknown,Americas
+KOR,TUR,7790.107185695076,family,Asia-Pacific,Europe
+DMA,FRA,6755.0339126441095,family,Americas,Europe
+CUW,USA,3842.054046656253,family,Americas,Americas
+SAU,HUN,3440.5567379311783,family,Middle East,Europe
+TUN,POL,2148.013880683064,family,Middle East,Europe
+LSO,SAU,6214.8002064926495,family,Africa,Middle East
+ISL,MEX,7337.694530403362,family,Europe,Americas
+IND,HUN,6055.090589970159,family,Asia-Pacific,Europe
+QAT,CHL,14487.179174099301,family,Middle East,Americas
+GLP,HRV,7704.333727232524,family,Americas,Europe
+PAN,HRV,9800.992414649902,family,Americas,Europe
+AIA,HKG,12482.408681679102,family,Unknown,Asia-Pacific
+HUN,SAU,3440.5567379311783,family,Europe,Middle East
+CMR,SAU,3939.77468450398,family,Africa,Middle East
+BEN,BRA,6529.4908774666355,family,Africa,Americas
+SUR,CHL,4690.166000463023,family,Americas,Americas
+IRQ,HRV,2767.351066604025,budget,Middle East,Europe
+DZA,BHR,4814.787739591567,budget,Africa,Middle East
+PRY,ALB,10808.58961890913,budget,Americas,Europe
+BES,BRN,12747.954103227565,budget,Unknown,Asia-Pacific
+UZB,ARG,15650.072155636266,budget,Asia-Pacific,Americas
+ETH,BHR,2160.5568607442005,budget,Africa,Middle East
+TON,DEU,16644.677215489795,budget,Asia-Pacific,Europe
+ABW,MEX,3648.2359426724033,budget,Americas,Americas
+AUS,TCD,13216.881506883106,budget,Asia-Pacific,Africa
+ARM,BLR,1986.0033079401674,budget,Europe,Europe
+IDN,ITA,11004.05544726418,budget,Asia-Pacific,Europe
+MSR,FRA,6713.942363187567,budget,Americas,Europe
+NGA,MEX,11711.454842474657,budget,Africa,Americas
+CAN,ITA,7705.256658969186,budget,Americas,Europe
+MTQ,AND,6674.417977895495,budget,Americas,Europe
+IND,TWN,4323.995920521018,budget,Asia-Pacific,Asia-Pacific
+TJK,POL,4218.354892996331,budget,Asia-Pacific,Europe
+NCL,BHS,13604.503246237136,budget,Oceania,Americas
+SRB,AND,1582.919562625421,budget,Europe,Europe
+DEU,TUR,2354.713381137845,budget,Europe,Europe
+GMB,LKA,10455.350618352399,budget,Africa,Asia-Pacific
+NGA,USA,10649.161848290529,budget,Africa,Americas
+COG,AND,4913.764216421289,budget,Africa,Europe
+LKA,AND,8537.07298542381,budget,Asia-Pacific,Europe
+TCD,SAU,2907.7245463697864,budget,Africa,Middle East
+YEM,MEX,11284.602439717288,budget,Unknown,Americas
+UKR,ARG,13401.6330715684,budget,Europe,Americas
+ALB,CHN,7040.777075701015,budget,Europe,Asia-Pacific
+JOR,BHS,10629.014076413143,budget,Middle East,Americas
+LAO,GBR,9158.750430030013,budget,Asia-Pacific,Europe
+KOR,TUR,7790.107185695076,budget,Asia-Pacific,Europe
+RUS,CHN,2854.6100136702817,luxury,Europe,Asia-Pacific
+MNG,FRA,7164.7906688562325,luxury,Asia-Pacific,Europe
+DZA,HRV,2243.255036765116,luxury,Africa,Europe
+PER,BEL,10062.735849135946,luxury,Americas,Europe
+BOL,SAU,12591.12653995362,luxury,Americas,Middle East
+GAB,BHR,5135.162636827403,luxury,Africa,Middle East
+TTO,ESP,6505.760022206283,luxury,Americas,Europe
+LAO,DEU,8440.133416725712,luxury,Asia-Pacific,Europe
+CYM,GBR,7487.562271675758,luxury,Americas,Europe
+SLE,CHN,11715.615397809483,luxury,Africa,Asia-Pacific
+MSR,ARG,6135.168436377339,luxury,Americas,Americas
+ISL,SAU,6404.336429785502,luxury,Europe,Middle East
+BEL,JPN,9364.929378553463,adventure,Europe,Asia-Pacific
+LBY,MEX,11485.806445414191,adventure,Middle East,Americas
+KEN,MEX,15007.19876835748,adventure,Africa,Americas
+VEN,ESP,4515.319738842054,adventure,Unknown,Europe
+VIR,DEU,5774.0073239565145,adventure,Unknown,Europe
+LCA,MEX,4491.414480179664,adventure,Americas,Americas
+SYR,ITA,2423.9616728994793,family,Middle East,Europe
+ATG,HKG,15614.26173477285,family,Americas,Asia-Pacific
+IRQ,FRA,3777.641949523736,family,Middle East,Europe
+NGA,JPN,12729.903671281254,family,Africa,Asia-Pacific
+CHN,BHR,5164.483322042729,family,Asia-Pacific,Middle East
+QAT,HUN,3690.330692697128,family,Middle East,Europe
+TJK,HKG,4448.121551482908,family,Asia-Pacific,Asia-Pacific
+CMR,DEU,4873.05018046827,family,Africa,Europe
+PRI,DEU,5774.0073239565145,family,Unknown,Europe
+SVN,HKG,8908.166582105985,family,Europe,Asia-Pacific
+GRD,SAU,11113.834184211204,family,Americas,Middle East
+KGZ,ALB,4490.855530364273,family,Asia-Pacific,Europe
+GUM,BRB,16019.58809485951,family,Asia-Pacific,Americas
+PRI,HKG,12482.408681679102,family,Unknown,Asia-Pacific
+SRB,TWN,8948.645825102134,family,Europe,Asia-Pacific
+LBY,AND,2295.9566585020075,budget,Middle East,Europe
+VGB,POL,7985.505164842513,budget,Americas,Europe
+MTQ,BHS,2062.6354866191723,budget,Americas,Americas
+DMA,TWN,15658.567238871723,budget,Americas,Asia-Pacific
+MDG,TUR,6532.522955573096,budget,Africa,Europe
+HND,BRB,2884.9514479130644,budget,Americas,Americas
+AND,MEX,9326.859519555304,budget,Europe,Americas
+HKG,JPN,2787.528491020968,budget,Asia-Pacific,Asia-Pacific
+BFA,HUN,4353.175648444519,budget,Africa,Europe
+ARE,ESP,5648.232988982662,budget,Middle East,Europe
+FRA,CAN,6840.796869811404,budget,Europe,Americas
+MEX,FRA,9190.11638335397,budget,Americas,Europe
+JOR,ESP,3746.37921015168,budget,Middle East,Europe
+MMR,USA,13340.800132667446,budget,Asia-Pacific,Americas
+AUS,TUR,12441.375801574388,budget,Asia-Pacific,Europe
+MDG,JPN,11345.592044752284,budget,Africa,Asia-Pacific
+TCA,TUR,5624.013219298066,budget,Unknown,Europe
+CHL,FRA,11709.160688831711,budget,Americas,Europe
+ECU,HRV,10417.304526484953,budget,Americas,Europe
+GRD,COM,11884.807920651185,budget,Americas,Africa
+HKG,HRV,8937.291023200818,budget,Asia-Pacific,Europe
+CUW,GBR,7362.695291137344,budget,Americas,Europe
+GRC,HKG,8659.655530194288,budget,Europe,Asia-Pacific
+NGA,CHN,9908.85346582871,budget,Africa,Asia-Pacific
+VNM,FRA,5144.8281547943225,budget,Unknown,Europe
+PSE,BWA,6139.220053051814,budget,Asia-Pacific,Africa
+BEN,BRB,6744.5570383947825,budget,Africa,Americas
+PHL,BHS,15314.602533588884,luxury,Asia-Pacific,Americas
+BRB,SAU,10852.98407843628,luxury,Americas,Middle East
+VEN,COG,1760.1378653138302,luxury,Unknown,Africa
+BFA,SAU,5073.417729661843,luxury,Africa,Middle East
+CIV,ESP,3665.2984228867,luxury,Africa,Europe
+NCL,JPN,6971.64827619967,luxury,Oceania,Asia-Pacific
+AUS,POL,13860.054911269923,luxury,Asia-Pacific,Europe
+LIE,ITA,635.1401466708603,luxury,Europe,Europe
+YEM,ALB,5006.68377326962,luxury,Unknown,Europe
+THA,JPN,4315.16936680081,luxury,Asia-Pacific,Asia-Pacific
+UKR,ESP,2880.5837914685117,luxury,Europe,Europe
+ISL,JPN,8593.073930358014,adventure,Europe,Asia-Pacific
+SLV,ESP,8612.377184931584,adventure,Americas,Europe
+MUS,HUN,8417.244153944668,adventure,Africa,Europe
+OMN,POL,4628.047059309216,adventure,Middle East,Europe
+WSM,HKG,8974.265611314268,adventure,Asia-Pacific,Asia-Pacific
+GBR,MAC,9546.774940584302,adventure,Europe,Asia-Pacific
+RUS,HKG,4412.032219502709,adventure,Europe,Asia-Pacific
+KAZ,ESP,5492.41133136356,adventure,Asia-Pacific,Europe
+EGY,MAC,8233.510104673016,adventure,Middle East,Asia-Pacific
+BRB,POL,8083.389315491711,family,Americas,Europe
+IDN,BHR,7409.1543525201805,family,Asia-Pacific,Middle East
+KOR,TUR,7790.107185695076,family,Asia-Pacific,Europe
+ARM,HRV,2490.903687492171,family,Europe,Europe
+SEN,ARG,7794.133114475519,family,Africa,Americas
+ZAF,HKG,11356.871226463161,family,Africa,Asia-Pacific
+ISL,USA,5713.5383565742395,family,Europe,Americas
+MEX,BHR,13777.459446834519,family,Americas,Middle East
+VCT,DEU,7616.931749053834,family,Americas,Europe
+ESP,POL,2159.2825749605913,family,Europe,Europe
+NAM,HUN,7797.662127734039,family,Africa,Europe
+RUS,HRV,5731.1757121397495,family,Europe,Europe
+SLV,AND,9010.385113725593,family,Americas,Europe
+LCA,TCD,8521.37393512575,family,Americas,Africa
+VUT,HKG,7114.086192429824,family,Asia-Pacific,Asia-Pacific
+CHL,TUR,13711.23598891874,family,Americas,Europe
+SGP,FRA,10787.384384180958,family,Asia-Pacific,Europe
+AZE,MEX,12277.626026182781,family,Europe,Americas
+COM,DEU,7671.340019730723,family,Africa,Europe
+TTO,HRV,8104.717154837392,family,Americas,Europe
+TCD,HUN,3526.521411832185,family,Africa,Europe
+BRB,ESP,6185.709528247093,family,Americas,Europe
+ARE,MAC,6074.3762894232505,family,Middle East,Asia-Pacific
+ARM,DEU,2924.3104873457273,budget,Europe,Europe
+LKA,ALB,6989.143719521561,budget,Asia-Pacific,Europe
+NCL,HUN,15799.197656357464,budget,Oceania,Europe
+KOR,HUN,8348.501077731671,budget,Asia-Pacific,Europe
+BLZ,CHN,13966.483389165183,budget,Americas,Asia-Pacific
+GAB,ESP,4845.333032133399,budget,Africa,Europe
+CRI,BHR,13672.357405431663,budget,Americas,Middle East
+IRN,CHN,4612.315795789059,budget,Middle East,Asia-Pacific
+ETH,GBR,6412.584150226365,budget,Africa,Europe
+REU,BLR,6502.495793062647,budget,Unknown,Europe
+PHL,HUN,9863.647093661422,budget,Asia-Pacific,Europe
+BGR,ARM,1653.5924777963803,budget,Europe,Europe
+GRC,TWN,9109.684342728116,budget,Europe,Asia-Pacific
+TCD,TUR,3070.528950024896,budget,Africa,Europe
+BMU,CYM,2189.434694777369,budget,Americas,Americas
+CRI,TUR,11716.264540442548,budget,Americas,Europe
+DMA,AZE,10440.614136770162,budget,Americas,Europe
+WSM,AND,16760.38856047484,budget,Asia-Pacific,Europe
+VUT,DZA,17948.280742838284,budget,Asia-Pacific,Africa
+FJI,FRA,16821.48291004622,budget,Asia-Pacific,Europe
+NCL,DEU,16018.045663474542,budget,Oceania,Europe
+SWZ,TUR,7292.312407834232,budget,Africa,Europe
+SGP,HKG,2586.133781513593,budget,Asia-Pacific,Asia-Pacific
+TKM,TUR,2095.6891780696083,budget,Asia-Pacific,Europe
+GLP,ASM,12391.361927592083,budget,Americas,Oceania
+NAM,MMR,9753.860818769846,budget,Africa,Asia-Pacific
+CYM,HUN,9223.523963589912,budget,Americas,Europe
+CUB,ARG,6826.7433670565515,budget,Americas,Americas
+GTM,BLR,10324.72577693562,budget,Americas,Europe
+FRA,JPN,9850.110810919428,budget,Europe,Asia-Pacific
+DNK,SAU,4607.023057880003,budget,Europe,Middle East
+ARM,CAN,8983.248123583127,luxury,Europe,Americas
+PHL,SAU,8097.104456790595,luxury,Asia-Pacific,Middle East
+CAN,TUR,8837.82822842115,luxury,Americas,Europe
+HND,BHS,1430.2622996942227,luxury,Americas,Americas
+QAT,FRA,4890.172315916395,luxury,Middle East,Europe
+KAZ,HUN,3500.477544496172,luxury,Asia-Pacific,Europe
+HTI,ESP,6859.570508760498,luxury,Americas,Europe
+AUS,CHL,12734.125036889534,luxury,Asia-Pacific,Americas
+BES,JPN,14123.462595647892,adventure,Unknown,Asia-Pacific
+BFA,DZA,1788.011781942792,adventure,Africa,Africa
+JPN,AND,10224.461971340477,adventure,Asia-Pacific,Europe
+ETH,ARM,3467.9897679334954,adventure,Africa,Europe
+LIE,USA,8070.140432752729,adventure,Europe,Americas
+AUS,COD,12002.760333100507,adventure,Asia-Pacific,Africa
+LIE,GBR,1280.8441575690358,adventure,Europe,Europe
+HND,ITA,9593.43279094708,adventure,Americas,Europe
+BFA,AUS,15119.87965193293,family,Africa,Asia-Pacific
+CAN,POL,7005.159576893397,family,Americas,Europe
+SXM,GBR,6463.014076242962,family,Americas,Europe
+COG,CHL,9784.86972550647,family,Africa,Americas
+LTU,JPN,8101.899772624144,family,Europe,Asia-Pacific
+LCA,HUN,8163.601921071266,family,Americas,Europe
+PSE,DEU,2941.4127328134496,family,Asia-Pacific,Europe
+BOL,DEU,10345.378301760871,family,Americas,Europe
+HND,GBR,8170.12162709596,family,Americas,Europe
+MMR,ITA,7873.925835206157,family,Asia-Pacific,Europe
+KEN,ESP,6157.583060379372,family,Africa,Europe
+BMU,BHR,10579.8060781345,family,Americas,Middle East
+YEM,POL,6044.822411831666,family,Unknown,Europe
+CRI,HKG,15949.149233439515,budget,Americas,Asia-Pacific
+TJK,GBR,5640.912925287824,budget,Asia-Pacific,Europe
+LKA,BGR,6617.849136943237,budget,Asia-Pacific,Europe
+GTM,CHN,14075.011738369749,budget,Americas,Asia-Pacific
+ZWE,USA,10513.964439946625,budget,Unknown,Americas
+BMU,HUN,7037.680996329518,budget,Americas,Europe
+SMR,DEU,817.099162120068,budget,Europe,Europe
+SWZ,POL,8804.887911118305,budget,Africa,Europe
+SWZ,BHS,12988.841823030387,budget,Africa,Americas
+SVN,JPN,9244.877350012492,budget,Europe,Asia-Pacific
+MOZ,ESP,7727.731436961798,budget,Africa,Europe
+BMU,DEU,6284.348654753968,budget,Americas,Europe
+DOM,CAN,5132.499774741443,budget,Americas,Americas
+TCD,ALB,2860.9567372195397,budget,Africa,Europe
+MEX,DEU,9447.558813326088,budget,Americas,Europe
+KNA,POL,7949.158370644708,budget,Americas,Europe
+KAZ,BHR,2827.1577321353852,budget,Asia-Pacific,Middle East
+CHN,FRA,8021.996811806065,budget,Asia-Pacific,Europe
+ASM,FRA,16390.407944449085,budget,Oceania,Europe
+BMU,ITA,6709.075022851042,budget,Americas,Europe
+MAC,SAU,6935.344794996576,budget,Asia-Pacific,Middle East
+DZA,ESP,1468.010744392983,budget,Africa,Europe
+VCT,BHS,2155.711692306307,budget,Americas,Americas
+YEM,HRV,5233.306711275091,budget,Unknown,Europe
+AUS,CHN,7474.3568124730755,budget,Asia-Pacific,Asia-Pacific
+LSO,MAC,10779.45985621006,budget,Africa,Asia-Pacific
+IDN,HRV,10753.235175269776,budget,Asia-Pacific,Europe
+DMA,FRA,6755.0339126441095,budget,Americas,Europe
+SWZ,POL,8804.887911118305,budget,Africa,Europe
+TON,POL,16379.643566769711,luxury,Asia-Pacific,Europe
+MEX,HKG,13544.242631591034,luxury,Americas,Asia-Pacific
+KEN,CHN,7894.285216380207,luxury,Africa,Asia-Pacific
+MYS,AND,10542.016139414902,luxury,Asia-Pacific,Europe
+ROU,SAU,3043.676269498416,luxury,Europe,Middle East
+TTO,DEU,7809.117156753904,luxury,Americas,Europe
+GAB,AUS,13163.649475653518,luxury,Africa,Asia-Pacific
+COL,MEX,3696.563711003503,luxury,Americas,Americas
+UKR,POL,941.1128257166857,luxury,Europe,Europe
+PAN,HKG,16216.698156303488,luxury,Americas,Asia-Pacific
+TWN,USA,12241.187262270494,adventure,Asia-Pacific,Americas
+LAO,ITA,8544.733256761627,adventure,Asia-Pacific,Europe
+ARE,DEU,4814.9078579317365,adventure,Middle East,Europe
+ASM,CMR,19201.107966855147,adventure,Oceania,Africa
+VUT,GBR,15491.555131533716,adventure,Asia-Pacific,Europe
+GRD,DEU,7718.338429300602,adventure,Americas,Europe
+CHL,JPN,17342.613353644363,adventure,Americas,Asia-Pacific
+ZWE,CAN,11011.002227916915,adventure,Unknown,Americas
+COG,USA,11885.238188323856,family,Africa,Americas
+MLT,DEU,1721.93025273145,family,Europe,Europe
+SMR,DEU,817.099162120068,family,Europe,Europe
+BRA,MMR,16521.676701900135,family,Americas,Asia-Pacific
+GRC,COG,4362.468792122787,family,Europe,Africa
+ALB,BRA,9608.612244028162,family,Europe,Americas
+VNM,MEX,11284.602439717288,family,Unknown,Americas
+RUS,CAN,6644.475152286467,family,Europe,Americas
+PYF,BLR,16002.245384380714,family,Oceania,Europe
+LTU,BEL,1397.535025800015,family,Europe,Europe
+ECU,HRV,10417.304526484953,family,Americas,Europe
+SWZ,POL,8804.887911118305,family,Africa,Europe
+BEN,ESP,3515.7967860971967,family,Africa,Europe
+PNG,COG,14220.369064585948,family,Asia-Pacific,Africa
+UZB,ESP,5585.009305326796,family,Asia-Pacific,Europe
+BLR,GBR,2015.8038677983368,budget,Europe,Europe
+BOL,BHR,13167.952105851247,budget,Americas,Middle East
+CRI,HKG,15949.149233439515,budget,Americas,Asia-Pacific
+BRN,ESP,12017.710771796616,budget,Asia-Pacific,Europe
+TTO,BHR,11591.034018711,budget,Americas,Middle East
+DMA,USA,4149.955350628412,budget,Americas,Americas
+URY,BHR,12975.062102624392,budget,Americas,Middle East
+MNG,MAC,2877.486769069022,budget,Asia-Pacific,Asia-Pacific
+CUB,CAN,4507.958454845779,budget,Americas,Americas
+ALB,HRV,595.720533452937,budget,Europe,Europe
+KNA,TUR,9471.87224670355,budget,Americas,Europe
+BES,DEU,5774.0073239565145,budget,Unknown,Europe
+BFA,SAU,5073.417729661843,budget,Africa,Middle East
+FJI,COL,12028.783473616979,budget,Asia-Pacific,Americas
+TON,HRV,17190.141010877564,budget,Asia-Pacific,Europe
+MOZ,ARG,9491.74395203419,budget,Africa,Americas
+DMA,ESP,6180.1296695780475,budget,Americas,Europe
+GUM,CAN,9893.908255721106,budget,Asia-Pacific,Americas
+DEU,BHS,7722.90574842405,budget,Europe,Americas
+LVA,BHR,3999.5019499577675,budget,Europe,Middle East
+SRB,ALB,325.66933676922935,budget,Europe,Europe
+NIC,ESP,8408.964507850073,budget,Americas,Europe
+GEO,ITA,2527.0350020686255,luxury,Europe,Europe
+AUS,TWN,5617.6286180701945,luxury,Asia-Pacific,Asia-Pacific
+FIN,ESP,3095.6456897908606,luxury,Europe,Europe
+GUF,DEU,7852.640674392999,luxury,Americas,Europe
+TUN,MAC,9850.617769634815,luxury,Middle East,Asia-Pacific
+MSR,JPN,13747.561341944593,luxury,Americas,Asia-Pacific
+TCA,AUS,14313.72895520397,luxury,Unknown,Asia-Pacific
+BIH,HRV,236.59097609723906,luxury,Europe,Europe
+CHN,CAN,9385.849916760362,luxury,Asia-Pacific,Americas
+ZAF,CAN,15184.003192410573,luxury,Africa,Americas
+DEU,CHL,12513.9558087134,luxury,Europe,Americas
+TTO,DEU,7809.117156753904,luxury,Americas,Europe
+ZAF,MEX,14615.361679449557,adventure,Africa,Americas
+IND,FRA,7368.905667129283,adventure,Asia-Pacific,Europe
+KIR,TUR,15373.947282406378,adventure,Asia-Pacific,Europe
+BHR,AND,4784.294857891199,adventure,Middle East,Europe
+UKR,SAU,2985.619016438778,adventure,Europe,Middle East
+SGP,TUR,8074.600633006358,adventure,Asia-Pacific,Europe
+CZE,COL,9602.947903935205,adventure,Europe,Americas
+BRN,TUR,8781.968214323448,adventure,Asia-Pacific,Europe
+THA,GBR,9440.67568327092,family,Asia-Pacific,Europe
+VUT,DEU,15518.122841675913,family,Asia-Pacific,Europe
+SYC,POL,7169.33603010714,family,Africa,Europe
+CHL,TUR,13711.23598891874,family,Americas,Europe
+SUR,BHR,11458.476833704057,family,Americas,Middle East
+BGR,DZA,2692.571621666598,family,Europe,Africa
+VUT,HKG,7114.086192429824,family,Asia-Pacific,Asia-Pacific
+PAN,AUS,15913.83601665751,family,Americas,Asia-Pacific
+USA,MAC,12744.454125828646,family,Americas,Asia-Pacific
+OMN,BRA,12403.47872764272,family,Middle East,Americas
+IDN,HUN,10405.813380698699,family,Asia-Pacific,Europe
+VGB,CHN,13865.693548824003,budget,Americas,Asia-Pacific
+IRN,TUR,1812.9045432989203,budget,Middle East,Europe
+USA,ITA,8619.062718679941,budget,Americas,Europe
+WSM,ESP,16836.803276935105,budget,Asia-Pacific,Europe
+SMR,HUN,654.7102232136099,budget,Europe,Europe
+SLE,HKG,13206.672320983584,budget,Africa,Asia-Pacific
+MUS,CHN,7946.011125000561,budget,Africa,Asia-Pacific
+TTO,TUR,9812.40346259494,budget,Americas,Europe
+MCO,USA,8159.969074531777,budget,Europe,Americas
+CMR,HUN,4476.680917790794,budget,Africa,Europe
+COL,POL,9843.067867576747,budget,Americas,Europe
+VNM,USA,10513.964439946625,budget,Unknown,Americas
+RWA,BRA,9070.760161278216,budget,Africa,Americas
+CZE,HUN,418.65886767621294,budget,Europe,Europe
+UZB,TUR,2495.5020067019077,budget,Asia-Pacific,Europe
+NAM,POL,8326.187204538912,budget,Africa,Europe
+IDN,MAC,2556.4765841040453,budget,Asia-Pacific,Asia-Pacific
+ESP,BGR,2431.7974905085816,budget,Europe,Europe
+TTO,HUN,8439.025885548259,budget,Americas,Europe
+LIE,SAU,4069.076153624657,budget,Europe,Middle East
+MTQ,MAC,15876.088688119704,budget,Americas,Asia-Pacific
+BEN,HUN,4511.2476354547825,budget,Africa,Europe
+REU,MEX,11284.602439717288,budget,Unknown,Americas
+MNP,POL,10963.06928826251,budget,Asia-Pacific,Europe
+ZAF,TUR,7834.9314042673,budget,Africa,Europe
+AND,ITA,912.1031096587362,budget,Europe,Europe
+PYF,HRV,16647.533943898925,budget,Oceania,Europe
+CMR,TUR,4193.690967852693,budget,Africa,Europe
+PRY,DEU,10663.251727978452,budget,Americas,Europe
+GUF,GBR,7223.953099432594,luxury,Americas,Europe
+NIU,FRA,16907.696459283077,luxury,Oceania,Europe
+JPN,SAU,8735.572980394669,luxury,Asia-Pacific,Middle East
+BHS,JPN,12245.866697566278,luxury,Americas,Asia-Pacific
+TKM,JPN,6712.490701998574,luxury,Asia-Pacific,Asia-Pacific
+ARG,GBR,11881.871208148528,luxury,Americas,Europe
+ARG,CHN,18898.971842546467,luxury,Americas,Asia-Pacific
+NIC,ESP,8408.964507850073,adventure,Americas,Europe
+GUF,CAN,7456.139117717302,adventure,Americas,Americas
+GBR,BHS,6741.633407728486,adventure,Europe,Americas
+BHS,HRV,8260.656952726189,adventure,Americas,Europe
+HUN,MAC,8511.353066882006,adventure,Europe,Asia-Pacific
+BHR,CHN,5164.483322042729,adventure,Middle East,Asia-Pacific
+PRT,FRA,1139.005691192484,adventure,Europe,Europe
+THA,HKG,1558.1059864990339,family,Asia-Pacific,Asia-Pacific
+MSR,MAC,15660.151658871513,family,Americas,Asia-Pacific
+AIA,AZE,6555.6614279724345,family,Unknown,Europe
+SXM,COL,1933.563887815901,family,Americas,Americas
+REU,HRV,5233.306711275091,family,Unknown,Europe
+VUT,MAC,7162.2962196086355,family,Asia-Pacific,Asia-Pacific
+IRN,MAC,5947.094410834194,family,Middle East,Asia-Pacific
+IDN,CAN,12886.323123106642,family,Asia-Pacific,Americas
+KIR,CAN,8665.813831362171,family,Asia-Pacific,Americas
+SVN,ITA,513.8640413087771,family,Europe,Europe
+HTI,ARG,6444.9912549707415,family,Americas,Americas
+VEN,ITA,4823.788882367057,family,Unknown,Europe
+KAZ,SAU,3301.8663414886646,family,Asia-Pacific,Middle East
+COD,FRA,5912.075966863886,family,Africa,Europe
+KEN,GBR,7202.316001918993,family,Africa,Europe
+YEM,HRV,5233.306711275091,family,Unknown,Europe
+HRV,GBR,1740.2472413689077,family,Europe,Europe
+BES,BLR,6502.495793062647,budget,Unknown,Europe
+FJI,MAC,8302.406048256351,budget,Asia-Pacific,Asia-Pacific
+RWA,BHS,11836.584509623812,budget,Africa,Americas
+LAO,MEX,14469.155455699381,budget,Asia-Pacific,Americas
+GEO,BMU,8947.831813141172,budget,Europe,Americas
+LTU,MEX,9890.799642052967,budget,Europe,Americas
+CMR,TUR,4193.690967852693,budget,Africa,Europe
+WSM,CAN,9849.648083475238,budget,Asia-Pacific,Americas
+BLZ,HRV,9691.03429654356,budget,Americas,Europe
+GRC,MEX,10959.590636808622,budget,Europe,Americas
+TWN,SAU,7613.6173984691595,budget,Asia-Pacific,Middle East
+MAR,SAU,5156.450206293444,budget,Africa,Middle East
+DMA,POL,8018.2092305839515,budget,Americas,Europe
+EST,USA,8050.648013818229,budget,Europe,Americas
+AZE,ALB,2305.5325839754923,budget,Europe,Europe
+BEN,FRA,4105.317068279385,budget,Africa,Europe
+BWA,CAN,14548.107552731393,budget,Africa,Americas
+CZE,CAN,7071.124575106869,budget,Europe,Americas
+SMR,HRV,252.63130632245375,budget,Europe,Europe
+CUB,BRB,2143.0680533899163,budget,Americas,Americas
+CAN,POL,7005.159576893397,budget,Americas,Europe
+MLT,JPN,10119.08216242875,budget,Europe,Asia-Pacific
+KGZ,DZA,6652.645625320529,budget,Asia-Pacific,Africa
+CIV,BEL,4866.549725815843,budget,Africa,Europe
+SEN,POL,5117.007654923374,budget,Africa,Europe
+QAT,ESP,5304.877961052627,budget,Middle East,Europe
+MEX,ESP,9025.736082740734,budget,Americas,Europe
+UZB,BEL,4624.919472127772,budget,Asia-Pacific,Europe
+ZWE,TWN,13132.524918164185,budget,Unknown,Asia-Pacific
+CHE,CHN,7596.18233253847,budget,Europe,Asia-Pacific
+LVA,ALB,1777.409921882968,budget,Europe,Europe
+NGA,MAC,11128.025421863465,budget,Africa,Asia-Pacific
+DNK,TUR,2694.231712501441,budget,Europe,Europe
+HTI,CHN,13906.688777502613,budget,Americas,Asia-Pacific
+CHE,FRA,464.65572641732666,luxury,Europe,Europe
+BRA,CHL,3084.190620136486,luxury,Americas,Americas
+EST,HKG,7856.602496562772,luxury,Europe,Asia-Pacific
+GBR,HKG,9567.79150651927,luxury,Europe,Asia-Pacific
+NZL,COL,12082.34011480496,luxury,Asia-Pacific,Americas
+HND,MEX,1948.3464228248022,luxury,Americas,Americas
+COM,COL,13116.621485786982,luxury,Africa,Americas
+MAR,JPN,11637.056097512776,luxury,Africa,Asia-Pacific
+CYP,HRV,1898.869255936688,luxury,Europe,Europe
+MNP,HRV,11669.18372019706,luxury,Asia-Pacific,Europe
+THA,MAC,1494.2343127891565,luxury,Asia-Pacific,Asia-Pacific
+KOR,JPN,942.7510366281967,adventure,Asia-Pacific,Asia-Pacific
+WSM,HRV,16462.557421267527,adventure,Asia-Pacific,Europe
+PNG,ITA,13815.569580838119,adventure,Asia-Pacific,Europe
+LVA,DZA,3679.981184881733,adventure,Europe,Africa
+PYF,FRA,15906.89471495021,adventure,Oceania,Europe
+TCD,CHN,8608.126502197058,adventure,Africa,Asia-Pacific
+COD,JPN,12633.990447160695,adventure,Africa,Asia-Pacific
+KAZ,POL,3382.141070189257,adventure,Asia-Pacific,Europe
+ROU,DEU,1212.976573575521,family,Europe,Europe
+VGB,GBR,6525.863104938614,family,Americas,Europe
+NZL,FRA,19179.4518843431,family,Asia-Pacific,Europe
+ABW,BRA,3578.015600399246,family,Americas,Americas
+KNA,AZE,10399.6705958364,family,Americas,Europe
+PRT,HKG,10914.765796202108,family,Europe,Asia-Pacific
+MYS,MEX,15934.080996078797,family,Asia-Pacific,Americas
+COL,MEX,3696.563711003503,family,Americas,Americas
+EGY,ESP,3510.1542865217066,family,Middle East,Europe
+MEX,TUR,11786.173898953013,family,Americas,Europe
+ROU,ESP,2391.629005935731,family,Europe,Europe
+BMU,POL,6845.8956482155645,family,Americas,Europe
+AZE,MEX,12277.626026182781,family,Europe,Americas
+SWZ,CHN,10302.750863632096,family,Africa,Asia-Pacific
+MHL,JPN,4649.176167792959,family,Asia-Pacific,Asia-Pacific
+CZE,MEX,9825.665216063187,family,Europe,Americas
+PAN,ALB,10286.321922761788,budget,Americas,Europe
+JOR,CHN,6221.303378793824,budget,Middle East,Asia-Pacific
+DZA,TUR,3319.5759303617565,budget,Africa,Europe
+PSE,MAC,7667.368450321166,budget,Asia-Pacific,Asia-Pacific
+BMU,MAC,13951.52798938094,budget,Americas,Asia-Pacific
+FRA,ESP,801.532862166119,budget,Europe,Europe
+KGZ,TUR,3342.6838262944357,budget,Asia-Pacific,Europe
+MOZ,HRV,7383.082231273719,budget,Africa,Europe
+UZB,ITA,4255.705127695062,budget,Asia-Pacific,Europe
+BRN,JPN,4264.337901655565,budget,Asia-Pacific,Asia-Pacific
+TKM,TUR,2095.6891780696083,budget,Asia-Pacific,Europe
+CHN,BLZ,13966.483389165183,budget,Asia-Pacific,Americas
+DOM,USA,3216.3292850466946,budget,Americas,Americas
+SRB,SAU,3130.077413402692,budget,Europe,Middle East
+BEN,CAN,10273.262199600227,budget,Africa,Americas
+SAU,DEU,4233.643453792658,budget,Middle East,Europe
+TCD,CAN,10565.432439099468,budget,Africa,Americas
+FRA,JPN,9850.110810919428,budget,Europe,Asia-Pacific
+ISR,GBR,4030.5000776919846,budget,Middle East,Europe
+ERI,HKG,7799.1908260882265,budget,Africa,Asia-Pacific
+IND,POL,6165.675952168014,budget,Asia-Pacific,Europe
+SXM,POL,7909.535755270925,budget,Americas,Europe
+VNM,FRA,5144.8281547943225,budget,Unknown,Europe
+MEX,TWN,12961.597367555882,budget,Americas,Asia-Pacific
+PRY,USA,7780.499952576791,budget,Americas,Americas
+BGR,BRA,10082.030644716338,budget,Europe,Americas
+BRB,ALB,8191.958390935009,budget,Americas,Europe
+SRB,HKG,8547.466025901886,budget,Europe,Asia-Pacific
+DNK,HRV,1303.5717929193886,budget,Europe,Europe
+SXM,BRA,3790.854687311774,budget,Americas,Americas
+USA,HKG,12704.531283870774,budget,Americas,Asia-Pacific
+BLZ,POL,9663.017996921453,budget,Americas,Europe
+SEN,JPN,13690.134767816266,budget,Africa,Asia-Pacific
+VEN,MEX,11284.602439717288,budget,Unknown,Americas
+GLP,HKG,15699.476458250942,budget,Americas,Asia-Pacific
+PYF,CAN,9139.706669158817,budget,Oceania,Americas
+ECU,CAN,6929.622911828694,budget,Americas,Americas
+COL,BHS,2299.3746912621436,budget,Americas,Americas
+SRB,TUR,1309.8587426763168,budget,Europe,Europe
+PHL,GBR,10876.122183754238,luxury,Asia-Pacific,Europe
+VCT,ITA,7717.6123460160625,luxury,Americas,Europe
+MTQ,COM,11855.472833073536,luxury,Americas,Africa
+SYR,GBR,3948.5990369761057,luxury,Middle East,Europe
+SVN,ESP,1638.2264894704856,luxury,Europe,Europe
+TUR,SAU,1915.891340156652,luxury,Europe,Middle East
+BRB,POL,8083.389315491711,luxury,Americas,Europe
+CRI,CHL,5210.946286256693,luxury,Americas,Americas
+BRB,CHN,14298.693605337967,luxury,Americas,Asia-Pacific
+MOZ,HKG,9681.895948312233,luxury,Africa,Asia-Pacific
+URY,ARG,966.188982270026,luxury,Americas,Americas
+CHE,POL,971.3392009218289,luxury,Europe,Europe
+PYF,ESP,15868.956227540488,luxury,Oceania,Europe
+CHN,DEU,7223.88602933107,adventure,Asia-Pacific,Europe
+KAZ,CAN,8417.255527813963,adventure,Asia-Pacific,Americas
+TUR,JPN,8527.71252730307,adventure,Europe,Asia-Pacific
+CRI,BEL,9047.617347972306,adventure,Americas,Europe
+BEL,HKG,9403.171512703868,adventure,Europe,Asia-Pacific
+STP,HKG,11801.048763018593,adventure,Africa,Asia-Pacific
+NIU,AND,17284.343292563168,adventure,Oceania,Europe
+CIV,AUS,15276.17416765342,adventure,Africa,Asia-Pacific
+MOZ,DEU,8141.146283798548,adventure,Africa,Europe
+CIV,ALB,4518.48488709471,adventure,Africa,Europe
+SAU,BRA,11340.165669849897,adventure,Middle East,Americas
+SYR,TWN,7834.533160416319,adventure,Middle East,Asia-Pacific
+LCA,JPN,14087.79377845553,family,Americas,Asia-Pacific
+FJI,FRA,16821.48291004622,family,Asia-Pacific,Europe
+GEO,ITA,2527.0350020686255,family,Europe,Europe
+TJK,CAN,9450.136853332113,family,Asia-Pacific,Americas
+TWN,HKG,711.6772138694437,family,Asia-Pacific,Asia-Pacific
+TKM,HRV,3678.705785036298,family,Asia-Pacific,Europe
+VGB,BHR,11446.794930427774,family,Americas,Middle East
+NAM,JPN,14101.086071201262,family,Africa,Asia-Pacific
+PHL,ALB,10013.761283519143,family,Asia-Pacific,Europe
+MKD,TUR,1188.2659958437002,family,Europe,Europe
+MMR,DEU,7822.0720362409875,family,Asia-Pacific,Europe
+TCD,ESP,3528.5410409054525,family,Africa,Europe
+DNK,ESP,2003.3495888405325,family,Europe,Europe
+PER,AUS,15074.947914393448,family,Americas,Asia-Pacific
+SYR,ALB,1790.26102756268,family,Middle East,Europe
+BES,FRA,5144.8281547943225,family,Unknown,Europe
+NIU,BRB,12588.686675719244,family,Oceania,Americas
+BHS,CHL,6778.574974397168,family,Americas,Americas
+CRI,ITA,9802.199947668563,budget,Americas,Europe
+TON,ESP,17723.439038485616,budget,Asia-Pacific,Europe
+ALB,CHN,7040.777075701015,budget,Europe,Asia-Pacific
+HRV,FRA,1015.7650801051359,budget,Europe,Europe
+MDG,BMU,13101.712198091614,budget,Africa,Americas
+CUW,FRA,7592.106185795835,budget,Americas,Europe
+MDA,AND,2169.8356698885955,budget,Europe,Europe
+POL,BHS,8269.552514393727,budget,Europe,Americas
+BES,MEX,11284.602439717288,budget,Unknown,Americas
+BFA,HRV,3985.02266437235,budget,Africa,Europe
+BIH,GBR,1969.9291592759257,budget,Europe,Europe
+IND,CAN,11469.106640505306,budget,Asia-Pacific,Americas
+GUM,JPN,2613.691791812939,budget,Asia-Pacific,Asia-Pacific
+NIU,POL,16277.018312892122,budget,Oceania,Europe
+BOL,MAC,19292.489874500803,budget,Americas,Asia-Pacific
+GMB,DEU,4790.595760933937,budget,Africa,Europe
+BRB,SAU,10852.98407843628,budget,Americas,Middle East
+VCT,ALB,8352.468363397888,budget,Americas,Europe
+OMN,HKG,5965.431795327021,budget,Middle East,Asia-Pacific
+TWN,ALB,9142.322344251916,budget,Asia-Pacific,Europe
+HUN,FRA,1319.9941058430372,budget,Europe,Europe
+KEN,HUN,5542.590061634678,budget,Africa,Europe
+ISL,GBR,1363.0893279980128,budget,Europe,Europe
+DMA,BGR,8599.575289301314,budget,Americas,Europe
+ATG,ITA,7471.058834866571,budget,Americas,Europe
+VEN,ESP,4515.319738842054,budget,Unknown,Europe
+LKA,SAU,4193.6911649987715,budget,Asia-Pacific,Middle East
+SLV,BRA,5125.743533503916,luxury,Americas,Americas
+CYM,SAU,12472.607838323062,luxury,Americas,Middle East
+VEN,BRB,6719.349717837941,luxury,Unknown,Americas
+TUN,CHL,11424.665160113713,luxury,Middle East,Americas
+VCT,ITA,7717.6123460160625,luxury,Americas,Europe
+TUN,USA,8970.45841750148,adventure,Middle East,Americas
+GRC,ITA,841.9857682997396,adventure,Europe,Europe
+DZA,ALB,2227.0624260347968,adventure,Africa,Europe
+PER,TUR,12396.194120213568,adventure,Americas,Europe
+CHE,CAN,7056.257627023048,adventure,Europe,Americas
+CIV,TUR,5363.237822376012,adventure,Africa,Europe
+ARM,ITA,2717.2536070650044,adventure,Europe,Europe
+COM,JPN,11206.009402345933,adventure,Africa,Asia-Pacific
+SLV,CHN,14324.486562390233,family,Americas,Asia-Pacific
+COG,HUN,5231.063787010424,family,Africa,Europe
+HTI,FRA,7318.9392297580125,family,Americas,Europe
+SXM,POL,7909.535755270925,family,Americas,Europe
+LIE,ITA,635.1401466708603,family,Europe,Europe
+GEO,USA,10260.167876909261,family,Europe,Americas
+PHL,JPN,3072.294027434351,family,Asia-Pacific,Asia-Pacific
+ROU,MAC,8149.607826437857,family,Europe,Asia-Pacific
+MSR,CHN,13992.601105359572,family,Americas,Asia-Pacific
+KGZ,CAN,9191.442781318838,family,Asia-Pacific,Americas
+SWZ,AND,8266.762551982063,family,Africa,Europe
+KNA,BHS,1737.0085990726595,family,Americas,Americas
+ECU,ARM,12907.538061752835,family,Americas,Europe
+AZE,POL,2531.6119253988754,family,Europe,Europe
+DZA,JPN,11550.49052956256,family,Africa,Asia-Pacific
+CMR,TUR,4193.690967852693,family,Africa,Europe
+MNP,GBR,11659.466584799105,family,Asia-Pacific,Europe
+ARG,DEU,12279.904769433986,family,Americas,Europe
+REU,CHN,11282.217268788312,family,Unknown,Asia-Pacific
+ISL,ASM,13968.643643840805,budget,Europe,Oceania
+JPN,ITA,9728.699591145374,budget,Asia-Pacific,Europe
+MHL,CHN,7475.296809916809,budget,Asia-Pacific,Asia-Pacific
+MKD,USA,9203.38757157549,budget,Europe,Americas
+VGB,ARG,6320.866058621769,budget,Americas,Americas
+PER,HUN,11095.831110962501,budget,Americas,Europe
+PHL,BRN,1208.132587316035,budget,Asia-Pacific,Asia-Pacific
+PRT,CHN,9157.698605430336,budget,Europe,Asia-Pacific
+GRC,BHS,9022.362613606065,budget,Europe,Americas
+BMU,CAN,4141.753115139637,budget,Americas,Americas
+TJK,JPN,5776.604691220034,budget,Asia-Pacific,Asia-Pacific
+BMU,BHR,10579.8060781345,budget,Americas,Middle East
+UKR,GBR,2469.712749762244,budget,Europe,Europe
+TJK,FRA,5536.624629573033,budget,Asia-Pacific,Europe
+THA,ALB,8096.731982290829,budget,Asia-Pacific,Europe
+RWA,MEX,14360.206196676174,budget,Africa,Americas
+MEX,MEX,0,budget,Americas,Americas
+KOR,CHL,18276.062892846705,budget,Asia-Pacific,Americas
+TJK,FRA,5536.624629573033,budget,Asia-Pacific,Europe
+POL,MEX,9888.564743186847,budget,Europe,Americas
+CHE,ARM,3035.05966369116,budget,Europe,Europe
+LVA,BEL,1495.403984623227,budget,Europe,Europe
+MAR,POL,3086.654917842769,budget,Africa,Europe
+BRN,HUN,10031.334511475092,luxury,Asia-Pacific,Europe
+TTO,CAN,6369.9933649040395,luxury,Americas,Americas
+CIV,HUN,5005.999075755715,luxury,Africa,Europe
+JPN,COL,14357.319121786944,luxury,Asia-Pacific,Americas
+GUM,JPN,2613.691791812939,luxury,Asia-Pacific,Asia-Pacific
+FRA,SAU,4546.313452931867,luxury,Europe,Middle East
+TWN,ITA,9668.979832488665,luxury,Asia-Pacific,Europe
+BRB,ITA,7558.219999009244,luxury,Americas,Europe
+SRB,CHN,6845.529086425052,adventure,Europe,Asia-Pacific
+BMU,GBR,5327.145245000322,adventure,Americas,Europe
+SXM,HKG,15516.915992611945,adventure,Americas,Asia-Pacific
+BOL,SAU,12591.12653995362,adventure,Americas,Middle East
+DZA,TWN,11333.689702387295,adventure,Africa,Asia-Pacific
+REU,MAC,12421.139513704387,adventure,Unknown,Asia-Pacific
+BES,COL,8267.178833252816,adventure,Unknown,Americas
+DEU,POL,606.6510341534487,adventure,Europe,Europe
+NIC,GBR,8369.55204638449,adventure,Americas,Europe
+PER,FRA,9780.444048396905,family,Americas,Europe
+BES,DEU,5774.0073239565145,family,Unknown,Europe
+JAM,CAN,4875.930170139822,family,Americas,Americas
+GMB,BWA,5900.476860373979,family,Africa,Africa
+BWA,JPN,13512.799605593482,family,Africa,Asia-Pacific
+BRN,FRA,11335.730458723596,family,Asia-Pacific,Europe
+BEL,CHN,7627.185579469352,family,Europe,Asia-Pacific
+EST,TUR,2301.9571150190714,family,Europe,Europe
+PRI,CHN,11282.217268788312,family,Unknown,Asia-Pacific
+JAM,FRA,7769.193742287357,family,Americas,Europe
+KIR,BMU,11520.84247152814,family,Asia-Pacific,Americas
+MDA,HUN,668.9862369559295,family,Europe,Europe
+PNG,CAN,11802.547209411201,family,Asia-Pacific,Americas
+SLV,DEU,9453.7516164695,family,Americas,Europe
+SAU,CAN,10718.120771150885,budget,Middle East,Americas
+ASM,CHL,9840.71191545736,budget,Oceania,Americas
+TUR,POL,1902.605220249886,budget,Europe,Europe
+ITA,MEX,10147.779543876999,budget,Europe,Americas
+OMN,POL,4628.047059309216,budget,Middle East,Europe
+SLE,HUN,5220.635536025756,budget,Africa,Europe
+HTI,MEX,3172.1113945379266,budget,Americas,Americas
+BRB,HKG,16007.165104664622,budget,Americas,Asia-Pacific
+CUW,HRV,8599.770642672545,budget,Americas,Europe
+ECU,AND,9304.739735630596,budget,Americas,Europe
+NGA,FRA,4175.972926325855,budget,Africa,Europe
+THA,ESP,10063.331379158684,budget,Asia-Pacific,Europe
+ROU,CHN,6476.230910859141,budget,Europe,Asia-Pacific
+YEM,SAU,5535.892093762673,budget,Unknown,Middle East
+NZL,FRA,19179.4518843431,budget,Asia-Pacific,Europe
+THA,HRV,8440.355420781367,budget,Asia-Pacific,Europe
+BGR,MEX,10919.083612047169,budget,Europe,Americas
+ATG,SAU,10869.969423166585,budget,Americas,Middle East
+CZE,USA,8234.390400491298,budget,Europe,Americas
+GAB,FRA,5309.970911597286,budget,Africa,Europe
+ROU,TUR,1144.1958380766175,budget,Europe,Europe
+SYR,USA,10752.130870948295,budget,Middle East,Americas
+UZB,FRA,4904.461920703348,budget,Asia-Pacific,Europe
+MNP,MAC,3468.5882706979005,budget,Asia-Pacific,Asia-Pacific
+IDN,HKG,2569.699848810287,budget,Asia-Pacific,Asia-Pacific
+BRA,TUR,10757.223427140694,budget,Americas,Europe
+EST,HKG,7856.602496562772,budget,Europe,Asia-Pacific
+ABW,JPN,13840.818859594718,budget,Americas,Asia-Pacific
+NGA,MAC,11128.025421863465,budget,Africa,Asia-Pacific
+JAM,BHS,770.0591630068195,budget,Americas,Americas
+ARE,HKG,6133.723622092898,budget,Middle East,Asia-Pacific
+TUR,MAC,7499.5750804911895,budget,Europe,Asia-Pacific
+SLV,CHN,14324.486562390233,luxury,Americas,Asia-Pacific
+LSO,ARG,8166.155324597909,luxury,Africa,Americas
+VUT,DEU,15518.122841675913,luxury,Asia-Pacific,Europe
+BES,MEX,11284.602439717288,luxury,Unknown,Americas
+SLE,USA,8905.475112311955,luxury,Africa,Americas
+BRN,HKG,1978.4035832174147,luxury,Asia-Pacific,Asia-Pacific
+COM,CHN,8277.435214653302,luxury,Africa,Asia-Pacific
+TCD,ITA,2996.400544172865,adventure,Africa,Europe
+REU,USA,10513.964439946625,adventure,Unknown,Americas
+LTU,USA,8265.572890746455,adventure,Europe,Americas
+MTQ,HUN,8108.935644841774,adventure,Americas,Europe
+HTI,USA,3041.062009501948,adventure,Americas,Americas
+DOM,TUR,9966.979996015127,adventure,Americas,Europe
+VGB,HRV,7784.026933677524,family,Americas,Europe
+JAM,BGR,9647.641888103108,family,Americas,Europe
+LSO,CAN,15413.851249066352,family,Africa,Americas
+KAZ,BGR,3248.9730592909186,family,Asia-Pacific,Europe
+AZE,HKG,6480.426281395376,family,Europe,Asia-Pacific
+LKA,BEL,8365.470243179141,family,Asia-Pacific,Europe
+POL,BLR,624.0559848116761,family,Europe,Europe
+PER,HKG,18256.66074991888,family,Americas,Asia-Pacific
+SVN,ESP,1638.2264894704856,family,Europe,Europe
+TTO,COL,1592.9214936929725,family,Americas,Americas
+POL,BRA,10005.110033444676,family,Europe,Americas
+LTU,CHN,6230.288031861461,family,Europe,Asia-Pacific
+CHE,SAU,4142.62325352011,family,Europe,Middle East
+TKM,HUN,3338.654498961941,family,Asia-Pacific,Europe
+MMR,CAN,11085.800579846466,family,Asia-Pacific,Americas
+CMR,ATG,8089.311414787776,family,Africa,Americas
+ARG,GBR,11881.871208148528,family,Americas,Europe
+CUB,TUR,10340.416860627287,family,Americas,Europe
+SGP,BHR,6316.110073926634,family,Asia-Pacific,Middle East
+STP,HRV,5065.16714272811,family,Africa,Europe
+URY,ITA,10819.119729402864,budget,Americas,Europe
+NGA,HUN,4356.3544065399265,budget,Africa,Europe
+MTQ,HKG,15871.998694994601,budget,Americas,Asia-Pacific
+PER,TUR,12396.194120213568,budget,Americas,Europe
+UZB,ESP,5585.009305326796,budget,Asia-Pacific,Europe
+ETH,CHN,7051.2314452924375,budget,Africa,Asia-Pacific
+BFA,ALB,3848.326950477865,budget,Africa,Europe
+SUR,POL,8651.346061212536,budget,Americas,Europe
+EGY,HKG,8287.498794685962,budget,Middle East,Asia-Pacific
+TJK,POL,4218.354892996331,budget,Asia-Pacific,Europe
+GUF,HRV,8008.290773731553,budget,Americas,Europe
+ROU,DEU,1212.976573575521,budget,Europe,Europe
+MAR,USA,7837.646964269011,budget,Africa,Americas
+SYC,ESP,7832.13031131774,budget,Africa,Europe
+WSM,CHN,10345.06272549752,budget,Asia-Pacific,Asia-Pacific
+BES,HUN,5575.353951336609,budget,Unknown,Europe
+MNP,BRN,3582.191734374771,budget,Asia-Pacific,Asia-Pacific
+ARM,HKG,6696.32555759186,budget,Europe,Asia-Pacific
+GRC,FRA,1783.6769678164223,budget,Europe,Europe
+HTI,MEX,3172.1113945379266,budget,Americas,Americas
+PYF,FRA,15906.89471495021,budget,Oceania,Europe
+ISR,DEU,3002.472806162785,budget,Middle East,Europe
+MYS,POL,9147.660124278662,budget,Asia-Pacific,Europe
+URY,FRA,10510.99806388428,budget,Americas,Europe
+ABW,GBR,7390.733813553167,budget,Americas,Europe
+ARG,ESP,10671.30443092354,budget,Americas,Europe
+BRA,GBR,8966.771801914781,luxury,Americas,Europe
+BEL,DEU,426.3358560145184,luxury,Europe,Europe
+VNM,SAU,5535.892093762673,luxury,Unknown,Middle East
+MUS,ITA,8320.51186352406,luxury,Africa,Europe
+BES,CAN,11011.002227916915,luxury,Unknown,Americas
+PRI,HUN,5575.353951336609,luxury,Unknown,Europe
+SGP,JPN,5249.783595791139,luxury,Asia-Pacific,Asia-Pacific
+MSR,USA,3986.6753343364735,adventure,Americas,Americas
+GLP,MEX,4348.195159647847,adventure,Americas,Americas
+SYR,CMR,4088.137183037189,adventure,Middle East,Africa
+SUR,MAC,16897.343202462413,adventure,Americas,Asia-Pacific
+PYF,CAN,9139.706669158817,adventure,Oceania,Americas
+MSR,JPN,13747.561341944593,adventure,Americas,Asia-Pacific
+VCT,FRA,6940.557337011146,adventure,Americas,Europe
+CYP,ESP,3295.299481004478,adventure,Europe,Europe
+MDA,ITA,1390.2736072001037,adventure,Europe,Europe
+CHN,DEU,7223.88602933107,adventure,Asia-Pacific,Europe
+BES,GBR,6165.667546488069,adventure,Unknown,Europe
+PSE,BRA,10577.629381162225,adventure,Asia-Pacific,Americas
+ERI,HRV,4046.648462828883,adventure,Africa,Europe
+UKR,CAN,7744.817361569053,adventure,Europe,Americas
+CMR,POL,4992.546942458464,family,Africa,Europe
+CZE,FRA,1062.0093105802496,family,Europe,Europe
+QAT,HUN,3690.330692697128,family,Middle East,Europe
+NIU,CAN,10238.170850632414,family,Oceania,Americas
+SLV,ALB,10530.1707413075,family,Americas,Europe
+GTM,JPN,12312.968057466562,family,Americas,Asia-Pacific
+ZWE,DEU,5774.0073239565145,family,Unknown,Europe
+REU,BHS,8739.599824363728,family,Unknown,Americas
+LBY,MEX,11485.806445414191,family,Middle East,Americas
+BRB,MEX,4664.657266905143,family,Americas,Americas
+LVA,HUN,1134.6627473273238,family,Europe,Europe
+HRV,USA,8553.876926537898,family,Europe,Americas
+SRB,FRA,1491.1238644784783,family,Europe,Europe
+TJK,ITA,4886.99720364663,family,Asia-Pacific,Europe
+VGB,HKG,15483.15601441019,family,Americas,Asia-Pacific
+KOR,FRA,9384.179909734728,family,Asia-Pacific,Europe
+DNK,HUN,1221.6626828997294,family,Europe,Europe
+MAR,DEU,2588.666782790165,family,Africa,Europe

@@ -303,6 +303,7 @@ def render_map(sim):
         dest_data,
         locations="country_code",
         locationmode='ISO-3',  # Explicit ISO3 code matching
+        scope='world',  # Explicitly set world scope for reliable GeoJSON loading
         color="capacity_util",
         color_continuous_scale="RdYlGn_r",  # Red (high) to Green (low)
         range_color=(0, dynamic_max),
@@ -317,6 +318,14 @@ def render_map(sim):
             "latitude": False,
             "longitude": False,
         },
+    )
+    
+    # Explicitly enable country borders and frame
+    fig.update_geos(
+        showframe=True,
+        showcoastlines=True,
+        showcountries=True,  # Explicitly enable country borders
+        projection_type="equirectangular",
     )
 
     # Add traveling agents as scatter overlay with differentiated styling

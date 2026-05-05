@@ -667,34 +667,32 @@ def main():
             st.session_state.stop_confirm = True
             logger.info("Stop confirmation pending")
 
-    def trigger_disaster():
-        import random
-
-        countries = list(st.session_state.simulation.destinations.keys())
-        target = random.choice(countries)
+    def trigger_negative_event(country_code, event_type, severity, duration_days):
+        """Trigger a negative event in specified country"""
+        event_names = {
+            "disaster": "Natural Disaster",
+            "epidemic": "Epidemic Outbreak",
+            "political_unrest": "Political Unrest",
+            "economic_shock": "Economic Crisis",
+            "terrorism": "Terrorist Attack",
+        }
+        
+        event_name = event_names.get(event_type, event_type.replace("_", " ").title())
+        
         st.session_state.simulation.unplanned_events.trigger_event(
-            country_code=target,
-            event_type="disaster",
-            severity=0.7,
+            country_code=country_code,
+            event_type=event_type,
+            severity=severity,
             current_date=st.session_state.simulation.current_date,
-            name=f"Natural Disaster in {target}",
+            duration_days=duration_days,
+            name=f"{event_name} in {country_code}",
         )
-        logger.info(f"Disaster triggered in {target}")
-        st.success(f"Disaster triggered in {target}!")
-
-    def trigger_epidemic():
-        import random
-
-        countries = list(st.session_state.simulation.destinations.keys())
-        target = random.choice(countries)
-        st.session_state.simulation.unplanned_events.trigger_event(
-            country_code=target,
-            event_type="epidemic",
-            severity=0.6,
-            current_date=st.session_state.simulation.current_date,
-        )
-        logger.info(f"Epidemic triggered in {target}")
-        st.success(f"Epidemic triggered in {target}!")
+        
+        dest = st.session_state.simulation.destinations.get(country_code)
+        country_name = dest.country_name if dest else country_code
+        
+        logger.info(f"{event_name} triggered in {country_code} (severity: {severity}, duration: {duration_days}d)")
+        st.success(f"⚠️ {event_name} triggered in {country_name}!")
 
     def step_simulation(sim_obj):
         """Advance simulation by one day"""
@@ -978,21 +976,85 @@ def main():
             except ImportError:
                 st.info("Install psutil for memory monitoring: `pip install psutil`")
 
-            # Trigger event button
+            # Trigger negative event
             st.divider()
-            st.subheader("⚡ Trigger Event")
+            st.subheader("⚠️ Trigger Negative Event")
 
-            st.button(
-                "🌋 Natural Disaster",
-                use_container_width=True,
-                on_click=trigger_disaster,
+            # Country selector
+            sim_countries = list(st.session_state.simulation.destinations.items())
+            sim_countries.sort(key=lambda x: x[1].country_name)
+            
+            country_options = {f"{dest.country_name} ({code})": code for code, dest in sim_countries}
+            
+            selected_country_display = st.selectbox(
+                "Target Country",
+                options=list(country_options.keys()),
+                help="Select the country to affect",
+                key="negative_event_country",
             )
-
-            st.button(
-                "🦠 Epidemic Outbreak",
-                use_container_width=True,
-                on_click=trigger_epidemic,
+            
+            # Event type selector
+            event_types = {
+                "🌋 Natural Disaster": "disaster",
+                "🦠 Epidemic Outbreak": "epidemic",
+                "🔥 Political Unrest": "political_unrest",
+                "💰 Economic Crisis": "economic_shock",
+                "💣 Terrorist Attack": "terrorism",
+            }
+            
+            selected_event_display = st.selectbox(
+                "Event Type",
+                options=list(event_types.keys()),
+                help="Select the type of negative event",
+                key="negative_event_type",
             )
+            
+            # Severity selector
+            severity_options = {
+                "Low (0.3)": 0.3,
+                "Medium (0.5)": 0.5,
+                "High (0.7)": 0.7,
+                "Critical (0.9)": 0.9,
+            }
+            
+            selected_severity_display = st.selectbox(
+                "Severity",
+                options=list(severity_options.keys()),
+                help="Higher severity = stronger impact on tourist behavior",
+                key="negative_event_severity",
+            )
+            
+            # Duration selector
+            duration_options = {
+                "Short (30 days)": 30,
+                "Medium (60 days)": 60,
+                "Long (90 days)": 90,
+                "Extended (180 days)": 180,
+            }
+            
+            selected_duration_display = st.selectbox(
+                "Duration",
+                options=list(duration_options.keys()),
+                help="How long the event affects tourist behavior",
+                key="negative_event_duration",
+            )
+            
+            # Trigger button
+            if st.button(
+                "⚡ Trigger Event",
+                use_container_width=True,
+                type="primary",
+                key="trigger_negative_event",
+            ):
+                if selected_country_display and selected_event_display:
+                    country_code = country_options[selected_country_display]
+                    event_type = event_types[selected_event_display]
+                    severity = severity_options[selected_severity_display]
+                    duration = duration_options[selected_duration_display]
+                    
+                    trigger_negative_event(country_code, event_type, severity, duration)
+                else:
+                    st.error("Please select both country and event type")
 
     # Main content area
     if st.session_state.simulation is None:

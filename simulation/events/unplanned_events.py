@@ -17,23 +17,28 @@ class UnplannedEvent:
     EVENT_TYPES = {
         "disaster": {
             "name": "Natural Disaster",
-            "typical_duration": 6,  # months
+            "typical_duration": 2,  # months (60 days)
             "recovery_pattern": "linear",
         },
         "epidemic": {
-            "name": "Epidemic/Pandemic",
-            "typical_duration": 12,
+            "name": "Epidemic Outbreak",
+            "typical_duration": 4,  # months (120 days)
             "recovery_pattern": "hybrid",  # Double-dip + S-curve
+        },
+        "political_unrest": {
+            "name": "Political Unrest",
+            "typical_duration": 3,  # months (90 days)
+            "recovery_pattern": "s_curve",
+        },
+        "economic_shock": {
+            "name": "Economic Crisis",
+            "typical_duration": 6,  # months (180 days)
+            "recovery_pattern": "linear",
         },
         "terrorism": {
             "name": "Terrorist Attack",
-            "typical_duration": 3,
+            "typical_duration": 1,  # month (30 days)
             "recovery_pattern": "exponential",
-        },
-        "conflict": {
-            "name": "Armed Conflict",
-            "typical_duration": "variable",
-            "recovery_pattern": "s_curve",
         },
     }
 
@@ -226,6 +231,7 @@ class UnplannedEventManager:
         severity: float,
         current_date: datetime,
         name: Optional[str] = None,
+        duration_days: int = 60,
     ) -> UnplannedEvent:
         """
         Trigger a new unplanned event.
@@ -236,6 +242,7 @@ class UnplannedEventManager:
             severity: Severity (0.0-1.0)
             current_date: Current simulation date
             name: Optional event name
+            duration_days: Event duration in days (default: 60)
 
         Returns:
             Created UnplannedEvent
@@ -254,13 +261,16 @@ class UnplannedEventManager:
         if isinstance(typical_duration, str):
             typical_duration = 6  # Default for 'variable'
 
+        # Convert duration_days to months (default to typical duration if not specified)
+        duration_months = max(1, duration_days // 30) if duration_days else typical_duration
+        
         event = UnplannedEvent(
             name=name,
             country_code=country_code,
             start_date=current_date,
             event_type=event_type,
             severity=severity,
-            duration_months=typical_duration,
+            duration_months=duration_months,
         )
 
         self.add_event(event)

@@ -1251,30 +1251,32 @@ def main():
     with tab_overview:
         st.header("🗺️ Global Overview")
         
-        # Main layout: Map (left) + Key Metrics (right)
-        col_map, col_metrics = st.columns([6, 4])
-
-        with col_map:
-            # Interactive map
-            fig_map = render_map(sim)
-            st.plotly_chart(fig_map, use_container_width=True, key="map")
-
-        with col_metrics:
-            # Quick stats
-            st.subheader("📊 Key Metrics")
-            summary = sim.data_collector.get_summary()
-            
-            st.metric("Current Day", f"Day {sim.tick} ({sim.current_date.strftime('%Y-%m-%d')})")
+        # Key Metrics - Horizontal row at top (doesn't obstruct map)
+        st.subheader("📊 Key Metrics")
+        summary = sim.data_collector.get_summary()
+        
+        col1, col2, col3, col4 = st.columns(4)
+        with col1:
+            st.metric("Current Day", f"Day {sim.tick}")
+        with col2:
+            st.metric("Date", sim.current_date.strftime('%Y-%m-%d'))
+        with col3:
             st.metric("Active Travelers", f"{summary['active_travelers']:,}")
-            st.metric("Total Trips", f"{summary['total_trips']:,}")
-            
-            st.divider()
-            
-            # Country selector for quick view
-            selected_country = render_country_selector(sim)
-            
-            if st.session_state.selected_country:
-                render_destination_details(sim, st.session_state.selected_country)
+        with col4:
+            st.metric("Total Trips", f"{summary['total_trips_recorded']:,}")
+        
+        st.divider()
+        
+        # Map - Full width (no obstruction)
+        fig_map = render_map(sim)
+        st.plotly_chart(fig_map, use_container_width=True, key="map")
+        
+        # Country selector below map (doesn't obstruct)
+        st.divider()
+        selected_country = render_country_selector(sim)
+        
+        if st.session_state.selected_country:
+            render_destination_details(sim, st.session_state.selected_country)
 
     with tab_agents:
         st.header("👥 Agent Analysis")

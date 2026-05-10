@@ -245,6 +245,7 @@ class Tourist:
         self.arrival_tick = arrival_tick
         self.stay_duration = self._calculate_stay_duration(distance_km)
         self.days_remaining = self.stay_duration
+        self.trip_distance = distance_km  # Track for data collection
         self._chosen_destination = None  # Clear after trip starts
 
     def step(self):

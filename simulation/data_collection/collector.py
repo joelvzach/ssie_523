@@ -45,6 +45,20 @@ class DataCollector:
             "adventure": [],
             "family": [],
         }
+        
+        # Segment-level trip metrics (accumulated)
+        self.segment_distances: Dict[str, List[float]] = {
+            "budget": [],
+            "luxury": [],
+            "adventure": [],
+            "family": [],
+        }
+        self.segment_trip_lengths: Dict[str, List[int]] = {
+            "budget": [],
+            "luxury": [],
+            "adventure": [],
+            "family": [],
+        }
 
         # Destination-level metrics (every tick) - limited to MAX_DAYS per country
         self.dest_visitors: Dict[str, List[int]] = defaultdict(list)
@@ -162,6 +176,13 @@ class DataCollector:
 
         # Store reference for updating later
         agent._current_trip_record = trip_record
+        
+        # Track segment-level metrics
+        if hasattr(agent, 'trip_distance'):
+            self.segment_distances[agent.segment].append(agent.trip_distance)
+        
+        if departure_tick and arrival_tick:
+            self.segment_trip_lengths[agent.segment].append(departure_tick - arrival_tick)
 
     def get_summary(self) -> dict:
         """
